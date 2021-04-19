@@ -1,0 +1,1678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A66443F1-A4AA-4C9E-AC88-027FF55905F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YR.ERP</RootNamespace>
+    <AssemblyName>YR.ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\YR.ERP.DAL\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\YR.ERP.DAL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListView.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.bpac, Version=1.3.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>Dll\Interop.bpac.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2017.1.7.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Controls, Version=2017.1.7.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Controls.Win, Version=2017.1.7.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Database, Version=2017.1.7.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Editor, Version=2017.1.7.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report, Version=2017.1.7.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report.Win, Version=2017.1.7.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customize\Forms\Inv\FrmXinvt302.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customize\Forms\Inv\FrmXinvt302.Designer.cs">
+      <DependentUpon>FrmXinvt302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customize\Forms\Inv\FrmZinvt001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customize\Forms\Inv\FrmZinvt001.Designer.cs">
+      <DependentUpon>FrmZinvt001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi100.Designer.cs">
+      <DependentUpon>FrmAdmi100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi110.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi110.Designer.cs">
+      <DependentUpon>FrmAdmi110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi120.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi120.Designer.cs">
+      <DependentUpon>FrmAdmi120.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi600.Designer.cs">
+      <DependentUpon>FrmAdmi600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi601.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi601.Designer.cs">
+      <DependentUpon>FrmAdmi601.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi602.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi602.Designer.cs">
+      <DependentUpon>FrmAdmi602.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi611.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi611.Designer.cs">
+      <DependentUpon>FrmAdmi611.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi611s.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi611s.Designer.cs">
+      <DependentUpon>FrmAdmi611s.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi620.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi620.Designer.cs">
+      <DependentUpon>FrmAdmi620.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi630.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi630.Designer.cs">
+      <DependentUpon>FrmAdmi630.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi640.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi640.Designer.cs">
+      <DependentUpon>FrmAdmi640.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi650.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi650.Designer.cs">
+      <DependentUpon>FrmAdmi650.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmq910.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmq910.Designer.cs">
+      <DependentUpon>FrmAdmq910.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdms801.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdms801.Designer.cs">
+      <DependentUpon>FrmAdms801.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi610.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmAdmi610.Designer.cs">
+      <DependentUpon>FrmAdmi610.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Adm\FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Adm\UltraTree_DropHightLight_DrawFilter_Class.cs" />
+    <Compile Include="Forms\Bas\FrmBasi001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi001.Designer.cs">
+      <DependentUpon>FrmBasi001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi010.Designer.cs">
+      <DependentUpon>FrmBasi010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi020.Designer.cs">
+      <DependentUpon>FrmBasi020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi030.Designer.cs">
+      <DependentUpon>FrmBasi030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi040.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi040.Designer.cs">
+      <DependentUpon>FrmBasi040.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi050.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi050.Designer.cs">
+      <DependentUpon>FrmBasi050.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi060.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi060.Designer.cs">
+      <DependentUpon>FrmBasi060.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi070.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi070.Designer.cs">
+      <DependentUpon>FrmBasi070.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi080.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi080.Designer.cs">
+      <DependentUpon>FrmBasi080.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi090.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bas\FrmBasi090.Designer.cs">
+      <DependentUpon>FrmBasi090.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCarb110.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCarb110.Designer.cs">
+      <DependentUpon>FrmCarb110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCarb350.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCarb350.Designer.cs">
+      <DependentUpon>FrmCarb350.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCarb351.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCarb351.Designer.cs">
+      <DependentUpon>FrmCarb351.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCari010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCari010.Designer.cs">
+      <DependentUpon>FrmCari010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCari030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCari030.Designer.cs">
+      <DependentUpon>FrmCari030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCart100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCart100.Designer.cs">
+      <DependentUpon>FrmCart100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCart110.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCart110.Designer.cs">
+      <DependentUpon>FrmCart110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCart200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Car\FrmCart200.Designer.cs">
+      <DependentUpon>FrmCart200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Csp\Cspb200BLL.cs" />
+    <Compile Include="Forms\Csp\FrmCspb200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Csp\FrmCspb200.Designer.cs">
+      <DependentUpon>FrmCspb200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Csp\FrmCspq100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Csp\FrmCspq100.Designer.cs">
+      <DependentUpon>FrmCspq100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Csp\FrmCspr110.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Csp\FrmCspr110.Designer.cs">
+      <DependentUpon>FrmCspr110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProgramList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProgramList.Designer.cs">
+      <DependentUpon>FrmProgramList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab321.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab321.Designer.cs">
+      <DependentUpon>FrmGlab321.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai110.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai110.Designer.cs">
+      <DependentUpon>FrmGlai110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq401.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq401.Designer.cs">
+      <DependentUpon>FrmGlaq401.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq402.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq402.Designer.cs">
+      <DependentUpon>FrmGlaq402.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq403.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq403.Designer.cs">
+      <DependentUpon>FrmGlaq403.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar300.Designer.cs">
+      <DependentUpon>FrmGlar300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar301.Designer.cs">
+      <DependentUpon>FrmGlar301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar311.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar311.Designer.cs">
+      <DependentUpon>FrmGlar311.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar321.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar321.Designer.cs">
+      <DependentUpon>FrmGlar321.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar322.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlar322.Designer.cs">
+      <DependentUpon>FrmGlar322.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlat200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlat200.Designer.cs">
+      <DependentUpon>FrmGlat200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlat300_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlat300_1.Designer.cs">
+      <DependentUpon>FrmGlat300_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab311.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab311.Designer.cs">
+      <DependentUpon>FrmGlab311.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab312.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab312.Designer.cs">
+      <DependentUpon>FrmGlab312.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab313.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlab313.Designer.cs">
+      <DependentUpon>FrmGlab313.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai001.Designer.cs">
+      <DependentUpon>FrmGlai001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai010.Designer.cs">
+      <DependentUpon>FrmGlai010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlai100.Designer.cs">
+      <DependentUpon>FrmGlai100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlaq410.Designer.cs">
+      <DependentUpon>FrmGlaq410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlat300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gla\FrmGlat300.Designer.cs">
+      <DependentUpon>FrmGlat300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb600.Designer.cs">
+      <DependentUpon>FrmInvb600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi010.Designer.cs">
+      <DependentUpon>FrmInvi010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi020.Designer.cs">
+      <DependentUpon>FrmInvi020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi030.Designer.cs">
+      <DependentUpon>FrmInvi030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi100.Designer.cs">
+      <DependentUpon>FrmInvi100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi100_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi100_1.Designer.cs">
+      <DependentUpon>FrmInvi100_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi101.Designer.cs">
+      <DependentUpon>FrmInvi101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi102.Designer.cs">
+      <DependentUpon>FrmInvi102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi200.Designer.cs">
+      <DependentUpon>FrmInvi200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb500.Designer.cs">
+      <DependentUpon>FrmInvb500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb501.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb501.Designer.cs">
+      <DependentUpon>FrmInvb501.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb502.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvb502.Designer.cs">
+      <DependentUpon>FrmInvb502.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvq210.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvq210.Designer.cs">
+      <DependentUpon>FrmInvq210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvq220.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvq220.Designer.cs">
+      <DependentUpon>FrmInvq220.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr101.Designer.cs">
+      <DependentUpon>FrmInvr101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr215.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr215.Designer.cs">
+      <DependentUpon>FrmInvr215.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr301.Designer.cs">
+      <DependentUpon>FrmInvr301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr302.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr302.Designer.cs">
+      <DependentUpon>FrmInvr302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr330.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr330.Designer.cs">
+      <DependentUpon>FrmInvr330.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr336.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr336.Designer.cs">
+      <DependentUpon>FrmInvr336.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr337.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr337.Designer.cs">
+      <DependentUpon>FrmInvr337.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr401.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr401.Designer.cs">
+      <DependentUpon>FrmInvr401.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr402.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr402.Designer.cs">
+      <DependentUpon>FrmInvr402.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr410.Designer.cs">
+      <DependentUpon>FrmInvr410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr520.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr520.Designer.cs">
+      <DependentUpon>FrmInvr520.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr521.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr521.Designer.cs">
+      <DependentUpon>FrmInvr521.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr522.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr522.Designer.cs">
+      <DependentUpon>FrmInvr522.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt301.Designer.cs">
+      <DependentUpon>FrmInvt301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt302.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt302.Designer.cs">
+      <DependentUpon>FrmInvt302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt330.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt330.Designer.cs">
+      <DependentUpon>FrmInvt330.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt331.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt331.Designer.cs">
+      <DependentUpon>FrmInvt331.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt332.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt332.Designer.cs">
+      <DependentUpon>FrmInvt332.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt401.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt401.Designer.cs">
+      <DependentUpon>FrmInvt401.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt402.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt402.Designer.cs">
+      <DependentUpon>FrmInvt402.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt520.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt520.Designer.cs">
+      <DependentUpon>FrmInvt520.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt521.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt521.Designer.cs">
+      <DependentUpon>FrmInvt521.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt522.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvt522.Designer.cs">
+      <DependentUpon>FrmInvt522.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr210.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr210.Designer.cs">
+      <DependentUpon>FrmManr210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr311.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr311.Designer.cs">
+      <DependentUpon>FrmManr311.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr312.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr312.Designer.cs">
+      <DependentUpon>FrmManr312.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr411.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmManr411.Designer.cs">
+      <DependentUpon>FrmManr411.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant200.Designer.cs">
+      <DependentUpon>FrmMant200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant210.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant210.Designer.cs">
+      <DependentUpon>FrmMant210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant210_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant210_1.Designer.cs">
+      <DependentUpon>FrmMant210_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant301.Designer.cs">
+      <DependentUpon>FrmMant301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant302.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant302.Designer.cs">
+      <DependentUpon>FrmMant302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant311.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant311.Designer.cs">
+      <DependentUpon>FrmMant311.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant312.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant312.Designer.cs">
+      <DependentUpon>FrmMant312.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant401.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant401.Designer.cs">
+      <DependentUpon>FrmMant401.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant402.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant402.Designer.cs">
+      <DependentUpon>FrmMant402.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant411.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant411.Designer.cs">
+      <DependentUpon>FrmMant411.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant412.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Man\FrmMant412.Designer.cs">
+      <DependentUpon>FrmMant412.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\pick\PickAdd1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\pick\PickAdd1.Designer.cs">
+      <DependentUpon>PickAdd1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri010.Designer.cs">
+      <DependentUpon>FrmPuri010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri020.Designer.cs">
+      <DependentUpon>FrmPuri020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri030.Designer.cs">
+      <DependentUpon>FrmPuri030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri031.Designer.cs">
+      <DependentUpon>FrmPuri031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri100.Designer.cs">
+      <DependentUpon>FrmPuri100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPuri101.Designer.cs">
+      <DependentUpon>FrmPuri101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr200.Designer.cs">
+      <DependentUpon>FrmPurr200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr300.Designer.cs">
+      <DependentUpon>FrmPurr300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr400.Designer.cs">
+      <DependentUpon>FrmPurr400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr410.Designer.cs">
+      <DependentUpon>FrmPurr410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurr500.Designer.cs">
+      <DependentUpon>FrmPurr500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt200.Designer.cs">
+      <DependentUpon>FrmPurt200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt300.Designer.cs">
+      <DependentUpon>FrmPurt300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt400.Designer.cs">
+      <DependentUpon>FrmPurt400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pur\FrmPurt500.Designer.cs">
+      <DependentUpon>FrmPurt500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpb400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpb400.Designer.cs">
+      <DependentUpon>FrmStpb400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi010.Designer.cs">
+      <DependentUpon>FrmStpi010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi020.Designer.cs">
+      <DependentUpon>FrmStpi020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi030.Designer.cs">
+      <DependentUpon>FrmStpi030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi031.Designer.cs">
+      <DependentUpon>FrmStpi031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi040.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi040.Designer.cs">
+      <DependentUpon>FrmStpi040.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpi100.Designer.cs">
+      <DependentUpon>FrmStpi100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr200.Designer.cs">
+      <DependentUpon>FrmStpr200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr300.Designer.cs">
+      <DependentUpon>FrmStpr300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr400.Designer.cs">
+      <DependentUpon>FrmStpr400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr410.Designer.cs">
+      <DependentUpon>FrmStpr410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr500.Designer.cs">
+      <DependentUpon>FrmStpr500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr501.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpr501.Designer.cs">
+      <DependentUpon>FrmStpr501.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt200.Designer.cs">
+      <DependentUpon>FrmStpt200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt300.Designer.cs">
+      <DependentUpon>FrmStpt300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt400.Designer.cs">
+      <DependentUpon>FrmStpt400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt410.Designer.cs">
+      <DependentUpon>FrmStpt410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stp\FrmStpt500.Designer.cs">
+      <DependentUpon>FrmStpt500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tax\FrmTaxi001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tax\FrmTaxi001.Designer.cs">
+      <DependentUpon>FrmTaxi001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tax\FrmTaxi020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tax\FrmTaxi020.Designer.cs">
+      <DependentUpon>FrmTaxi020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customize\Forms\Inv\FrmXinvt302.resx">
+      <DependentUpon>FrmXinvt302.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customize\Forms\Inv\FrmZinvt001.resx">
+      <DependentUpon>FrmZinvt001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi100.resx">
+      <DependentUpon>FrmAdmi100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi110.resx">
+      <DependentUpon>FrmAdmi110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi120.resx">
+      <DependentUpon>FrmAdmi120.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi600.resx">
+      <DependentUpon>FrmAdmi600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi601.resx">
+      <DependentUpon>FrmAdmi601.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi602.resx">
+      <DependentUpon>FrmAdmi602.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi611.resx">
+      <DependentUpon>FrmAdmi611.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi611s.resx">
+      <DependentUpon>FrmAdmi611s.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi620.resx">
+      <DependentUpon>FrmAdmi620.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi630.resx">
+      <DependentUpon>FrmAdmi630.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi640.resx">
+      <DependentUpon>FrmAdmi640.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi650.resx">
+      <DependentUpon>FrmAdmi650.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmq910.resx">
+      <DependentUpon>FrmAdmq910.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdms801.resx">
+      <DependentUpon>FrmAdms801.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmAdmi610.resx">
+      <DependentUpon>FrmAdmi610.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Adm\FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi001.resx">
+      <DependentUpon>FrmBasi001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi010.resx">
+      <DependentUpon>FrmBasi010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi020.resx">
+      <DependentUpon>FrmBasi020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi030.resx">
+      <DependentUpon>FrmBasi030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi040.resx">
+      <DependentUpon>FrmBasi040.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi050.resx">
+      <DependentUpon>FrmBasi050.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi060.resx">
+      <DependentUpon>FrmBasi060.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi070.resx">
+      <DependentUpon>FrmBasi070.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi080.resx">
+      <DependentUpon>FrmBasi080.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bas\FrmBasi090.resx">
+      <DependentUpon>FrmBasi090.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCarb110.resx">
+      <DependentUpon>FrmCarb110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCarb350.resx">
+      <DependentUpon>FrmCarb350.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCarb351.resx">
+      <DependentUpon>FrmCarb351.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCari010.resx">
+      <DependentUpon>FrmCari010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCari030.resx">
+      <DependentUpon>FrmCari030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCart100.resx">
+      <DependentUpon>FrmCart100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCart110.resx">
+      <DependentUpon>FrmCart110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Car\FrmCart200.resx">
+      <DependentUpon>FrmCart200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Csp\FrmCspb200.resx">
+      <DependentUpon>FrmCspb200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Csp\FrmCspq100.resx">
+      <DependentUpon>FrmCspq100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Csp\FrmCspr110.resx">
+      <DependentUpon>FrmCspr110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProgramList.resx">
+      <DependentUpon>FrmProgramList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlab311.resx">
+      <DependentUpon>FrmGlab311.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlab312.resx">
+      <DependentUpon>FrmGlab312.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlab313.resx">
+      <DependentUpon>FrmGlab313.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlab321.resx">
+      <DependentUpon>FrmGlab321.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlai110.resx">
+      <DependentUpon>FrmGlai110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlaq401.resx">
+      <DependentUpon>FrmGlaq401.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlaq402.resx">
+      <DependentUpon>FrmGlaq402.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlaq403.resx">
+      <DependentUpon>FrmGlaq403.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlar300.resx">
+      <DependentUpon>FrmGlar300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlar301.resx">
+      <DependentUpon>FrmGlar301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlar311.resx">
+      <DependentUpon>FrmGlar311.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlar321.resx">
+      <DependentUpon>FrmGlar321.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlar322.resx">
+      <DependentUpon>FrmGlar322.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlat200.resx">
+      <DependentUpon>FrmGlat200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlat300_1.resx">
+      <DependentUpon>FrmGlat300_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlai010.resx">
+      <DependentUpon>FrmGlai010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlai100.resx">
+      <DependentUpon>FrmGlai100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlaq410.resx">
+      <DependentUpon>FrmGlaq410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gla\FrmGlat300.resx">
+      <DependentUpon>FrmGlat300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvb501.resx">
+      <DependentUpon>FrmInvb501.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvb502.resx">
+      <DependentUpon>FrmInvb502.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvb600.resx">
+      <DependentUpon>FrmInvb600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi010.resx">
+      <DependentUpon>FrmInvi010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi020.resx">
+      <DependentUpon>FrmInvi020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi030.resx">
+      <DependentUpon>FrmInvi030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi100.resx">
+      <DependentUpon>FrmInvi100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi100_1.resx">
+      <DependentUpon>FrmInvi100_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi101.resx">
+      <DependentUpon>FrmInvi101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi102.resx">
+      <DependentUpon>FrmInvi102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi200.resx">
+      <DependentUpon>FrmInvi200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvb500.resx">
+      <DependentUpon>FrmInvb500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvq210.resx">
+      <DependentUpon>FrmInvq210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvq220.resx">
+      <DependentUpon>FrmInvq220.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr101.resx">
+      <DependentUpon>FrmInvr101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr215.resx">
+      <DependentUpon>FrmInvr215.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr301.resx">
+      <DependentUpon>FrmInvr301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr302.resx">
+      <DependentUpon>FrmInvr302.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr330.resx">
+      <DependentUpon>FrmInvr330.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr336.resx">
+      <DependentUpon>FrmInvr336.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr337.resx">
+      <DependentUpon>FrmInvr337.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr401.resx">
+      <DependentUpon>FrmInvr401.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr402.resx">
+      <DependentUpon>FrmInvr402.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr410.resx">
+      <DependentUpon>FrmInvr410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr520.resx">
+      <DependentUpon>FrmInvr520.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr521.resx">
+      <DependentUpon>FrmInvr521.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr522.resx">
+      <DependentUpon>FrmInvr522.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt301.resx">
+      <DependentUpon>FrmInvt301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt302.resx">
+      <DependentUpon>FrmInvt302.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt330.resx">
+      <DependentUpon>FrmInvt330.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt331.resx">
+      <DependentUpon>FrmInvt331.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt332.resx">
+      <DependentUpon>FrmInvt332.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt401.resx">
+      <DependentUpon>FrmInvt401.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt402.resx">
+      <DependentUpon>FrmInvt402.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt520.resx">
+      <DependentUpon>FrmInvt520.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt521.resx">
+      <DependentUpon>FrmInvt521.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvt522.resx">
+      <DependentUpon>FrmInvt522.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmManr210.resx">
+      <DependentUpon>FrmManr210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmManr311.resx">
+      <DependentUpon>FrmManr311.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmManr312.resx">
+      <DependentUpon>FrmManr312.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmManr411.resx">
+      <DependentUpon>FrmManr411.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmMant210.resx">
+      <DependentUpon>FrmMant210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmMant210_1.resx">
+      <DependentUpon>FrmMant210_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmMant311.resx">
+      <DependentUpon>FrmMant311.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmMant312.resx">
+      <DependentUpon>FrmMant312.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmMant411.resx">
+      <DependentUpon>FrmMant411.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Man\FrmMant412.resx">
+      <DependentUpon>FrmMant412.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\pick\PickAdd1.resx">
+      <DependentUpon>PickAdd1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPuri020.resx">
+      <DependentUpon>FrmPuri020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPuri030.resx">
+      <DependentUpon>FrmPuri030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPuri031.resx">
+      <DependentUpon>FrmPuri031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPuri100.resx">
+      <DependentUpon>FrmPuri100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPuri101.resx">
+      <DependentUpon>FrmPuri101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurr200.resx">
+      <DependentUpon>FrmPurr200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurr300.resx">
+      <DependentUpon>FrmPurr300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurr400.resx">
+      <DependentUpon>FrmPurr400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurr410.resx">
+      <DependentUpon>FrmPurr410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurr500.resx">
+      <DependentUpon>FrmPurr500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurt200.resx">
+      <DependentUpon>FrmPurt200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurt300.resx">
+      <DependentUpon>FrmPurt300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurt400.resx">
+      <DependentUpon>FrmPurt400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pur\FrmPurt500.resx">
+      <DependentUpon>FrmPurt500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpb400.resx">
+      <DependentUpon>FrmStpb400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpi010.resx">
+      <DependentUpon>FrmStpi010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpi020.resx">
+      <DependentUpon>FrmStpi020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpi030.resx">
+      <DependentUpon>FrmStpi030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpi031.resx">
+      <DependentUpon>FrmStpi031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpi040.resx">
+      <DependentUpon>FrmStpi040.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpi100.resx">
+      <DependentUpon>FrmStpi100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpr200.resx">
+      <DependentUpon>FrmStpr200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpr300.resx">
+      <DependentUpon>FrmStpr300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpr400.resx">
+      <DependentUpon>FrmStpr400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpr410.resx">
+      <DependentUpon>FrmStpr410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpr500.resx">
+      <DependentUpon>FrmStpr500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpr501.resx">
+      <DependentUpon>FrmStpr501.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpt200.resx">
+      <DependentUpon>FrmStpt200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpt300.resx">
+      <DependentUpon>FrmStpt300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpt400.resx">
+      <DependentUpon>FrmStpt400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpt410.resx">
+      <DependentUpon>FrmStpt410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stp\FrmStpt500.resx">
+      <DependentUpon>FrmStpt500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tax\FrmTaxi001.resx">
+      <DependentUpon>FrmTaxi001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tax\FrmTaxi020.resx">
+      <DependentUpon>FrmTaxi020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Label\barcode.lbx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Label\barcode_money.lbx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Label\barcode_money_used.lbx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Label\barcode_shelfQR.lbx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Label\barcode_shelf.lbx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reports\Csp\Cspr110.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Gla\Glar300.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Gla\Glar301.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Gla\Glar311.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Gla\Glar321.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr101.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr215.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr301.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr302.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr330.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr336.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr337.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr401.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr402.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr410.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr521.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr520.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr522.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Man\Manr210.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Man\Manr311.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Man\Manr312.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Man\Manr411.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Pur\Purr200.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Pur\Purr300.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Pur\Purr400.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Pur\Purr410.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Pur\Purr500.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Stp\Stpr200.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YR.DAL\YR.DAL.csproj">
+      <Project>{eb83a876-53e2-4081-b3ab-c1a241f36e10}</Project>
+      <Name>YR.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.ERP.Base\YR.ERP.Base.csproj">
+      <Project>{3c02fd04-992b-44a9-8dc3-6e152ee4cfa9}</Project>
+      <Name>YR.ERP.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.ERP.BLL\YR.ERP.BLL.csproj">
+      <Project>{63f8bb76-a7eb-48ac-89ff-8d9a2f55494c}</Project>
+      <Name>YR.ERP.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.ERP.DAL\YR.ERP.DAL.csproj">
+      <Project>{0302f072-5b0b-42ef-9217-7bff82bacb8a}</Project>
+      <Name>YR.ERP.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.ERP.Shared\YR.ERP.Shared.csproj">
+      <Project>{646fb278-3db4-46f7-b7c0-9393f561ebb5}</Project>
+      <Name>YR.ERP.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.Util\YR.Util.csproj">
+      <Project>{041e40ef-5df0-43dc-aa16-08af4b56bf6d}</Project>
+      <Name>YR.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Customize\Reports\" />
+    <Folder Include="Reports\Adm\" />
+    <Folder Include="Reports\Bas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Stp\Stpr300.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Stp\Stpr400.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Stp\Stpr410.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Stp\Stpr500.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Stp\Stpr501.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\MainBackGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Localization\zh-CHT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

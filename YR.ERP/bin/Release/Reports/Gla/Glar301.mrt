@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="1">
+      <Master Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Master</Alias>
+        <Columns isList="true" count="36">
+          <value>bek04,System.Decimal</value>
+          <value>gba05,System.String</value>
+          <value>gfa01,System.String</value>
+          <value>gfa01_c,System.String</value>
+          <value>gfa02,System.Nullable`1[System.DateTime]</value>
+          <value>gfa03,System.Decimal</value>
+          <value>gfa03_str,System.String</value>
+          <value>gfa04,System.Decimal</value>
+          <value>gfa04_str,System.String</value>
+          <value>gfa05,System.String</value>
+          <value>gfa06,System.String</value>
+          <value>gfa07,System.String</value>
+          <value>gfa08,System.Decimal</value>
+          <value>gfa09,System.Decimal</value>
+          <value>gfacond,System.Nullable`1[System.DateTime]</value>
+          <value>gfaconf,System.String</value>
+          <value>gfaconu,System.String</value>
+          <value>gfacred,System.Nullable`1[System.DateTime]</value>
+          <value>gfacreu,System.String</value>
+          <value>gfaposd,System.Nullable`1[System.DateTime]</value>
+          <value>gfapost,System.String</value>
+          <value>gfaposu,System.String</value>
+          <value>gfaprno,System.Decimal</value>
+          <value>gfb02,System.Decimal</value>
+          <value>gfb03,System.String</value>
+          <value>gfb03_c,System.String</value>
+          <value>gfb04,System.String</value>
+          <value>gfb05,System.String</value>
+          <value>gfb05_c,System.String</value>
+          <value>gfb06,System.String</value>
+          <value>gfb07,System.Decimal</value>
+          <value>gfb07_str,System.String</value>
+          <value>gfb08,System.String</value>
+          <value>gfb09,System.Decimal</value>
+          <value>gfb10,System.Decimal</value>
+          <value>gfb10_str,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <IsCloud>False</IsCloud>
+        <Name>Master</Name>
+        <NameInSource>ds.Master</NameInSource>
+      </Master>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="8">
+      <value>,ReportId,ReportId,System.String,,False,False</value>
+      <value>,CompNo,CompNo,System.String,,False,False</value>
+      <value>,CompNameA,CompNameA,System.String,,False,False</value>
+      <value>,DeptNo,DeptNo,System.String,,False,False</value>
+      <value>,DeptName,DeptName,System.String,,False,False</value>
+      <value>,UserNo,UserNo,System.String,,False,False</value>
+      <value>,UserName,UserName,System.String,,False,False</value>
+      <value>,PrintConditions,PrintConditions,System.String,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="6">
+        <PageHeaderBand1 Ref="4" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,2.6</ClientRectangle>
+          <Components isList="true" count="20">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>製表日期:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Text2 Ref="6" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,1.4,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>3a4a6d804ce94bf599dfa9541de57b09</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Time}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="7" type="CustomFormat" isKey="true">
+                <StringFormat>yyyy/MM/dd HH:mm</StringFormat>
+              </TextFormat>
+              <Type>SystemVariables</Type>
+            </Text2>
+            <Text5 Ref="8" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,1.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>51c96efe808544f78ae8c587ce736778</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>頁次:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text5>
+            <Text6 Ref="9" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,1.4,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>25f9164011f4492fab4a47e643026fa7</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{PageNumber}/{TotalPageCount}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text6>
+            <Text7 Ref="10" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0.2,11.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{CompNameA}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text7>
+            <Text25 Ref="11" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.8,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{UserName}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text25>
+            <Text26 Ref="12" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,0.8,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>列印人員:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text26>
+            <Text30 Ref="13" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,1,11.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,12</Font>
+              <Guid>896579d07a1245e7ac273eecd919facc</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{ReportName}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>SystemVariables</Type>
+            </Text30>
+            <Text15 Ref="14" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.8,2,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>19d21a2e0c2e423e8215b4168b4f1ce8</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>過帳否</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text15>
+            <Text12 Ref="15" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>c1a567bd99644b5f8b651f7b5ef79124</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>憑證日期</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text12>
+            <Text14 Ref="16" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.8,2,2.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>81859483255c4dcba0d0931fda914594</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>傳票編號</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text14>
+            <Text17 Ref="17" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,2,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>2ea342fb8d7f4003878a9e15c18bc3e4</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>項次</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text17>
+            <Text10 Ref="18" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>0e094fee0612448db1bcaf27ace1acbf</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>輸入日期</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text10>
+            <Text3 Ref="19" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>346a0a9ce7fe41ebbc1c77e4fec4132a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>確認否</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text3>
+            <Text51 Ref="20" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.8,2,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>220470a1991d41528938df3f1b7d45c2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>科目/名稱/摘要</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text51>
+            <Text62 Ref="21" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>b21f8da84c924bb09e2af8d307d6e91f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>部門別</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text62>
+            <Text63 Ref="22" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,2,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>ae73efe5aba44805aab0998b09f0531d</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>借/貸</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text63>
+            <Text65 Ref="23" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>a4170fa0ef404dbc81834bb402ad6451</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>金額</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Bottom</VertAlignment>
+            </Text65>
+            <HorizontalLinePrimitive4 Ref="24" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,1.8,19,0.0254</ClientRectangle>
+              <Color>DimGray</Color>
+              <EndCap Ref="25" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>d60893012b544f8b8dd7dabf81623eae</Guid>
+              <Name>HorizontalLinePrimitive4</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <StartCap Ref="26" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive4>
+            <HorizontalLinePrimitive5 Ref="27" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,2.6,19,0.0254</ClientRectangle>
+              <Color>DimGray</Color>
+              <EndCap Ref="28" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Guid>5a06a0f15c0b49abb992d43d7fb6dd63</Guid>
+              <Name>HorizontalLinePrimitive5</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <StartCap Ref="29" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive5>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="30" type="PageFooterBand" isKey="true">
+          <Border>Top;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,26.5,19,1.2</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text31 Ref="31" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.1,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="3" />
+              <Parent isRef="30" />
+              <Text>{ReportId}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text31>
+            <Text64 Ref="32" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.6,0.1,17.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>11c8ee08f1a14691bbc9f99fadb7419f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="3" />
+              <Parent isRef="30" />
+              <Text>{PrintConditions}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text64>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </PageFooterBand1>
+        <PageFooterBand2 Ref="33" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,24.9,19,0.8</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand2</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </PageFooterBand2>
+        <GroupHeaderBand1 Ref="34" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3.8,19,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{Master.gfa01}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </GroupHeaderBand1>
+        <DataBand1 Ref="35" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,4.6,19,1.4</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text9 Ref="36" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>986eb4787ada4cc896540db03d89a466</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{IIF(Line==1,Master.gfacred,null)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="37" type="DateFormat" isKey="true" />
+              <Type>Expression</Type>
+            </Text9>
+            <Text16 Ref="38" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>2bee9283861346d2b18cb558fdbcd608</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{Master.gfb05}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="39" type="NumberFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <Type>DataColumn</Type>
+            </Text16>
+            <Text11 Ref="40" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,0.2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>d3bc0542a007485f89545581309c04d9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{IIF(Line==1,Master.gfa02,null)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="41" type="DateFormat" isKey="true" />
+              <Type>Expression</Type>
+            </Text11>
+            <Text13 Ref="42" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.8,0.2,2.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e7f0a9fc5b754068af37042e24568bb5</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{IIF(Line==1,Master.gfa01,null)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text13>
+            <Text18 Ref="43" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,0.2,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>25690122fb7d4f8f9bf4becc2ac0e294</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{Master.gfb06}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="44" type="NumberFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <Type>DataColumn</Type>
+            </Text18>
+            <Text19 Ref="45" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8,0.2,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>8deeeb4d687d44a5a631cd69e87ebef9</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{Line}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>SystemVariables</Type>
+            </Text19>
+            <Text20 Ref="46" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,0.2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <Guid>b3bd5598c4544bb18c061c55a92635b1</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{Master.gfb07}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text20>
+            <Text4 Ref="47" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.4,0.2,1.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3d00a235a3e84f75a264fe6ce8e6ef9b</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{IIF(Line==1,Master.gfaconf,null)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+            <Text8 Ref="48" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.8,0.2,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3d4e65292a6148ea908c6afe1e8faef6</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{IIF(Line==1,Master.gfapost,null)}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text8>
+            <Text21 Ref="49" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.8,0.2,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e97596d3ad354a2092d06d1c91fe6c23</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{Master.gfb03}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text21>
+            <Text23 Ref="50" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.8,0.6,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>092199f25f45408381aeb4de9568fba2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{Master.gfb03_c}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text23>
+            <Text24 Ref="51" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.8,1,5.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>0d02986643e74d599574fcc538290a98</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="3" />
+              <Parent isRef="35" />
+              <Text>{Master.gfb04}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </Text24>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Master</DataSourceName>
+          <Filters isList="true" count="0" />
+          <KeepChildTogether>True</KeepChildTogether>
+          <KeepDetails>KeepDetailsTogether</KeepDetails>
+          <Name>DataBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <GroupFooterBand1 Ref="52" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.8,19,0.8</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text45 Ref="53" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,0.2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>f391de656c0649cca6a16265dcde1476</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="3" />
+              <Parent isRef="52" />
+              <Text>借方合計:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text45>
+            <Text46 Ref="54" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,0.2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>c5b08d6b556041cb9325b92466f3e803</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="3" />
+              <Parent isRef="52" />
+              <Text>貸方合計:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text46>
+            <Text48 Ref="55" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;True;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>1404c67d3393490896ea059bb0a6c834</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="3" />
+              <Parent isRef="52" />
+              <Text>{Master.gfa04_str}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="56" type="NumberFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <Type>DataColumn</Type>
+            </Text48>
+            <Text22 Ref="57" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;True;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.2,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>4aad20e143584950b9d503cf144eae85</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="3" />
+              <Parent isRef="52" />
+              <Text>{Master.gfa03_str}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="58" type="NumberFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <Type>DataColumn</Type>
+            </Text22>
+            <HorizontalLinePrimitive1 Ref="59" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>8.8,0,9.2,0.0254</ClientRectangle>
+              <Color>105, 105, 105</Color>
+              <EndCap Ref="60" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="3" />
+              <Parent isRef="52" />
+              <StartCap Ref="61" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </GroupFooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>ed1ce0ec57744af1bc40df09dc56088f</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="62" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="63" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/15/2016 5:30:21 PM</ReportChanged>
+  <ReportCreated>2/5/2015 10:21:21 AM</ReportCreated>
+  <ReportFile>C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP\Reports\Gla\Glar301.mrt</ReportFile>
+  <ReportGuid>de7c1771833b4102aeb184189efe3e9c</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2014.3.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

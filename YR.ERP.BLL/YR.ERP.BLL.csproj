@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63F8BB76-A7EB-48AC-89FF-8D9A2F55494C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YR.ERP.BLL</RootNamespace>
+    <AssemblyName>YR.ERP.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Shared.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v14.2, Version=14.2.20142.2168, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLLMSSQLBase.cs" />
+    <Compile Include="Model\AdvanceQueryInfo.cs" />
+    <Compile Include="Model\BatchInfo.cs" />
+    <Compile Include="Model\BeforeEnterCellInfo.cs" />
+    <Compile Include="Model\ConditionInfo.cs" />
+    <Compile Include="Model\FormBaseInfo.cs" />
+    <Compile Include="Model\ItemCheckInfo.cs" />
+    <Compile Include="Model\MessageInfo.cs" />
+    <Compile Include="Model\QueryInfo.cs" />
+    <Compile Include="Model\ReportInfo.cs" />
+    <Compile Include="Model\TabDetailInfo.cs" />
+    <Compile Include="Model\TabInfo.cs" />
+    <Compile Include="MSSQL\CarBLL.cs" />
+    <Compile Include="MSSQL\Car\Carb110BLL.cs" />
+    <Compile Include="MSSQL\Car\Carb350BLL.cs" />
+    <Compile Include="MSSQL\Car\Carb351BLL.cs" />
+    <Compile Include="MSSQL\CspBLL.cs" />
+    <Compile Include="MSSQL\Csp\Cspb200BLL.cs" />
+    <Compile Include="MSSQL\Gla\Glab311BLL.cs" />
+    <Compile Include="MSSQL\GlaBLL.cs" />
+    <Compile Include="MSSQL\Gla\Glab313BLL.cs" />
+    <Compile Include="MSSQL\Gla\Glab321BLL.cs" />
+    <Compile Include="MSSQL\Gla\Glat200BLL.cs" />
+    <Compile Include="MSSQL\InvBLL.cs" />
+    <Compile Include="MSSQL\ManBLL.cs" />
+    <Compile Include="MSSQL\PurBLL.cs" />
+    <Compile Include="MSSQL\StpBLL.cs" />
+    <Compile Include="MSSQL\BasBLL.cs" />
+    <Compile Include="MSSQL\AdmBLL.cs" />
+    <Compile Include="MSSQL\CommonBLL.cs" />
+    <Compile Include="MSSQL\TaxBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YR.DAL\YR.DAL.csproj">
+      <Project>{eb83a876-53e2-4081-b3ab-c1a241f36e10}</Project>
+      <Name>YR.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.ERP.DAL\YR.ERP.DAL.csproj">
+      <Project>{0302f072-5b0b-42ef-9217-7bff82bacb8a}</Project>
+      <Name>YR.ERP.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.ERP.Shared\YR.ERP.Shared.csproj">
+      <Project>{646fb278-3db4-46f7-b7c0-9393f561ebb5}</Project>
+      <Name>YR.ERP.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.Util\YR.Util.csproj">
+      <Project>{041e40ef-5df0-43dc-aa16-08af4b56bf6d}</Project>
+      <Name>YR.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MySQL\" />
+    <Folder Include="Oracle\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0302F072-5B0B-42EF-9217-7BFF82BACB8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YR.ERP.DAL</RootNamespace>
+    <AssemblyName>YR.ERP.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DALFactory.cs" />
+    <Compile Include="ERP_MSSQLDAL.cs" />
+    <Compile Include="IERP_DAL.cs" />
+    <Compile Include="IERP_PU_DAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YRModel\ada_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\adb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\adc_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\add_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ade_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\adm_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ado_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\adp_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\adq_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\adx_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ady_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ata_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\atb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\atc_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\aza_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\aze_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\azf_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\azp_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\azq_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\baa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bab_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bea_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\beb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bec_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bef_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\beg_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bej_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bek_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bel_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bga_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bgb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\bgc_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\cac_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\cba_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\cea_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ceb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\cee_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\cef_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\cfa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\cfb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gac_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gba_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gbd_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gbh_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gbi_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gbj_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gea_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\geb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gfa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gfb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gfg_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\gfh_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ica_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ica_tb_0606.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ica_tb_0607.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icc_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icm_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icn_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icp_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icp_tb_0606.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icp_tb_0607.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\icx_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ifa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ifb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\iga_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\igb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ila_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ilb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ima_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\imb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ina_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ipa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\ipb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\jja_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mea_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\meb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mfa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mfb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mga_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mgb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mha_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mhb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mia_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\mib_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pba_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pbb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pbc_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pca_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pcb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pcc_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pdd_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pea_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\peb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pfa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pfb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pga_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pgb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\pha_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\phb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\Reports\Csp\Cspr110.cs" />
+    <Compile Include="YRModel\Reports\Gla\Glar300.cs" />
+    <Compile Include="YRModel\Reports\Gla\Glar301.cs" />
+    <Compile Include="YRModel\Reports\Gla\Glar311.cs" />
+    <Compile Include="YRModel\Reports\Gla\Glar321.cs" />
+    <Compile Include="YRModel\Reports\Gla\Glar322.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr101.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr301.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr302.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr330.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr337.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr401.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr215.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="YRModel\Reports\Inv\Invr402.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr336.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr410.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr520.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr521.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr522.cs" />
+    <Compile Include="YRModel\Reports\Man\Manr311.cs" />
+    <Compile Include="YRModel\Reports\Man\Manr210.cs" />
+    <Compile Include="YRModel\Reports\Man\Manr312.cs" />
+    <Compile Include="YRModel\Reports\Man\Manr411.cs" />
+    <Compile Include="YRModel\Reports\Pur\Purr200.cs" />
+    <Compile Include="YRModel\Reports\Pur\Purr300.cs" />
+    <Compile Include="YRModel\Reports\Pur\Purr400.cs" />
+    <Compile Include="YRModel\Reports\Pur\Purr500.cs" />
+    <Compile Include="YRModel\Reports\Pur\Purr410.cs" />
+    <Compile Include="YRModel\Reports\Stp\Stpr200.cs" />
+    <Compile Include="YRModel\Reports\Stp\Stpr300.cs" />
+    <Compile Include="YRModel\Reports\Stp\Stpr400.cs" />
+    <Compile Include="YRModel\Reports\Stp\Stpr410.cs" />
+    <Compile Include="YRModel\Reports\Stp\Stpr500.cs" />
+    <Compile Include="YRModel\Reports\Stp\Stpr501.cs" />
+    <Compile Include="YRModel\saV_tb_desc.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sba_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sbb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sbc_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sbg_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sca_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\scb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sdd_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sea_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\seb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sfa_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sfb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sga_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sgb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\sha_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\shb_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\tba_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\tbe_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\test.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi100.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi100s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi110.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi110s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi120.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi600.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi601.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi601s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi602.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi602s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi610.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi610s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi611.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi611s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi620.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi620s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi630.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi630s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi640.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi640s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi650.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admi650s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_admq910.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi001.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi010.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi020.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi030.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi040.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi040a.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi040b.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi050.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi060.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi070.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi080.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_basi090.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_carb110.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_carb350.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_carb351.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cari010.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cari030.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_carp350.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cart100.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cart100s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cart110.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cart200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cart200s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cspb200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cspq100.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_cspr110.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glab311.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glab312.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glab313.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glab321.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glai010.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glai100.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glai110.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glai110s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq401.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq401s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq402.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq402s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq403.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq403s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq410.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glaq410s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glar300.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glar301.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glar311.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glar321.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glat200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glat200s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glat300.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glat300a.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glat300s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glat300_1.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_glat300_1s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invb500.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invb501.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invb501s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invb502.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invb502s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invb600.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi010.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi020.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi030.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi100.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi100_1.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi101.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi101s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi102.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invq210.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invq210s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invq220.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr101.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr215.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr301.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr302.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr330.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr336.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr337.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr401.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr402.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr410.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr520.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr521.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr522.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt301.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt301s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt302.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt302s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt330.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt330s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt331.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt331s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt332.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt332s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt401.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt401s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt402.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt402s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt520.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt520s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt521.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt521s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt522.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invt522s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_manr210.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_manr311.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_manr312.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_manr411.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant210.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant210s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant210_1.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant311.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant311s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant312.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant312s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant411.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant411s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant412.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_mant412s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_pick_ica1.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri020.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri030.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri030s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri031.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri031s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri100.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri100s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_puri101.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purr200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purr300.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purr400.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purr410.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purr500.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt200s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt300.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt300s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt400.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt400s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt500.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_purt500s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpb400.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi010.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi020.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi030.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi030s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi031.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi031s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi040.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi100.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpi100s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpr200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpr300.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpr400.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpr410.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpr500.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpr501.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt200.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt200s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt300.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt300s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt400.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt400s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt410.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt410s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt500.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_stpt500s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_taxi001.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_taxi020.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_taxi020s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_test.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_xinvt302.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_xinvt302s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_zinvt001.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_zinvt001s.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\YRDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YRDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\YRDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\YRDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YRDB.edmx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="YRModel\GetSummery.ttinclude" />
+    <EntityDeploy Include="YRModel\YRDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YRDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="YRModel\YRDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YRDB.edmx</DependentUpon>
+      <LastGenOutput>YRDB.Context.cs</LastGenOutput>
+    </None>
+    <None Include="YRModel\YRDB.edmx.diagram">
+      <DependentUpon>YRDB.edmx</DependentUpon>
+    </None>
+    <None Include="YRModel\YRDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YRDB.edmx</DependentUpon>
+      <LastGenOutput>YRDB.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YR.DAL\YR.DAL.csproj">
+      <Project>{eb83a876-53e2-4081-b3ab-c1a241f36e10}</Project>
+      <Name>YR.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YR.ERP.Shared\YR.ERP.Shared.csproj">
+      <Project>{646fb278-3db4-46f7-b7c0-9393f561ebb5}</Project>
+      <Name>YR.ERP.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\bin\Release\YR.DAL.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\bin\Release\YR.DAL.pdb
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Release\YR.DAL.Properties.Resources.resources
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Release\YR.DAL.csproj.GenerateResource.Cache
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Release\YR.DAL.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Release\YR.DAL.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Release\YR.DAL.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Release\YR.DAL.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Release\YR.DAL.Properties.Resources.resources
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Release\YR.DAL.csproj.GenerateResource.Cache
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Release\YR.DAL.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Release\YR.DAL.pdb

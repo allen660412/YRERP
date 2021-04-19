@@ -1,0 +1,30 @@
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\bin\Debug\YR.DAL.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\bin\Debug\YR.DAL.pdb
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Debug\YR.DAL.Properties.Resources.resources
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Debug\YR.DAL.csproj.GenerateResource.Cache
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Debug\YR.DAL.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.DAL\obj\Debug\YR.DAL.pdb
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.DAL\bin\Debug\YR.DAL.dll
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.DAL\bin\Debug\YR.DAL.pdb
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.DAL\obj\Debug\YR.DAL.Properties.Resources.resources
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.DAL\obj\Debug\YR.DAL.csproj.GenerateResource.Cache
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.DAL\obj\Debug\YR.DAL.dll
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.DAL\obj\Debug\YR.DAL.pdb
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Debug\YR.DAL.dll
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Debug\YR.DAL.pdb
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.Properties.Resources.resources
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.csproj.GenerateResource.Cache
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.dll
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Debug\YR.DAL.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Debug\YR.DAL.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.Properties.Resources.resources
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.csproj.GenerateResource.Cache
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Debug\YR.DAL.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\bin\Debug\YR.DAL.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.Properties.Resources.resources
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.csproj.GenerateResource.Cache
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.pdb

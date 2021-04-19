@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="1">
+      <Master Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Master</Alias>
+        <Columns isList="true" count="90">
+          <value>ica01,System.String</value>
+          <value>ica02,System.String</value>
+          <value>ica03,System.String</value>
+          <value>ica04,System.String</value>
+          <value>ica05,System.String</value>
+          <value>ica06,System.String</value>
+          <value>ica07,System.String</value>
+          <value>ica08,System.String</value>
+          <value>ica09,System.String</value>
+          <value>ica10,System.Decimal</value>
+          <value>ica11,System.Decimal</value>
+          <value>ica12,System.Decimal</value>
+          <value>ica13,System.Decimal</value>
+          <value>ica14,System.Decimal</value>
+          <value>ica15,System.Decimal</value>
+          <value>ica16,System.Decimal</value>
+          <value>ica17,System.String</value>
+          <value>ica18,System.Decimal</value>
+          <value>ica19,System.Decimal</value>
+          <value>ica20,System.Nullable`1[System.DateTime]</value>
+          <value>ica21,System.String</value>
+          <value>ica22,System.String</value>
+          <value>ica23,System.String</value>
+          <value>ica24,System.Nullable`1[System.Decimal]</value>
+          <value>ica25,System.Nullable`1[System.DateTime]</value>
+          <value>ica26,System.Decimal</value>
+          <value>ica27,System.String</value>
+          <value>ica28,System.String</value>
+          <value>ica29,System.String</value>
+          <value>ica30,System.String</value>
+          <value>ica31,System.String</value>
+          <value>ica32,System.String</value>
+          <value>ica33,System.String</value>
+          <value>ica34,System.String</value>
+          <value>ica35,System.String</value>
+          <value>ica36,System.String</value>
+          <value>ica37,System.String</value>
+          <value>ica38,System.String</value>
+          <value>ica39,System.String</value>
+          <value>ica40,System.String</value>
+          <value>ica41,System.String</value>
+          <value>ica42,System.String</value>
+          <value>ica43,System.String</value>
+          <value>ica44,System.String</value>
+          <value>ica45,System.String</value>
+          <value>ica46,System.String</value>
+          <value>ica47,System.String</value>
+          <value>ica48,System.String</value>
+          <value>ica49,System.String</value>
+          <value>ica50,System.String</value>
+          <value>ica51,System.String</value>
+          <value>ica52,System.String</value>
+          <value>ica53,System.String</value>
+          <value>ica54,System.String</value>
+          <value>ica55,System.String</value>
+          <value>ica56,System.String</value>
+          <value>ica57,System.String</value>
+          <value>ica58,System.String</value>
+          <value>ica59,System.String</value>
+          <value>ica60,System.String</value>
+          <value>ica61,System.String</value>
+          <value>ica62,System.String</value>
+          <value>ica63,System.String</value>
+          <value>ica64,System.String</value>
+          <value>ica65,System.String</value>
+          <value>ica66,System.String</value>
+          <value>ica67,System.String</value>
+          <value>ica68,System.String</value>
+          <value>ica69,System.String</value>
+          <value>ica70,System.String</value>
+          <value>ica71,System.String</value>
+          <value>ica72,System.String</value>
+          <value>ica73,System.String</value>
+          <value>ica74,System.String</value>
+          <value>ica75,System.String</value>
+          <value>ica76,System.String</value>
+          <value>ica77,System.String</value>
+          <value>ica78,System.String</value>
+          <value>ica79,System.String</value>
+          <value>ica80,System.String</value>
+          <value>icaconf,System.String</value>
+          <value>icacred,System.Nullable`1[System.DateTime]</value>
+          <value>icacreg,System.String</value>
+          <value>icacreu,System.String</value>
+          <value>icamodd,System.Nullable`1[System.DateTime]</value>
+          <value>icamodg,System.String</value>
+          <value>icamodu,System.String</value>
+          <value>icasecg,System.String</value>
+          <value>icasecu,System.String</value>
+          <value>icavali,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Master</Name>
+        <NameInSource>ds.Master</NameInSource>
+      </Master>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="9">
+      <value>,ReportId,ReportId,,System.String,,False,False,False,False</value>
+      <value>,CompNo,CompNo,,System.String,,False,False,False,False</value>
+      <value>,CompNameA,CompNameA,,System.String,,False,False,False,False</value>
+      <value>,DeptNo,DeptNo,,System.String,,False,False,False,False</value>
+      <value>,DeptName,DeptName,,System.String,,False,False,False,False</value>
+      <value>,UserNo,UserNo,,System.String,,False,False,False,False</value>
+      <value>,UserName,UserName,,System.String,,False,False,False,False</value>
+      <value>,PrintConditions,PrintConditions,,System.String,,False,False,False,False</value>
+      <value>,show_warehouse_yn,show_warehouse_yn,,System.String,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <DataBand1 Ref="4" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,19,3.4</ClientRectangle>
+          <Columns>3</Columns>
+          <Components isList="true" count="2">
+            <Text3 Ref="5" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,2,6,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9.75,Regular,Point,False,136</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{Master.ica02}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text3>
+            <BarCode6 Ref="6" type="Stimulsoft.Report.BarCodes.StiBarCode" isKey="true">
+              <BackColor>Transparent</BackColor>
+              <BarCodeType Ref="7" type="Stimulsoft.Report.BarCodes.StiCode128aBarCodeType" isKey="true" />
+              <Border>None;[193:152:89];1;Solid;False;4;Black</Border>
+              <ClientRectangle>0.4,0,5.6,2</ClientRectangle>
+              <Code>{Master.ica01}</Code>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold,Pixel</Font>
+              <ForeColor>Black</ForeColor>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e99fd7761f9f41409e437477952f8a61</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Name>BarCode6</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+            </BarCode6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Master</DataSourceName>
+          <Filters isList="true" count="0" />
+          <KeepChildTogether>True</KeepChildTogether>
+          <KeepDetails>KeepDetailsTogether</KeepDetails>
+          <Name>DataBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>ed1ce0ec57744af1bc40df09dc56088f</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="8" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="9" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>5/18/2020 12:46:02 AM</ReportChanged>
+  <ReportCreated>2/5/2015 10:21:21 AM</ReportCreated>
+  <ReportFile />
+  <ReportGuid>ddceedaa1a8f4d11ab5468ffb6f116c8</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2017.1.11.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

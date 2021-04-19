@@ -1,0 +1,559 @@
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\action_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\del_detail_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\end_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\first_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\folder_16.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\folder_active_16.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\form_16.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\form_active_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\form_active_16.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\insert_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\cancel_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\copy_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\del_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\excel_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\exit_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\give_up_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\insert_detail_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\menu_active_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\next_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\ok_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\pdf_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\pick_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\previous_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\query_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\report_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\save_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\update_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\wizard_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\word_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Aero.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Chameleon.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Claymation.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\GrapeTomato.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\IG.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\LucidDream.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Metro.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\ModClay.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Nautilus.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\NoirModerne.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Black.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Blue.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Silver.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Black.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Blue.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Silver.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Dark Gray.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Light Gray.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - White.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Pear.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\RedPlanet.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\RubberBlack.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\SampleBrowser.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Trendy.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2008.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2010.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows7.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Blue.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Green.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Pink.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Yellow.isl
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.pdb
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\YR.DAL.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\YR.Util.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\YR.DAL.pdb
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\YR.Util.pdb
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csprojResolveAssemblyReference.cache
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.Properties.Resources.resources
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csproj.GenerateResource.Cache
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.dll
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.pdb
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\cancle_confirm_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\confirm_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\invalid_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\doc_closed_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\doc_confirm_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\doc_invalid_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\doc_open_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\module_adm_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\module_bas_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\module_inv_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\module_pur_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\module_stp_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\home_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\form_navgiator_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\report_chart_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\report_list_32.png
+C:\Users\allen\Documents\Visual Studio 2013\Projects\yrERP_20140919\YR.ERP.Shared\bin\Debug\Pictures\report_receipt_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\action_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancle_confirm_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\confirm_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_detail_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_closed_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_confirm_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_invalid_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_open_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\end_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\first_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_16.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_active_16.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_16.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_16.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_navgiator_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\home_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancel_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\copy_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\excel_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\exit_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\give_up_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_detail_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\invalid_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\menu_active_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\next_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\ok_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pdf_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pick_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\previous_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\query_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_chart_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_list_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_receipt_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\save_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\update_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\wizard_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\word_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Aero.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Chameleon.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Claymation.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\GrapeTomato.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\IG.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\LucidDream.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Metro.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\ModClay.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Nautilus.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\NoirModerne.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Black.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Blue.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Silver.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Black.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Blue.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Silver.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Dark Gray.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Light Gray.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - White.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Pear.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RedPlanet.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RubberBlack.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\SampleBrowser.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Trendy.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2008.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2010.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows7.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Blue.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Green.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Pink.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Yellow.isl
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_adm_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_bas_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_inv_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_pur_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_stp_32.png
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.dll
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.pdb
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.dll
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.dll
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.pdb
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.pdb
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csprojResolveAssemblyReference.cache
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.Properties.Resources.resources
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csproj.GenerateResource.Cache
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.dll
+D:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.pdb
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\action_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancle_confirm_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\confirm_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_detail_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_closed_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_confirm_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_invalid_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_open_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\end_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\first_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_16.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_active_16.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_16.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_16.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_navgiator_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\home_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancel_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\copy_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\excel_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\exit_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\give_up_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_detail_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\invalid_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\menu_active_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\next_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\ok_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pdf_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pick_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\previous_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\query_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_chart_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_list_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_receipt_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\save_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\update_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\wizard_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\word_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Aero.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Chameleon.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Claymation.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\GrapeTomato.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\IG.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\LucidDream.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Metro.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\ModClay.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Nautilus.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\NoirModerne.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Black.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Blue.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Silver.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Black.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Blue.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Silver.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Dark Gray.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Light Gray.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - White.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Pear.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RedPlanet.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RubberBlack.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\SampleBrowser.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Trendy.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2008.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2010.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows7.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Blue.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Green.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Pink.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Yellow.isl
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_adm_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_bas_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_inv_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_pur_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_stp_32.png
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.dll
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.pdb
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.dll
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.dll
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.pdb
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.pdb
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csprojResolveAssemblyReference.cache
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.Properties.Resources.resources
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csproj.GenerateResource.Cache
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.dll
+E:\公司相關(言瑞)\erp相關\新ERP專案\02.程式\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.pdb
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_list_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\action_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancle_confirm_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\confirm_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_detail_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_closed_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_confirm_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_invalid_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_open_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\end_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\first_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_16.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_active_16.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_16.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_16.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_navgiator_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\home_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancel_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\copy_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\excel_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\exit_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\give_up_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_detail_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\invalid_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\menu_active_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\next_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\ok_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pdf_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pick_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\previous_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\query_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_chart_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_receipt_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\save_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\update_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\wizard_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\word_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Aero.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Chameleon.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Claymation.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\GrapeTomato.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\IG.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\LucidDream.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Metro.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\ModClay.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Nautilus.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\NoirModerne.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Black.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Blue.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Silver.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Black.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Blue.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Silver.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Dark Gray.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Light Gray.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - White.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Pear.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RedPlanet.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RubberBlack.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\SampleBrowser.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Trendy.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2008.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2010.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows7.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Blue.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Green.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Pink.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Yellow.isl
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_adm_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_bas_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_inv_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_pur_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_stp_32.png
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.dll
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.pdb
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.dll
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.dll
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.pdb
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.pdb
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csprojResolveAssemblyReference.cache
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.Properties.Resources.resources
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csproj.GenerateResource.Cache
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.dll
+C:\Users\翰林\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\action_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\batch_128.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancel_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\confirm_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_detail_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\documnet_128.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_closed_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_confirm_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_invalid_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_open_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\end_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\eraser_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\first_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_16.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_active_16.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_16.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_16.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_navgiator_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\home_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancel_confirm_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\copy_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\excel_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\exit_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\give_up_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_detail_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\invalid_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\magnifier_128.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\menu_128.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\menu_active_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_adm_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_bas_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_gla_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_inv_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_man_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_pur_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_stp_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\next_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\ok_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\parameter_128.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pdf_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pick_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\previous_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\query_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\query_advance_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\receipt_128.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_128.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_chart_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_list_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_receipt_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\save_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\select_all_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\select_none_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\update_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\wizard_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\word_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Aero.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Chameleon.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Claymation.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\GrapeTomato.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\IG.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\LucidDream.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Metro.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\ModClay.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Nautilus.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\NoirModerne.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Black.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Blue.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Silver.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Black.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Blue.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Silver.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Dark Gray.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Light Gray.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - White.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Pear.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RedPlanet.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RubberBlack.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\SampleBrowser.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Trendy.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2008.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2010.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows7.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Blue.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Green.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Pink.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Yellow.isl
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csprojResolveAssemblyReference.cache
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.Properties.Resources.resources
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csproj.GenerateResource.Cache
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.dll
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.pdb
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_car_32.png
+C:\Users\Allen\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_tax_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\action_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\batch_128.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancel_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\confirm_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_detail_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_closed_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_confirm_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_invalid_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\doc_open_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\end_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\eraser_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\first_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_16.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\folder_active_16.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_16.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_active_16.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\form_navgiator_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\home_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\cancel_confirm_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\copy_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\del_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\excel_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\exit_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\give_up_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\insert_detail_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\invalid_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\menu_128.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\menu_active_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_adm_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_bas_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_car_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_gla_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_inv_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_man_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_pur_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_stp_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\module_tax_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\next_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\ok_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\parameter_128.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pdf_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\pick_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\previous_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\query_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\query_advance_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_chart_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_list_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_receipt_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\save_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\select_all_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\select_none_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\update_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\wizard_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\word_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Aero.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Chameleon.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Claymation.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\GrapeTomato.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\IG.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\LucidDream.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Metro.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\ModClay.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Nautilus.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\NoirModerne.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Black.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Blue.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2007Silver.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Black.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Blue.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2010Silver.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Dark Gray.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - Light Gray.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Office2013 - White.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Pear.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RedPlanet.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\RubberBlack.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\SampleBrowser.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Trendy.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2008.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\VS2010.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows7.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Blue.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Green.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Pink.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\StyleLibrary\Windows8-DarkGray-Yellow.isl
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\documnet_128.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\magnifier_128.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\receipt_128.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\report_128.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.ERP.Shared.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.DAL.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\YR.Util.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csprojResolveAssemblyReference.cache
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.Properties.Resources.resources
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.csproj.GenerateResource.Cache
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\obj\Debug\YR.ERP.Shared.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.ERP.Shared\bin\Debug\Pictures\old_goods.png
