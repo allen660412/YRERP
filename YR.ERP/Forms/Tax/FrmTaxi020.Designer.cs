@@ -34,6 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ute_tbe03 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ute_tbe11 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.ute_tbe11_c = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Detail)).BeginInit();
             this.uTab_Detail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
@@ -47,6 +50,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_tbe01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_tbe02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_tbe03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_tbe11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_tbe11_c)).BeginInit();
             this.SuspendLayout();
             // 
             // uTab_Detail
@@ -55,9 +60,25 @@
             this.uTab_Detail.Size = new System.Drawing.Size(914, 291);
             this.uTab_Detail.TabPageMargins.ForceSerialization = true;
             // 
+            // ultraTabPageControl8
+            // 
+            this.ultraTabPageControl8.Size = new System.Drawing.Size(910, 265);
+            // 
+            // ultraTabPageControl9
+            // 
+            this.ultraTabPageControl9.Size = new System.Drawing.Size(910, 265);
+            // 
+            // ultraTabPageControl10
+            // 
+            this.ultraTabPageControl10.Size = new System.Drawing.Size(910, 265);
+            // 
             // ultraTabPageControl6
             // 
             this.ultraTabPageControl6.Size = new System.Drawing.Size(910, 265);
+            // 
+            // ultraTabPageControl7
+            // 
+            this.ultraTabPageControl7.Size = new System.Drawing.Size(910, 265);
             // 
             // ultraSplitter1
             // 
@@ -73,8 +94,27 @@
             this.uTab_Master.Size = new System.Drawing.Size(914, 160);
             this.uTab_Master.TabPageMargins.ForceSerialization = true;
             // 
+            // ultraTabPageControl2
+            // 
+            this.ultraTabPageControl2.Size = new System.Drawing.Size(910, 130);
+            // 
+            // ultraTabPageControl3
+            // 
+            this.ultraTabPageControl3.Size = new System.Drawing.Size(910, 130);
+            // 
+            // ultraTabPageControl4
+            // 
+            this.ultraTabPageControl4.Size = new System.Drawing.Size(910, 130);
+            // 
+            // ultraTabPageControl5
+            // 
+            this.ultraTabPageControl5.Size = new System.Drawing.Size(910, 130);
+            // 
             // ultraTabPageControl1
             // 
+            this.ultraTabPageControl1.Controls.Add(this.ute_tbe11_c);
+            this.ultraTabPageControl1.Controls.Add(this.ute_tbe11);
+            this.ultraTabPageControl1.Controls.Add(this.label4);
             this.ultraTabPageControl1.Controls.Add(this.ute_tbe03);
             this.ultraTabPageControl1.Controls.Add(this.label3);
             this.ultraTabPageControl1.Controls.Add(this.ute_tbe02);
@@ -90,6 +130,9 @@
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_tbe02, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label3, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_tbe03, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.label4, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_tbe11, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_tbe11_c, 0);
             // 
             // UtbmMain
             // 
@@ -109,10 +152,10 @@
             // 
             this.ute_tbe01.AccessibleDescription = "R";
             this.ute_tbe01.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_tbe01.Location = new System.Drawing.Point(137, 21);
+            this.ute_tbe01.Location = new System.Drawing.Point(137, 17);
             this.ute_tbe01.Name = "ute_tbe01";
             this.ute_tbe01.Size = new System.Drawing.Size(142, 22);
-            this.ute_tbe01.TabIndex = 67;
+            this.ute_tbe01.TabIndex = 0;
             this.ute_tbe01.Tag = "tbe01";
             // 
             // label1
@@ -120,7 +163,7 @@
             this.label1.AccessibleDescription = "R";
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label1.Location = new System.Drawing.Point(29, 25);
+            this.label1.Location = new System.Drawing.Point(29, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 14);
             this.label1.TabIndex = 68;
@@ -134,7 +177,7 @@
             this.ute_tbe02.Location = new System.Drawing.Point(137, 65);
             this.ute_tbe02.Name = "ute_tbe02";
             this.ute_tbe02.Size = new System.Drawing.Size(142, 22);
-            this.ute_tbe02.TabIndex = 69;
+            this.ute_tbe02.TabIndex = 2;
             this.ute_tbe02.Tag = "tbe02";
             // 
             // label2
@@ -156,7 +199,7 @@
             this.ute_tbe03.Location = new System.Drawing.Point(426, 65);
             this.ute_tbe03.Name = "ute_tbe03";
             this.ute_tbe03.Size = new System.Drawing.Size(142, 22);
-            this.ute_tbe03.TabIndex = 71;
+            this.ute_tbe03.TabIndex = 3;
             this.ute_tbe03.Tag = "tbe03";
             // 
             // label3
@@ -170,6 +213,38 @@
             this.label3.TabIndex = 72;
             this.label3.Tag = "tbe03";
             this.label3.Text = "tbe03";
+            // 
+            // label4
+            // 
+            this.label4.AccessibleDescription = "R";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label4.Location = new System.Drawing.Point(318, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 14);
+            this.label4.TabIndex = 73;
+            this.label4.Tag = "tbe11";
+            this.label4.Text = "tbe11";
+            // 
+            // ute_tbe11
+            // 
+            this.ute_tbe11.AccessibleDescription = "R";
+            this.ute_tbe11.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_tbe11.Location = new System.Drawing.Point(426, 17);
+            this.ute_tbe11.Name = "ute_tbe11";
+            this.ute_tbe11.Size = new System.Drawing.Size(77, 22);
+            this.ute_tbe11.TabIndex = 1;
+            this.ute_tbe11.Tag = "tbe11";
+            // 
+            // ute_tbe11_c
+            // 
+            this.ute_tbe11_c.AccessibleDescription = "";
+            this.ute_tbe11_c.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_tbe11_c.Location = new System.Drawing.Point(509, 17);
+            this.ute_tbe11_c.Name = "ute_tbe11_c";
+            this.ute_tbe11_c.Size = new System.Drawing.Size(234, 22);
+            this.ute_tbe11_c.TabIndex = 75;
+            this.ute_tbe11_c.Tag = "tbe11_c";
             // 
             // FrmTaxi020
             // 
@@ -192,6 +267,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_tbe01)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_tbe02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_tbe03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_tbe11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_tbe11_c)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +281,8 @@
         private System.Windows.Forms.Label label3;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_tbe02;
         private System.Windows.Forms.Label label2;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_tbe11_c;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_tbe11;
+        private System.Windows.Forms.Label label4;
     }
 }

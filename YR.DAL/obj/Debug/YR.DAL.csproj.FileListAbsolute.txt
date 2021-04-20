@@ -28,3 +28,9 @@ C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\De
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.csproj.GenerateResource.Cache
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.dll
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\yrERP\YR.DAL\obj\Debug\YR.DAL.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.DAL\bin\Debug\YR.DAL.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.DAL\bin\Debug\YR.DAL.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.DAL\obj\Debug\YR.DAL.Properties.Resources.resources
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.DAL\obj\Debug\YR.DAL.csproj.GenerateResource.Cache
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.DAL\obj\Debug\YR.DAL.dll
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.DAL\obj\Debug\YR.DAL.pdb

@@ -3719,8 +3719,8 @@
     <Property Name="sga23" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
     <Property Name="sga24" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="sga25" Type="DateTime" Precision="7" />
-    <Property Name="sga26" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="sga27" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sga27" Type="DateTime" Precision="7" />
     <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -3960,7 +3960,7 @@
     <Property Name="tbe08" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="tbe09" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="tbe10" Type="DateTime" Precision="7" />
-    <Property Name="tbe11" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tbe11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="tbe12" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="tbe13" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="tbe14" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -6421,7 +6421,7 @@
     <Property Name="ica25" Type="DateTime" Precision="7" />
     <Property Name="ica26" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
     <Property Name="ica27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="ica28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -8131,7 +8131,7 @@
     <Property Name="ica25" Type="DateTime" Precision="7" />
     <Property Name="ica26" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
     <Property Name="ica27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="ica28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -9534,8 +9534,8 @@
     <Property Name="sga23" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
     <Property Name="sga24" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="sga25" Type="DateTime" Precision="7" />
-    <Property Name="sga26" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="sga27" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sga27" Type="DateTime" Precision="7" />
     <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -9692,8 +9692,8 @@
     <Property Name="sga23" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
     <Property Name="sga24" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="sga25" Type="DateTime" Precision="7" />
-    <Property Name="sga26" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="sga27" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sga27" Type="DateTime" Precision="7" />
     <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -9965,6 +9965,8 @@
     <Property Name="tbe01" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
     <Property Name="tbe02" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
     <Property Name="tbe03" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
+    <Property Name="tbe11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tbe11_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="vw_taxi020s">
     <Key>
@@ -9985,7 +9987,7 @@
     <Property Name="tbe08" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="tbe09" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="tbe10" Type="DateTime" Precision="7" />
-    <Property Name="tbe11" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tbe11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="tbe12" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="tbe13" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="tbe14" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -10001,7 +10003,7 @@
     <Property Name="tbemodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="tbemodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="tbemodd" Type="DateTime" Precision="7" />
-    <Property Name="total_cnts" Type="Decimal" Precision="23" Scale="0" />
+    <Property Name="total_cnts" Type="Decimal" Precision="24" Scale="0" />
   </EntityType>
   <EntityType Name="vw_test">
     <Key>

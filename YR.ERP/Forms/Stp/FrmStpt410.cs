@@ -90,6 +90,7 @@ namespace YR.ERP.Forms.Stp
         StpBLL BoStp = null;
         InvBLL BoInv = null;
         AdmBLL BoAdm = null;
+        TaxBLL BoTax = null;
 
         bek_tb BekTbModel = null;      //幣別檔,在display mode載入
         #endregion Property
@@ -448,6 +449,7 @@ namespace YR.ERP.Forms.Stp
             BoBas = new BasBLL(BoMaster.OfGetConntion());
             BoInv = new InvBLL(BoMaster.OfGetConntion());
             BoAdm = new AdmBLL(BoMaster.OfGetConntion());
+            BoTax = new TaxBLL(BoMaster.OfGetConntion());
             return;
         }
         #endregion
@@ -1193,6 +1195,24 @@ namespace YR.ERP.Forms.Stp
         #endregion
 
         /******************* 其它 Control 事件 ***********************/
+
+        #region WfBindMaster 設定數據源與組件的 binding
+        protected override void WfBindMaster()
+        {
+            List<KeyValuePair<string, string>> sourceList;
+            try
+            {
+                //發票聯數
+                sourceList = BoStp.OfGetInvoWayKVPList();
+                WfSetUcomboxDataSource(ucb_sga09, sourceList);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
 
         #region WfBindMasterByTag() : 將 mater tab 所有的頁面的控制項，以 control.tag 屬性與 bindingmaster 做 binding
         //只做一次,因此順便處理元件不可編輯,及各種控制項的appearance
@@ -3214,6 +3234,7 @@ namespace YR.ERP.Forms.Stp
                 BoBas.TRAN = BoMaster.TRAN;
                 BoInv.TRAN = BoMaster.TRAN;
                 BoAdm.TRAN = BoMaster.TRAN;
+                BoTax.TRAN = BoMaster.TRAN;
             }
             catch (Exception ex)
             {
@@ -3345,6 +3366,7 @@ namespace YR.ERP.Forms.Stp
                 pDr["sga21"] = 1;       //匯率
                 pDr["sga23"] = 0;       //出貨成本
                 pDr["sga25"] = Today;   //訂單日期
+                pDr["sga27"] = Today;   //發票日期
                 pDr["sgaconf"] = "N";
                 pDr["sgastat"] = "1";
                 pDr["sgacomp"] = LoginInfo.CompNo;
@@ -3591,6 +3613,10 @@ namespace YR.ERP.Forms.Stp
                             uGridMaster.ActiveRow.Refresh();
                             break;
 
+                        case "sga26"://發票別
+ 
+                            e.Row["sga24"] = "";
+                            break;
                     }
                 }
                 #endregion
@@ -3781,6 +3807,7 @@ namespace YR.ERP.Forms.Stp
         {
             sga_tb sgaModel;
             sgb_tb sgbModel;
+            Result rtnResult = null;
 
             try
             {
@@ -3807,7 +3834,17 @@ namespace YR.ERP.Forms.Stp
                     }
                 }
 
-
+                //更新發票本
+                if (!GlobalFn.varIsNull(sgaModel.sga24))
+                {
+                    rtnResult = new Result();
+                    rtnResult = BoTax.OfUpdTbe09(sgaModel.sga26, sgaModel.sga09, sgaModel.sga24, Convert.ToDateTime(sgaModel.sga27));
+                    if (rtnResult.Success==false)
+                    {
+                        WfShowErrorMsg(rtnResult.Message);
+                        return false;
+                    }
+                }
 
 
                 return true;
@@ -3961,6 +3998,16 @@ namespace YR.ERP.Forms.Stp
                             }
                             break;
 
+                        case "sga26"://發票別
+                            WfShowPickUtility("p_tbe2", messageModel);
+                            if (messageModel.Result == System.Windows.Forms.DialogResult.OK)
+                            {
+                                if (messageModel.DataRowList.Count > 0)
+                                    pDr[pColName] = GlobalFn.isNullRet(messageModel.DataRowList[0]["tbe04"], "");
+                                else
+                                    pDr[pColName] = "";
+                            }
+                            break;
                     }
                 }
                 #endregion
@@ -5320,6 +5367,7 @@ namespace YR.ERP.Forms.Stp
                     DrMaster["sga03"] = sca03;
                     DrMaster["sga03_c"] = BoStp.OfGetSca03(sca03);
                     sgaModel.sga03 = sca03;
+                    WfSetSga03Relation(sca03);
                     //自動計算成本
                     if (BoStp.OfChkEbusinessPlateForm(sca03) == false)
                     {
@@ -5453,6 +5501,7 @@ namespace YR.ERP.Forms.Stp
         }
         #endregion
 
+        #region 按下列印標籤
         private void btnLabel_Click(object sender, EventArgs e)
         {
             vw_stpt410s detailModel;
@@ -5478,8 +5527,10 @@ namespace YR.ERP.Forms.Stp
 
                 WfShowErrorMsg(ex.Message);
             }
-        }
+        } 
+        #endregion
 
+        #region 雙擊圖片
         private void pbx_icp03_DoubleClick(object sender, EventArgs e)
         {
             if (pbx_icp03.Image != null)
@@ -5487,7 +5538,36 @@ namespace YR.ERP.Forms.Stp
                 Image img = pbx_icp03.Image;
                 Clipboard.SetImage(img);
             }
-        }
+        } 
+        #endregion
+
+        #region 按下取得發票
+        private void button1_Click(object sender, EventArgs e)
+        {
+            vw_stpt410 masterModel;
+            Result rtnResult = null;
+            string invoice = "";
+            if (FormEditMode == YREditType.新增 || FormEditMode == YREditType.修改)
+            {
+                masterModel = DrMaster.ToItem<vw_stpt410>();
+                if (masterModel.sga27==null||GlobalFn.varIsNull(masterModel.sga26)
+                    || GlobalFn.varIsNull(masterModel.sga09)
+                    )
+                {
+                    WfShowErrorMsg("發票日期、發票聯級及發票別不可為空!");
+                    return;
+                }
+
+                rtnResult = BoTax.OfGetInvoice(masterModel.sga26, masterModel.sga09, Convert.ToDateTime(masterModel.sga27), out invoice);
+                if (rtnResult.Success==false)
+                {
+                    WfShowErrorMsg(rtnResult.Message);
+                    return;
+                }
+                DrMaster["sga24"]=invoice;
+            }
+        } 
+        #endregion
 
     }
 }

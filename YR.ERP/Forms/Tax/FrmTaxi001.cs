@@ -142,16 +142,16 @@ namespace YR.ERP.Forms.Tax
                                 return true;
                             }
                             var bebModel = BoBas.OfGetBebModel(e.Value.ToString());
-                            if (bebModel==null)
-                            {
-                                WfShowErrorMsg("查無此部門!");
-                                return false;
-                            }
-                            if (bebModel.bebvali.ToUpper() !="Y")
-                            {
-                                WfShowErrorMsg("該部門已失效!");
-                                return false;
-                            }
+                            //if (bebModel==null)
+                            //{
+                            //    WfShowErrorMsg("查無此部門!");
+                            //    return false;
+                            //}
+                            //if (bebModel.bebvali.ToUpper() !="Y")
+                            //{
+                            //    WfShowErrorMsg("該部門已失效!");
+                            //    return false;
+                            //}
 
                             if (BoTax.OfChkTbaPKExists(e.Value.ToString())==true)
                             {

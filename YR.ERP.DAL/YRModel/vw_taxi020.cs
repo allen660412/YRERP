@@ -17,5 +17,7 @@ namespace YR.ERP.DAL.YRModel
         public decimal tbe01 { get; set; }
         public decimal tbe02 { get; set; }
         public decimal tbe03 { get; set; }
+        public string tbe11 { get; set; }
+        public string tbe11_c { get; set; }
     }
 }

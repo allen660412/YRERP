@@ -67,6 +67,8 @@
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             this.ultraTabPageControl11 = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
+            this.label38 = new System.Windows.Forms.Label();
+            this.ultraTextEditor1 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.udt_sga25 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.label37 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -156,8 +158,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.ute_sga24 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label36 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.ultraTextEditor1 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Detail)).BeginInit();
             this.uTab_Detail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
@@ -169,6 +169,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).BeginInit();
             this.ultraTabPageControl11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sga25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sga02)).BeginInit();
@@ -220,7 +221,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ucb_sgaconf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor1)).BeginInit();
             this.SuspendLayout();
             // 
             // uTab_Detail
@@ -231,15 +231,15 @@
             // 
             // ultraTabPageControl8
             // 
-            this.ultraTabPageControl8.Size = new System.Drawing.Size(1191, 125);
+            this.ultraTabPageControl8.Size = new System.Drawing.Size(1342, 223);
             // 
             // ultraTabPageControl9
             // 
-            this.ultraTabPageControl9.Size = new System.Drawing.Size(1191, 125);
+            this.ultraTabPageControl9.Size = new System.Drawing.Size(1342, 223);
             // 
             // ultraTabPageControl10
             // 
-            this.ultraTabPageControl10.Size = new System.Drawing.Size(1191, 125);
+            this.ultraTabPageControl10.Size = new System.Drawing.Size(1342, 223);
             // 
             // ultraTabPageControl6
             // 
@@ -247,7 +247,7 @@
             // 
             // ultraTabPageControl7
             // 
-            this.ultraTabPageControl7.Size = new System.Drawing.Size(1191, 125);
+            this.ultraTabPageControl7.Size = new System.Drawing.Size(1342, 223);
             // 
             // ultraSplitter1
             // 
@@ -267,19 +267,19 @@
             // 
             // ultraTabPageControl2
             // 
-            this.ultraTabPageControl2.Size = new System.Drawing.Size(1191, 232);
+            this.ultraTabPageControl2.Size = new System.Drawing.Size(1342, 232);
             // 
             // ultraTabPageControl3
             // 
-            this.ultraTabPageControl3.Size = new System.Drawing.Size(1191, 232);
+            this.ultraTabPageControl3.Size = new System.Drawing.Size(1342, 232);
             // 
             // ultraTabPageControl4
             // 
-            this.ultraTabPageControl4.Size = new System.Drawing.Size(1191, 232);
+            this.ultraTabPageControl4.Size = new System.Drawing.Size(1342, 232);
             // 
             // ultraTabPageControl5
             // 
-            this.ultraTabPageControl5.Size = new System.Drawing.Size(1191, 232);
+            this.ultraTabPageControl5.Size = new System.Drawing.Size(1342, 232);
             // 
             // ultraTabPageControl1
             // 
@@ -428,6 +428,28 @@
             this.ultraTabPageControl11.Location = new System.Drawing.Point(1, 23);
             this.ultraTabPageControl11.Name = "ultraTabPageControl11";
             this.ultraTabPageControl11.Size = new System.Drawing.Size(1342, 117);
+            // 
+            // label38
+            // 
+            this.label38.AccessibleDescription = "";
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label38.Location = new System.Drawing.Point(945, 10);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(35, 14);
+            this.label38.TabIndex = 204;
+            this.label38.Tag = "jja24";
+            this.label38.Text = "jja24";
+            // 
+            // ultraTextEditor1
+            // 
+            this.ultraTextEditor1.AccessibleDescription = "";
+            this.ultraTextEditor1.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ultraTextEditor1.Location = new System.Drawing.Point(1038, 6);
+            this.ultraTextEditor1.Name = "ultraTextEditor1";
+            this.ultraTextEditor1.Size = new System.Drawing.Size(142, 22);
+            this.ultraTextEditor1.TabIndex = 203;
+            this.ultraTextEditor1.Tag = "jja24";
             // 
             // udt_sga25
             // 
@@ -675,7 +697,7 @@
             this.ultraTabPageControl12.Controls.Add(this.label34);
             this.ultraTabPageControl12.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl12.Name = "ultraTabPageControl12";
-            this.ultraTabPageControl12.Size = new System.Drawing.Size(1191, 117);
+            this.ultraTabPageControl12.Size = new System.Drawing.Size(1342, 117);
             // 
             // udt_sgamodd
             // 
@@ -1568,28 +1590,6 @@
             this.label36.Tag = "sga24";
             this.label36.Text = "sga24";
             // 
-            // label38
-            // 
-            this.label38.AccessibleDescription = "";
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label38.Location = new System.Drawing.Point(945, 10);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(35, 14);
-            this.label38.TabIndex = 204;
-            this.label38.Tag = "jja24";
-            this.label38.Text = "jja24";
-            // 
-            // ultraTextEditor1
-            // 
-            this.ultraTextEditor1.AccessibleDescription = "";
-            this.ultraTextEditor1.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ultraTextEditor1.Location = new System.Drawing.Point(1038, 6);
-            this.ultraTextEditor1.Name = "ultraTextEditor1";
-            this.ultraTextEditor1.Size = new System.Drawing.Size(142, 22);
-            this.ultraTextEditor1.TabIndex = 203;
-            this.ultraTextEditor1.Tag = "jja24";
-            // 
             // FrmStpt400
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1616,6 +1616,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).EndInit();
             this.ultraTabPageControl11.ResumeLayout(false);
             this.ultraTabPageControl11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sga25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sga02)).EndInit();
@@ -1668,7 +1669,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ucb_sgaconf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraTextEditor1)).EndInit();
             this.ResumeLayout(false);
 
         }

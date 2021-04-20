@@ -42,7 +42,7 @@ namespace YR.ERP.DAL.YRModel
         public string sga24 { get; set; }
         public Nullable<System.DateTime> sga25 { get; set; }
         public string sga26 { get; set; }
-        public string sga27 { get; set; }
+        public Nullable<System.DateTime> sga27 { get; set; }
         public string sga28 { get; set; }
         public string sga29 { get; set; }
         public string sga30 { get; set; }

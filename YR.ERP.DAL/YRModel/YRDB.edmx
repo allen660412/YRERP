@@ -3663,8 +3663,8 @@
           <Property Name="sga23" Type="numeric" Precision="22" Scale="6" Nullable="false" />
           <Property Name="sga24" Type="nvarchar" MaxLength="10" />
           <Property Name="sga25" Type="datetime2" Precision="7" />
-          <Property Name="sga26" Type="nvarchar" MaxLength="1" />
-          <Property Name="sga27" Type="nvarchar" MaxLength="1" />
+          <Property Name="sga26" Type="nvarchar" MaxLength="20" />
+          <Property Name="sga27" Type="datetime2" Precision="7" />
           <Property Name="sga28" Type="nvarchar" MaxLength="1" />
           <Property Name="sga29" Type="nvarchar" MaxLength="1" />
           <Property Name="sga30" Type="nvarchar" MaxLength="1" />
@@ -3904,7 +3904,7 @@
           <Property Name="tbe08" Type="nvarchar" MaxLength="20" />
           <Property Name="tbe09" Type="nvarchar" MaxLength="20" />
           <Property Name="tbe10" Type="datetime2" Precision="7" />
-          <Property Name="tbe11" Type="nvarchar" MaxLength="1" />
+          <Property Name="tbe11" Type="nvarchar" MaxLength="20" />
           <Property Name="tbe12" Type="nvarchar" MaxLength="1" />
           <Property Name="tbe13" Type="nvarchar" MaxLength="1" />
           <Property Name="tbe14" Type="nvarchar" MaxLength="1" />
@@ -6291,7 +6291,7 @@
           <Property Name="ica25" Type="datetime2" Precision="7" />
           <Property Name="ica26" Type="numeric" Precision="22" Scale="6" Nullable="false" />
           <Property Name="ica27" Type="nvarchar" MaxLength="10" />
-          <Property Name="ica28" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica28" Type="nvarchar" MaxLength="255" />
           <Property Name="ica29" Type="nvarchar" MaxLength="1" />
           <Property Name="ica30" Type="nvarchar" MaxLength="1" />
           <Property Name="ica31" Type="nvarchar" MaxLength="1" />
@@ -8115,7 +8115,7 @@
           <Property Name="ica25" Type="datetime2" Precision="7" />
           <Property Name="ica26" Type="numeric" Precision="22" Scale="6" Nullable="false" />
           <Property Name="ica27" Type="nvarchar" MaxLength="10" />
-          <Property Name="ica28" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica28" Type="nvarchar" MaxLength="255" />
           <Property Name="ica29" Type="nvarchar" MaxLength="1" />
           <Property Name="ica30" Type="nvarchar" MaxLength="1" />
           <Property Name="ica31" Type="nvarchar" MaxLength="1" />
@@ -9602,8 +9602,8 @@
           <Property Name="sga23" Type="numeric" Precision="22" Scale="6" Nullable="false" />
           <Property Name="sga24" Type="nvarchar" MaxLength="10" />
           <Property Name="sga25" Type="datetime2" Precision="7" />
-          <Property Name="sga26" Type="nvarchar" MaxLength="1" />
-          <Property Name="sga27" Type="nvarchar" MaxLength="1" />
+          <Property Name="sga26" Type="nvarchar" MaxLength="20" />
+          <Property Name="sga27" Type="datetime2" Precision="7" />
           <Property Name="sga28" Type="nvarchar" MaxLength="1" />
           <Property Name="sga29" Type="nvarchar" MaxLength="1" />
           <Property Name="sga30" Type="nvarchar" MaxLength="1" />
@@ -9764,8 +9764,8 @@
           <Property Name="sga23" Type="numeric" Precision="22" Scale="6" Nullable="false" />
           <Property Name="sga24" Type="nvarchar" MaxLength="10" />
           <Property Name="sga25" Type="datetime2" Precision="7" />
-          <Property Name="sga26" Type="nvarchar" MaxLength="1" />
-          <Property Name="sga27" Type="nvarchar" MaxLength="1" />
+          <Property Name="sga26" Type="nvarchar" MaxLength="20" />
+          <Property Name="sga27" Type="datetime2" Precision="7" />
           <Property Name="sga28" Type="nvarchar" MaxLength="1" />
           <Property Name="sga29" Type="nvarchar" MaxLength="1" />
           <Property Name="sga30" Type="nvarchar" MaxLength="1" />
@@ -10047,6 +10047,8 @@
           <Property Name="tbe01" Type="numeric" Precision="22" Scale="0" Nullable="false" />
           <Property Name="tbe02" Type="numeric" Precision="22" Scale="0" Nullable="false" />
           <Property Name="tbe03" Type="numeric" Precision="22" Scale="0" Nullable="false" />
+          <Property Name="tbe11" Type="nvarchar" MaxLength="20" />
+          <Property Name="tbe11_c" Type="nvarchar" MaxLength="80" />
         </EntityType>
         <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_taxi020s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -10069,7 +10071,7 @@
           <Property Name="tbe08" Type="nvarchar" MaxLength="20" />
           <Property Name="tbe09" Type="nvarchar" MaxLength="20" />
           <Property Name="tbe10" Type="datetime2" Precision="7" />
-          <Property Name="tbe11" Type="nvarchar" MaxLength="1" />
+          <Property Name="tbe11" Type="nvarchar" MaxLength="20" />
           <Property Name="tbe12" Type="nvarchar" MaxLength="1" />
           <Property Name="tbe13" Type="nvarchar" MaxLength="1" />
           <Property Name="tbe14" Type="nvarchar" MaxLength="1" />
@@ -10085,7 +10087,7 @@
           <Property Name="tbemodu" Type="nvarchar" MaxLength="10" />
           <Property Name="tbemodg" Type="nvarchar" MaxLength="10" />
           <Property Name="tbemodd" Type="datetime2" Precision="7" />
-          <Property Name="total_cnts" Type="numeric" Precision="23" Scale="0" />
+          <Property Name="total_cnts" Type="numeric" Precision="24" Scale="0" />
         </EntityType>
         <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_test' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -15688,7 +15690,9 @@
             <DefiningQuery>SELECT 
     [vw_taxi020].[tbe01] AS [tbe01], 
     [vw_taxi020].[tbe02] AS [tbe02], 
-    [vw_taxi020].[tbe03] AS [tbe03]
+    [vw_taxi020].[tbe03] AS [tbe03], 
+    [vw_taxi020].[tbe11] AS [tbe11], 
+    [vw_taxi020].[tbe11_c] AS [tbe11_c]
     FROM [dbo].[vw_taxi020] AS [vw_taxi020]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_taxi020s" EntityType="Self.vw_taxi020s" store:Type="Views" store:Schema="dbo">
@@ -19579,8 +19583,8 @@
           <Property Name="sga23" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
           <Property Name="sga24" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="sga25" Type="DateTime" Precision="7" />
-          <Property Name="sga26" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="sga27" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="sga27" Type="DateTime" Precision="7" />
           <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -19820,7 +19824,7 @@
           <Property Name="tbe08" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="tbe09" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="tbe10" Type="DateTime" Precision="7" />
-          <Property Name="tbe11" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="tbe11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="tbe12" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="tbe13" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="tbe14" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -22281,7 +22285,7 @@
           <Property Name="ica25" Type="DateTime" Precision="7" />
           <Property Name="ica26" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
           <Property Name="ica27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="ica28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -23991,7 +23995,7 @@
           <Property Name="ica25" Type="DateTime" Precision="7" />
           <Property Name="ica26" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
           <Property Name="ica27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="ica28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -25394,8 +25398,8 @@
           <Property Name="sga23" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
           <Property Name="sga24" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="sga25" Type="DateTime" Precision="7" />
-          <Property Name="sga26" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="sga27" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="sga27" Type="DateTime" Precision="7" />
           <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -25552,8 +25556,8 @@
           <Property Name="sga23" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
           <Property Name="sga24" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="sga25" Type="DateTime" Precision="7" />
-          <Property Name="sga26" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="sga27" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="sga27" Type="DateTime" Precision="7" />
           <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -25825,6 +25829,8 @@
           <Property Name="tbe01" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
           <Property Name="tbe02" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
           <Property Name="tbe03" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
+          <Property Name="tbe11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="tbe11_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="vw_taxi020s">
           <Key>
@@ -25845,7 +25851,7 @@
           <Property Name="tbe08" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="tbe09" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="tbe10" Type="DateTime" Precision="7" />
-          <Property Name="tbe11" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="tbe11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="tbe12" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="tbe13" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="tbe14" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -25861,7 +25867,7 @@
           <Property Name="tbemodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="tbemodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="tbemodd" Type="DateTime" Precision="7" />
-          <Property Name="total_cnts" Type="Decimal" Precision="23" Scale="0" />
+          <Property Name="total_cnts" Type="Decimal" Precision="24" Scale="0" />
         </EntityType>
         <EntityType Name="vw_test">
           <Key>
@@ -35439,6 +35445,8 @@
           <EntitySetMapping Name="vw_taxi020">
             <EntityTypeMapping TypeName="YRDB.vw_taxi020">
               <MappingFragment StoreEntitySet="vw_taxi020">
+                <ScalarProperty Name="tbe11_c" ColumnName="tbe11_c" />
+                <ScalarProperty Name="tbe11" ColumnName="tbe11" />
                 <ScalarProperty Name="tbe03" ColumnName="tbe03" />
                 <ScalarProperty Name="tbe02" ColumnName="tbe02" />
                 <ScalarProperty Name="tbe01" ColumnName="tbe01" />

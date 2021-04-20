@@ -9420,6 +9420,8 @@
     <EntitySetMapping Name="vw_taxi020">
       <EntityTypeMapping TypeName="YRDB.vw_taxi020">
         <MappingFragment StoreEntitySet="vw_taxi020">
+          <ScalarProperty Name="tbe11_c" ColumnName="tbe11_c" />
+          <ScalarProperty Name="tbe11" ColumnName="tbe11" />
           <ScalarProperty Name="tbe03" ColumnName="tbe03" />
           <ScalarProperty Name="tbe02" ColumnName="tbe02" />
           <ScalarProperty Name="tbe01" ColumnName="tbe01" />

@@ -254,29 +254,29 @@ namespace YR.ERP.BLL.MSSQL
                     rtnResult.Message = "長度應為8碼!";
                     return rtnResult;
                 }
-                else
-                {
-                    int[] intTmpVal = new int[6];
-                    int intTmpSum = 0;
-                    for (int i = 0; i < 6; i++)
-                    {
-                        //位置在奇數位置的*2，偶數位置*1，位置計算從0開始
-                        if (i % 2 == 1)
-                            intTmpVal[i] = overTen(int.Parse(pUniNumber[i].ToString()) * 2);
-                        else
-                            intTmpVal[i] = overTen(int.Parse(pUniNumber[i].ToString()));
+                //else
+                //{
+                //    int[] intTmpVal = new int[6];
+                //    int intTmpSum = 0;
+                //    for (int i = 0; i < 6; i++)
+                //    {
+                //        //位置在奇數位置的*2，偶數位置*1，位置計算從0開始
+                //        if (i % 2 == 1)
+                //            intTmpVal[i] = overTen(int.Parse(pUniNumber[i].ToString()) * 2);
+                //        else
+                //            intTmpVal[i] = overTen(int.Parse(pUniNumber[i].ToString()));
 
-                        intTmpSum += intTmpVal[i];
-                    }
-                    intTmpSum += overTen(int.Parse(pUniNumber[6].ToString()) * 4); //第6碼*4
-                    intTmpSum += overTen(int.Parse(pUniNumber[7].ToString())); //第7碼*1
+                //        intTmpSum += intTmpVal[i];
+                //    }
+                //    intTmpSum += overTen(int.Parse(pUniNumber[6].ToString()) * 4); //第6碼*4
+                //    intTmpSum += overTen(int.Parse(pUniNumber[7].ToString())); //第7碼*1
 
-                    if (intTmpSum % 10 != 0) //除以10後餘0表示正確，反之則錯誤
-                    {
-                        rtnResult.Message = "統一編號輸入異常!";
-                        return rtnResult;
-                    }
-                }
+                //    if (intTmpSum % 10 != 0) //除以10後餘0表示正確，反之則錯誤
+                //    {
+                //        rtnResult.Message = "統一編號輸入異常!";
+                //        return rtnResult;
+                //    }
+                //}
 
                 rtnResult.Success = true;
                 return rtnResult;

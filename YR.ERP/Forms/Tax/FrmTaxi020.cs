@@ -27,6 +27,7 @@ namespace YR.ERP.Forms.Tax
     {
         #region Property
         TaxBLL BoTax = null;
+        TaxBLL BoStp = null;
 
         #endregion
 
@@ -64,7 +65,8 @@ namespace YR.ERP.Forms.Tax
                 TabMaster.PKParms = new List<SqlParameter>(new SqlParameter[] 
                     { new SqlParameter("tbe01", SqlDbType.Decimal),
                       new SqlParameter("tbe02", SqlDbType.Decimal),
-                      new SqlParameter("tbe03", SqlDbType.Decimal)
+                      new SqlParameter("tbe03", SqlDbType.Decimal),
+                      new SqlParameter("tbe11", SqlDbType.NVarChar)
                 });
 
                 TabMaster.CanCopyMode = false;
@@ -83,6 +85,7 @@ namespace YR.ERP.Forms.Tax
             BoMaster = new AdmBLL(LoginInfo.CompNo, TabMaster.TargetTable, TabMaster.TargetColumn, TabMaster.ViewTable);
 
             BoTax = new TaxBLL(BoMaster.OfGetConntion());
+            BoStp = new TaxBLL(BoMaster.OfGetConntion());
             return;
         }
         #endregion
@@ -134,6 +137,10 @@ namespace YR.ERP.Forms.Tax
             keyParm = new SqlParameter("tbe03", SqlDbType.Decimal);
             keyParm.SourceColumn = "tbe03";
             this.TabDetailList[0].RelationParams.Add(keyParm);
+
+            keyParm = new SqlParameter("tbe11", SqlDbType.NVarChar);
+            keyParm.SourceColumn = "tbe11";
+            this.TabDetailList[0].RelationParams.Add(keyParm);
             return true;
         }
         #endregion
@@ -151,6 +158,9 @@ namespace YR.ERP.Forms.Tax
                 else
                 {
                     WfSetControlsReadOnlyRecursion(this, false); //先全開
+                    WfSetControlReadonly(ute_tbe11_c, true);
+
+
                     WfSetControlReadonly(uGridMaster, true);//主表grid不可編輯
 
                     //明細先全開,並交由 WfSetDetailDisplayMode處理
@@ -187,15 +197,18 @@ namespace YR.ERP.Forms.Tax
                             //先控可以輸入的
                             if (
                                 columnName == "tbe07" ||
-                                columnName == "tbe08"
+                                columnName == "tbe08" ||
+                                columnName == "tbe09" ||    //先不設控卡
+                                columnName == "tbe10" ||
+                                columnName == "tbe12"
                                 )
                             {
-                                if (GlobalFn.varIsNull(pDr["tbe09"]))   //發票本未開立時,可編輯
-                                    WfSetControlReadonly(ugc, false);
-                                else
-                                {
-                                    WfSetControlReadonly(ugc, true);
-                                }
+                                //if (GlobalFn.varIsNull(pDr["tbe09"]))   //發票本未開立時,可編輯
+                                //    WfSetControlReadonly(ugc, false);
+                                //else
+                                //{
+                                //    WfSetControlReadonly(ugc, true);
+                                //}
                                 continue;
                             }
 
@@ -244,6 +257,67 @@ namespace YR.ERP.Forms.Tax
         }
         #endregion
 
+        #region WfPickClickOnEditMode(object sender, string pKey, DataRow pDr)
+        protected override bool WfPickClickOnEditMode(object sender, string pColName, DataRow pDr)
+        {
+            try
+            {
+                vw_taxi020 masterModel = null;
+                vw_taxi020s detailModel = null;
+                //this.MsgInfoReturned = new MessageInfo();
+                MessageInfo messageModel = new MessageInfo();
+                #region 單頭-pick vw_stpt400
+                if (pDr.Table.Prefix.ToLower() == "vw_taxi020")
+                {
+                    masterModel = DrMaster.ToItem<vw_taxi020>();
+                    switch (pColName.ToLower())
+                    {
+                        case "tbe11"://申報別
+                            messageModel.ParamSearchList = new List<SqlParameter>();
+                            messageModel.IsAutoQuery = true;
+                            WfShowPickUtility("p_tba", messageModel);
+                            if (messageModel.Result == System.Windows.Forms.DialogResult.OK)
+                            {
+                                if (messageModel.DataRowList.Count > 0)
+                                    pDr[pColName] = GlobalFn.isNullRet(messageModel.DataRowList[0]["tba01"], "");
+                                else
+                                    pDr[pColName] = "";
+                            }
+                            break;
+
+                    }
+                }
+                #endregion
+
+                #region 單身-pick vw_stpt400s
+                if (pDr.Table.Prefix.ToLower() == "vw_taxi020s")
+                {
+                    //masterModel = DrMaster.ToItem<vw_stpt400>();
+                    //detailModel = pDr.ToItem<vw_stpt400s>();
+                    //switch (pColName.ToLower())
+                    //{
+                    //    case "sgb03"://料號
+                    //        WfShowPickUtility("p_ica1", messageModel);
+                    //        if (messageModel.Result == System.Windows.Forms.DialogResult.OK)
+                    //        {
+                    //            if (messageModel.DataRowList.Count > 0)
+                    //                pDr[pColName] = GlobalFn.isNullRet(messageModel.DataRowList[0]["ica01"], "");
+                    //            else
+                    //                pDr[pColName] = "";
+                    //        }
+                    //        break;
+                    //}
+                }
+                #endregion
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #region WfSetMasterRowDefault 設定主表新增時的預設值
         protected override bool WfSetMasterRowDefault(DataRow pDr)
         {
@@ -280,6 +354,51 @@ namespace YR.ERP.Forms.Tax
         }
         #endregion
 
+        #region WfIniDetailComboSource 處理grid下拉選單
+        protected override void WfIniDetailComboSource(int pTabIndex)
+        {
+            UltraGrid uGrid;
+            UltraGridColumn ugc;
+            try
+            {
+                switch (pTabIndex)
+                {
+                    case 0:
+                        uGrid = TabDetailList[pTabIndex].UGrid;
+                        ugc = uGrid.DisplayLayout.Bands[0].Columns["tbe05"];//發票聯數
+                        WfSetGridValueList(ugc, BoStp.OfGetInvoWayKVPList());
+                        break;
+                        
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region WfSeDetailGridLayout
+        protected override void WfSeDetailGridLayout(UltraGrid pUgrid)
+        {
+            Infragistics.Win.UltraWinGrid.UltraGridColumn lugc;
+            try
+            {
+                //設定目前開立簿號
+                if (pUgrid.DisplayLayout.Bands[0].Columns.Exists("tbe12"))
+                {
+                    lugc = pUgrid.DisplayLayout.Bands[0].Columns["tbe12"];
+                    WfSetUgridCheckBox(lugc);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+        
         #region WfItemCheck
         //回傳值 true.通過驗證 false.未通過驗證,會把值還原
         protected override bool WfItemCheck(object sender, ItemCheckInfo e)
@@ -288,6 +407,7 @@ namespace YR.ERP.Forms.Tax
             vw_taxi020s detailModel = null;
             List<vw_taxi020s> detailList = null;
             UltraGrid uGrid = null;
+            tba_tb tbaModel = null;
             int begNo, endNo,chkBegNo,chkEndNo;
             int ChkCnts = 0;
             try
@@ -307,6 +427,19 @@ namespace YR.ERP.Forms.Tax
                                 return false;
                             }
                             break;
+
+                        case "tbe11":   //申報別
+                            if (GlobalFn.isNullRet(e.Value, "") == "")
+                                return true;
+                            if (BoTax.OfChkTbaPKExists(GlobalFn.isNullRet(e.Value,"")) == false)
+                            {
+                                WfShowErrorMsg("無此申報別");
+                                return false;
+                            }
+                            tbaModel = BoTax.OfGetTbaModel(e.Value.ToString());
+                            DrMaster["tbe11_c"] = tbaModel.tba04;
+                            break;
+
                         case "tbe02":
                             if (GlobalFn.isNullRet(e.Value, "") == "")
                                 return true;
@@ -518,6 +651,7 @@ namespace YR.ERP.Forms.Tax
                     //檢查單頭資料是否存在
                     sqlSelect = @"SELECT COUNT(1) FROM tbe_tb
                                   WHERE tbe01=@tbe01
+                                      AND tbe11=@tbe11
                                       AND NOT (@tbe02>tbe03
                                          OR tbe03<@tbe02)
                                 ";
@@ -525,10 +659,11 @@ namespace YR.ERP.Forms.Tax
                     sqlParms.Add(new SqlParameter("@tbe01", masterModel.tbe01));
                     sqlParms.Add(new SqlParameter("@tbe02", masterModel.tbe02));
                     sqlParms.Add(new SqlParameter("@tbe03", masterModel.tbe03));
+                    sqlParms.Add(new SqlParameter("@tbe11", masterModel.tbe11));
                     chkCnts = GlobalFn.isNullRet(BoTax.OfGetFieldValue(sqlSelect, sqlParms.ToArray()), 0);
                     if (chkCnts > 1)
                     {
-                        WfShowErrorMsg("該年月資料有重疊,請先查詢後再做修改!");
+                        WfShowErrorMsg("該年月+申報別資料有重疊,請先查詢後再做修改!");
                         return false;
                     }
 
@@ -563,6 +698,7 @@ namespace YR.ERP.Forms.Tax
             }
         }
         #endregion
+
         #region WfAfterDetailDelete() :刪除明細後調用
         protected override bool WfAfterDetailDelete(int pCurTabDetail, DataRow pDr)
         {
