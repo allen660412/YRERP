@@ -66,6 +66,12 @@
             this.ute_sga13t = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdb_invoice3 = new System.Windows.Forms.RadioButton();
+            this.rdb_invoice2 = new System.Windows.Forms.RadioButton();
+            this.rdb_invoice1 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.ute_sga27 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -113,7 +119,6 @@
             this.btnQtyAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.udt_sgb04_pick = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BindingMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).BeginInit();
@@ -123,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga13t)).BeginInit();
             this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucb_sga09)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga26)).BeginInit();
@@ -265,6 +271,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Pink;
+            this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.ute_sga27);
             this.panel2.Controls.Add(this.label15);
@@ -296,6 +303,86 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(807, 259);
             this.panel2.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.rdb_invoice3);
+            this.groupBox2.Controls.Add(this.rdb_invoice2);
+            this.groupBox2.Controls.Add(this.rdb_invoice1);
+            this.groupBox2.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox2.Location = new System.Drawing.Point(532, 201);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(219, 55);
+            this.groupBox2.TabIndex = 83;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "發票別";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(381, 21);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 17);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "蝦皮2";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // rdb_invoice3
+            // 
+            this.rdb_invoice3.AutoSize = true;
+            this.rdb_invoice3.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_invoice3.ForeColor = System.Drawing.Color.Black;
+            this.rdb_invoice3.Location = new System.Drawing.Point(143, 21);
+            this.rdb_invoice3.Name = "rdb_invoice3";
+            this.rdb_invoice3.Size = new System.Drawing.Size(65, 23);
+            this.rdb_invoice3.TabIndex = 2;
+            this.rdb_invoice3.TabStop = true;
+            this.rdb_invoice3.Text = "正中";
+            this.rdb_invoice3.UseVisualStyleBackColor = true;
+            this.rdb_invoice3.CheckedChanged += new System.EventHandler(this.rdb_invoice_CheckedChanged);
+            // 
+            // rdb_invoice2
+            // 
+            this.rdb_invoice2.AutoSize = true;
+            this.rdb_invoice2.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_invoice2.ForeColor = System.Drawing.Color.Black;
+            this.rdb_invoice2.Location = new System.Drawing.Point(70, 21);
+            this.rdb_invoice2.Name = "rdb_invoice2";
+            this.rdb_invoice2.Size = new System.Drawing.Size(65, 23);
+            this.rdb_invoice2.TabIndex = 1;
+            this.rdb_invoice2.TabStop = true;
+            this.rdb_invoice2.Text = "艾達";
+            this.rdb_invoice2.UseVisualStyleBackColor = true;
+            this.rdb_invoice2.CheckedChanged += new System.EventHandler(this.rdb_invoice_CheckedChanged);
+            // 
+            // rdb_invoice1
+            // 
+            this.rdb_invoice1.AutoSize = true;
+            this.rdb_invoice1.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_invoice1.ForeColor = System.Drawing.Color.Black;
+            this.rdb_invoice1.Location = new System.Drawing.Point(6, 21);
+            this.rdb_invoice1.Name = "rdb_invoice1";
+            this.rdb_invoice1.Size = new System.Drawing.Size(65, 23);
+            this.rdb_invoice1.TabIndex = 0;
+            this.rdb_invoice1.TabStop = true;
+            this.rdb_invoice1.Text = "清空";
+            this.rdb_invoice1.UseVisualStyleBackColor = true;
+            this.rdb_invoice1.CheckedChanged += new System.EventHandler(this.rdb_invoice_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(642, 171);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 35);
+            this.button1.TabIndex = 85;
+            this.button1.TabStop = false;
+            this.button1.Text = "取得發票";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ute_sga27
             // 
@@ -444,7 +531,7 @@
             this.label12.AccessibleDescription = "R";
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(281, 181);
+            this.label12.Location = new System.Drawing.Point(286, 181);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 19);
             this.label12.TabIndex = 84;
@@ -471,16 +558,20 @@
             this.groupBox1.Controls.Add(this.rdb_03);
             this.groupBox1.Controls.Add(this.rdb_02);
             this.groupBox1.Controls.Add(this.rdb_01);
-            this.groupBox1.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox1.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(21, 200);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(480, 55);
             this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "客戶";
             // 
             // rdb_06
             // 
             this.rdb_06.AutoSize = true;
+            this.rdb_06.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_06.ForeColor = System.Drawing.Color.Black;
             this.rdb_06.Location = new System.Drawing.Point(381, 21);
             this.rdb_06.Name = "rdb_06";
             this.rdb_06.Size = new System.Drawing.Size(74, 23);
@@ -493,6 +584,8 @@
             // rdb_05
             // 
             this.rdb_05.AutoSize = true;
+            this.rdb_05.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_05.ForeColor = System.Drawing.Color.Black;
             this.rdb_05.Location = new System.Drawing.Point(301, 21);
             this.rdb_05.Name = "rdb_05";
             this.rdb_05.Size = new System.Drawing.Size(65, 23);
@@ -505,6 +598,8 @@
             // rdb_04
             // 
             this.rdb_04.AutoSize = true;
+            this.rdb_04.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_04.ForeColor = System.Drawing.Color.Black;
             this.rdb_04.Location = new System.Drawing.Point(214, 21);
             this.rdb_04.Name = "rdb_04";
             this.rdb_04.Size = new System.Drawing.Size(65, 23);
@@ -517,6 +612,8 @@
             // rdb_03
             // 
             this.rdb_03.AutoSize = true;
+            this.rdb_03.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_03.ForeColor = System.Drawing.Color.Black;
             this.rdb_03.Location = new System.Drawing.Point(143, 21);
             this.rdb_03.Name = "rdb_03";
             this.rdb_03.Size = new System.Drawing.Size(65, 23);
@@ -529,6 +626,8 @@
             // rdb_02
             // 
             this.rdb_02.AutoSize = true;
+            this.rdb_02.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_02.ForeColor = System.Drawing.Color.Black;
             this.rdb_02.Location = new System.Drawing.Point(70, 21);
             this.rdb_02.Name = "rdb_02";
             this.rdb_02.Size = new System.Drawing.Size(74, 23);
@@ -541,6 +640,8 @@
             // rdb_01
             // 
             this.rdb_01.AutoSize = true;
+            this.rdb_01.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rdb_01.ForeColor = System.Drawing.Color.Black;
             this.rdb_01.Location = new System.Drawing.Point(6, 21);
             this.rdb_01.Name = "rdb_01";
             this.rdb_01.Size = new System.Drawing.Size(65, 23);
@@ -839,6 +940,7 @@
             this.btnLabel.Name = "btnLabel";
             this.btnLabel.Size = new System.Drawing.Size(85, 48);
             this.btnLabel.TabIndex = 84;
+            this.btnLabel.TabStop = false;
             this.btnLabel.Text = "列印標籤";
             this.btnLabel.UseVisualStyleBackColor = true;
             this.btnLabel.Click += new System.EventHandler(this.btnLabel_Click);
@@ -850,6 +952,7 @@
             this.btnInvi100.Name = "btnInvi100";
             this.btnInvi100.Size = new System.Drawing.Size(85, 48);
             this.btnInvi100.TabIndex = 83;
+            this.btnInvi100.TabStop = false;
             this.btnInvi100.Text = "料件查詢";
             this.btnInvi100.UseVisualStyleBackColor = true;
             this.btnInvi100.Click += new System.EventHandler(this.btnInvi100_Click);
@@ -861,6 +964,7 @@
             this.btnStp400.Name = "btnStp400";
             this.btnStp400.Size = new System.Drawing.Size(85, 48);
             this.btnStp400.TabIndex = 82;
+            this.btnStp400.TabStop = false;
             this.btnStp400.Text = "出貨單查詢";
             this.btnStp400.UseVisualStyleBackColor = true;
             this.btnStp400.Click += new System.EventHandler(this.btnStp400_Click);
@@ -884,6 +988,7 @@
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(79, 48);
             this.btnInsert.TabIndex = 78;
+            this.btnInsert.TabStop = false;
             this.btnInsert.Text = "新增一筆";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -895,6 +1000,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 48);
             this.btnSave.TabIndex = 77;
+            this.btnSave.TabStop = false;
             this.btnSave.Text = "存檔";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -906,6 +1012,7 @@
             this.btnQtyDec.Name = "btnQtyDec";
             this.btnQtyDec.Size = new System.Drawing.Size(79, 48);
             this.btnQtyDec.TabIndex = 76;
+            this.btnQtyDec.TabStop = false;
             this.btnQtyDec.Text = "減一個";
             this.btnQtyDec.UseVisualStyleBackColor = true;
             this.btnQtyDec.Click += new System.EventHandler(this.btnQtyDec_Click);
@@ -917,6 +1024,7 @@
             this.btnQtyAdd.Name = "btnQtyAdd";
             this.btnQtyAdd.Size = new System.Drawing.Size(79, 48);
             this.btnQtyAdd.TabIndex = 75;
+            this.btnQtyAdd.TabStop = false;
             this.btnQtyAdd.Text = "加一個";
             this.btnQtyAdd.UseVisualStyleBackColor = true;
             this.btnQtyAdd.Click += new System.EventHandler(this.btnQtyAdd_Click);
@@ -928,6 +1036,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(79, 48);
             this.btnDelete.TabIndex = 74;
+            this.btnDelete.TabStop = false;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -945,17 +1054,6 @@
             this.udt_sgb04_pick.Size = new System.Drawing.Size(230, 35);
             this.udt_sgb04_pick.TabIndex = 0;
             this.udt_sgb04_pick.Tag = "sgb04_pick";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(642, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 35);
-            this.button1.TabIndex = 85;
-            this.button1.Text = "取得發票";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmStpt410
             // 
@@ -985,6 +1083,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga13t)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucb_sga09)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga26)).EndInit();
@@ -1071,5 +1171,10 @@
         private System.Windows.Forms.Label label13;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_sga26;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdb_invoice3;
+        private System.Windows.Forms.RadioButton rdb_invoice2;
+        private System.Windows.Forms.RadioButton rdb_invoice1;
     }
 }

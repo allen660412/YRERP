@@ -3373,7 +3373,8 @@ namespace YR.ERP.Forms.Stp
 
                 //預設客人資料
                 pDr["sga03"] = "C000001";    //門市客人
-                if ((rdb_01.Checked == false && rdb_02.Checked && rdb_03.Checked && rdb_04.Checked && rdb_05.Checked)
+                if ((rdb_01.Checked == false && rdb_02.Checked == false && rdb_03.Checked == false
+                        && rdb_04.Checked == false && rdb_05.Checked == false && rdb_06.Checked == false)
                     || rdb_01.Checked == true)
                     pDr["sga03"] = "C000001";    //門市客人
                 else if (rdb_02.Checked == true)
@@ -3390,7 +3391,14 @@ namespace YR.ERP.Forms.Stp
                 WfSetSga03Relation(pDr["sga03"].ToString());
                 pDr["sgb16_pick"] = "400A";    //慣用倉庫 先寫死
 
-                //
+                //發票別
+                if ((rdb_invoice1.Checked == false && rdb_invoice2.Checked == false && rdb_invoice3.Checked == false)
+                    || rdb_invoice1.Checked == true)
+                    pDr["sga26"] = "";    //清空
+                else if (rdb_invoice2.Checked == true)
+                    pDr["sga26"] = "I01";    //艾達
+                else if (rdb_invoice3.Checked == true)
+                    pDr["sga26"] = "Z01";    //正中
                 return true;
             }
             catch (Exception ex)
@@ -5328,6 +5336,7 @@ namespace YR.ERP.Forms.Stp
             }
         }
 
+        #region rdb_cust_CheckedChanged 選取客戶編號
         private void rdb_cust_CheckedChanged(object sender, EventArgs e)
         {
             string senderName;
@@ -5384,7 +5393,46 @@ namespace YR.ERP.Forms.Stp
             {
                 WfShowErrorMsg(ex.Message);
             }
-        }
+        } 
+        #endregion
+
+
+        #region rdb_invoice_CheckedChanged 選取發票別 #依發票機選取
+        private void rdb_invoice_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            string senderName;
+            string sga26 = "";
+            sga_tb sgaModel;
+            Result result;
+            try
+            {
+                senderName = WfGetControlName(sender);
+                if (DrMaster != null && (FormEditMode == YREditType.新增 || FormEditMode == YREditType.修改))
+                {
+                    switch (senderName.ToLower())
+                    {
+                        case "rdb_invoice1":
+                            sga26 = "";
+                            break;
+                        case "rdb_invoice2":
+                            sga26 = "I01";
+                            break;
+                        case "rdb_invoice3":
+                            sga26 = "Z01";
+                            break;
+                    }
+
+                    DrMaster["sga26"] = sga26;
+                    DrMaster["sga24"] = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                WfShowErrorMsg(ex.Message);
+            }
+        } 
+        #endregion
 
         private void btnAutoCal_Click(object sender, EventArgs e)
         {
@@ -5568,6 +5616,7 @@ namespace YR.ERP.Forms.Stp
             }
         } 
         #endregion
+
 
     }
 }
