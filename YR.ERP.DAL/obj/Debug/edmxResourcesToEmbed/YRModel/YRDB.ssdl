@@ -1455,7 +1455,7 @@
     <Property Name="icasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.ica_tb_0606' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.ica_tb_0606' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="ica_tb_0606">
     <Key>
       <PropertyRef Name="ica01" />
@@ -1562,7 +1562,7 @@
     <Property Name="icasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.ica_tb_0607' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.ica_tb_0607' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="ica_tb_0607">
     <Key>
       <PropertyRef Name="ica01" />
@@ -1775,7 +1775,7 @@
     <Property Name="icpmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.icp_tb_0606' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.icp_tb_0606' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="icp_tb_0606">
     <Key>
       <PropertyRef Name="icp01" />
@@ -1797,7 +1797,7 @@
     <Property Name="icpmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.icp_tb_0607' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.icp_tb_0607' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="icp_tb_0607">
     <Key>
       <PropertyRef Name="icp01" />
@@ -3916,6 +3916,52 @@
     <Property Name="tbemodg" Type="nvarchar" MaxLength="10" />
     <Property Name="tbemodd" Type="datetime2" Precision="7" />
   </EntityType>
+  <EntityType Name="tca_tb">
+    <Key>
+      <PropertyRef Name="tca01" />
+      <PropertyRef Name="tca02" />
+      <PropertyRef Name="tca03" />
+      <PropertyRef Name="tca04" />
+      <PropertyRef Name="tca05" />
+    </Key>
+    <Property Name="tca01" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="tca02" Type="numeric" Precision="22" Scale="0" Nullable="false" />
+    <Property Name="tca03" Type="numeric" Precision="22" Scale="0" Nullable="false" />
+    <Property Name="tca04" Type="numeric" Precision="22" Scale="0" Nullable="false" />
+    <Property Name="tca05" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="tca06" Type="nvarchar" MaxLength="20" />
+    <Property Name="tca07" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca08" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca09" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="tca09t" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="tca09g" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="tca10" Type="datetime2" Precision="7" />
+    <Property Name="tca11" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca12" Type="nvarchar" MaxLength="255" />
+    <Property Name="tca13" Type="nvarchar" MaxLength="255" />
+    <Property Name="tca14" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca15" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca16" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca17" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca18" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca19" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca20" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca21" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca22" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca23" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca24" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca25" Type="nvarchar" MaxLength="1" />
+    <Property Name="tca26" Type="nvarchar" MaxLength="1" />
+    <Property Name="tcaconf" Type="nvarchar" MaxLength="1" />
+    <Property Name="tcaconu" Type="nvarchar" MaxLength="10" />
+    <Property Name="tcacond" Type="datetime2" Precision="7" />
+    <Property Name="tcacreu" Type="nvarchar" MaxLength="10" />
+    <Property Name="tcacreg" Type="nvarchar" MaxLength="10" />
+    <Property Name="tcacred" Type="datetime2" Precision="7" />
+    <Property Name="tcamodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="tcamodg" Type="nvarchar" MaxLength="10" />
+    <Property Name="tcamoddd" Type="datetime2" Precision="7" />
+  </EntityType>
   <EntityType Name="test">
     <Key>
       <PropertyRef Name="id" />
@@ -3925,9 +3971,9 @@
     <Property Name="test2" Type="nchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6005: 目標 Entity Framework 版本目前不支援資料型別 'sql_variant'; 已排除資料表 'IDA.dbo.saV_tb_desc' 中的資料行 'Table_Description'。
-警告 6005: 目標 Entity Framework 版本目前不支援資料型別 'sql_variant'; 已排除資料表 'IDA.dbo.saV_tb_desc' 中的資料行 'Field_descr'。
-警告 6002: 資料表/檢視 'IDA.dbo.saV_tb_desc' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6005: 目標 Entity Framework 版本目前不支援資料型別 'sql_variant'; 已排除資料表 'IDA_TEST.dbo.saV_tb_desc' 中的資料行 'Table_Description'。
+警告 6005: 目標 Entity Framework 版本目前不支援資料型別 'sql_variant'; 已排除資料表 'IDA_TEST.dbo.saV_tb_desc' 中的資料行 'Field_descr'。
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.saV_tb_desc' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="saV_tb_desc">
     <Key>
       <PropertyRef Name="Table_Name" />
@@ -3942,7 +3988,7 @@
     <Property Name="name" Type="nvarchar" MaxLength="128" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi100">
     <Key>
       <PropertyRef Name="ada01" />
@@ -3969,7 +4015,7 @@
     <Property Name="ada03_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi100s">
     <Key>
       <PropertyRef Name="adb01" />
@@ -3989,7 +4035,7 @@
     <Property Name="adb02_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi110">
     <Key>
       <PropertyRef Name="adc01" />
@@ -4009,7 +4055,7 @@
     <Property Name="adcsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi110s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi110s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi110s">
     <Key>
       <PropertyRef Name="add01" />
@@ -4042,7 +4088,7 @@
     <Property Name="add02_c" Type="nvarchar" MaxLength="60" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi120' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi120' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi120">
     <Key>
       <PropertyRef Name="ade01" />
@@ -4063,7 +4109,7 @@
     <Property Name="parents_ade02" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi600' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi600' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi600">
     <Key>
       <PropertyRef Name="ado01" />
@@ -4103,7 +4149,7 @@
     <Property Name="adosecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi601' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi601' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi601">
     <Key>
       <PropertyRef Name="ado01" />
@@ -4143,7 +4189,7 @@
     <Property Name="adosecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi601s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi601s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi601s">
     <Key>
       <PropertyRef Name="adp01" />
@@ -4173,7 +4219,7 @@
     <Property Name="aza11" Type="numeric" Precision="22" Scale="0" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi602' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi602' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi602">
     <Key>
       <PropertyRef Name="ado01" />
@@ -4213,7 +4259,7 @@
     <Property Name="adosecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi602s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi602s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi602s">
     <Key>
       <PropertyRef Name="adq01" />
@@ -4233,7 +4279,7 @@
     <Property Name="adqmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi610' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi610' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi610">
     <Key>
       <PropertyRef Name="adm01" />
@@ -4242,7 +4288,7 @@
     <Property Name="adm01_c" Type="nvarchar" MaxLength="60" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi610s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi610s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi610s">
     <Key>
       <PropertyRef Name="adm01" />
@@ -4262,7 +4308,7 @@
     <Property Name="adm02_c" Type="nvarchar" MaxLength="60" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi611' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi611' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi611">
     <Key>
       <PropertyRef Name="adx01" />
@@ -4282,7 +4328,7 @@
     <Property Name="adxsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi611s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi611s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi611s">
     <Key>
       <PropertyRef Name="ady01" />
@@ -4311,7 +4357,7 @@
     <Property Name="ady03_c" Type="nvarchar" MaxLength="60" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi620' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi620' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi620">
     <Key>
       <PropertyRef Name="aza01" />
@@ -4320,7 +4366,7 @@
     <Property Name="aza02" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi620s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi620s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi620s">
     <Key>
       <PropertyRef Name="aza01" />
@@ -4354,7 +4400,7 @@
     <Property Name="azamodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi630' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi630' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi630">
     <Key>
       <PropertyRef Name="atb01" />
@@ -4374,7 +4420,7 @@
     <Property Name="atbsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi630s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi630s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi630s">
     <Key>
       <PropertyRef Name="atc01" />
@@ -4394,7 +4440,7 @@
     <Property Name="atcmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi640' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi640' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi640">
     <Key>
       <PropertyRef Name="aze01" />
@@ -4416,7 +4462,7 @@
     <Property Name="azesecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi640s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi640s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi640s">
     <Key>
       <PropertyRef Name="azf01" />
@@ -4438,7 +4484,7 @@
     <Property Name="azfmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi650' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi650' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi650">
     <Key>
       <PropertyRef Name="azp01" />
@@ -4466,7 +4512,7 @@
     <Property Name="azp03_c" Type="nvarchar" MaxLength="30" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admi650s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admi650s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admi650s">
     <Key>
       <PropertyRef Name="azq01" />
@@ -4493,7 +4539,7 @@
     <Property Name="azq04_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_admq910' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_admq910' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_admq910">
     <Key>
       <PropertyRef Name="spid" />
@@ -4522,7 +4568,7 @@
     <Property Name="text" Type="nvarchar(max)" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi001' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi001' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi001">
     <Key>
       <PropertyRef Name="baacomp" />
@@ -4556,7 +4602,7 @@
     <Property Name="baamodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi010">
     <Key>
       <PropertyRef Name="beacomp" />
@@ -4587,7 +4633,7 @@
     <Property Name="beasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi020">
     <Key>
       <PropertyRef Name="beb01" />
@@ -4611,7 +4657,7 @@
     <Property Name="bebsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi030">
     <Key>
       <PropertyRef Name="bec01" />
@@ -4641,7 +4687,7 @@
     <Property Name="bec03_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi040' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi040' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi040">
     <Key>
       <PropertyRef Name="bga01" />
@@ -4663,7 +4709,7 @@
     <Property Name="bgasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi040a' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi040a' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi040a">
     <Key>
       <PropertyRef Name="bgb01" />
@@ -4687,7 +4733,7 @@
     <Property Name="bgbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi040b' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi040b' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi040b">
     <Key>
       <PropertyRef Name="bgc01" />
@@ -4707,7 +4753,7 @@
     <Property Name="bgcmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi050' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi050' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi050">
     <Key>
       <PropertyRef Name="bef01" />
@@ -4734,7 +4780,7 @@
     <Property Name="befsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi060' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi060' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi060">
     <Key>
       <PropertyRef Name="beg01" />
@@ -4757,7 +4803,7 @@
     <Property Name="begsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi070' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi070' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi070">
     <Key>
       <PropertyRef Name="bej01" />
@@ -4779,7 +4825,7 @@
     <Property Name="bejsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi080' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi080' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi080">
     <Key>
       <PropertyRef Name="bek01" />
@@ -4803,7 +4849,7 @@
     <Property Name="beksecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_basi090' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_basi090' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_basi090">
     <Key>
       <PropertyRef Name="bel01" />
@@ -4823,7 +4869,7 @@
     <Property Name="belsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_carb110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_carb110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_carb110">
     <Key>
       <PropertyRef Name="sga01" />
@@ -4836,7 +4882,7 @@
     <Property Name="cea02" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_carb350' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_carb350' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_carb350">
     <Key>
       <PropertyRef Name="gea01" />
@@ -4851,7 +4897,7 @@
     <Property Name="ceasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_carb351' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_carb351' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_carb351">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -4861,7 +4907,7 @@
     <Property Name="gfa02_e" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cari010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cari010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cari010">
     <Key>
       <PropertyRef Name="cac01" />
@@ -4898,7 +4944,7 @@
     <Property Name="cac04_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cari030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cari030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cari030">
     <Key>
       <PropertyRef Name="cba01" />
@@ -4931,7 +4977,7 @@
     <Property Name="cbamodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_carp350' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_carp350' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_carp350">
     <Key>
       <PropertyRef Name="gea01" />
@@ -4948,7 +4994,7 @@
     <Property Name="ceasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cart100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cart100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cart100">
     <Key>
       <PropertyRef Name="cea00" />
@@ -5031,7 +5077,7 @@
     <Property Name="cea22_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cart100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cart100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cart100s">
     <Key>
       <PropertyRef Name="ceb01" />
@@ -5083,7 +5129,7 @@
     <Property Name="ceb10_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cart110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cart110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cart110">
     <Key>
       <PropertyRef Name="cee01" />
@@ -5135,7 +5181,7 @@
     <Property Name="ceesecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cart200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cart200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cart200">
     <Key>
       <PropertyRef Name="cfa01" />
@@ -5190,7 +5236,7 @@
     <Property Name="cfa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cart200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cart200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cart200s">
     <Key>
       <PropertyRef Name="cfb01" />
@@ -5234,16 +5280,17 @@
     <Property Name="cfb11_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cspb200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cspb200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cspb200">
     <Key>
       <PropertyRef Name="delete_yn" />
     </Key>
     <Property Name="jja04" Type="nvarchar" MaxLength="20" />
+    <Property Name="jja06" Type="datetime2" Precision="7" />
     <Property Name="delete_yn" Type="varchar" MaxLength="1" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cspq100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cspq100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cspq100">
     <Key>
       <PropertyRef Name="jja01" />
@@ -5313,7 +5360,7 @@
     <Property Name="jja13_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_cspr110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_cspr110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_cspr110">
     <Key>
       <PropertyRef Name="jja16_s" />
@@ -5327,7 +5374,7 @@
     <Property Name="icc05_e" Type="int" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glab311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glab311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glab311">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -5337,7 +5384,7 @@
     <Property Name="gfa01" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glab312' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glab312' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glab312">
     <Key>
       <PropertyRef Name="gfa08" />
@@ -5347,7 +5394,7 @@
     <Property Name="gfa09" Type="numeric" Precision="22" Scale="0" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glab313' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glab313' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glab313">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -5357,7 +5404,7 @@
     <Property Name="gfa01" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glab321' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glab321' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glab321">
     <Key>
       <PropertyRef Name="gfa08" />
@@ -5365,7 +5412,7 @@
     <Property Name="gfa08" Type="numeric" Precision="22" Scale="0" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glai010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glai010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glai010">
     <Key>
       <PropertyRef Name="gac01" />
@@ -5401,7 +5448,7 @@
     <Property Name="gacsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glai100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glai100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glai100">
     <Key>
       <PropertyRef Name="gba01" />
@@ -5436,7 +5483,7 @@
     <Property Name="gbamodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glai110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glai110' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glai110">
     <Key>
       <PropertyRef Name="gbd01" />
@@ -5461,7 +5508,7 @@
     <Property Name="gbd01_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glai110s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glai110s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glai110s">
     <Key>
       <PropertyRef Name="gbd01" />
@@ -5486,7 +5533,7 @@
     <Property Name="gbd02_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq401' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq401' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq401">
     <Key>
       <PropertyRef Name="gbh01" />
@@ -5497,7 +5544,7 @@
     <Property Name="gbh01_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq401s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq401s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq401s">
     <Key>
       <PropertyRef Name="gbh01" />
@@ -5519,7 +5566,7 @@
     <Property Name="sum_blance" Type="numeric" Precision="38" Scale="6" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq402' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq402' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq402">
     <Key>
       <PropertyRef Name="gbi01" />
@@ -5528,7 +5575,7 @@
     <Property Name="gbi01_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq402s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq402s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq402s">
     <Key>
       <PropertyRef Name="gbi01" />
@@ -5548,7 +5595,7 @@
     <Property Name="sum_blance" Type="numeric" Precision="38" Scale="6" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq403' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq403' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq403">
     <Key>
       <PropertyRef Name="gbj01" />
@@ -5561,7 +5608,7 @@
     <Property Name="gbj01_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq403s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq403s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq403s">
     <Key>
       <PropertyRef Name="gbj01" />
@@ -5585,7 +5632,7 @@
     <Property Name="sum_blance" Type="numeric" Precision="38" Scale="6" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq410">
     <Key>
       <PropertyRef Name="gfg01" />
@@ -5612,7 +5659,7 @@
     <Property Name="gfgcomp" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glaq410s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glaq410s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glaq410s">
     <Key>
       <PropertyRef Name="gfh01" />
@@ -5640,7 +5687,7 @@
     <Property Name="gfhcomp" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glar300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glar300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glar300">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -5654,7 +5701,7 @@
     <Property Name="gfaprno" Type="numeric" Precision="22" Scale="0" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glar301' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glar301' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glar301">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -5668,7 +5715,7 @@
     <Property Name="gfaprno" Type="numeric" Precision="22" Scale="0" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glar311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glar311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glar311">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -5690,7 +5737,7 @@
     <Property Name="order3_sum_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glar321' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glar321' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glar321">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -5704,7 +5751,7 @@
     <Property Name="c3" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glat200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glat200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glat200">
     <Key>
       <PropertyRef Name="gea01" />
@@ -5739,7 +5786,7 @@
     <Property Name="geasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glat200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glat200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glat200s">
     <Key>
       <PropertyRef Name="geb01" />
@@ -5785,7 +5832,7 @@
     <Property Name="gba09" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glat300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glat300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glat300">
     <Key>
       <PropertyRef Name="gfa01" />
@@ -5834,7 +5881,7 @@
     <Property Name="gfa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glat300_1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glat300_1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glat300_1">
     <Key>
       <PropertyRef Name="gfb01" />
@@ -5877,7 +5924,7 @@
     <Property Name="sum_gfh09" Type="numeric" Precision="22" Scale="5" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glat300_1s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glat300_1s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glat300_1s">
     <Key>
       <PropertyRef Name="gfg01" />
@@ -5906,7 +5953,7 @@
     <Property Name="gfh09" Type="numeric" Precision="22" Scale="6" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glat300a' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glat300a' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glat300a">
     <Key>
       <PropertyRef Name="gfh01" />
@@ -5934,7 +5981,7 @@
     <Property Name="gfhcomp" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_glat300s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_glat300s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_glat300s">
     <Key>
       <PropertyRef Name="gfb01" />
@@ -5976,7 +6023,7 @@
     <Property Name="gba09" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invb500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invb500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invb500">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -5993,7 +6040,7 @@
     <Property Name="order_by_3" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invb501' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invb501' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invb501">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -6030,7 +6077,7 @@
     <Property Name="ipa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invb501s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invb501s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invb501s">
     <Key>
       <PropertyRef Name="ipb01" />
@@ -6070,7 +6117,7 @@
     <Property Name="ipbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invb502' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invb502' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invb502">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -6107,7 +6154,7 @@
     <Property Name="ipa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invb502s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invb502s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invb502s">
     <Key>
       <PropertyRef Name="ipb01" />
@@ -6147,7 +6194,7 @@
     <Property Name="ipbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invb600' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invb600' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invb600">
     <Key>
       <PropertyRef Name="icc01" />
@@ -6157,7 +6204,7 @@
     <Property Name="icc02" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi010">
     <Key>
       <PropertyRef Name="bab01" />
@@ -6194,7 +6241,7 @@
     <Property Name="bab04_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi020">
     <Key>
       <PropertyRef Name="icm01" />
@@ -6223,7 +6270,7 @@
     <Property Name="icm02_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi030">
     <Key>
       <PropertyRef Name="icx01" />
@@ -6244,7 +6291,7 @@
     <Property Name="icxsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi100">
     <Key>
       <PropertyRef Name="ica01" />
@@ -6357,7 +6404,7 @@
     <Property Name="icc05_tot" Type="numeric" Precision="38" Scale="3" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi100_1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi100_1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi100_1">
     <Key>
       <PropertyRef Name="pga01" />
@@ -6373,7 +6420,7 @@
     <Property Name="price" Type="numeric" Precision="38" Scale="19" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi101">
     <Key>
       <PropertyRef Name="ica01" />
@@ -6400,7 +6447,7 @@
     <Property Name="icasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi101s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi101s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi101s">
     <Key>
       <PropertyRef Name="icn01" />
@@ -6426,7 +6473,7 @@
     <Property Name="icnmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi102' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi102' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi102">
     <Key>
       <PropertyRef Name="icp01" />
@@ -6449,7 +6496,7 @@
     <Property Name="icp01_c" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invi200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invi200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi200">
     <Key>
       <PropertyRef Name="icb01" />
@@ -6475,7 +6522,7 @@
     <Property Name="icbsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invq210' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invq210' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invq210">
     <Key>
       <PropertyRef Name="ica01" />
@@ -6492,7 +6539,7 @@
     <Property Name="ica07" Type="nvarchar" MaxLength="6" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invq210s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invq210s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invq210s">
     <Key>
       <PropertyRef Name="icc01" />
@@ -6513,7 +6560,7 @@
     <Property Name="icc02_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invq220' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invq220' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invq220">
     <Key>
       <PropertyRef Name="ina01" />
@@ -6562,7 +6609,7 @@
     <Property Name="ina03_c" Type="nvarchar" MaxLength="2" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr101">
     <Key>
       <PropertyRef Name="ica01" />
@@ -6570,7 +6617,7 @@
     <Property Name="ica01" Type="nvarchar" MaxLength="40" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr215' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr215' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr215">
     <Key>
       <PropertyRef Name="icc01" />
@@ -6581,7 +6628,7 @@
     <Property Name="show_warehouse_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr301' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr301' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr301">
     <Key>
       <PropertyRef Name="iga01" />
@@ -6592,7 +6639,7 @@
     <Property Name="jump_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr302' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr302' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr302">
     <Key>
       <PropertyRef Name="iga01" />
@@ -6603,7 +6650,7 @@
     <Property Name="jump_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr330' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr330' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr330">
     <Key>
       <PropertyRef Name="ifa01" />
@@ -6615,7 +6662,7 @@
     <Property Name="jump_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr336' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr336' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr336">
     <Key>
       <PropertyRef Name="ifa01" />
@@ -6628,7 +6675,7 @@
     <Property Name="conf_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr337' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr337' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr337">
     <Key>
       <PropertyRef Name="ifa01" />
@@ -6642,7 +6689,7 @@
     <Property Name="doc_status" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr401' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr401' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr401">
     <Key>
       <PropertyRef Name="ila01" />
@@ -6655,7 +6702,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr402' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr402' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr402">
     <Key>
       <PropertyRef Name="ima01" />
@@ -6668,7 +6715,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr410">
     <Key>
       <PropertyRef Name="ila01" />
@@ -6687,7 +6734,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr520' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr520' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr520">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -6699,7 +6746,7 @@
     <Property Name="ipa03_e" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr521' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr521' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr521">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -6715,7 +6762,7 @@
     <Property Name="print_qty_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invr522' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr522' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr522">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -6730,7 +6777,7 @@
     <Property Name="dif_yn" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt301' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt301' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt301">
     <Key>
       <PropertyRef Name="iga01" />
@@ -6763,7 +6810,7 @@
     <Property Name="iga01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt301s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt301s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt301s">
     <Key>
       <PropertyRef Name="igb01" />
@@ -6805,7 +6852,7 @@
     <Property Name="xc_igb002" Type="numeric" Precision="22" Scale="0" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt302' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt302' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt302">
     <Key>
       <PropertyRef Name="iga01" />
@@ -6838,7 +6885,7 @@
     <Property Name="iga01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt302s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt302s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt302s">
     <Key>
       <PropertyRef Name="igb01" />
@@ -6880,7 +6927,7 @@
     <Property Name="xc_igb002" Type="numeric" Precision="22" Scale="0" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt330' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt330' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt330">
     <Key>
       <PropertyRef Name="ifa01" />
@@ -6920,7 +6967,7 @@
     <Property Name="ifa08_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt330s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt330s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt330s">
     <Key>
       <PropertyRef Name="ifb01" />
@@ -6957,7 +7004,7 @@
     <Property Name="ifbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt331' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt331' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt331">
     <Key>
       <PropertyRef Name="ifa01" />
@@ -6997,7 +7044,7 @@
     <Property Name="ifa08_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt331s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt331s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt331s">
     <Key>
       <PropertyRef Name="ifb01" />
@@ -7034,7 +7081,7 @@
     <Property Name="ifbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt332' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt332' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt332">
     <Key>
       <PropertyRef Name="ifa01" />
@@ -7074,7 +7121,7 @@
     <Property Name="ifa08_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt332s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt332s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt332s">
     <Key>
       <PropertyRef Name="ifb01" />
@@ -7111,7 +7158,7 @@
     <Property Name="ifbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt401' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt401' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt401">
     <Key>
       <PropertyRef Name="ila01" />
@@ -7172,7 +7219,7 @@
     <Property Name="ila16_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt401s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt401s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt401s">
     <Key>
       <PropertyRef Name="ilb01" />
@@ -7221,7 +7268,7 @@
     <Property Name="ilbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt402' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt402' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt402">
     <Key>
       <PropertyRef Name="ima01" />
@@ -7272,7 +7319,7 @@
     <Property Name="ima01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt402s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt402s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt402s">
     <Key>
       <PropertyRef Name="imb01" />
@@ -7321,7 +7368,7 @@
     <Property Name="imbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt520' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt520' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt520">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -7358,7 +7405,7 @@
     <Property Name="ipa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt520s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt520s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt520s">
     <Key>
       <PropertyRef Name="ipb01" />
@@ -7398,7 +7445,7 @@
     <Property Name="ipbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt521' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt521' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt521">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -7435,7 +7482,7 @@
     <Property Name="ipa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt521s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt521s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt521s">
     <Key>
       <PropertyRef Name="ipb01" />
@@ -7475,7 +7522,7 @@
     <Property Name="ipbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt522' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt522' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt522">
     <Key>
       <PropertyRef Name="ipa01" />
@@ -7512,7 +7559,7 @@
     <Property Name="ipa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_invt522s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invt522s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invt522s">
     <Key>
       <PropertyRef Name="ipb01" />
@@ -7552,7 +7599,7 @@
     <Property Name="ipbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_manr210' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_manr210' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_manr210">
     <Key>
       <PropertyRef Name="mea01" />
@@ -7566,7 +7613,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_manr311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_manr311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_manr311">
     <Key>
       <PropertyRef Name="mfa01" />
@@ -7580,7 +7627,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_manr312' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_manr312' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_manr312">
     <Key>
       <PropertyRef Name="mga01" />
@@ -7594,7 +7641,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_manr411' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_manr411' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_manr411">
     <Key>
       <PropertyRef Name="mha01" />
@@ -7607,7 +7654,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant210' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant210' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant210">
     <Key>
       <PropertyRef Name="mea01" />
@@ -7682,7 +7729,7 @@
     <Property Name="mea01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant210_1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant210_1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant210_1">
     <Key>
       <PropertyRef Name="mea01" />
@@ -7702,7 +7749,7 @@
     <Property Name="mea27" Type="numeric" Precision="22" Scale="6" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant210s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant210s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant210s">
     <Key>
       <PropertyRef Name="meb01" />
@@ -7740,7 +7787,7 @@
     <Property Name="mebmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant311' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant311">
     <Key>
       <PropertyRef Name="mfa01" />
@@ -7779,7 +7826,7 @@
     <Property Name="mfa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant311s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant311s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant311s">
     <Key>
       <PropertyRef Name="mfb01" />
@@ -7813,7 +7860,7 @@
     <Property Name="mfbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant312' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant312' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant312">
     <Key>
       <PropertyRef Name="mga01" />
@@ -7852,7 +7899,7 @@
     <Property Name="mga01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant312s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant312s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant312s">
     <Key>
       <PropertyRef Name="mgb01" />
@@ -7886,7 +7933,7 @@
     <Property Name="mgbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant411' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant411' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant411">
     <Key>
       <PropertyRef Name="mha01" />
@@ -7937,7 +7984,7 @@
     <Property Name="mha01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant411s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant411s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant411s">
     <Key>
       <PropertyRef Name="mhb01" />
@@ -7977,7 +8024,7 @@
     <Property Name="mhbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant412' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant412' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant412">
     <Key>
       <PropertyRef Name="mia01" />
@@ -8028,7 +8075,7 @@
     <Property Name="mia01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_mant412s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_mant412s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_mant412s">
     <Key>
       <PropertyRef Name="mib01" />
@@ -8068,7 +8115,7 @@
     <Property Name="mibmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_pick_ica1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_pick_ica1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_pick_ica1">
     <Key>
       <PropertyRef Name="ica01" />
@@ -8190,7 +8237,7 @@
     <Property Name="rw" Type="bigint" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri020">
     <Key>
       <PropertyRef Name="pba01" />
@@ -8211,7 +8258,7 @@
     <Property Name="pbasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri030">
     <Key>
       <PropertyRef Name="pbb01" />
@@ -8231,7 +8278,7 @@
     <Property Name="pbbsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri030s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri030s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri030s">
     <Key>
       <PropertyRef Name="pbc01" />
@@ -8253,7 +8300,7 @@
     <Property Name="pbcmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri031' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri031' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri031">
     <Key>
       <PropertyRef Name="ica01" />
@@ -8270,7 +8317,7 @@
     <Property Name="ica20" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri031s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri031s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri031s">
     <Key>
       <PropertyRef Name="pdd01" />
@@ -8313,7 +8360,7 @@
     <Property Name="pdd02_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri100">
     <Key>
       <PropertyRef Name="pca01" />
@@ -8378,7 +8425,7 @@
     <Property Name="pca24_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri100s">
     <Key>
       <PropertyRef Name="pcb01" />
@@ -8405,7 +8452,7 @@
     <Property Name="pcbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_puri101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_puri101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_puri101">
     <Key>
       <PropertyRef Name="pcc01" />
@@ -8430,7 +8477,7 @@
     <Property Name="pccsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purr200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purr200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purr200">
     <Key>
       <PropertyRef Name="pea01" />
@@ -8443,7 +8490,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purr300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purr300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purr300">
     <Key>
       <PropertyRef Name="pfa01" />
@@ -8456,7 +8503,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purr400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purr400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purr400">
     <Key>
       <PropertyRef Name="pga01" />
@@ -8469,7 +8516,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purr410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purr410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purr410">
     <Key>
       <PropertyRef Name="pga01" />
@@ -8485,7 +8532,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purr500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purr500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purr500">
     <Key>
       <PropertyRef Name="pha01" />
@@ -8498,7 +8545,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt200">
     <Key>
       <PropertyRef Name="pea01" />
@@ -8543,7 +8590,7 @@
     <Property Name="pea01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt200s">
     <Key>
       <PropertyRef Name="peb01" />
@@ -8581,7 +8628,7 @@
     <Property Name="pebmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt300">
     <Key>
       <PropertyRef Name="pfa01" />
@@ -8659,7 +8706,7 @@
     <Property Name="pfa01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt300s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt300s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt300s">
     <Key>
       <PropertyRef Name="pfb01" />
@@ -8718,7 +8765,7 @@
     <Property Name="pfbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt400">
     <Key>
       <PropertyRef Name="pga01" />
@@ -8796,7 +8843,7 @@
     <Property Name="pga01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt400s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt400s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt400s">
     <Key>
       <PropertyRef Name="pgb01" />
@@ -8856,7 +8903,7 @@
     <Property Name="pgbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt500">
     <Key>
       <PropertyRef Name="pha01" />
@@ -8906,7 +8953,7 @@
     <Property Name="pha01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_purt500s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_purt500s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_purt500s">
     <Key>
       <PropertyRef Name="phb01" />
@@ -8955,7 +9002,7 @@
     <Property Name="phbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpb400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpb400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpb400">
     <Key>
       <PropertyRef Name="sga01" />
@@ -8967,7 +9014,7 @@
     <Property Name="sga04" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi010">
     <Key>
       <PropertyRef Name="bab01" />
@@ -9004,7 +9051,7 @@
     <Property Name="bab04_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi020">
     <Key>
       <PropertyRef Name="sba01" />
@@ -9025,7 +9072,7 @@
     <Property Name="sbasecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi030' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi030">
     <Key>
       <PropertyRef Name="sbb01" />
@@ -9045,7 +9092,7 @@
     <Property Name="sbbsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi030s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi030s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi030s">
     <Key>
       <PropertyRef Name="sbc01" />
@@ -9068,7 +9115,7 @@
     <Property Name="sbcsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi031' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi031' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi031">
     <Key>
       <PropertyRef Name="ica01" />
@@ -9078,7 +9125,7 @@
     <Property Name="ica03" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi031s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi031s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi031s">
     <Key>
       <PropertyRef Name="sdd01" />
@@ -9120,7 +9167,7 @@
     <Property Name="sdd02_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi040' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi040' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi040">
     <Key>
       <PropertyRef Name="sbg01" />
@@ -9140,7 +9187,7 @@
     <Property Name="sbgsecg" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi100' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi100">
     <Key>
       <PropertyRef Name="sca01" />
@@ -9203,7 +9250,7 @@
     <Property Name="sca27_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpi100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpi100s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpi100s">
     <Key>
       <PropertyRef Name="scb01" />
@@ -9229,7 +9276,7 @@
     <Property Name="scbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpr200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpr200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpr200">
     <Key>
       <PropertyRef Name="sea01" />
@@ -9242,7 +9289,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpr300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpr300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpr300">
     <Key>
       <PropertyRef Name="sfa01" />
@@ -9255,7 +9302,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpr400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpr400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpr400">
     <Key>
       <PropertyRef Name="sga01" />
@@ -9268,7 +9315,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpr410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpr410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpr410">
     <Key>
       <PropertyRef Name="sga01" />
@@ -9285,7 +9332,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpr500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpr500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpr500">
     <Key>
       <PropertyRef Name="sha01" />
@@ -9298,7 +9345,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpr501' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpr501' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpr501">
     <Key>
       <PropertyRef Name="sha01" />
@@ -9311,7 +9358,7 @@
     <Property Name="order_by" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt200">
     <Key>
       <PropertyRef Name="sea01" />
@@ -9371,7 +9418,7 @@
     <Property Name="sea16_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt200s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt200s">
     <Key>
       <PropertyRef Name="seb01" />
@@ -9409,7 +9456,7 @@
     <Property Name="sebmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt300' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt300">
     <Key>
       <PropertyRef Name="sfa01" />
@@ -9495,7 +9542,7 @@
     <Property Name="sfa16_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt300s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt300s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt300s">
     <Key>
       <PropertyRef Name="sfb01" />
@@ -9559,7 +9606,7 @@
     <Property Name="sfbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt400' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt400">
     <Key>
       <PropertyRef Name="sga01" />
@@ -9655,7 +9702,7 @@
     <Property Name="sga16_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt400s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt400s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt400s">
     <Key>
       <PropertyRef Name="sgb01" />
@@ -9721,7 +9768,7 @@
     <Property Name="sgbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt410' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt410">
     <Key>
       <PropertyRef Name="sga01" />
@@ -9819,7 +9866,7 @@
     <Property Name="qty_tot" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt410s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt410s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt410s">
     <Key>
       <PropertyRef Name="sgb01" />
@@ -9888,7 +9935,7 @@
     <Property Name="ica18" Type="numeric" Precision="18" Scale="0" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt500">
     <Key>
       <PropertyRef Name="sha01" />
@@ -9941,7 +9988,7 @@
     <Property Name="sha01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt500s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_stpt500s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_stpt500s">
     <Key>
       <PropertyRef Name="shb01" />
@@ -9992,7 +10039,7 @@
     <Property Name="shbmodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_taxi001' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_taxi001' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_taxi001">
     <Key>
       <PropertyRef Name="tba01" />
@@ -10032,7 +10079,7 @@
     <Property Name="tbamodd" Type="datetime2" Precision="7" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_taxi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_taxi020' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_taxi020">
     <Key>
       <PropertyRef Name="tbe01" />
@@ -10046,7 +10093,7 @@
     <Property Name="tbe11_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_taxi020s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_taxi020s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_taxi020s">
     <Key>
       <PropertyRef Name="tbe01" />
@@ -10085,7 +10132,7 @@
     <Property Name="total_cnts" Type="numeric" Precision="24" Scale="0" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_test' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_test' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_test">
     <Key>
       <PropertyRef Name="id" />
@@ -10096,7 +10143,7 @@
     <Property Name="test2" Type="nchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_xinvt302' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_xinvt302' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_xinvt302">
     <Key>
       <PropertyRef Name="iga01" />
@@ -10129,7 +10176,7 @@
     <Property Name="iga01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_xinvt302s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_xinvt302s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_xinvt302s">
     <Key>
       <PropertyRef Name="igb01" />
@@ -10171,7 +10218,7 @@
     <Property Name="xc_igb002" Type="numeric" Precision="22" Scale="0" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_zinvt001' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_zinvt001' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_zinvt001">
     <Key>
       <PropertyRef Name="iga01" />
@@ -10204,7 +10251,7 @@
     <Property Name="iga01_c" Type="nvarchar" MaxLength="40" />
   </EntityType>
   <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'IDA.dbo.vw_zinvt001s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_zinvt001s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_zinvt001s">
     <Key>
       <PropertyRef Name="igb01" />
@@ -10359,6 +10406,7 @@
     <EntitySet Name="shb_tb" EntityType="Self.shb_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tba_tb" EntityType="Self.tba_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbe_tb" EntityType="Self.tbe_tb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tca_tb" EntityType="Self.tca_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="test" EntityType="Self.test" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ica_tb_0606" EntityType="Self.ica_tb_0606" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -11682,6 +11730,7 @@
     <EntitySet Name="vw_cspb200" EntityType="Self.vw_cspb200" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [vw_cspb200].[jja04] AS [jja04], 
+    [vw_cspb200].[jja06] AS [jja06], 
     [vw_cspb200].[delete_yn] AS [delete_yn]
     FROM [dbo].[vw_cspb200] AS [vw_cspb200]</DefiningQuery>
     </EntitySet>

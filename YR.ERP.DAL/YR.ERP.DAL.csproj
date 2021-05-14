@@ -460,6 +460,9 @@
     <Compile Include="YRModel\tbe_tb.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="YRModel\tca_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="YRModel\test.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>

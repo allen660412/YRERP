@@ -2139,7 +2139,7 @@ namespace YR.ERP.Forms.Stp
                         return;
                     }
                     //更新庫存交易歷史檔
-                    if (BoInv.OfStockPost("purt400", sgaModel, sgbModel, LoginInfo, out errMsg) == false)
+                    if (BoInv.OfStockPost("stpt400", sgaModel, sgbModel, LoginInfo, out errMsg) == false)
                     {
                         WfShowErrorMsg(errMsg);
                         DrMaster.RejectChanges();

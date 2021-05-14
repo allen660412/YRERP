@@ -3695,6 +3695,49 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tca_tb">
+      <EntityTypeMapping TypeName="YRDB.tca_tb">
+        <MappingFragment StoreEntitySet="tca_tb">
+          <ScalarProperty Name="tcamoddd" ColumnName="tcamoddd" />
+          <ScalarProperty Name="tcamodg" ColumnName="tcamodg" />
+          <ScalarProperty Name="tcamodu" ColumnName="tcamodu" />
+          <ScalarProperty Name="tcacred" ColumnName="tcacred" />
+          <ScalarProperty Name="tcacreg" ColumnName="tcacreg" />
+          <ScalarProperty Name="tcacreu" ColumnName="tcacreu" />
+          <ScalarProperty Name="tcacond" ColumnName="tcacond" />
+          <ScalarProperty Name="tcaconu" ColumnName="tcaconu" />
+          <ScalarProperty Name="tcaconf" ColumnName="tcaconf" />
+          <ScalarProperty Name="tca26" ColumnName="tca26" />
+          <ScalarProperty Name="tca25" ColumnName="tca25" />
+          <ScalarProperty Name="tca24" ColumnName="tca24" />
+          <ScalarProperty Name="tca23" ColumnName="tca23" />
+          <ScalarProperty Name="tca22" ColumnName="tca22" />
+          <ScalarProperty Name="tca21" ColumnName="tca21" />
+          <ScalarProperty Name="tca20" ColumnName="tca20" />
+          <ScalarProperty Name="tca19" ColumnName="tca19" />
+          <ScalarProperty Name="tca18" ColumnName="tca18" />
+          <ScalarProperty Name="tca17" ColumnName="tca17" />
+          <ScalarProperty Name="tca16" ColumnName="tca16" />
+          <ScalarProperty Name="tca15" ColumnName="tca15" />
+          <ScalarProperty Name="tca14" ColumnName="tca14" />
+          <ScalarProperty Name="tca13" ColumnName="tca13" />
+          <ScalarProperty Name="tca12" ColumnName="tca12" />
+          <ScalarProperty Name="tca11" ColumnName="tca11" />
+          <ScalarProperty Name="tca10" ColumnName="tca10" />
+          <ScalarProperty Name="tca09g" ColumnName="tca09g" />
+          <ScalarProperty Name="tca09t" ColumnName="tca09t" />
+          <ScalarProperty Name="tca09" ColumnName="tca09" />
+          <ScalarProperty Name="tca08" ColumnName="tca08" />
+          <ScalarProperty Name="tca07" ColumnName="tca07" />
+          <ScalarProperty Name="tca06" ColumnName="tca06" />
+          <ScalarProperty Name="tca05" ColumnName="tca05" />
+          <ScalarProperty Name="tca04" ColumnName="tca04" />
+          <ScalarProperty Name="tca03" ColumnName="tca03" />
+          <ScalarProperty Name="tca02" ColumnName="tca02" />
+          <ScalarProperty Name="tca01" ColumnName="tca01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="test">
       <EntityTypeMapping TypeName="YRDB.test">
         <MappingFragment StoreEntitySet="test">
@@ -5129,6 +5172,7 @@
       <EntityTypeMapping TypeName="YRDB.vw_cspb200">
         <MappingFragment StoreEntitySet="vw_cspb200">
           <ScalarProperty Name="delete_yn" ColumnName="delete_yn" />
+          <ScalarProperty Name="jja06" ColumnName="jja06" />
           <ScalarProperty Name="jja04" ColumnName="jja04" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -15,6 +15,7 @@ namespace YR.ERP.DAL.YRModel
     public partial class vw_cspb200
     {
         public string jja04 { get; set; }
+        public Nullable<System.DateTime> jja06 { get; set; }
         public string delete_yn { get; set; }
     }
 }

@@ -138,6 +138,7 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<shb_tb> shb_tb { get; set; }
         public virtual DbSet<tba_tb> tba_tb { get; set; }
         public virtual DbSet<tbe_tb> tbe_tb { get; set; }
+        public virtual DbSet<tca_tb> tca_tb { get; set; }
         public virtual DbSet<test> test { get; set; }
         public virtual DbSet<ica_tb_0606> ica_tb_0606 { get; set; }
         public virtual DbSet<ica_tb_0607> ica_tb_0607 { get; set; }

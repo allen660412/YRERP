@@ -131,6 +131,7 @@
             this.pbxUsed = new System.Windows.Forms.PictureBox();
             this.ute_ica28 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label38 = new System.Windows.Forms.Label();
+            this.ucx_ica29 = new YR.Util.Controls.UcCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Master)).BeginInit();
             this.uTab_Master.SuspendLayout();
@@ -236,6 +237,7 @@
             // 
             // ultraTabPageControl1
             // 
+            this.ultraTabPageControl1.Controls.Add(this.ucx_ica29);
             this.ultraTabPageControl1.Controls.Add(this.ute_ica28);
             this.ultraTabPageControl1.Controls.Add(this.label38);
             this.ultraTabPageControl1.Controls.Add(this.pbxUsed);
@@ -325,6 +327,7 @@
             this.ultraTabPageControl1.Controls.SetChildIndex(this.pbxUsed, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label38, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_ica28, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ucx_ica29, 0);
             // 
             // UtbmMain
             // 
@@ -1388,6 +1391,18 @@
             this.label38.Tag = "ica28";
             this.label38.Text = "ica28";
             // 
+            // ucx_ica29
+            // 
+            this.ucx_ica29.AutoSize = true;
+            this.ucx_ica29.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ucx_ica29.Location = new System.Drawing.Point(457, 136);
+            this.ucx_ica29.Name = "ucx_ica29";
+            this.ucx_ica29.NullValue = "";
+            this.ucx_ica29.Size = new System.Drawing.Size(56, 18);
+            this.ucx_ica29.TabIndex = 175;
+            this.ucx_ica29.Tag = "ica29";
+            this.ucx_ica29.Text = "ica29";
+            // 
             // FrmInvi100
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1558,5 +1573,6 @@
         private System.Windows.Forms.Label label37;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_ica28;
         private System.Windows.Forms.Label label38;
+        private Util.Controls.UcCheckBox ucx_ica29;
     }
 }

@@ -233,6 +233,7 @@ namespace YR.ERP.Forms.Inv
                 pDr["ica23"] = 0;
                 pDr["ica24"] = 0;
                 pDr["ica26"] = 0;
+                pDr["ica29"] = "Y"; //預設都是要計算成本的
                 pDr["icaconf"] = "N";
                 pDr["icavali"] = "W";//待確認
                 return true;

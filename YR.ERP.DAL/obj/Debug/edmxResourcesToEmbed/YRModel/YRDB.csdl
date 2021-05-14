@@ -114,6 +114,7 @@
     <EntitySet Name="shb_tb" EntityType="YRDB.shb_tb" />
     <EntitySet Name="tba_tb" EntityType="YRDB.tba_tb" />
     <EntitySet Name="tbe_tb" EntityType="YRDB.tbe_tb" />
+    <EntitySet Name="tca_tb" EntityType="YRDB.tca_tb" />
     <EntitySet Name="test" EntityType="YRDB.test" />
     <EntitySet Name="ica_tb_0606" EntityType="YRDB.ica_tb_0606" />
     <EntitySet Name="ica_tb_0607" EntityType="YRDB.ica_tb_0607" />
@@ -3977,6 +3978,52 @@
     <Property Name="tbemodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="tbemodd" Type="DateTime" Precision="7" />
   </EntityType>
+  <EntityType Name="tca_tb">
+    <Key>
+      <PropertyRef Name="tca01" />
+      <PropertyRef Name="tca02" />
+      <PropertyRef Name="tca03" />
+      <PropertyRef Name="tca04" />
+      <PropertyRef Name="tca05" />
+    </Key>
+    <Property Name="tca01" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca02" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
+    <Property Name="tca03" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
+    <Property Name="tca04" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
+    <Property Name="tca05" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tca06" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tca07" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca09" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="tca09t" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="tca09g" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="tca10" Type="DateTime" Precision="7" />
+    <Property Name="tca11" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca12" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tca13" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tca14" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca15" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca16" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca17" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca18" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca19" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca20" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca21" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca22" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca23" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca24" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca25" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca26" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tcaconf" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tcaconu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tcacond" Type="DateTime" Precision="7" />
+    <Property Name="tcacreu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tcacreg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tcacred" Type="DateTime" Precision="7" />
+    <Property Name="tcamodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tcamodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tcamoddd" Type="DateTime" Precision="7" />
+  </EntityType>
   <EntityType Name="test">
     <Key>
       <PropertyRef Name="id" />
@@ -5453,6 +5500,7 @@
       <PropertyRef Name="delete_yn" />
     </Key>
     <Property Name="jja04" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="jja06" Type="DateTime" Precision="7" />
     <Property Name="delete_yn" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="vw_cspq100">
