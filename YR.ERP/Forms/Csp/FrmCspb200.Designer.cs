@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
+            this.udt_jja06 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
+            this.label4 = new System.Windows.Forms.Label();
             this.ucx_delete_yn = new YR.Util.Controls.UcCheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ute_jja04 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.udt_jja06 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
-            this.label4 = new System.Windows.Forms.Label();
             this.PnlFillMaster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).BeginInit();
             this.ultraGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_jja04)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_jja06)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_jja04)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlFillMaster
@@ -62,6 +62,27 @@
             this.ultraGroupBox1.Size = new System.Drawing.Size(583, 190);
             this.ultraGroupBox1.TabIndex = 12;
             this.ultraGroupBox1.Text = "Range";
+            // 
+            // udt_jja06
+            // 
+            this.udt_jja06.AccessibleDescription = "";
+            this.udt_jja06.Location = new System.Drawing.Point(120, 72);
+            this.udt_jja06.Name = "udt_jja06";
+            this.udt_jja06.Size = new System.Drawing.Size(124, 21);
+            this.udt_jja06.TabIndex = 178;
+            this.udt_jja06.Tag = "jja06";
+            this.udt_jja06.Value = null;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label4.Location = new System.Drawing.Point(15, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 14);
+            this.label4.TabIndex = 179;
+            this.label4.Tag = "jja06";
+            this.label4.Text = "jja06";
             // 
             // ucx_delete_yn
             // 
@@ -96,27 +117,6 @@
             this.ute_jja04.TabIndex = 0;
             this.ute_jja04.Tag = "jja04";
             // 
-            // udt_jja06
-            // 
-            this.udt_jja06.AccessibleDescription = "";
-            this.udt_jja06.Location = new System.Drawing.Point(120, 72);
-            this.udt_jja06.Name = "udt_jja06";
-            this.udt_jja06.Size = new System.Drawing.Size(124, 21);
-            this.udt_jja06.TabIndex = 178;
-            this.udt_jja06.Tag = "jja06";
-            this.udt_jja06.Value = null;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label4.Location = new System.Drawing.Point(15, 77);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 14);
-            this.label4.TabIndex = 179;
-            this.label4.Tag = "jja06";
-            this.label4.Text = "jja06";
-            // 
             // FrmCspb200
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -131,8 +131,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).EndInit();
             this.ultraGroupBox1.ResumeLayout(false);
             this.ultraGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_jja04)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_jja06)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_jja04)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -919,3 +919,6 @@ C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.Base\obj\Debug\YR.ERP.Base.dll.licenses
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.Base\obj\Debug\YR.ERP.Base.dll
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.Base\obj\Debug\YR.ERP.Base.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.Base\bin\Debug\Pictures\printer_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.Base\bin\Debug\Pictures\shipped_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.Base\bin\Debug\Pictures\trash_can_32.png

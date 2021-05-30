@@ -1050,20 +1050,23 @@ namespace YR.ERP.BLL.MSSQL
                         if (sgaModel.sga13t > 4490)
                             sga23 += 60;
                         break;
-                    case "C000003"://露天
+                    case "C000003"://露天-正中
                         sga23 = sgaModel.sga13t * 0.03m;
                         break;
                     case "C000004"://奇摩
                         sga23 = sgaModel.sga13t * 0.015m;
-                        if (sgaModel.sga13t > 4490)
+                        if (sgaModel.sga13t > 4990)
                             sga23 += 60;
                         break;
                     case "C000005"://松果
                         sga23 = sgaModel.sga13t * 0.04m; //預設刷卡
-                        sga23 += 60;
+                        //sga23 += 60;
                         break;
                     case "C000006"://蝦皮2
                         sga23 = sgaModel.sga13t * 0.04m;
+                        break;
+                    case "C000007"://露天-艾達
+                        sga23 = sgaModel.sga13t * 0.03m;
                         break;
                 }
                 sga23 = GlobalFn.Round(sga23, 0);

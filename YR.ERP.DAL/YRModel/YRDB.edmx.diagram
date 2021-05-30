@@ -220,22 +220,23 @@
         <EntityTypeShape EntityType="YRDB.vw_invq210s" Width="1.5" PointX="54.75" PointY="53.75" />
         <EntityTypeShape EntityType="YRDB.vw_invq220" Width="1.5" PointX="36.75" PointY="55.75" />
         <EntityTypeShape EntityType="YRDB.vw_invr101" Width="1.5" PointX="38.75" PointY="55.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr215" Width="1.5" PointX="56.75" PointY="0.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr301" Width="1.5" PointX="56.75" PointY="3.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr302" Width="1.5" PointX="56.75" PointY="6.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr330" Width="1.5" PointX="6.75" PointY="56.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr336" Width="1.5" PointX="56.75" PointY="9.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr337" Width="1.5" PointX="56.75" PointY="12.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr401" Width="1.5" PointX="56.75" PointY="16.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr402" Width="1.5" PointX="56.75" PointY="19.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr410" Width="1.5" PointX="56.75" PointY="22.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr520" Width="1.5" PointX="56.75" PointY="26.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr521" Width="1.5" PointX="56.75" PointY="29.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invr522" Width="1.5" PointX="56.75" PointY="33.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invt301" Width="1.5" PointX="56.75" PointY="37.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invt301s" Width="1.5" PointX="56.75" PointY="44.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr102" Width="1.5" PointX="56.75" PointY="0.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr215" Width="1.5" PointX="56.75" PointY="2.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr301" Width="1.5" PointX="56.75" PointY="5.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr302" Width="1.5" PointX="6.75" PointY="56.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr330" Width="1.5" PointX="56.75" PointY="8.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr336" Width="1.5" PointX="56.75" PointY="11.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr337" Width="1.5" PointX="56.75" PointY="14.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr401" Width="1.5" PointX="56.75" PointY="18.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr402" Width="1.5" PointX="56.75" PointY="21.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr410" Width="1.5" PointX="56.75" PointY="24.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr520" Width="1.5" PointX="56.75" PointY="28.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr521" Width="1.5" PointX="56.75" PointY="31.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invr522" Width="1.5" PointX="56.75" PointY="35.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invt301" Width="1.5" PointX="56.75" PointY="39.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invt301s" Width="1.5" PointX="56.75" PointY="46.75" />
         <EntityTypeShape EntityType="YRDB.vw_invt302" Width="1.5" PointX="50.75" PointY="56.75" />
-        <EntityTypeShape EntityType="YRDB.vw_invt302s" Width="1.5" PointX="56.75" PointY="52.75" />
+        <EntityTypeShape EntityType="YRDB.vw_invt302s" Width="1.5" PointX="56.75" PointY="54.75" />
         <EntityTypeShape EntityType="YRDB.vw_invt330" Width="1.5" PointX="0.75" PointY="57.75" />
         <EntityTypeShape EntityType="YRDB.vw_invt330s" Width="1.5" PointX="38.75" PointY="57.75" />
         <EntityTypeShape EntityType="YRDB.vw_invt331" Width="1.5" PointX="44.75" PointY="57.75" />
@@ -266,24 +267,24 @@
         <EntityTypeShape EntityType="YRDB.vw_mant411" Width="1.5" PointX="60.75" PointY="40.75" />
         <EntityTypeShape EntityType="YRDB.vw_mant411s" Width="1.5" PointX="46.75" PointY="60.75" />
         <EntityTypeShape EntityType="YRDB.vw_mant412" Width="1.5" PointX="60.75" PointY="50.75" />
-        <EntityTypeShape EntityType="YRDB.vw_mant412s" Width="1.5" PointX="54.75" PointY="60.75" />
-        <EntityTypeShape EntityType="YRDB.vw_pick_ica1" Width="1.5" PointX="60.75" PointY="60.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri020" Width="1.5" PointX="2.75" PointY="61.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri030" Width="1.5" PointX="4.75" PointY="61.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri030s" Width="1.5" PointX="10.75" PointY="61.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri031" Width="1.5" PointX="12.75" PointY="61.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri031s" Width="1.5" PointX="40.75" PointY="61.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri100" Width="1.5" PointX="62.75" PointY="0.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri100s" Width="1.5" PointX="62.75" PointY="13.75" />
-        <EntityTypeShape EntityType="YRDB.vw_puri101" Width="1.5" PointX="62.75" PointY="19.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purr200" Width="1.5" PointX="62.75" PointY="25.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purr300" Width="1.5" PointX="62.75" PointY="28.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purr400" Width="1.5" PointX="62.75" PointY="31.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purr410" Width="1.5" PointX="62.75" PointY="34.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purr500" Width="1.5" PointX="62.75" PointY="38.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purt200" Width="1.5" PointX="62.75" PointY="41.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purt200s" Width="1.5" PointX="62.75" PointY="50.75" />
-        <EntityTypeShape EntityType="YRDB.vw_purt300" Width="1.5" PointX="62.75" PointY="57.75" />
+        <EntityTypeShape EntityType="YRDB.vw_mant412s" Width="1.5" PointX="60.75" PointY="60.75" />
+        <EntityTypeShape EntityType="YRDB.vw_pick_ica1" Width="1.5" PointX="2.75" PointY="61.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri020" Width="1.5" PointX="4.75" PointY="61.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri030" Width="1.5" PointX="10.75" PointY="61.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri030s" Width="1.5" PointX="12.75" PointY="61.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri031" Width="1.5" PointX="40.75" PointY="61.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri031s" Width="1.5" PointX="62.75" PointY="0.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri100" Width="1.5" PointX="62.75" PointY="8.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri100s" Width="1.5" PointX="62.75" PointY="21.75" />
+        <EntityTypeShape EntityType="YRDB.vw_puri101" Width="1.5" PointX="62.75" PointY="27.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purr200" Width="1.5" PointX="62.75" PointY="33.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purr300" Width="1.5" PointX="62.75" PointY="36.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purr400" Width="1.5" PointX="62.75" PointY="39.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purr410" Width="1.5" PointX="62.75" PointY="42.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purr500" Width="1.5" PointX="62.75" PointY="46.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purt200" Width="1.5" PointX="62.75" PointY="49.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purt200s" Width="1.5" PointX="54.75" PointY="62.75" />
+        <EntityTypeShape EntityType="YRDB.vw_purt300" Width="1.5" PointX="62.75" PointY="58.75" />
         <EntityTypeShape EntityType="YRDB.vw_purt300s" Width="1.5" PointX="30.75" PointY="63.75" />
         <EntityTypeShape EntityType="YRDB.vw_purt400" Width="1.5" PointX="32.75" PointY="63.75" />
         <EntityTypeShape EntityType="YRDB.vw_purt400s" Width="1.5" PointX="48.75" PointY="63.75" />
@@ -303,26 +304,26 @@
         <EntityTypeShape EntityType="YRDB.vw_stpr300" Width="1.5" PointX="64.75" PointY="56.75" />
         <EntityTypeShape EntityType="YRDB.vw_stpr400" Width="1.5" PointX="64.75" PointY="59.75" />
         <EntityTypeShape EntityType="YRDB.vw_stpr410" Width="1.5" PointX="64.75" PointY="62.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpr500" Width="1.5" PointX="12.75" PointY="65.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpr501" Width="1.5" PointX="42.75" PointY="65.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt200" Width="1.5" PointX="66.75" PointY="0.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt200s" Width="1.5" PointX="0.75" PointY="66.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt300" Width="1.5" PointX="2.75" PointY="66.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt300s" Width="1.5" PointX="4.75" PointY="66.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt400" Width="1.5" PointX="66.75" PointY="11.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt400s" Width="1.5" PointX="66.75" PointY="29.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt410" Width="1.5" PointX="66.75" PointY="40.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt410s" Width="1.5" PointX="66.75" PointY="58.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt500" Width="1.5" PointX="14.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_stpt500s" Width="1.5" PointX="16.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_taxi001" Width="1.5" PointX="18.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_taxi020" Width="1.5" PointX="20.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_taxi020s" Width="1.5" PointX="22.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_test" Width="1.5" PointX="24.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_xinvt302" Width="1.5" PointX="44.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_xinvt302s" Width="1.5" PointX="50.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_zinvt001" Width="1.5" PointX="52.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_zinvt001s" Width="1.5" PointX="68.75" PointY="0.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpr500" Width="1.5" PointX="38.75" PointY="65.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpr501" Width="1.5" PointX="40.75" PointY="65.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt200" Width="1.5" PointX="42.75" PointY="65.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt200s" Width="1.5" PointX="66.75" PointY="0.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt300" Width="1.5" PointX="4.75" PointY="66.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt300s" Width="1.5" PointX="66.75" PointY="7.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt400" Width="1.5" PointX="10.75" PointY="66.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt400s" Width="1.5" PointX="12.75" PointY="66.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt410" Width="1.5" PointX="66.75" PointY="18.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt410s" Width="1.5" PointX="66.75" PointY="36.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt500" Width="1.5" PointX="66.75" PointY="48.75" />
+        <EntityTypeShape EntityType="YRDB.vw_stpt500s" Width="1.5" PointX="66.75" PointY="58.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxi001" Width="1.5" PointX="14.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxi020" Width="1.5" PointX="16.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxi020s" Width="1.5" PointX="18.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_test" Width="1.5" PointX="20.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_xinvt302" Width="1.5" PointX="22.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_xinvt302s" Width="1.5" PointX="24.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_zinvt001" Width="1.5" PointX="44.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_zinvt001s" Width="1.5" PointX="50.75" PointY="67.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

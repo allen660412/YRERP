@@ -216,6 +216,7 @@
     <EntitySet Name="vw_invq210s" EntityType="YRDB.vw_invq210s" />
     <EntitySet Name="vw_invq220" EntityType="YRDB.vw_invq220" />
     <EntitySet Name="vw_invr101" EntityType="YRDB.vw_invr101" />
+    <EntitySet Name="vw_invr102" EntityType="YRDB.vw_invr102" />
     <EntitySet Name="vw_invr215" EntityType="YRDB.vw_invr215" />
     <EntitySet Name="vw_invr301" EntityType="YRDB.vw_invr301" />
     <EntitySet Name="vw_invr302" EntityType="YRDB.vw_invr302" />
@@ -3408,7 +3409,7 @@
     <Property Name="sca26" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="sca27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="sca28" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-    <Property Name="sca29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sca29" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="sca30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sca31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sca32" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -6734,6 +6735,12 @@
     </Key>
     <Property Name="ica01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="vw_invr102">
+    <Key>
+      <PropertyRef Name="ica01" />
+    </Key>
+    <Property Name="ica01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="vw_invr215">
     <Key>
       <PropertyRef Name="icc01" />
@@ -9182,7 +9189,7 @@
     <Property Name="sca26" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="sca27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="sca28" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-    <Property Name="sca29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sca29" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="sca30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sca31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sca32" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />

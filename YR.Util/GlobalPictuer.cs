@@ -45,6 +45,10 @@ namespace YR.Util
         public static readonly string TOOLBAR_NEXT = "next_32";
         public static readonly string TOOLBAR_PREVIOUS = "previous_32";
 
+        public static readonly string TOOLBAR_SHIPPING = "shipped_32";
+        public static readonly string TOOLBAR_PRINTER = "printer_32";
+        public static readonly string TOOLBAR_TRANSH_CAN = "trash_can_32";
+
         public static readonly string DOC_CLOSED = "doc_closed_32";
         public static readonly string DOC_CONFIRM = "doc_confirm_32";
         public static readonly string DOC_OPEN = "doc_open_32";
@@ -72,6 +76,7 @@ namespace YR.Util
         public static readonly string MENU_TREE_FOLDER_ACTIVE = "folder_active_16";
         public static readonly string MENU_TREE_FORM = "form_16";
         public static readonly string MENU_TREE_FORM_ACTIVE = "form_active_16";
+
 
         #endregion
 
@@ -235,6 +240,18 @@ namespace YR.Util
                 _imgLists.Images.Add(imageName, System.Drawing.Image.FromFile(imageFullName));
 
                 imageName = "pick_32";                  //要切開
+                imageFullName = imagePath + imageName + ".png";
+                _imgLists.Images.Add(imageName, System.Drawing.Image.FromFile(imageFullName));
+
+                imageName = TOOLBAR_PRINTER;                  
+                imageFullName = imagePath + imageName + ".png";
+                _imgLists.Images.Add(imageName, System.Drawing.Image.FromFile(imageFullName));
+
+                imageName = TOOLBAR_SHIPPING;
+                imageFullName = imagePath + imageName + ".png";
+                _imgLists.Images.Add(imageName, System.Drawing.Image.FromFile(imageFullName));
+
+                imageName = TOOLBAR_TRANSH_CAN;
                 imageFullName = imagePath + imageName + ".png";
                 _imgLists.Images.Add(imageName, System.Drawing.Image.FromFile(imageFullName));
 

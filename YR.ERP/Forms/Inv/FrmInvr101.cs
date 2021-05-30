@@ -110,7 +110,7 @@ namespace YR.ERP.Forms.Inv
                 invr101Model = DrMaster.ToItem<vw_invr101>();
                 switch (e.Column.ToLower())
                 {
-                    case "igca01":
+                    case "ica01":
                         //if (!GlobalFn.varIsNull(e.Value) && !GlobalFn.varIsNull(invr301Model.iga02_s))
                         //{
                         //    if (invr301Model.iga02_s > invr301Model.iga02_e)

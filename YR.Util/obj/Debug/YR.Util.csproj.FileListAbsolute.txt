@@ -650,3 +650,6 @@ C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.Util\obj\Debug\YR.Util.csproj.GenerateResource.Cache
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.Util\obj\Debug\YR.Util.dll
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.Util\obj\Debug\YR.Util.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.Util\bin\Debug\Pictures\printer_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.Util\bin\Debug\Pictures\shipped_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.Util\bin\Debug\Pictures\trash_can_32.png

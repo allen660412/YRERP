@@ -618,6 +618,12 @@
     <Compile Include="Forms\Inv\FrmInvr101.Designer.cs">
       <DependentUpon>FrmInvr101.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inv\FrmInvr102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvr102.Designer.cs">
+      <DependentUpon>FrmInvr102.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inv\FrmInvr215.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1286,6 +1292,9 @@
     <EmbeddedResource Include="Forms\Inv\FrmInvr101.resx">
       <DependentUpon>FrmInvr101.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvr102.resx">
+      <DependentUpon>FrmInvr102.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inv\FrmInvr215.resx">
       <DependentUpon>FrmInvr215.cs</DependentUpon>
     </EmbeddedResource>
@@ -1541,6 +1550,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Reports\Inv\Invr101.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inv\Invr102.mrt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Reports\Inv\Invr215.mrt">

@@ -240,6 +240,7 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<vw_invq210s> vw_invq210s { get; set; }
         public virtual DbSet<vw_invq220> vw_invq220 { get; set; }
         public virtual DbSet<vw_invr101> vw_invr101 { get; set; }
+        public virtual DbSet<vw_invr102> vw_invr102 { get; set; }
         public virtual DbSet<vw_invr215> vw_invr215 { get; set; }
         public virtual DbSet<vw_invr301> vw_invr301 { get; set; }
         public virtual DbSet<vw_invr302> vw_invr302 { get; set; }

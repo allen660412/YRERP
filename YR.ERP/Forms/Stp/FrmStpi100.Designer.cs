@@ -152,6 +152,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.ute_sca28 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label37 = new System.Windows.Forms.Label();
+            this.udt_sca29 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label38 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Detail)).BeginInit();
             this.uTab_Detail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
@@ -211,6 +213,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_sca27_c)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sca27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sca28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udt_sca29)).BeginInit();
             this.SuspendLayout();
             // 
             // uTab_Detail
@@ -259,6 +262,8 @@
             // 
             // ultraTabPageControl2
             // 
+            this.ultraTabPageControl2.Controls.Add(this.udt_sca29);
+            this.ultraTabPageControl2.Controls.Add(this.label38);
             this.ultraTabPageControl2.Controls.Add(this.ute_sca28);
             this.ultraTabPageControl2.Controls.Add(this.label37);
             this.ultraTabPageControl2.Controls.Add(this.ute_sca27_c);
@@ -282,6 +287,7 @@
             this.ultraTabPageControl2.Controls.Add(this.label23);
             this.ultraTabPageControl2.Controls.Add(this.label22);
             this.ultraTabPageControl2.Controls.Add(this.label21);
+            this.ultraTabPageControl2.Location = new System.Drawing.Point(1, 27);
             this.ultraTabPageControl2.Size = new System.Drawing.Size(940, 223);
             // 
             // ultraTabPageControl3
@@ -332,6 +338,7 @@
             this.ultraTabPageControl1.Controls.Add(this.ute_sca04);
             this.ultraTabPageControl1.Controls.Add(this.uGridMaster);
             this.ultraTabPageControl1.Controls.Add(this.label3);
+            this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl1.Size = new System.Drawing.Size(940, 223);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label3, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.uGridMaster, 0);
@@ -1088,7 +1095,7 @@
             this.label23.AccessibleDescription = "";
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label23.Location = new System.Drawing.Point(21, 119);
+            this.label23.Location = new System.Drawing.Point(21, 118);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(38, 14);
             this.label23.TabIndex = 108;
@@ -1251,7 +1258,7 @@
             this.ucb_sca23.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.ucb_sca23.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ucb_sca23.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.ucb_sca23.Location = new System.Drawing.Point(130, 115);
+            this.ucb_sca23.Location = new System.Drawing.Point(130, 114);
             this.ucb_sca23.Name = "ucb_sca23";
             this.ucb_sca23.Size = new System.Drawing.Size(157, 22);
             this.ucb_sca23.TabIndex = 4;
@@ -1500,6 +1507,28 @@
             this.label37.Tag = "sca28";
             this.label37.Text = "sca28";
             // 
+            // udt_sca29
+            // 
+            this.udt_sca29.AccessibleDescription = "";
+            this.udt_sca29.Font = new System.Drawing.Font("新細明體", 10F);
+            this.udt_sca29.Location = new System.Drawing.Point(451, 114);
+            this.udt_sca29.Name = "udt_sca29";
+            this.udt_sca29.Size = new System.Drawing.Size(80, 22);
+            this.udt_sca29.TabIndex = 125;
+            this.udt_sca29.Tag = "sca29";
+            // 
+            // label38
+            // 
+            this.label38.AccessibleDescription = "";
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label38.Location = new System.Drawing.Point(342, 118);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(38, 14);
+            this.label38.TabIndex = 126;
+            this.label38.Tag = "sca29";
+            this.label38.Text = "sca29";
+            // 
             // FrmStpi100
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1576,6 +1605,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_sca27_c)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sca27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sca28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udt_sca29)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1668,6 +1698,8 @@
         private System.Windows.Forms.Label label36;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_sca28;
         private System.Windows.Forms.Label label37;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor udt_sca29;
+        private System.Windows.Forms.Label label38;
 
     }
 }

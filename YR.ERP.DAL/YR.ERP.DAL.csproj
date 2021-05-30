@@ -377,6 +377,7 @@
     <Compile Include="YRModel\Reports\Gla\Glar321.cs" />
     <Compile Include="YRModel\Reports\Gla\Glar322.cs" />
     <Compile Include="YRModel\Reports\Inv\Invr101.cs" />
+    <Compile Include="YRModel\Reports\Inv\Invr102.cs" />
     <Compile Include="YRModel\Reports\Inv\Invr301.cs" />
     <Compile Include="YRModel\Reports\Inv\Invr302.cs" />
     <Compile Include="YRModel\Reports\Inv\Invr330.cs" />
@@ -749,6 +750,9 @@
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
     <Compile Include="YRModel\vw_invr101.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invr102.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
     <Compile Include="YRModel\vw_invr215.cs">

@@ -511,7 +511,9 @@ namespace YR.ERP.BLL.MSSQL.Csp
                 dtJja = boCsp.OfGetDataTable(selectSql);
                 
                 //1.由進貨單 產生成本進項
-                selectSql = @"SELECT * FROM pga_tb WHERE pgaconf='Y' AND pga01=@pga01";
+                selectSql = @"SELECT * FROM pga_tb
+                              WHERE pgaconf='Y' AND pga01=@pga01";
+
                 sqlParmList = new List<SqlParameter>();
                 sqlParmList.Add(new SqlParameter("@pga01", pPga01));
                 dtPga = OfGetDataTable(selectSql, sqlParmList.ToArray());
@@ -519,7 +521,12 @@ namespace YR.ERP.BLL.MSSQL.Csp
                 foreach (DataRow drPga in dtPga.Rows)
                 {
                     pgaModel = drPga.ToItem<pga_tb>();
-                    selectSql = @"SELECT * FROM pgb_tb WHERE pgb05>0 AND pgb01=@pgb01";
+                    //5.16 加入只做成本管理的料號控管
+                    selectSql = @"SELECT a.* FROM pgb_tb a
+                                        LEFT JOIN ica_tb b ON a.pgb03=b.ica01
+                                    WHERE pgb05>0 AND pgb01=@pgb01
+                                        AND b.ica29='Y'
+                                        ";
                     sqlParmList = new List<SqlParameter>();
                     sqlParmList.Add(new SqlParameter("@pgb01", pgaModel.pga01));
 
@@ -606,13 +613,22 @@ namespace YR.ERP.BLL.MSSQL.Csp
             {
                 //2.由銷退單產生成本進項
                 selectSql = @"SELECT * FROM sha_tb WHERE shaconf='Y' AND sha01=@sha01";
+
+
                 sqlParmList = new List<SqlParameter>();
                 sqlParmList.Add(new SqlParameter("@sha01", pSha01));
                 dtSha = OfGetDataTable(selectSql,sqlParmList.ToArray());
                 foreach (DataRow drSha in dtSha.Rows)
                 {
                     shaModel = drSha.ToItem<sha_tb>();
-                    selectSql = @"SELECT * FROM shb_tb WHERE shb05>0 AND shb01=@shb01";
+                    //selectSql = @"SELECT * FROM shb_tb WHERE shb05>0 AND shb01=@shb01";
+                    //5.16 加入只做成本管理的料號控管
+                    selectSql = @"SELECT a.* FROM shb_tb a
+                                    LEFT JOIN ica_tb b ON a.shb03=b.ica01
+                                WHERE a.shb05>0 AND a.shb01=@shb01
+                                    AND b.ica29='Y'";
+
+
                     sqlParmList = new List<SqlParameter>();
                     sqlParmList.Add(new SqlParameter("@shb01", shaModel.sha01));
 
@@ -708,16 +724,34 @@ namespace YR.ERP.BLL.MSSQL.Csp
                 foreach (DataRow drSga in dtSga.Rows)
                 {
                     sgaModel = drSga.ToItem<sga_tb>();
-                    selectSql = @"SELECT * FROM sgb_tb WHERE sgb05>0 AND sgb01=@sgb01";
+                    //selectSql = @"SELECT * FROM sgb_tb WHERE sgb05>0 AND sgb01=@sgb01";
+                    //5.16 加入只做成本管理的料號控管
+                    selectSql = @"SELECT a.* FROM sgb_tb a
+                                        LEFT JOIN ica_tb b ON a.sgb03=ica01
+                                    WHERE a.sgb05>0 AND a.sgb01=@sgb01
+                                        AND b.ica29='Y'
+                                ";
+
                     sqlParmList = new List<SqlParameter>();
                     sqlParmList.Add(new SqlParameter("@sgb01", sgaModel.sga01));
+                    dtSgb = OfGetDataTable(selectSql, sqlParmList.ToArray());
 
+
+                    //sga13t改用成本計算的料號去代替
+                    selectSql = @"SELECT SUM(a.sgb10t) FROM sgb_tb a
+                                        LEFT JOIN ica_tb b ON a.sgb03=ica01
+                                    WHERE a.sgb05>0 AND a.sgb01=@sgb01
+                                        AND b.ica29='Y'
+                                ";
+                    sqlParmList = new List<SqlParameter>();
+                    sqlParmList.Add(new SqlParameter("@sgb01", sgaModel.sga01));
+                    sgaModel.sga13t = GlobalFn.isNullRet(boCsp.OfGetFieldValue(selectSql, sqlParmList.ToArray()),0);
                     if (sgaModel.sga13t == 0)
                         costRate = 1;
                     else
                         costRate = (sgaModel.sga23 / sgaModel.sga13t);
 
-                    dtSgb = OfGetDataTable(selectSql, sqlParmList.ToArray());
+
                     foreach (DataRow drSgb in dtSgb.Rows)
                     {
                         sgbModel = drSgb.ToItem<sgb_tb>();
@@ -763,10 +797,7 @@ namespace YR.ERP.BLL.MSSQL.Csp
                             }
                         }
                     }
-
                 }
-
-
 
                 rtnResult = new Result();
                 rtnResult.Success = true;
@@ -813,7 +844,12 @@ namespace YR.ERP.BLL.MSSQL.Csp
                 {
 
                     phaModel = drPha.ToItem<pha_tb>();
-                    selectSql = @"SELECT * FROM phb_tb WHERE phb05>0 AND phb01=@phb01";
+                    //selectSql = @"SELECT * FROM phb_tb WHERE phb05>0 AND phb01=@phb01";
+                    //5.16 加入只做成本管理的料號控管
+                    selectSql = @"SELECT a.* FROM phb_tb a
+                                        LEFT JOIN ica_tb b on a.phb03=b.ica01
+                                    WHERE a.phb05>0 AND a.phb01=@phb01
+                                        AND b.ica29='Y'";
                     sqlParmList = new List<SqlParameter>();
                     sqlParmList.Add(new SqlParameter("@phb01", phaModel.pha01));
 

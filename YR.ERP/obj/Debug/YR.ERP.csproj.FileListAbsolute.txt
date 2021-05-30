@@ -1866,3 +1866,8 @@ C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\obj\Debug\YR.ERP.Properties.Resources.resources
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\obj\Debug\YR.ERP.csproj.GenerateResource.Cache
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\obj\Debug\YR.ERP.exe.licenses
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\bin\Debug\Pictures\printer_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\bin\Debug\Pictures\shipped_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\bin\Debug\Pictures\trash_can_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\obj\Debug\YR.ERP.Forms.Inv.FrmInvr102.resources
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\bin\Debug\Reports\Inv\Invr102.mrt

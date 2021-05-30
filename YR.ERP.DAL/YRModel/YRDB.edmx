@@ -3351,7 +3351,7 @@
           <Property Name="sca26" Type="nvarchar" MaxLength="10" />
           <Property Name="sca27" Type="nvarchar" MaxLength="10" />
           <Property Name="sca28" Type="nvarchar" MaxLength="4" />
-          <Property Name="sca29" Type="nvarchar" MaxLength="1" />
+          <Property Name="sca29" Type="nvarchar" MaxLength="5" />
           <Property Name="sca30" Type="nvarchar" MaxLength="1" />
           <Property Name="sca31" Type="nvarchar" MaxLength="1" />
           <Property Name="sca32" Type="nvarchar" MaxLength="1" />
@@ -6622,6 +6622,14 @@
           <Property Name="ica01" Type="nvarchar" MaxLength="40" Nullable="false" />
         </EntityType>
         <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr102' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="vw_invr102">
+          <Key>
+            <PropertyRef Name="ica01" />
+          </Key>
+          <Property Name="ica01" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr215' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
         <EntityType Name="vw_invr215">
           <Key>
@@ -9225,7 +9233,7 @@
           <Property Name="sca26" Type="nvarchar" MaxLength="10" />
           <Property Name="sca27" Type="nvarchar" MaxLength="10" />
           <Property Name="sca28" Type="nvarchar" MaxLength="4" />
-          <Property Name="sca29" Type="nvarchar" MaxLength="1" />
+          <Property Name="sca29" Type="nvarchar" MaxLength="5" />
           <Property Name="sca30" Type="nvarchar" MaxLength="1" />
           <Property Name="sca31" Type="nvarchar" MaxLength="1" />
           <Property Name="sca32" Type="nvarchar" MaxLength="1" />
@@ -12812,6 +12820,11 @@
     [vw_invr101].[ica01] AS [ica01]
     FROM [dbo].[vw_invr101] AS [vw_invr101]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="vw_invr102" EntityType="Self.vw_invr102" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_invr102].[ica01] AS [ica01]
+    FROM [dbo].[vw_invr102] AS [vw_invr102]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="vw_invr215" EntityType="Self.vw_invr215" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vw_invr215].[icc01] AS [icc01], 
@@ -16129,6 +16142,7 @@
           <EntitySet Name="vw_invq210s" EntityType="YRDB.vw_invq210s" />
           <EntitySet Name="vw_invq220" EntityType="YRDB.vw_invq220" />
           <EntitySet Name="vw_invr101" EntityType="YRDB.vw_invr101" />
+          <EntitySet Name="vw_invr102" EntityType="YRDB.vw_invr102" />
           <EntitySet Name="vw_invr215" EntityType="YRDB.vw_invr215" />
           <EntitySet Name="vw_invr301" EntityType="YRDB.vw_invr301" />
           <EntitySet Name="vw_invr302" EntityType="YRDB.vw_invr302" />
@@ -19321,7 +19335,7 @@
           <Property Name="sca26" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="sca27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="sca28" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="sca29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="sca29" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="sca30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sca31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sca32" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -22647,6 +22661,12 @@
           </Key>
           <Property Name="ica01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="vw_invr102">
+          <Key>
+            <PropertyRef Name="ica01" />
+          </Key>
+          <Property Name="ica01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="vw_invr215">
           <Key>
             <PropertyRef Name="icc01" />
@@ -25095,7 +25115,7 @@
           <Property Name="sca26" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="sca27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="sca28" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="sca29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="sca29" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="sca30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sca31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="sca32" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -32464,6 +32484,13 @@
           <EntitySetMapping Name="vw_invr101">
             <EntityTypeMapping TypeName="YRDB.vw_invr101">
               <MappingFragment StoreEntitySet="vw_invr101">
+                <ScalarProperty Name="ica01" ColumnName="ica01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_invr102">
+            <EntityTypeMapping TypeName="YRDB.vw_invr102">
+              <MappingFragment StoreEntitySet="vw_invr102">
                 <ScalarProperty Name="ica01" ColumnName="ica01" />
               </MappingFragment>
             </EntityTypeMapping>

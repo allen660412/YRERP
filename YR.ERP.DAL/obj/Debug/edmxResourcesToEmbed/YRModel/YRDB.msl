@@ -6346,6 +6346,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="vw_invr102">
+      <EntityTypeMapping TypeName="YRDB.vw_invr102">
+        <MappingFragment StoreEntitySet="vw_invr102">
+          <ScalarProperty Name="ica01" ColumnName="ica01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="vw_invr215">
       <EntityTypeMapping TypeName="YRDB.vw_invr215">
         <MappingFragment StoreEntitySet="vw_invr215">

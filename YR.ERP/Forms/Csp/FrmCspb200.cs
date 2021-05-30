@@ -82,6 +82,7 @@ namespace YR.ERP.Forms.Csp
         {
             try
             {
+                pDr["jja06"] = Today;
                 pDr["delete_yn"] = "N";
                 return true;
             }

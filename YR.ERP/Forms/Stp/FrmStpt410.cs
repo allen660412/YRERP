@@ -487,6 +487,39 @@ namespace YR.ERP.Forms.Stp
                 if (this.IsMdiChild)
                     this.ControlBox = false;
                 //WfShowRibbonGroup(YREditType.NA, TabMaster.IsCheckSecurity, TabMaster.AddTbModel);
+                //設定圖檔
+                ImageList ilLarge = new ImageList();
+                ilLarge = GlobalPictuer.LoadToolBarImage();
+
+                ImageList ilModule=new ImageList();
+                ilModule = GlobalPictuer.LoadModuleImage();
+
+                btnSave.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_SAVE];
+                btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+
+                btnInvi100.Image = ilLarge.Images["pick_32"];
+                btnInvi100.TextImageRelation = TextImageRelation.ImageBeforeText;
+
+                btnStp400.Image = ilLarge.Images["pick_32"];
+                btnStp400.TextImageRelation = TextImageRelation.ImageBeforeText;
+
+
+                btnDelete.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_TRANSH_CAN];
+                btnDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
+
+                btnLabel.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_PRINTER];
+                btnLabel.TextImageRelation = TextImageRelation.ImageBeforeText;
+
+                btnShipping.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_SHIPPING];
+                btnShipping.TextImageRelation = TextImageRelation.ImageBeforeText;
+                                
+
+                btnAutoCal.Image = ilModule.Images[GlobalPictuer.MODULE_GLA];
+                btnAutoCal.TextImageRelation = TextImageRelation.ImageBeforeText;
+
+                btnCreditCard.Image = ilModule.Images[GlobalPictuer.MODULE_STP];
+                btnCreditCard.TextImageRelation = TextImageRelation.ImageBeforeText;
+
 
                 WfDisplayMode();
                 this.KeyPreview = true;
@@ -3374,7 +3407,9 @@ namespace YR.ERP.Forms.Stp
                 //預設客人資料
                 pDr["sga03"] = "C000001";    //門市客人
                 if ((rdb_01.Checked == false && rdb_02.Checked == false && rdb_03.Checked == false
-                        && rdb_04.Checked == false && rdb_05.Checked == false && rdb_06.Checked == false)
+                        && rdb_04.Checked == false && rdb_05.Checked == false
+                        && rdb_06.Checked == false && rdb_07.Checked == false 
+                        )
                     || rdb_01.Checked == true)
                     pDr["sga03"] = "C000001";    //門市客人
                 else if (rdb_02.Checked == true)
@@ -3387,6 +3422,8 @@ namespace YR.ERP.Forms.Stp
                     pDr["sga03"] = "C000005";    //松果客人
                 else if (rdb_06.Checked == true)
                     pDr["sga03"] = "C000006";    //蝦皮客人2
+                else if (rdb_07.Checked == true)
+                    pDr["sga03"] = "C000007";    //露天艾達
 
                 WfSetSga03Relation(pDr["sga03"].ToString());
                 pDr["sgb16_pick"] = "400A";    //慣用倉庫 先寫死
@@ -3593,6 +3630,13 @@ namespace YR.ERP.Forms.Stp
                                         return false;
                                     }
                                 }
+                                //料號為MISC0001 手續費時另外計算以總金額的2%來特別計算
+                                if (e.Value.ToString().ToLower()=="misc0001")
+                                {
+                                    newRow["sgb09"] =GlobalFn.Round( masterModel.sga13t * 0.02m,0);
+                                }
+
+
                                 WfLoadIcp03(ica01);//取得圖檔
                                 WfSetDetailAmt(newRow);
                                 WfSetTotalAmt();
@@ -3622,7 +3666,7 @@ namespace YR.ERP.Forms.Stp
                             break;
 
                         case "sga26"://發票別
- 
+
                             e.Row["sga24"] = "";
                             break;
                     }
@@ -3847,7 +3891,7 @@ namespace YR.ERP.Forms.Stp
                 {
                     rtnResult = new Result();
                     rtnResult = BoTax.OfUpdTbe09(sgaModel.sga26, sgaModel.sga09, sgaModel.sga24, Convert.ToDateTime(sgaModel.sga27));
-                    if (rtnResult.Success==false)
+                    if (rtnResult.Success == false)
                     {
                         WfShowErrorMsg(rtnResult.Message);
                         return false;
@@ -4184,7 +4228,7 @@ namespace YR.ERP.Forms.Stp
                 }
 
                 chkColName = "sga17";       //客戶單號
-                chkControl = ute_sga17;             
+                chkControl = ute_sga17;
                 //檢查是否為網路平台客戶
                 if (BoStp.OfChkEbusinessPlateForm(masterModel.sga03) == true)
                 {
@@ -4208,21 +4252,21 @@ namespace YR.ERP.Forms.Stp
 
                     if (GlobalFn.varIsNull(masterModel.sga17))
                     {
-                        if (WfShowConfirmMsg("客戶單號為空白，是否繼續？")==DialogResult.No)
-                            return false;  
+                        if (WfShowConfirmMsg("客戶單號為空白，是否繼續？") == DialogResult.No)
+                            return false;
                     }
                     else  //比對是否為重覆輸入的單號                    
                     {
-                        if (BoStp.OfChkSga03Sga17(masterModel.sga03,masterModel.sga17,"0")==true)
+                        if (BoStp.OfChkSga03Sga17(masterModel.sga03, masterModel.sga17, "0") == true)
                         {
 
                             if (WfShowConfirmMsg("客戶單號為已重覆，是否繼續？") == DialogResult.No)
-                                return false;  
+                                return false;
                         }
                     }
                 }
 
-                    
+
                 chkColName = "sga23";       //出貨成本
                 chkControl = ute_sga23;
                 //檢查是否為網路平台客戶
@@ -4423,6 +4467,21 @@ namespace YR.ERP.Forms.Stp
 
                 DrMaster["sga12"] = scaModel.sca24;    //取價條件
                 DrMaster["sga12_c"] = BoStp.OfGetSbb02(scaModel.sca24);
+                DrMaster["sga26"] = scaModel.sca29;    //發票別
+                //依發票別重新調整radiogroup
+                scaModel.sca29=GlobalFn.isNullRet(scaModel.sca29,"");
+                switch (scaModel.sca29)
+                {
+                    case "Z01": //正中
+                        rdb_invoice3.Checked=true;
+                        break;
+                    case"I01":  //艾達
+                        rdb_invoice2.Checked=true;
+                        break;
+                    default:
+                        rdb_invoice1.Checked=true;
+                        break;
+                }
             }
             catch (Exception ex)
             {
@@ -5369,8 +5428,10 @@ namespace YR.ERP.Forms.Stp
                         case "rdb_06":  //蝦皮2
                             sca03 = "C000006";
                             break;
+                        case "rdb_07":  //露天艾達
+                            sca03 = "C000007";
+                            break;
                     }
-
 
                     sgaModel = DrMaster.ToItem<sga_tb>();
                     DrMaster["sga03"] = sca03;
@@ -5393,14 +5454,13 @@ namespace YR.ERP.Forms.Stp
             {
                 WfShowErrorMsg(ex.Message);
             }
-        } 
+        }
         #endregion
-
 
         #region rdb_invoice_CheckedChanged 選取發票別 #依發票機選取
         private void rdb_invoice_CheckedChanged(object sender, EventArgs e)
         {
-            
+
             string senderName;
             string sga26 = "";
             sga_tb sgaModel;
@@ -5431,39 +5491,9 @@ namespace YR.ERP.Forms.Stp
             {
                 WfShowErrorMsg(ex.Message);
             }
-        } 
-        #endregion
-
-        private void btnAutoCal_Click(object sender, EventArgs e)
-        {
-
-            sga_tb masterModel = null;
-            decimal sga23 = 0;
-            Result rtnResult;
-            try
-            {
-                if (DrMaster == null)
-                    return;
-                masterModel = DrMaster.ToItem<sga_tb>();
-                rtnResult = BoStp.OfGetSga23(masterModel, out sga23);
-
-                if (rtnResult.Success == false)
-                {
-                    WfShowErrorMsg(rtnResult.Message);
-                    DrMaster["sga23"] = 0;
-                    return;
-                }
-
-                sga23 = GlobalFn.Round(sga23, 0);
-                DrMaster["sga23"] = sga23;
-
-            }
-            catch (Exception ex)
-            {
-                WfShowErrorMsg(ex.Message);
-            }
         }
-
+        #endregion
+             
         #region WfSetDocPicture 設定單據顯示圖片
         protected void WfSetUsedPicture(string ica01)
         {
@@ -5489,7 +5519,6 @@ namespace YR.ERP.Forms.Stp
             }
         }
         #endregion
-
 
         #region WfPrintLabel 列印標籤
         private void WfPrintLabelMoney(string ica01)
@@ -5575,7 +5604,7 @@ namespace YR.ERP.Forms.Stp
 
                 WfShowErrorMsg(ex.Message);
             }
-        } 
+        }
         #endregion
 
         #region 雙擊圖片
@@ -5586,35 +5615,88 @@ namespace YR.ERP.Forms.Stp
                 Image img = pbx_icp03.Image;
                 Clipboard.SetImage(img);
             }
-        } 
+        }
         #endregion
 
-        #region 按下取得發票
-        private void button1_Click(object sender, EventArgs e)
+        #region 按鈕功能集合
+        private void btnButton_Click(object sender, EventArgs e)
         {
             vw_stpt410 masterModel;
+            sga_tb sgaMode;
             Result rtnResult = null;
             string invoice = "";
-            if (FormEditMode == YREditType.新增 || FormEditMode == YREditType.修改)
+            decimal sga23 = 0;
+            try
             {
-                masterModel = DrMaster.ToItem<vw_stpt410>();
-                if (masterModel.sga27==null||GlobalFn.varIsNull(masterModel.sga26)
-                    || GlobalFn.varIsNull(masterModel.sga09)
-                    )
+                Control control = (System.Windows.Forms.Control)sender;
+                masterModel=DrMaster.ToItem<vw_stpt410>();
+                switch (control.Name.ToLower())
                 {
-                    WfShowErrorMsg("發票日期、發票聯級及發票別不可為空!");
-                    return;
-                }
+                    case "btninvoice":  //取得發票
+                        #region 取得發票
+                        if (FormEditMode == YREditType.新增 || FormEditMode == YREditType.修改)
+                        {
+                            masterModel = DrMaster.ToItem<vw_stpt410>();
+                            if (masterModel.sga27 == null || GlobalFn.varIsNull(masterModel.sga26)
+                                || GlobalFn.varIsNull(masterModel.sga09)
+                                )
+                            {
+                                WfShowErrorMsg("發票日期、發票聯級及發票別不可為空!");
+                                return;
+                            }
 
-                rtnResult = BoTax.OfGetInvoice(masterModel.sga26, masterModel.sga09, Convert.ToDateTime(masterModel.sga27), out invoice);
-                if (rtnResult.Success==false)
-                {
-                    WfShowErrorMsg(rtnResult.Message);
-                    return;
+                            rtnResult = BoTax.OfGetInvoice(masterModel.sga26, masterModel.sga09, Convert.ToDateTime(masterModel.sga27), out invoice);
+                            if (rtnResult.Success == false)
+                            {
+                                WfShowErrorMsg(rtnResult.Message);
+                                return;
+                            }
+                            DrMaster["sga24"] = invoice;
+                        }
+                        #endregion
+                        break;
+                    case "btnshipping": //新增一筆運費
+                        #region 新增一筆運費
+                        DrMaster["sgb04_pick"] = "MISC0002";
+                        WfFireControlValidated(udt_sgb04_pick);
+                        #endregion
+                        break;
+                    case "btncreditcard": //新增一筆手續費
+                        #region 新增一筆手續費
+                        if (GlobalFn.isNullRet(masterModel.sga03, "") != "C000001")
+                        {
+                            WfShowErrorMsg("此功能限門市客人使用");
+                            return;
+                        }
+
+                        DrMaster["sgb04_pick"] = "MISC0001";
+                        WfFireControlValidated(udt_sgb04_pick);
+                        #endregion
+                        break;
+                    case "btnautocal":  //計算成本
+                        if (DrMaster == null)
+                            return;
+                        sgaMode = DrMaster.ToItem<sga_tb>();
+                        rtnResult = BoStp.OfGetSga23(sgaMode, out sga23);
+
+                        if (rtnResult.Success == false)
+                        {
+                            WfShowErrorMsg(rtnResult.Message);
+                            DrMaster["sga23"] = 0;
+                            return;
+                        }
+
+                        sga23 = GlobalFn.Round(sga23, 0);
+                        DrMaster["sga23"] = sga23;
+
+                        break;
                 }
-                DrMaster["sga24"]=invoice;
             }
-        } 
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
 
 

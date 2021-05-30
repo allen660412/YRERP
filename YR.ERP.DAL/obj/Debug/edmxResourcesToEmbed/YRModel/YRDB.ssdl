@@ -3346,7 +3346,7 @@
     <Property Name="sca26" Type="nvarchar" MaxLength="10" />
     <Property Name="sca27" Type="nvarchar" MaxLength="10" />
     <Property Name="sca28" Type="nvarchar" MaxLength="4" />
-    <Property Name="sca29" Type="nvarchar" MaxLength="1" />
+    <Property Name="sca29" Type="nvarchar" MaxLength="5" />
     <Property Name="sca30" Type="nvarchar" MaxLength="1" />
     <Property Name="sca31" Type="nvarchar" MaxLength="1" />
     <Property Name="sca32" Type="nvarchar" MaxLength="1" />
@@ -6617,6 +6617,14 @@
     <Property Name="ica01" Type="nvarchar" MaxLength="40" Nullable="false" />
   </EntityType>
   <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr102' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="vw_invr102">
+    <Key>
+      <PropertyRef Name="ica01" />
+    </Key>
+    <Property Name="ica01" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_invr215' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invr215">
     <Key>
@@ -9220,7 +9228,7 @@
     <Property Name="sca26" Type="nvarchar" MaxLength="10" />
     <Property Name="sca27" Type="nvarchar" MaxLength="10" />
     <Property Name="sca28" Type="nvarchar" MaxLength="4" />
-    <Property Name="sca29" Type="nvarchar" MaxLength="1" />
+    <Property Name="sca29" Type="nvarchar" MaxLength="5" />
     <Property Name="sca30" Type="nvarchar" MaxLength="1" />
     <Property Name="sca31" Type="nvarchar" MaxLength="1" />
     <Property Name="sca32" Type="nvarchar" MaxLength="1" />
@@ -12806,6 +12814,11 @@
       <DefiningQuery>SELECT 
     [vw_invr101].[ica01] AS [ica01]
     FROM [dbo].[vw_invr101] AS [vw_invr101]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_invr102" EntityType="Self.vw_invr102" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_invr102].[ica01] AS [ica01]
+    FROM [dbo].[vw_invr102] AS [vw_invr102]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_invr215" EntityType="Self.vw_invr215" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

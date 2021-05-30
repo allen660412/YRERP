@@ -743,3 +743,6 @@ C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.BLL\obj\Debug\YR.ERP.BLL.csproj.GenerateResource.Cache
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.BLL\obj\Debug\YR.ERP.BLL.dll
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.BLL\obj\Debug\YR.ERP.BLL.pdb
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.BLL\bin\Debug\Pictures\printer_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.BLL\bin\Debug\Pictures\shipped_32.png
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP.BLL\bin\Debug\Pictures\trash_can_32.png
