@@ -287,7 +287,6 @@
             this.ultraTabPageControl2.Controls.Add(this.label23);
             this.ultraTabPageControl2.Controls.Add(this.label22);
             this.ultraTabPageControl2.Controls.Add(this.label21);
-            this.ultraTabPageControl2.Location = new System.Drawing.Point(1, 27);
             this.ultraTabPageControl2.Size = new System.Drawing.Size(940, 223);
             // 
             // ultraTabPageControl3
@@ -338,7 +337,6 @@
             this.ultraTabPageControl1.Controls.Add(this.ute_sca04);
             this.ultraTabPageControl1.Controls.Add(this.uGridMaster);
             this.ultraTabPageControl1.Controls.Add(this.label3);
-            this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl1.Size = new System.Drawing.Size(940, 223);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label3, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.uGridMaster, 0);

@@ -132,6 +132,7 @@
             this.ute_ica28 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label38 = new System.Windows.Forms.Label();
             this.ucx_ica29 = new YR.Util.Controls.UcCheckBox();
+            this.ucx_ica30 = new YR.Util.Controls.UcCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Master)).BeginInit();
             this.uTab_Master.SuspendLayout();
@@ -237,6 +238,7 @@
             // 
             // ultraTabPageControl1
             // 
+            this.ultraTabPageControl1.Controls.Add(this.ucx_ica30);
             this.ultraTabPageControl1.Controls.Add(this.ucx_ica29);
             this.ultraTabPageControl1.Controls.Add(this.ute_ica28);
             this.ultraTabPageControl1.Controls.Add(this.label38);
@@ -328,6 +330,7 @@
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label38, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_ica28, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ucx_ica29, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ucx_ica30, 0);
             // 
             // UtbmMain
             // 
@@ -1298,7 +1301,7 @@
             // 
             this.ute_ica21.AccessibleDescription = "";
             this.ute_ica21.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_ica21.Location = new System.Drawing.Point(563, 98);
+            this.ute_ica21.Location = new System.Drawing.Point(563, 94);
             this.ute_ica21.Name = "ute_ica21";
             this.ute_ica21.Size = new System.Drawing.Size(142, 22);
             this.ute_ica21.TabIndex = 17;
@@ -1309,7 +1312,7 @@
             this.label35.AccessibleDescription = "";
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label35.Location = new System.Drawing.Point(454, 102);
+            this.label35.Location = new System.Drawing.Point(454, 98);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(37, 14);
             this.label35.TabIndex = 167;
@@ -1395,13 +1398,25 @@
             // 
             this.ucx_ica29.AutoSize = true;
             this.ucx_ica29.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ucx_ica29.Location = new System.Drawing.Point(457, 136);
+            this.ucx_ica29.Location = new System.Drawing.Point(457, 124);
             this.ucx_ica29.Name = "ucx_ica29";
             this.ucx_ica29.NullValue = "";
             this.ucx_ica29.Size = new System.Drawing.Size(56, 18);
             this.ucx_ica29.TabIndex = 175;
             this.ucx_ica29.Tag = "ica29";
             this.ucx_ica29.Text = "ica29";
+            // 
+            // ucx_ica30
+            // 
+            this.ucx_ica30.AutoSize = true;
+            this.ucx_ica30.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ucx_ica30.Location = new System.Drawing.Point(457, 154);
+            this.ucx_ica30.Name = "ucx_ica30";
+            this.ucx_ica30.NullValue = "";
+            this.ucx_ica30.Size = new System.Drawing.Size(56, 18);
+            this.ucx_ica30.TabIndex = 176;
+            this.ucx_ica30.Tag = "ica30";
+            this.ucx_ica30.Text = "ica30";
             // 
             // FrmInvi100
             // 
@@ -1574,5 +1589,6 @@
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_ica28;
         private System.Windows.Forms.Label label38;
         private Util.Controls.UcCheckBox ucx_ica29;
+        private Util.Controls.UcCheckBox ucx_ica30;
     }
 }

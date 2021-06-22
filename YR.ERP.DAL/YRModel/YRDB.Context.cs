@@ -12,6 +12,8 @@ namespace YR.ERP.DAL.YRModel
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class Enitity : DbContext
     {
@@ -344,5 +346,37 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<vw_xinvt302s> vw_xinvt302s { get; set; }
         public virtual DbSet<vw_zinvt001> vw_zinvt001 { get; set; }
         public virtual DbSet<vw_zinvt001s> vw_zinvt001s { get; set; }
+        public virtual DbSet<vw_taxb010> vw_taxb010 { get; set; }
+    
+        public virtual int sap_check_table(string table)
+        {
+            var tableParameter = table != null ?
+                new ObjectParameter("table", table) :
+                new ObjectParameter("table", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sap_check_table", tableParameter);
+        }
+    
+        public virtual int sap_update_aza04(string table_name, string view_name)
+        {
+            var table_nameParameter = table_name != null ?
+                new ObjectParameter("table_name", table_name) :
+                new ObjectParameter("table_name", typeof(string));
+    
+            var view_nameParameter = view_name != null ?
+                new ObjectParameter("view_name", view_name) :
+                new ObjectParameter("view_name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sap_update_aza04", table_nameParameter, view_nameParameter);
+        }
+    
+        public virtual int sp_gen_aza(string p_view)
+        {
+            var p_viewParameter = p_view != null ?
+                new ObjectParameter("p_view", p_view) :
+                new ObjectParameter("p_view", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_gen_aza", p_viewParameter);
+        }
     }
 }

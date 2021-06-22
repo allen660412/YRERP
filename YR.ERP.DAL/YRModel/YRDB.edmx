@@ -10052,6 +10052,19 @@
           <Property Name="shbmodd" Type="datetime2" Precision="7" />
         </EntityType>
         <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_taxb010' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="vw_taxb010">
+          <Key>
+            <PropertyRef Name="tca01" />
+            <PropertyRef Name="delete_yn" />
+          </Key>
+          <Property Name="tca01" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="tca03" Type="nvarchar" MaxLength="8" />
+          <Property Name="tca04" Type="nvarchar" MaxLength="8" />
+          <Property Name="tca06" Type="nvarchar" MaxLength="20" />
+          <Property Name="delete_yn" Type="varchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA_TEST.dbo.vw_taxi001' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
         <EntityType Name="vw_taxi001">
           <Key>
@@ -10305,6 +10318,16 @@
           <Property Name="xc_igb001" Type="nvarchar" MaxLength="20" />
           <Property Name="xc_igb002" Type="numeric" Precision="22" Scale="0" />
         </EntityType>
+        <Function Name="sap_check_table" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="table" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sap_update_aza04" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="table_name" Type="varchar" Mode="In" />
+          <Parameter Name="view_name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_gen_aza" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_view" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="YRDBStoreContainer">
           <EntitySet Name="ada_tb" EntityType="Self.ada_tb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="adb_tb" EntityType="Self.adb_tb" Schema="dbo" store:Type="Tables" />
@@ -15711,6 +15734,15 @@
     [vw_stpt500s].[shbmodd] AS [shbmodd]
     FROM [dbo].[vw_stpt500s] AS [vw_stpt500s]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="vw_taxb010" EntityType="Self.vw_taxb010" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_taxb010].[tca01] AS [tca01], 
+    [vw_taxb010].[tca03] AS [tca03], 
+    [vw_taxb010].[tca04] AS [tca04], 
+    [vw_taxb010].[tca06] AS [tca06], 
+    [vw_taxb010].[delete_yn] AS [delete_yn]
+    FROM [dbo].[vw_taxb010] AS [vw_taxb010]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="vw_taxi001" EntityType="Self.vw_taxi001" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vw_taxi001].[tba01] AS [tba01], 
@@ -16246,6 +16278,17 @@
           <EntitySet Name="vw_xinvt302s" EntityType="YRDB.vw_xinvt302s" />
           <EntitySet Name="vw_zinvt001" EntityType="YRDB.vw_zinvt001" />
           <EntitySet Name="vw_zinvt001s" EntityType="YRDB.vw_zinvt001s" />
+          <EntitySet Name="vw_taxb010" EntityType="YRDB.vw_taxb010" />
+          <FunctionImport Name="sap_check_table">
+            <Parameter Name="table" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sap_update_aza04">
+            <Parameter Name="table_name" Mode="In" Type="String" />
+            <Parameter Name="view_name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_gen_aza">
+            <Parameter Name="p_view" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="ada_tb">
           <Key>
@@ -26137,6 +26180,17 @@
           <Property Name="xc_igb001" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="xc_igb002" Type="Decimal" Precision="22" Scale="0" />
         </EntityType>
+        <EntityType Name="vw_taxb010">
+          <Key>
+            <PropertyRef Name="tca01" />
+            <PropertyRef Name="delete_yn" />
+          </Key>
+          <Property Name="tca01" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="tca03" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="tca04" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="tca06" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="delete_yn" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -35797,6 +35851,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="vw_taxb010">
+            <EntityTypeMapping TypeName="YRDB.vw_taxb010">
+              <MappingFragment StoreEntitySet="vw_taxb010">
+                <ScalarProperty Name="delete_yn" ColumnName="delete_yn" />
+                <ScalarProperty Name="tca06" ColumnName="tca06" />
+                <ScalarProperty Name="tca04" ColumnName="tca04" />
+                <ScalarProperty Name="tca03" ColumnName="tca03" />
+                <ScalarProperty Name="tca01" ColumnName="tca01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sap_check_table" FunctionName="YRDB.Store.sap_check_table" />
+          <FunctionImportMapping FunctionImportName="sap_update_aza04" FunctionName="YRDB.Store.sap_update_aza04" />
+          <FunctionImportMapping FunctionImportName="sp_gen_aza" FunctionName="YRDB.Store.sp_gen_aza" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

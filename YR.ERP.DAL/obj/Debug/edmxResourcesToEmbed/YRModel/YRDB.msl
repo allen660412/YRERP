@@ -9655,5 +9655,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="vw_taxb010">
+      <EntityTypeMapping TypeName="YRDB.vw_taxb010">
+        <MappingFragment StoreEntitySet="vw_taxb010">
+          <ScalarProperty Name="delete_yn" ColumnName="delete_yn" />
+          <ScalarProperty Name="tca06" ColumnName="tca06" />
+          <ScalarProperty Name="tca04" ColumnName="tca04" />
+          <ScalarProperty Name="tca03" ColumnName="tca03" />
+          <ScalarProperty Name="tca01" ColumnName="tca01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sap_check_table" FunctionName="YRDB.Store.sap_check_table" />
+    <FunctionImportMapping FunctionImportName="sap_update_aza04" FunctionName="YRDB.Store.sap_update_aza04" />
+    <FunctionImportMapping FunctionImportName="sp_gen_aza" FunctionName="YRDB.Store.sp_gen_aza" />
   </EntityContainerMapping>
 </Mapping>

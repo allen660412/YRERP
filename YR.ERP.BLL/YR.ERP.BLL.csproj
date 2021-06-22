@@ -90,6 +90,7 @@
     <Compile Include="MSSQL\AdmBLL.cs" />
     <Compile Include="MSSQL\CommonBLL.cs" />
     <Compile Include="MSSQL\TaxBLL.cs" />
+    <Compile Include="MSSQL\Tax\Taxb010BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

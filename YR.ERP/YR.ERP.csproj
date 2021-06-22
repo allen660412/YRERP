@@ -1050,6 +1050,12 @@
     <Compile Include="Forms\Stp\FrmStpt500.Designer.cs">
       <DependentUpon>FrmStpt500.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tax\FrmTaxb010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tax\FrmTaxb010.Designer.cs">
+      <DependentUpon>FrmTaxb010.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tax\FrmTaxi001.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1489,6 +1495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stp\FrmStpt500.resx">
       <DependentUpon>FrmStpt500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tax\FrmTaxb010.resx">
+      <DependentUpon>FrmTaxb010.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tax\FrmTaxi001.resx">
       <DependentUpon>FrmTaxi001.cs</DependentUpon>

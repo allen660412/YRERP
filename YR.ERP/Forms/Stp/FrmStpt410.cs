@@ -491,7 +491,7 @@ namespace YR.ERP.Forms.Stp
                 ImageList ilLarge = new ImageList();
                 ilLarge = GlobalPictuer.LoadToolBarImage();
 
-                ImageList ilModule=new ImageList();
+                ImageList ilModule = new ImageList();
                 ilModule = GlobalPictuer.LoadModuleImage();
 
                 btnSave.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_SAVE];
@@ -510,9 +510,12 @@ namespace YR.ERP.Forms.Stp
                 btnLabel.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_PRINTER];
                 btnLabel.TextImageRelation = TextImageRelation.ImageBeforeText;
 
+                btnLabelMoney.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_PRINTER];
+                btnLabelMoney.TextImageRelation = TextImageRelation.ImageBeforeText;
+
                 btnShipping.Image = ilLarge.Images[GlobalPictuer.TOOLBAR_SHIPPING];
                 btnShipping.TextImageRelation = TextImageRelation.ImageBeforeText;
-                                
+
 
                 btnAutoCal.Image = ilModule.Images[GlobalPictuer.MODULE_GLA];
                 btnAutoCal.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -3408,7 +3411,7 @@ namespace YR.ERP.Forms.Stp
                 pDr["sga03"] = "C000001";    //門市客人
                 if ((rdb_01.Checked == false && rdb_02.Checked == false && rdb_03.Checked == false
                         && rdb_04.Checked == false && rdb_05.Checked == false
-                        && rdb_06.Checked == false && rdb_07.Checked == false 
+                        && rdb_06.Checked == false && rdb_07.Checked == false
                         )
                     || rdb_01.Checked == true)
                     pDr["sga03"] = "C000001";    //門市客人
@@ -3631,9 +3634,9 @@ namespace YR.ERP.Forms.Stp
                                     }
                                 }
                                 //料號為MISC0001 手續費時另外計算以總金額的2%來特別計算
-                                if (e.Value.ToString().ToLower()=="misc0001")
+                                if (e.Value.ToString().ToLower() == "misc0001")
                                 {
-                                    newRow["sgb09"] =GlobalFn.Round( masterModel.sga13t * 0.02m,0);
+                                    newRow["sgb09"] = GlobalFn.Round(masterModel.sga13t * 0.02m, 0);
                                 }
 
 
@@ -4469,17 +4472,17 @@ namespace YR.ERP.Forms.Stp
                 DrMaster["sga12_c"] = BoStp.OfGetSbb02(scaModel.sca24);
                 DrMaster["sga26"] = scaModel.sca29;    //發票別
                 //依發票別重新調整radiogroup
-                scaModel.sca29=GlobalFn.isNullRet(scaModel.sca29,"");
+                scaModel.sca29 = GlobalFn.isNullRet(scaModel.sca29, "");
                 switch (scaModel.sca29)
                 {
                     case "Z01": //正中
-                        rdb_invoice3.Checked=true;
+                        rdb_invoice3.Checked = true;
                         break;
-                    case"I01":  //艾達
-                        rdb_invoice2.Checked=true;
+                    case "I01":  //艾達
+                        rdb_invoice2.Checked = true;
                         break;
                     default:
-                        rdb_invoice1.Checked=true;
+                        rdb_invoice1.Checked = true;
                         break;
                 }
             }
@@ -5493,7 +5496,7 @@ namespace YR.ERP.Forms.Stp
             }
         }
         #endregion
-             
+
         #region WfSetDocPicture 設定單據顯示圖片
         protected void WfSetUsedPicture(string ica01)
         {
@@ -5521,9 +5524,46 @@ namespace YR.ERP.Forms.Stp
         #endregion
 
         #region WfPrintLabel 列印標籤
+        private void WfPrintLabel(string ica01)
+        {
+            ica_tb icaModel;
+            try
+            {
+                icaModel = BoInv.OfGetIcaModel(ica01);
+                if (icaModel == null)
+                    return;
+
+                const string TEMPLATE_DIRECTORY = @"Label\";	// Template file path
+                const string TEMPLATE_SIMPLE = "barcode.LBX";	// Template file name
+
+                string templatePath = TEMPLATE_DIRECTORY;
+                templatePath = TEMPLATE_DIRECTORY + TEMPLATE_SIMPLE;
+                bpac.DocumentClass doc = new DocumentClass();
+
+                if (doc.Open(templatePath) != false)
+                {
+                    doc.GetObject("ica01").Text = icaModel.ica01;
+                    doc.GetObject("ica02").Text = icaModel.ica02;
+
+                    doc.StartPrint("", PrintOptionConstants.bpoDefault);
+                    doc.PrintOut(1, PrintOptionConstants.bpoDefault);
+                    doc.EndPrint();
+                    doc.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Open() Error: " + doc.ErrorCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+        }
+
         private void WfPrintLabelMoney(string ica01)
         {
-
             ica_tb icaModel;
             try
             {
@@ -5578,35 +5618,6 @@ namespace YR.ERP.Forms.Stp
         }
         #endregion
 
-        #region 按下列印標籤
-        private void btnLabel_Click(object sender, EventArgs e)
-        {
-            vw_stpt410s detailModel;
-            StringBuilder sbSql;
-            DataRow drDetail;
-            try
-            {
-                //if (FormEditMode != YREditType.NA)
-                //    return;
-                if (DrMaster == null)
-                    return;
-                if (uGridDetail.ActiveRow == null)
-                    return;
-                drDetail = WfGetUgridDatarow(uGridDetail.ActiveRow);
-                detailModel = drDetail.ToItem<vw_stpt410s>();
-                if (GlobalFn.varIsNull(detailModel.sgb03))
-                    return;
-
-                WfPrintLabelMoney(detailModel.sgb03);
-            }
-            catch (Exception ex)
-            {
-
-                WfShowErrorMsg(ex.Message);
-            }
-        }
-        #endregion
-
         #region 雙擊圖片
         private void pbx_icp03_DoubleClick(object sender, EventArgs e)
         {
@@ -5626,10 +5637,14 @@ namespace YR.ERP.Forms.Stp
             Result rtnResult = null;
             string invoice = "";
             decimal sga23 = 0;
+            ica_tb icaModel;
+            vw_stpt410s detailModel;
+            StringBuilder sbSql;
+            DataRow drDetail;
             try
             {
                 Control control = (System.Windows.Forms.Control)sender;
-                masterModel=DrMaster.ToItem<vw_stpt410>();
+                masterModel = DrMaster.ToItem<vw_stpt410>();
                 switch (control.Name.ToLower())
                 {
                     case "btninvoice":  //取得發票
@@ -5674,6 +5689,7 @@ namespace YR.ERP.Forms.Stp
                         #endregion
                         break;
                     case "btnautocal":  //計算成本
+                        #region 計算成本
                         if (DrMaster == null)
                             return;
                         sgaMode = DrMaster.ToItem<sga_tb>();
@@ -5688,7 +5704,35 @@ namespace YR.ERP.Forms.Stp
 
                         sga23 = GlobalFn.Round(sga23, 0);
                         DrMaster["sga23"] = sga23;
+                        #endregion
+                        break;
+                    case "btnlabel":
+                        #region 列印標籤
+                        if (DrMaster == null)
+                            return;
+                        if (uGridDetail.ActiveRow == null)
+                            return;
+                        drDetail = WfGetUgridDatarow(uGridDetail.ActiveRow);
+                        detailModel = drDetail.ToItem<vw_stpt410s>();
+                        if (GlobalFn.varIsNull(detailModel.sgb03))
+                            return;
+                        WfPrintLabel(detailModel.sgb03);
+                        #endregion
+                        break;
 
+                    case "btnlabelmoney":
+                        #region 列印標籤-含價格
+                        if (DrMaster == null)
+                            return;
+                        if (uGridDetail.ActiveRow == null)
+                            return;
+                        drDetail = WfGetUgridDatarow(uGridDetail.ActiveRow);
+                        detailModel = drDetail.ToItem<vw_stpt410s>();
+                        if (GlobalFn.varIsNull(detailModel.sgb03))
+                            return;
+
+                        WfPrintLabelMoney(detailModel.sgb03);
+                        #endregion
                         break;
                 }
             }

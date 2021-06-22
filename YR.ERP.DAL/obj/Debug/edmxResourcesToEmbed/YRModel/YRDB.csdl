@@ -320,6 +320,17 @@
     <EntitySet Name="vw_xinvt302s" EntityType="YRDB.vw_xinvt302s" />
     <EntitySet Name="vw_zinvt001" EntityType="YRDB.vw_zinvt001" />
     <EntitySet Name="vw_zinvt001s" EntityType="YRDB.vw_zinvt001s" />
+    <EntitySet Name="vw_taxb010" EntityType="YRDB.vw_taxb010" />
+    <FunctionImport Name="sap_check_table">
+      <Parameter Name="table" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sap_update_aza04">
+      <Parameter Name="table_name" Mode="In" Type="String" />
+      <Parameter Name="view_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_gen_aza">
+      <Parameter Name="p_view" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="ada_tb">
     <Key>
@@ -10210,5 +10221,16 @@
     <Property Name="igbmodd" Type="DateTime" Precision="7" />
     <Property Name="xc_igb001" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="xc_igb002" Type="Decimal" Precision="22" Scale="0" />
+  </EntityType>
+  <EntityType Name="vw_taxb010">
+    <Key>
+      <PropertyRef Name="tca01" />
+      <PropertyRef Name="delete_yn" />
+    </Key>
+    <Property Name="tca01" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca03" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="tca04" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="tca06" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="delete_yn" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

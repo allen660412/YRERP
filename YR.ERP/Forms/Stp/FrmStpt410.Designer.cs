@@ -112,6 +112,7 @@
             this.uGridDetail = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnLabelMoney = new System.Windows.Forms.Button();
             this.btnLabel = new System.Windows.Forms.Button();
             this.btnInvi100 = new System.Windows.Forms.Button();
             this.btnStp400 = new System.Windows.Forms.Button();
@@ -964,6 +965,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Bisque;
+            this.panel6.Controls.Add(this.btnLabelMoney);
             this.panel6.Controls.Add(this.btnLabel);
             this.panel6.Controls.Add(this.btnInvi100);
             this.panel6.Controls.Add(this.btnStp400);
@@ -980,6 +982,18 @@
             this.panel6.Size = new System.Drawing.Size(1323, 61);
             this.panel6.TabIndex = 0;
             // 
+            // btnLabelMoney
+            // 
+            this.btnLabelMoney.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLabelMoney.Location = new System.Drawing.Point(1168, 7);
+            this.btnLabelMoney.Name = "btnLabelMoney";
+            this.btnLabelMoney.Size = new System.Drawing.Size(94, 48);
+            this.btnLabelMoney.TabIndex = 85;
+            this.btnLabelMoney.TabStop = false;
+            this.btnLabelMoney.Text = "列印標籤$";
+            this.btnLabelMoney.UseVisualStyleBackColor = true;
+            this.btnLabelMoney.Click += new System.EventHandler(this.btnButton_Click);
+            // 
             // btnLabel
             // 
             this.btnLabel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -990,7 +1004,7 @@
             this.btnLabel.TabStop = false;
             this.btnLabel.Text = "列印標籤";
             this.btnLabel.UseVisualStyleBackColor = true;
-            this.btnLabel.Click += new System.EventHandler(this.btnLabel_Click);
+            this.btnLabel.Click += new System.EventHandler(this.btnButton_Click);
             // 
             // btnInvi100
             // 
@@ -1226,5 +1240,6 @@
         private System.Windows.Forms.RadioButton rdb_07;
         private System.Windows.Forms.Button btnCreditCard;
         private System.Windows.Forms.Button btnShipping;
+        private System.Windows.Forms.Button btnLabelMoney;
     }
 }

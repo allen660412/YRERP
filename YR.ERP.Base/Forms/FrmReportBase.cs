@@ -826,7 +826,9 @@ namespace YR.ERP.Base.Forms
                 {
                     var azaModel = TabMaster.AzaTbList.Where(p => p.aza03.ToLower() == colName.ToLower())
                                         .FirstOrDefault();
-                    if (azaModel.aza08 == "int" || azaModel.aza08 == "numeric")
+                    //if (azaModel.aza08 == "int" || azaModel.aza08 == "numeric")
+                    //2021.5.31 增加判斷
+                        if (azaModel!=null &&( azaModel.aza08 == "int" || azaModel.aza08 == "numeric"))
                     {
                         decimal parseDecimal = 0;
                         if (decimal.TryParse(GlobalFn.isNullRet(control.Value, "0"), out parseDecimal))

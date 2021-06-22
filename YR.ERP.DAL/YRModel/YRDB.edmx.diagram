@@ -324,6 +324,7 @@
         <EntityTypeShape EntityType="YRDB.vw_xinvt302s" Width="1.5" PointX="24.75" PointY="67.75" />
         <EntityTypeShape EntityType="YRDB.vw_zinvt001" Width="1.5" PointX="44.75" PointY="67.75" />
         <EntityTypeShape EntityType="YRDB.vw_zinvt001s" Width="1.5" PointX="50.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxb010" Width="1.5" PointX="59.375" PointY="67.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
