@@ -4283,18 +4283,19 @@ namespace YR.ERP.Forms.Stp
                         return false;
                     }
                 }
-                //chkColName = "sga06";       //課稅別
-                //chkControl = ucb_sga06;
-                //if (GlobalFn.varIsNull(masterModel.sga06))
-                //{
-                //    this.uTab_Master.SelectedTab = uTab_Master.Tabs[0];
-                //    chkControl.Focus();
-                //    msg = TabMaster.AzaTbList.Where(p => p.aza03 == chkColName).Select(p => p.aza04).FirstOrDefault();
-                //    msg += "不可為空白";
-                //    errorProvider.SetError(chkControl, msg);
-                //    WfShowErrorMsg(msg);
-                //    return false;
-                //}
+
+                chkColName = "sga24";       //發票號碼
+                chkControl = ute_sga24;
+                if (!GlobalFn.varIsNull(masterModel.sga24))
+                {
+                    //檢查發票重覆
+                    if (BoTax.OfChkInvDupl("2",masterModel.sga01,masterModel.sga24,masterModel.sga27,masterModel.sga09)==true)
+                    {
+                        DialogResult resultChk=WfShowConfirmMsg("發票號碼重覆，請確認是否繼續？");
+                        if (resultChk == DialogResult.No)
+                            return false;
+                    }
+                }
 
                 //chkColName = "sga12";
                 //chkControl = ute_sga12;
@@ -5328,6 +5329,11 @@ namespace YR.ERP.Forms.Stp
             StringBuilder sbSql;
             try
             {
+                WfFireControlValidated(this.ActiveControl);
+                //各驗證控製項會將 isItemchkValid設為true
+                if (IsItemchkValid == false)
+                    return;
+
                 if (FormEditMode != YREditType.NA)
                     return;
                 if (DrMaster == null)
@@ -5372,6 +5378,70 @@ namespace YR.ERP.Forms.Stp
             {
 
                 WfShowErrorMsg(ex.Message);
+            }
+        }
+
+
+        private void btnUpdIca11_Click(object sender, EventArgs e)
+        {
+            vw_stpt410 masterModel;
+            StringBuilder sbSql;
+            vw_stpt410s detailModel;
+            DataRow drDetail;
+            InvBLL boIcaUpd = null;
+            DataTable dtIca = null;
+            DataRow drIca = null;
+            string selectSql = "";
+            List<SqlParameter> sqlParms;
+
+            try
+            {
+                WfFireControlValidated(this.ActiveControl);
+                //各驗證控製項會將 isItemchkValid設為true
+                if (IsItemchkValid == false)
+                    return;
+
+                if (DrMaster == null)
+                    return;
+                masterModel = DrMaster.ToItem<vw_stpt410>();
+                if (uGridDetail.ActiveRow == null)
+                    return;
+                drDetail = WfGetUgridDatarow(uGridDetail.ActiveRow);
+                detailModel = drDetail.ToItem<vw_stpt410s>();
+                if (GlobalFn.varIsNull(detailModel.sgb03))
+                    return;
+
+                boIcaUpd = new InvBLL(BoMaster.OfGetConntion());
+                boIcaUpd.OfCreateDao("ica_tb", "*", "");
+                selectSql = "SELECT * FROM ica_tb WHERE ica01=@ica01 ";
+                sqlParms =new List<SqlParameter>();
+                sqlParms.Add(new SqlParameter("@ica01", detailModel.sgb03));
+                dtIca = boIcaUpd.OfGetDataTable(selectSql,sqlParms.ToArray());
+                if (dtIca==null ||dtIca.Rows.Count==0)
+                {
+                    WfShowErrorMsg("查無此料號");
+                    return;
+                }
+
+                if (dtIca.Rows.Count != 1)
+                {
+                    WfShowErrorMsg("料號並非只有一筆");
+                    return;
+                }
+                drIca = dtIca.Rows[0];
+                drIca["ica11"] = detailModel.sgb09;
+
+                if (boIcaUpd.OfUpdate(dtIca) != 1)
+                {
+                    WfShowErrorMsg("異動料號訂價失敗!");
+                    return;
+                }
+                WfShowBottomStatusMsg("異動成功!");
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
             }
         }
 
@@ -5742,6 +5812,7 @@ namespace YR.ERP.Forms.Stp
             }
         }
         #endregion
+
 
 
     }

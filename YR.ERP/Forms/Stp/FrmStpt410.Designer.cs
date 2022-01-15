@@ -112,6 +112,7 @@
             this.uGridDetail = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnUpdIca11 = new System.Windows.Forms.Button();
             this.btnLabelMoney = new System.Windows.Forms.Button();
             this.btnLabel = new System.Windows.Forms.Button();
             this.btnInvi100 = new System.Windows.Forms.Button();
@@ -123,6 +124,8 @@
             this.btnQtyAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.udt_sgb04_pick = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.ute_sga20 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BindingMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).BeginInit();
@@ -153,6 +156,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uGridDetail)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sgb04_pick)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_sga20)).BeginInit();
             this.SuspendLayout();
             // 
             // UsbButtom
@@ -275,7 +279,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Pink;
+            this.panel2.Controls.Add(this.ute_sga20);
             this.panel2.Controls.Add(this.btnCreditCard);
+            this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.btnShipping);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.ute_sga27);
@@ -965,6 +971,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Bisque;
+            this.panel6.Controls.Add(this.btnUpdIca11);
             this.panel6.Controls.Add(this.btnLabelMoney);
             this.panel6.Controls.Add(this.btnLabel);
             this.panel6.Controls.Add(this.btnInvi100);
@@ -982,10 +989,22 @@
             this.panel6.Size = new System.Drawing.Size(1323, 61);
             this.panel6.TabIndex = 0;
             // 
+            // btnUpdIca11
+            // 
+            this.btnUpdIca11.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnUpdIca11.Location = new System.Drawing.Point(1163, 7);
+            this.btnUpdIca11.Name = "btnUpdIca11";
+            this.btnUpdIca11.Size = new System.Drawing.Size(95, 48);
+            this.btnUpdIca11.TabIndex = 86;
+            this.btnUpdIca11.TabStop = false;
+            this.btnUpdIca11.Text = "修改訂價";
+            this.btnUpdIca11.UseVisualStyleBackColor = true;
+            this.btnUpdIca11.Click += new System.EventHandler(this.btnUpdIca11_Click);
+            // 
             // btnLabelMoney
             // 
             this.btnLabelMoney.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLabelMoney.Location = new System.Drawing.Point(1168, 7);
+            this.btnLabelMoney.Location = new System.Drawing.Point(1063, 7);
             this.btnLabelMoney.Name = "btnLabelMoney";
             this.btnLabelMoney.Size = new System.Drawing.Size(94, 48);
             this.btnLabelMoney.TabIndex = 85;
@@ -997,7 +1016,7 @@
             // btnLabel
             // 
             this.btnLabel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLabel.Location = new System.Drawing.Point(1077, 6);
+            this.btnLabel.Location = new System.Drawing.Point(972, 6);
             this.btnLabel.Name = "btnLabel";
             this.btnLabel.Size = new System.Drawing.Size(85, 48);
             this.btnLabel.TabIndex = 84;
@@ -1009,7 +1028,7 @@
             // btnInvi100
             // 
             this.btnInvi100.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnInvi100.Location = new System.Drawing.Point(986, 5);
+            this.btnInvi100.Location = new System.Drawing.Point(881, 5);
             this.btnInvi100.Name = "btnInvi100";
             this.btnInvi100.Size = new System.Drawing.Size(85, 48);
             this.btnInvi100.TabIndex = 83;
@@ -1021,7 +1040,7 @@
             // btnStp400
             // 
             this.btnStp400.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnStp400.Location = new System.Drawing.Point(878, 6);
+            this.btnStp400.Location = new System.Drawing.Point(773, 6);
             this.btnStp400.Name = "btnStp400";
             this.btnStp400.Size = new System.Drawing.Size(102, 48);
             this.btnStp400.TabIndex = 82;
@@ -1045,7 +1064,7 @@
             // btnInsert
             // 
             this.btnInsert.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnInsert.Location = new System.Drawing.Point(793, 6);
+            this.btnInsert.Location = new System.Drawing.Point(688, 6);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(79, 48);
             this.btnInsert.TabIndex = 78;
@@ -1057,7 +1076,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnSave.Location = new System.Drawing.Point(708, 6);
+            this.btnSave.Location = new System.Drawing.Point(603, 6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 48);
             this.btnSave.TabIndex = 77;
@@ -1069,7 +1088,7 @@
             // btnQtyDec
             // 
             this.btnQtyDec.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnQtyDec.Location = new System.Drawing.Point(623, 5);
+            this.btnQtyDec.Location = new System.Drawing.Point(518, 5);
             this.btnQtyDec.Name = "btnQtyDec";
             this.btnQtyDec.Size = new System.Drawing.Size(79, 48);
             this.btnQtyDec.TabIndex = 76;
@@ -1081,7 +1100,7 @@
             // btnQtyAdd
             // 
             this.btnQtyAdd.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnQtyAdd.Location = new System.Drawing.Point(538, 6);
+            this.btnQtyAdd.Location = new System.Drawing.Point(433, 6);
             this.btnQtyAdd.Name = "btnQtyAdd";
             this.btnQtyAdd.Size = new System.Drawing.Size(79, 48);
             this.btnQtyAdd.TabIndex = 75;
@@ -1093,7 +1112,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.Location = new System.Drawing.Point(453, 6);
+            this.btnDelete.Location = new System.Drawing.Point(348, 6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(79, 48);
             this.btnDelete.TabIndex = 74;
@@ -1110,11 +1129,33 @@
             this.udt_sgb04_pick.AutoSize = false;
             this.udt_sgb04_pick.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.udt_sgb04_pick.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.udt_sgb04_pick.Location = new System.Drawing.Point(197, 13);
+            this.udt_sgb04_pick.Location = new System.Drawing.Point(147, 13);
             this.udt_sgb04_pick.Name = "udt_sgb04_pick";
-            this.udt_sgb04_pick.Size = new System.Drawing.Size(230, 35);
+            this.udt_sgb04_pick.Size = new System.Drawing.Size(193, 35);
             this.udt_sgb04_pick.TabIndex = 0;
             this.udt_sgb04_pick.Tag = "sgb04_pick";
+            // 
+            // ute_sga20
+            // 
+            this.ute_sga20.AccessibleDescription = "";
+            this.ute_sga20.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ute_sga20.Location = new System.Drawing.Point(310, 272);
+            this.ute_sga20.Name = "ute_sga20";
+            this.ute_sga20.Size = new System.Drawing.Size(430, 29);
+            this.ute_sga20.TabIndex = 87;
+            this.ute_sga20.Tag = "sga20";
+            // 
+            // label16
+            // 
+            this.label16.AccessibleDescription = "R";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label16.Location = new System.Drawing.Point(240, 279);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 19);
+            this.label16.TabIndex = 88;
+            this.label16.Tag = "sga20";
+            this.label16.Text = "sga20";
             // 
             // FrmStpt410
             // 
@@ -1168,6 +1209,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sgb04_pick)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_sga20)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1241,5 +1283,8 @@
         private System.Windows.Forms.Button btnCreditCard;
         private System.Windows.Forms.Button btnShipping;
         private System.Windows.Forms.Button btnLabelMoney;
+        private System.Windows.Forms.Button btnUpdIca11;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_sga20;
+        private System.Windows.Forms.Label label16;
     }
 }

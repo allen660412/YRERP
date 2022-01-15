@@ -31,7 +31,7 @@ namespace YR.ERP.BLL.MSSQL
 
         }
 
-        public TaxBLL(string ps_comp, string ps_TargetTable, string ps_TargetColumn, string ps_ViewTable,bool pGenNonSelectCommand=true)
+        public TaxBLL(string ps_comp, string ps_TargetTable, string ps_TargetColumn, string ps_ViewTable, bool pGenNonSelectCommand = true)
             : base(ps_comp, ps_TargetTable, ps_TargetColumn, ps_ViewTable, pGenNonSelectCommand)
         {
 
@@ -185,7 +185,7 @@ namespace YR.ERP.BLL.MSSQL
             List<SqlParameter> sqlParmList = null;
             tbe_tb tbeModel = null;
             DataRow drTbe = null;
-            
+
             try
             {
                 //if (sgaModel == null)
@@ -228,7 +228,7 @@ namespace YR.ERP.BLL.MSSQL
                                 AND tbe12='Y'
                                 ";
                 iChkCnts = GlobalFn.isNullRet(OfGetFieldValue(sqlSelect, sqlParmList.ToArray()), 0);
-                if (iChkCnts==0)
+                if (iChkCnts == 0)
                 {
                     rtnResult.Message = "查無作用中的發票簿!";
                     return rtnResult;
@@ -239,7 +239,7 @@ namespace YR.ERP.BLL.MSSQL
                 {
                     rtnResult.Message = "查到多筆作用中的發票簿,請先檢核!";
                     return rtnResult;
-                }               
+                }
 
 
                 sqlSelect = @"SELECT * FROM tbe_tb 
@@ -250,7 +250,7 @@ namespace YR.ERP.BLL.MSSQL
                                 AND tbe05=@tbe05
                                 AND tbe12='Y'
                                 ";
-                drTbe= OfGetDataRow(sqlSelect, sqlParmList.ToArray());
+                drTbe = OfGetDataRow(sqlSelect, sqlParmList.ToArray());
                 tbeModel = drTbe.ToItem<tbe_tb>();
                 if (GlobalFn.varIsNull(tbeModel.tbe09))
                 {
@@ -258,7 +258,7 @@ namespace YR.ERP.BLL.MSSQL
                     rtnResult.Success = true;
                     return rtnResult;
                 }
-                if (tbeModel.tbe08==tbeModel.tbe09)
+                if (tbeModel.tbe08 == tbeModel.tbe09)
                 {
                     rtnResult.Message = "作用中的發票簿已開立完，請重新調整!";
                     return rtnResult;
@@ -266,12 +266,12 @@ namespace YR.ERP.BLL.MSSQL
                 }
 
 
-                strInvWord=tbeModel.tbe09.Substring(0, 2);
+                strInvWord = tbeModel.tbe09.Substring(0, 2);
                 strInvNum = tbeModel.tbe09.Substring(2, 8);
                 iInvNum = Convert.ToInt32(strInvNum);
-                iInvNum+=1;
-                invoice=strInvWord+iInvNum.ToString().PadLeft(8,'0');
-                                
+                iInvNum += 1;
+                invoice = strInvWord + iInvNum.ToString().PadLeft(8, '0');
+
                 rtnResult.Success = true;
                 return rtnResult;
             }
@@ -279,7 +279,7 @@ namespace YR.ERP.BLL.MSSQL
             {
                 throw ex;
             }
-        } 
+        }
         #endregion
 
         #region OfUpdTbe09
@@ -315,6 +315,7 @@ namespace YR.ERP.BLL.MSSQL
                 sqlParmList.Add(new SqlParameter("@tbe04", pTbe04));
                 sqlParmList.Add(new SqlParameter("@tbe05", pTbe05));
                 sqlParmList.Add(new SqlParameter("@tbe09", pTbe09));
+                sqlParmList.Add(new SqlParameter("@tbe10", pInvDate));
 
                 sqlSelect = @"
                             SELECT COUNT(1)
@@ -326,9 +327,9 @@ namespace YR.ERP.BLL.MSSQL
                                 AND tbe05=@tbe05
                                 AND @tbe09 between tbe07 AND tbe08
                         ";
-                iChkCnts =  GlobalFn.isNullRet(OfGetFieldValue(sqlSelect,sqlParmList.ToArray()),0);
-                
-                if (iChkCnts==0)
+                iChkCnts = GlobalFn.isNullRet(OfGetFieldValue(sqlSelect, sqlParmList.ToArray()), 0);
+
+                if (iChkCnts == 0)
                 {
                     rtnResult.Message = "查無可更新資料";
                     return rtnResult;
@@ -343,7 +344,8 @@ namespace YR.ERP.BLL.MSSQL
 
                 sqlUpdate = @"
                             UPDATE tbe_tb
-                            SET tbe09=@tbe09
+                            SET tbe09=@tbe09,
+                                tbe10=@tbe10
                             WHERE tbe01=@tbe01
                                 AND tbe02<=@tbe02
                                 AND tbe03>=@tbe03
@@ -352,7 +354,7 @@ namespace YR.ERP.BLL.MSSQL
                                 AND @tbe09 between tbe07 AND tbe08
                         ";
                 iChkCnts = OfExecuteNonquery(sqlUpdate, sqlParmList.ToArray());
-                if (iChkCnts!=1)
+                if (iChkCnts != 1)
                 {
                     rtnResult.Message = "更新發票本失敗,請檢核!";
                     return rtnResult;
@@ -364,8 +366,51 @@ namespace YR.ERP.BLL.MSSQL
             }
             catch (Exception ex)
             {
-                
+
                 throw ex;
+            }
+        }
+        #endregion
+
+        #region OfChkInvDupl 檢查進銷項發票號碼是否重覆
+        /// <summary>
+        /// 檢查進銷項發票號碼是否重覆
+        /// </summary>
+        /// <param name="pKind">1.進項 2.銷項</param>
+        /// <param name="pAutoNo">進(出)貨單號碼</param>
+        /// <param name="pInvNo">發票號碼</param>
+        /// <param name="pInvDate">發票日期</param>
+        /// <param name="pInvWay">發票聯數</param>
+        /// <returns></returns>
+        public bool OfChkInvDupl(string pKind,string pAutoNo,string pInvNo,DateTime? pInvDate,string pInvWay)
+        {
+            try
+            {
+                string sqlSelect = "";
+                int iChkCnts = 0;
+                List<SqlParameter> sqlParmList;
+
+                if (pKind=="2") //銷項檢查
+                {
+                    sqlSelect = @"SELECT COUNT(1) FROM sga_tb
+                                 WHERE sga01<>@sga01
+                                    AND sga24=@sga24
+                    ";
+                    sqlParmList = new List<SqlParameter>();
+                    sqlParmList.Add(new SqlParameter("@sga01", pAutoNo));
+                    sqlParmList.Add(new SqlParameter("@sga24", pInvNo));
+
+                    iChkCnts = GlobalFn.isNullRet(OfGetFieldValue(sqlSelect, sqlParmList.ToArray()),0);
+                    if (iChkCnts > 0)
+                        return true;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
             }
         } 
         #endregion

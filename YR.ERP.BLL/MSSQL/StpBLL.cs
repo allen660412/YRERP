@@ -1011,6 +1011,7 @@ namespace YR.ERP.BLL.MSSQL
                  || custNo == "C000004"  //奇摩
                  || custNo == "C000005"  //松果
                  || custNo == "C000006"  //蝦皮2
+                 || custNo == "C000007"  //蝦皮2
                  )
                     return true;
 
