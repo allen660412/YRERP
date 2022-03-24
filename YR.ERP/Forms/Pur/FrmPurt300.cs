@@ -181,6 +181,7 @@ namespace YR.ERP.Forms.Pur
                     WfSetControlReadonly(new List<Control> { ute_pfacreu, ute_pfacreg, udt_pfacred }, true);
                     WfSetControlReadonly(new List<Control> { ute_pfamodu, ute_pfamodg, udt_pfamodd }, true);
                     WfSetControlReadonly(new List<Control> { ute_pfasecu, ute_pfasecg }, true);
+                    WfSetControlReadonly(new List<Control> { ute_tot_cnts }, true);
 
                     if (GlobalFn.isNullRet(masterModel.pfa01, "") != "")
                     {
@@ -799,7 +800,7 @@ namespace YR.ERP.Forms.Pur
                             {
                                 return true;
                             }
-                            if (GlobalFn.isNullRet(e.Value, 0) <= 0)
+                            if (GlobalFn.isNullRet(e.Value, 0m) <= 0)
                             {
                                 WfShowErrorMsg("匯率應大於0,請檢核!");
                                 return false;
@@ -2321,10 +2322,11 @@ namespace YR.ERP.Forms.Pur
         }
         #endregion
 
-        #region WfSetTotalAmt 處理總計
+        #region WfSetTotalAmt 處理總計及數量
         private bool WfSetTotalAmt()
         {
             pfa_tb pfaModel;
+            decimal tot_cnts = 0;
             decimal pfa13 = 0, pfa13t = 0, pfa13g;
             try
             {
@@ -2334,18 +2336,20 @@ namespace YR.ERP.Forms.Pur
                     foreach (pfb_tb l_pfb in TabDetailList[0].DtSource.ToList<pfb_tb>())
                     {
                         pfa13t += l_pfb.pfb10t;
+                        tot_cnts += l_pfb.pfb05;
+
                     }
                     pfa13t = GlobalFn.Round(pfa13t, BekModel.bek04);
                     pfa13 = pfa13t / (1 + pfaModel.pfa07 / 100);
                     pfa13 = GlobalFn.Round(pfa13, BekModel.bek04);
                     pfa13g = pfa13t - pfa13;
-
                 }
                 else//稅外加
                 {
                     foreach (pfb_tb l_pfb in TabDetailList[0].DtSource.ToList<pfb_tb>())
                     {
                         pfa13 += l_pfb.pfb10;
+                        tot_cnts += l_pfb.pfb05;
                     }
                     pfa13 = GlobalFn.Round(pfa13, BekModel.bek04);
                     pfa13g = pfa13 * (pfaModel.pfa07 / 100);
@@ -2356,6 +2360,7 @@ namespace YR.ERP.Forms.Pur
                 DrMaster["pfa13"] = pfa13;
                 DrMaster["pfa13t"] = pfa13t;
                 DrMaster["pfa13g"] = pfa13g;
+                DrMaster["tot_cnts"] = tot_cnts;
                 return true;
             }
             catch (Exception ex)

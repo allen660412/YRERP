@@ -67,14 +67,22 @@
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             this.ultraTabPageControl11 = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
+            this.ute_tot_cnts = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label34 = new System.Windows.Forms.Label();
             this.udt_pga02 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.ute_pga16 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.ute_pga13g = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ute_pga01_c = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ute_pga03_c = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.ute_pga13t = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.pbxDoc = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.ute_pga13 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ute_pga03 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label22 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ute_pga01 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label1 = new System.Windows.Forms.Label();
@@ -130,15 +138,15 @@
             this.ucb_pgaconf = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.ute_pga17 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label19 = new System.Windows.Forms.Label();
-            this.ute_pga13g = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.label20 = new System.Windows.Forms.Label();
-            this.ute_pga13t = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.label21 = new System.Windows.Forms.Label();
-            this.ute_pga13 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.label22 = new System.Windows.Forms.Label();
             this.ute_pga18 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ute_pga19 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label15 = new System.Windows.Forms.Label();
+            this.ute_pga20 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label31 = new System.Windows.Forms.Label();
+            this.ute_pga21 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label32 = new System.Windows.Forms.Label();
+            this.ute_pga22 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Detail)).BeginInit();
             this.uTab_Detail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
@@ -150,11 +158,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).BeginInit();
             this.ultraTabPageControl11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_tot_cnts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_pga02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13g)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga01_c)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga03_c)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13t)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga03)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga01)).BeginInit();
             this.ultraTabPageControl12.SuspendLayout();
@@ -186,11 +198,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.udt_pgacond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucb_pgaconf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13g)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13t)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga22)).BeginInit();
             this.SuspendLayout();
             // 
             // uTab_Detail
@@ -253,15 +265,15 @@
             // 
             // ultraTabPageControl1
             // 
+            this.ultraTabPageControl1.Controls.Add(this.ute_pga22);
+            this.ultraTabPageControl1.Controls.Add(this.label33);
+            this.ultraTabPageControl1.Controls.Add(this.ute_pga21);
+            this.ultraTabPageControl1.Controls.Add(this.label32);
+            this.ultraTabPageControl1.Controls.Add(this.ute_pga20);
+            this.ultraTabPageControl1.Controls.Add(this.label31);
             this.ultraTabPageControl1.Controls.Add(this.ute_pga19);
             this.ultraTabPageControl1.Controls.Add(this.label15);
             this.ultraTabPageControl1.Controls.Add(this.ute_pga18);
-            this.ultraTabPageControl1.Controls.Add(this.ute_pga13g);
-            this.ultraTabPageControl1.Controls.Add(this.label20);
-            this.ultraTabPageControl1.Controls.Add(this.ute_pga13t);
-            this.ultraTabPageControl1.Controls.Add(this.label21);
-            this.ultraTabPageControl1.Controls.Add(this.ute_pga13);
-            this.ultraTabPageControl1.Controls.Add(this.label22);
             this.ultraTabPageControl1.Controls.Add(this.ute_pga17);
             this.ultraTabPageControl1.Controls.Add(this.label19);
             this.ultraTabPageControl1.Controls.Add(this.ucb_pgaconf);
@@ -331,15 +343,15 @@
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ucb_pgaconf, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label19, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga17, 0);
-            this.ultraTabPageControl1.Controls.SetChildIndex(this.label22, 0);
-            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga13, 0);
-            this.ultraTabPageControl1.Controls.SetChildIndex(this.label21, 0);
-            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga13t, 0);
-            this.ultraTabPageControl1.Controls.SetChildIndex(this.label20, 0);
-            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga13g, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga18, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label15, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga19, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.label31, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga20, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.label32, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga21, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.label33, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_pga22, 0);
             // 
             // UtbmMain
             // 
@@ -358,20 +370,50 @@
             // 
             // ultraTabPageControl11
             // 
+            this.ultraTabPageControl11.Controls.Add(this.ute_tot_cnts);
+            this.ultraTabPageControl11.Controls.Add(this.label34);
             this.ultraTabPageControl11.Controls.Add(this.udt_pga02);
             this.ultraTabPageControl11.Controls.Add(this.ute_pga16);
             this.ultraTabPageControl11.Controls.Add(this.label18);
+            this.ultraTabPageControl11.Controls.Add(this.label20);
+            this.ultraTabPageControl11.Controls.Add(this.ute_pga13g);
             this.ultraTabPageControl11.Controls.Add(this.ute_pga01_c);
             this.ultraTabPageControl11.Controls.Add(this.ute_pga03_c);
+            this.ultraTabPageControl11.Controls.Add(this.ute_pga13t);
             this.ultraTabPageControl11.Controls.Add(this.pbxDoc);
+            this.ultraTabPageControl11.Controls.Add(this.label21);
             this.ultraTabPageControl11.Controls.Add(this.label2);
+            this.ultraTabPageControl11.Controls.Add(this.ute_pga13);
             this.ultraTabPageControl11.Controls.Add(this.ute_pga03);
+            this.ultraTabPageControl11.Controls.Add(this.label22);
             this.ultraTabPageControl11.Controls.Add(this.label8);
             this.ultraTabPageControl11.Controls.Add(this.ute_pga01);
             this.ultraTabPageControl11.Controls.Add(this.label1);
             this.ultraTabPageControl11.Location = new System.Drawing.Point(1, 23);
             this.ultraTabPageControl11.Name = "ultraTabPageControl11";
             this.ultraTabPageControl11.Size = new System.Drawing.Size(1033, 97);
+            // 
+            // ute_tot_cnts
+            // 
+            this.ute_tot_cnts.AccessibleDescription = "";
+            this.ute_tot_cnts.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_tot_cnts.Location = new System.Drawing.Point(440, 61);
+            this.ute_tot_cnts.Name = "ute_tot_cnts";
+            this.ute_tot_cnts.Size = new System.Drawing.Size(129, 22);
+            this.ute_tot_cnts.TabIndex = 295;
+            this.ute_tot_cnts.Tag = "tot_cnts";
+            // 
+            // label34
+            // 
+            this.label34.AccessibleDescription = "";
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label34.Location = new System.Drawing.Point(335, 65);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(51, 14);
+            this.label34.TabIndex = 296;
+            this.label34.Tag = "tot_cnts";
+            this.label34.Text = "tot_cnts";
             // 
             // udt_pga02
             // 
@@ -405,6 +447,28 @@
             this.label18.Tag = "pga16";
             this.label18.Text = "pga16";
             // 
+            // label20
+            // 
+            this.label20.AccessibleDescription = "";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label20.Location = new System.Drawing.Point(736, 60);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(48, 14);
+            this.label20.TabIndex = 294;
+            this.label20.Tag = "pga13g";
+            this.label20.Text = "pga13g";
+            // 
+            // ute_pga13g
+            // 
+            this.ute_pga13g.AccessibleDescription = "";
+            this.ute_pga13g.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_pga13g.Location = new System.Drawing.Point(841, 57);
+            this.ute_pga13g.Name = "ute_pga13g";
+            this.ute_pga13g.Size = new System.Drawing.Size(142, 22);
+            this.ute_pga13g.TabIndex = 18;
+            this.ute_pga13g.Tag = "pga13g";
+            // 
             // ute_pga01_c
             // 
             this.ute_pga01_c.AccessibleDescription = "";
@@ -425,13 +489,35 @@
             this.ute_pga03_c.TabIndex = 5;
             this.ute_pga03_c.Tag = "pga03_c";
             // 
+            // ute_pga13t
+            // 
+            this.ute_pga13t.AccessibleDescription = "";
+            this.ute_pga13t.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_pga13t.Location = new System.Drawing.Point(841, 30);
+            this.ute_pga13t.Name = "ute_pga13t";
+            this.ute_pga13t.Size = new System.Drawing.Size(142, 22);
+            this.ute_pga13t.TabIndex = 17;
+            this.ute_pga13t.Tag = "pga13t";
+            // 
             // pbxDoc
             // 
-            this.pbxDoc.Location = new System.Drawing.Point(832, 7);
+            this.pbxDoc.Location = new System.Drawing.Point(998, 7);
             this.pbxDoc.Name = "pbxDoc";
             this.pbxDoc.Size = new System.Drawing.Size(32, 32);
             this.pbxDoc.TabIndex = 103;
             this.pbxDoc.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AccessibleDescription = "";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label21.Location = new System.Drawing.Point(736, 34);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 14);
+            this.label21.TabIndex = 293;
+            this.label21.Tag = "pga13t";
+            this.label21.Text = "pga13t";
             // 
             // label2
             // 
@@ -445,6 +531,16 @@
             this.label2.Tag = "pga02";
             this.label2.Text = "pga02";
             // 
+            // ute_pga13
+            // 
+            this.ute_pga13.AccessibleDescription = "";
+            this.ute_pga13.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_pga13.Location = new System.Drawing.Point(841, 3);
+            this.ute_pga13.Name = "ute_pga13";
+            this.ute_pga13.Size = new System.Drawing.Size(142, 22);
+            this.ute_pga13.TabIndex = 16;
+            this.ute_pga13.Tag = "pga13";
+            // 
             // ute_pga03
             // 
             this.ute_pga03.AccessibleDescription = "R";
@@ -454,6 +550,18 @@
             this.ute_pga03.Size = new System.Drawing.Size(126, 22);
             this.ute_pga03.TabIndex = 4;
             this.ute_pga03.Tag = "pga03";
+            // 
+            // label22
+            // 
+            this.label22.AccessibleDescription = "";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label22.Location = new System.Drawing.Point(736, 7);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(41, 14);
+            this.label22.TabIndex = 292;
+            this.label22.Tag = "pga13";
+            this.label22.Text = "pga13";
             // 
             // label8
             // 
@@ -756,7 +864,7 @@
             // 
             this.ucx_pga08.AutoSize = true;
             this.ucx_pga08.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ucx_pga08.Location = new System.Drawing.Point(206, 93);
+            this.ucx_pga08.Location = new System.Drawing.Point(206, 95);
             this.ucx_pga08.Name = "ucx_pga08";
             this.ucx_pga08.NullValue = "";
             this.ucx_pga08.Size = new System.Drawing.Size(60, 18);
@@ -821,7 +929,7 @@
             this.ucb_pga09.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.ucb_pga09.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ucb_pga09.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.ucb_pga09.Location = new System.Drawing.Point(121, 118);
+            this.ucb_pga09.Location = new System.Drawing.Point(121, 119);
             this.ucb_pga09.Name = "ucb_pga09";
             this.ucb_pga09.Size = new System.Drawing.Size(177, 22);
             this.ucb_pga09.TabIndex = 6;
@@ -928,7 +1036,7 @@
             // 
             this.ute_pga07.AccessibleDescription = "";
             this.ute_pga07.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_pga07.Location = new System.Drawing.Point(121, 91);
+            this.ute_pga07.Location = new System.Drawing.Point(121, 93);
             this.ute_pga07.Name = "ute_pga07";
             this.ute_pga07.Size = new System.Drawing.Size(79, 22);
             this.ute_pga07.TabIndex = 5;
@@ -939,7 +1047,7 @@
             this.label13.AccessibleDescription = "";
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label13.Location = new System.Drawing.Point(13, 95);
+            this.label13.Location = new System.Drawing.Point(13, 97);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 14);
             this.label13.TabIndex = 152;
@@ -951,7 +1059,7 @@
             this.label11.AccessibleDescription = "";
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label11.Location = new System.Drawing.Point(13, 122);
+            this.label11.Location = new System.Drawing.Point(13, 123);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 14);
             this.label11.TabIndex = 151;
@@ -1096,7 +1204,7 @@
             // 
             this.ute_pga14.AccessibleDescription = "";
             this.ute_pga14.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_pga14.Location = new System.Drawing.Point(783, 91);
+            this.ute_pga14.Location = new System.Drawing.Point(783, 10);
             this.ute_pga14.Name = "ute_pga14";
             this.ute_pga14.Size = new System.Drawing.Size(79, 22);
             this.ute_pga14.TabIndex = 19;
@@ -1107,7 +1215,7 @@
             this.label12.AccessibleDescription = "";
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label12.Location = new System.Drawing.Point(678, 95);
+            this.label12.Location = new System.Drawing.Point(678, 14);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 14);
             this.label12.TabIndex = 163;
@@ -1118,7 +1226,7 @@
             // 
             this.ute_pga15.AccessibleDescription = "";
             this.ute_pga15.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_pga15.Location = new System.Drawing.Point(783, 118);
+            this.ute_pga15.Location = new System.Drawing.Point(783, 37);
             this.ute_pga15.Name = "ute_pga15";
             this.ute_pga15.Size = new System.Drawing.Size(79, 22);
             this.ute_pga15.TabIndex = 20;
@@ -1129,7 +1237,7 @@
             this.label17.AccessibleDescription = "";
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label17.Location = new System.Drawing.Point(678, 122);
+            this.label17.Location = new System.Drawing.Point(678, 41);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 14);
             this.label17.TabIndex = 162;
@@ -1230,72 +1338,6 @@
             this.label19.Tag = "pga17";
             this.label19.Text = "pga17";
             // 
-            // ute_pga13g
-            // 
-            this.ute_pga13g.AccessibleDescription = "";
-            this.ute_pga13g.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_pga13g.Location = new System.Drawing.Point(783, 64);
-            this.ute_pga13g.Name = "ute_pga13g";
-            this.ute_pga13g.Size = new System.Drawing.Size(142, 22);
-            this.ute_pga13g.TabIndex = 18;
-            this.ute_pga13g.Tag = "pga13g";
-            // 
-            // label20
-            // 
-            this.label20.AccessibleDescription = "";
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label20.Location = new System.Drawing.Point(678, 68);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 14);
-            this.label20.TabIndex = 294;
-            this.label20.Tag = "pga13g";
-            this.label20.Text = "pga13g";
-            // 
-            // ute_pga13t
-            // 
-            this.ute_pga13t.AccessibleDescription = "";
-            this.ute_pga13t.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_pga13t.Location = new System.Drawing.Point(783, 37);
-            this.ute_pga13t.Name = "ute_pga13t";
-            this.ute_pga13t.Size = new System.Drawing.Size(142, 22);
-            this.ute_pga13t.TabIndex = 17;
-            this.ute_pga13t.Tag = "pga13t";
-            // 
-            // label21
-            // 
-            this.label21.AccessibleDescription = "";
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label21.Location = new System.Drawing.Point(678, 41);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 14);
-            this.label21.TabIndex = 293;
-            this.label21.Tag = "pga13t";
-            this.label21.Text = "pga13t";
-            // 
-            // ute_pga13
-            // 
-            this.ute_pga13.AccessibleDescription = "";
-            this.ute_pga13.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_pga13.Location = new System.Drawing.Point(783, 10);
-            this.ute_pga13.Name = "ute_pga13";
-            this.ute_pga13.Size = new System.Drawing.Size(142, 22);
-            this.ute_pga13.TabIndex = 16;
-            this.ute_pga13.Tag = "pga13";
-            // 
-            // label22
-            // 
-            this.label22.AccessibleDescription = "";
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label22.Location = new System.Drawing.Point(678, 14);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 14);
-            this.label22.TabIndex = 292;
-            this.label22.Tag = "pga13";
-            this.label22.Text = "pga13";
-            // 
             // ute_pga18
             // 
             this.ute_pga18.AccessibleDescription = "R";
@@ -1310,7 +1352,7 @@
             // 
             this.ute_pga19.AccessibleDescription = "";
             this.ute_pga19.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_pga19.Location = new System.Drawing.Point(463, 118);
+            this.ute_pga19.Location = new System.Drawing.Point(463, 119);
             this.ute_pga19.Name = "ute_pga19";
             this.ute_pga19.Size = new System.Drawing.Size(136, 22);
             this.ute_pga19.TabIndex = 295;
@@ -1321,12 +1363,78 @@
             this.label15.AccessibleDescription = "";
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label15.Location = new System.Drawing.Point(355, 122);
+            this.label15.Location = new System.Drawing.Point(355, 123);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 14);
             this.label15.TabIndex = 296;
             this.label15.Tag = "pga19";
             this.label15.Text = "pga19";
+            // 
+            // ute_pga20
+            // 
+            this.ute_pga20.AccessibleDescription = "";
+            this.ute_pga20.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_pga20.Location = new System.Drawing.Point(783, 64);
+            this.ute_pga20.Name = "ute_pga20";
+            this.ute_pga20.Size = new System.Drawing.Size(148, 22);
+            this.ute_pga20.TabIndex = 297;
+            this.ute_pga20.Tag = "pga20";
+            // 
+            // label31
+            // 
+            this.label31.AccessibleDescription = "";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label31.Location = new System.Drawing.Point(678, 68);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(41, 14);
+            this.label31.TabIndex = 298;
+            this.label31.Tag = "pga20";
+            this.label31.Text = "pga20";
+            // 
+            // ute_pga21
+            // 
+            this.ute_pga21.AccessibleDescription = "";
+            this.ute_pga21.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_pga21.Location = new System.Drawing.Point(783, 93);
+            this.ute_pga21.Name = "ute_pga21";
+            this.ute_pga21.Size = new System.Drawing.Size(148, 22);
+            this.ute_pga21.TabIndex = 299;
+            this.ute_pga21.Tag = "pga21";
+            // 
+            // label32
+            // 
+            this.label32.AccessibleDescription = "";
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label32.Location = new System.Drawing.Point(678, 97);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(41, 14);
+            this.label32.TabIndex = 300;
+            this.label32.Tag = "pga21";
+            this.label32.Text = "pga21";
+            // 
+            // ute_pga22
+            // 
+            this.ute_pga22.AccessibleDescription = "";
+            this.ute_pga22.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_pga22.Location = new System.Drawing.Point(783, 119);
+            this.ute_pga22.Name = "ute_pga22";
+            this.ute_pga22.Size = new System.Drawing.Size(148, 22);
+            this.ute_pga22.TabIndex = 301;
+            this.ute_pga22.Tag = "pga22";
+            // 
+            // label33
+            // 
+            this.label33.AccessibleDescription = "";
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label33.Location = new System.Drawing.Point(678, 123);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(41, 14);
+            this.label33.TabIndex = 302;
+            this.label33.Tag = "pga22";
+            this.label33.Text = "pga22";
             // 
             // FrmPurt400
             // 
@@ -1354,11 +1462,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).EndInit();
             this.ultraTabPageControl11.ResumeLayout(false);
             this.ultraTabPageControl11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_tot_cnts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udt_pga02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13g)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga01_c)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga03_c)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13t)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga03)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga01)).EndInit();
             this.ultraTabPageControl12.ResumeLayout(false);
@@ -1391,11 +1503,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.udt_pgacond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucb_pgaconf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13g)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13t)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_pga13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_pga19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_pga22)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1475,5 +1587,13 @@
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_pga18;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_pga19;
         private System.Windows.Forms.Label label15;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_pga22;
+        private System.Windows.Forms.Label label33;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_pga21;
+        private System.Windows.Forms.Label label32;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_pga20;
+        private System.Windows.Forms.Label label31;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_tot_cnts;
+        private System.Windows.Forms.Label label34;
     }
 }

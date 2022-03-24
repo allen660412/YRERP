@@ -119,7 +119,7 @@
         <PageHeaderBand1 Ref="6" type="PageHeaderBand" isKey="true">
           <Border>Bottom;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,27.7,1.8</ClientRectangle>
+          <ClientRectangle>0,0.4,19,1.8</ClientRectangle>
           <Components isList="true" count="7">
             <Text1 Ref="7" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
@@ -240,7 +240,7 @@
         <PageFooterBand1 Ref="15" type="PageFooterBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,17.8,27.7,1.2</ClientRectangle>
+          <ClientRectangle>0,26.5,19,1.2</ClientRectangle>
           <Components isList="true" count="2">
             <Text31 Ref="16" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
@@ -280,7 +280,7 @@
           <Border>Bottom;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,3,27.7,3.6</ClientRectangle>
+          <ClientRectangle>0,3,19,3.6</ClientRectangle>
           <Components isList="true" count="32">
             <Text4 Ref="19" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
@@ -776,8 +776,8 @@
         </DataBand1>
         <ColumnHeaderBand1 Ref="52" type="Stimulsoft.Report.Components.StiColumnHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,7.4,27.7,0.6</ClientRectangle>
-          <Components isList="true" count="8">
+          <ClientRectangle>0,7.4,19,0.6</ClientRectangle>
+          <Components isList="true" count="7">
             <Text12 Ref="53" type="Text" isKey="true">
               <Border>Bottom;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
@@ -810,7 +810,7 @@
             <Text23 Ref="55" type="Text" isKey="true">
               <Border>Bottom;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>13.6,0,1.6,0.6</ClientRectangle>
+              <ClientRectangle>11.6,0,1.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>新細明體,9</Font>
               <Guid>dcd5492b1cbe42349aceac7c88e7c75e</Guid>
@@ -818,7 +818,7 @@
               <Name>Text23</Name>
               <Page isRef="5" />
               <Parent isRef="52" />
-              <Text>含稅金額</Text>
+              <Text>金額小計</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
@@ -868,22 +868,7 @@
               <TextBrush>Black</TextBrush>
               <VertAlignment>Bottom</VertAlignment>
             </Text19>
-            <Text21 Ref="59" type="Text" isKey="true">
-              <Border>Bottom;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>11.8,0,1.6,0.6</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>新細明體,9</Font>
-              <Guid>623b62216c50471c80093bd94b319ff8</Guid>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text21</Name>
-              <Page isRef="5" />
-              <Parent isRef="52" />
-              <Text>未稅金額</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Bottom</VertAlignment>
-            </Text21>
-            <Text10 Ref="60" type="Text" isKey="true">
+            <Text10 Ref="59" type="Text" isKey="true">
               <Border>Bottom;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,0.8,0.6</ClientRectangle>
@@ -904,12 +889,12 @@
           <Page isRef="5" />
           <Parent isRef="5" />
         </ColumnHeaderBand1>
-        <DataBand2 Ref="61" type="DataBand" isKey="true">
+        <DataBand2 Ref="60" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,8.8,27.7,0.6</ClientRectangle>
-          <Components isList="true" count="8">
-            <Text9 Ref="62" type="Text" isKey="true">
+          <ClientRectangle>0,8.8,19,0.6</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text9 Ref="61" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,0.8,0.6</ClientRectangle>
@@ -919,12 +904,12 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text9</Name>
               <Page isRef="5" />
-              <Parent isRef="61" />
+              <Parent isRef="60" />
               <Text>{Detail.sgb02}</Text>
               <TextBrush>Black</TextBrush>
               <Type>DataColumn</Type>
             </Text9>
-            <Text11 Ref="63" type="Text" isKey="true">
+            <Text11 Ref="62" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>1,0,2,0.6</ClientRectangle>
@@ -933,12 +918,12 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text11</Name>
               <Page isRef="5" />
-              <Parent isRef="61" />
+              <Parent isRef="60" />
               <Text>{Detail.sgb03}</Text>
               <TextBrush>Black</TextBrush>
               <Type>DataColumn</Type>
             </Text11>
-            <Text20 Ref="64" type="Text" isKey="true">
+            <Text20 Ref="63" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>10.4,0,1.2,0.6</ClientRectangle>
@@ -949,39 +934,19 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text20</Name>
               <Page isRef="5" />
-              <Parent isRef="61" />
+              <Parent isRef="60" />
               <Text>{Detail.sgb09}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="65" type="NumberFormat" isKey="true">
+              <TextFormat Ref="64" type="NumberFormat" isKey="true">
                 <GroupSeparator>,</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
               </TextFormat>
               <Type>DataColumn</Type>
             </Text20>
-            <Text22 Ref="66" type="Text" isKey="true">
+            <Text24 Ref="65" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>11.8,0,1.6,0.6</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>新細明體,9</Font>
-              <Guid>6a83a60926b842afaa1947abf8afcd0a</Guid>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text22</Name>
-              <Page isRef="5" />
-              <Parent isRef="61" />
-              <Text>{Detail.sgb10}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextFormat Ref="67" type="NumberFormat" isKey="true">
-                <GroupSeparator>,</GroupSeparator>
-                <NegativePattern>1</NegativePattern>
-              </TextFormat>
-              <Type>DataColumn</Type>
-            </Text22>
-            <Text24 Ref="68" type="Text" isKey="true">
-              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>13.6,0,1.6,0.6</ClientRectangle>
+              <ClientRectangle>11.6,0,1.6,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>新細明體,9</Font>
               <Guid>bca3d997f1214aa6a94057e7ce52ff9b</Guid>
@@ -989,16 +954,16 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text24</Name>
               <Page isRef="5" />
-              <Parent isRef="61" />
+              <Parent isRef="60" />
               <Text>{Detail.sgb10t}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="69" type="NumberFormat" isKey="true">
+              <TextFormat Ref="66" type="NumberFormat" isKey="true">
                 <GroupSeparator>,</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
               </TextFormat>
               <Type>DataColumn</Type>
             </Text24>
-            <Text13 Ref="70" type="Text" isKey="true">
+            <Text13 Ref="67" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -1010,12 +975,12 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text13</Name>
               <Page isRef="5" />
-              <Parent isRef="61" />
+              <Parent isRef="60" />
               <Text>{Detail.sgb04}</Text>
               <TextBrush>Black</TextBrush>
               <Type>DataColumn</Type>
             </Text13>
-            <Text16 Ref="71" type="Text" isKey="true">
+            <Text16 Ref="68" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>8.2,0,1,0.6</ClientRectangle>
@@ -1026,16 +991,16 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text16</Name>
               <Page isRef="5" />
-              <Parent isRef="61" />
+              <Parent isRef="60" />
               <Text>{Detail.sgb05}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="72" type="NumberFormat" isKey="true">
+              <TextFormat Ref="69" type="NumberFormat" isKey="true">
                 <GroupSeparator>,</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
               </TextFormat>
               <Type>DataColumn</Type>
             </Text16>
-            <Text18 Ref="73" type="Text" isKey="true">
+            <Text18 Ref="70" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>9.4,0,0.8,0.6</ClientRectangle>
@@ -1045,10 +1010,10 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text18</Name>
               <Page isRef="5" />
-              <Parent isRef="61" />
+              <Parent isRef="60" />
               <Text>{Detail.sgb07}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="74" type="NumberFormat" isKey="true">
+              <TextFormat Ref="71" type="NumberFormat" isKey="true">
                 <GroupSeparator>,</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
               </TextFormat>
@@ -1065,64 +1030,30 @@
           <Parent isRef="5" />
           <Sort isList="true" count="0" />
         </DataBand2>
-        <FooterBand1 Ref="75" type="FooterBand" isKey="true">
+        <FooterBand1 Ref="72" type="FooterBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,10.2,27.7,1.6</ClientRectangle>
+          <ClientRectangle>0,10.2,19,1.6</ClientRectangle>
           <Components isList="true" count="4">
-            <Text3 Ref="76" type="Text" isKey="true">
+            <Text3 Ref="73" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>12.4,0.8,1.6,0.4</ClientRectangle>
+              <ClientRectangle>10,0.2,1.6,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>新細明體,9</Font>
               <Guid>e1dcb0ffc2414358b7462e9fe04e1f44</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text3</Name>
               <Page isRef="5" />
-              <Parent isRef="75" />
-              <Text>含稅合計:</Text>
+              <Parent isRef="72" />
+              <Text>金額合計:</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text3>
-            <Text27 Ref="77" type="Text" isKey="true">
+            <Text29 Ref="74" type="Text" isKey="true">
               <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>12.4,0.2,1.6,0.4</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>新細明體,9</Font>
-              <Guid>9a23f5c2806e4a3aa8624d4eefd28897</Guid>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text27</Name>
-              <Page isRef="5" />
-              <Parent isRef="75" />
-              <Text>未稅合計:</Text>
-              <TextBrush>Black</TextBrush>
-            </Text27>
-            <Text28 Ref="78" type="Text" isKey="true">
-              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>14,0.2,1.6,0.4</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>新細明體,9</Font>
-              <Guid>a7ba43eef4704d05830c23a4b98a3a90</Guid>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text28</Name>
-              <Page isRef="5" />
-              <Parent isRef="75" />
-              <Text>{Master.sga13}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextFormat Ref="79" type="NumberFormat" isKey="true">
-                <GroupSeparator>,</GroupSeparator>
-                <NegativePattern>1</NegativePattern>
-              </TextFormat>
-              <Type>DataColumn</Type>
-            </Text28>
-            <Text29 Ref="80" type="Text" isKey="true">
-              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>14,0.8,1.6,0.4</ClientRectangle>
+              <ClientRectangle>11.6,0.2,1.6,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>新細明體,9</Font>
               <Guid>faf85c5fe7314723bb0a4c6b904a9d78</Guid>
@@ -1130,15 +1061,54 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text29</Name>
               <Page isRef="5" />
-              <Parent isRef="75" />
+              <Parent isRef="72" />
               <Text>{Master.sga13t}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="81" type="NumberFormat" isKey="true">
+              <TextFormat Ref="75" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <GroupSeparator>,</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
+                <State>DecimalDigits</State>
               </TextFormat>
               <Type>DataColumn</Type>
             </Text29>
+            <Text21 Ref="76" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,0.2,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>3aaa2c2b798541d68f5062b915770678</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="5" />
+              <Parent isRef="72" />
+              <Text>{Sum(Detail.sgb05)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="77" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <State>DecimalDigits</State>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text21>
+            <Text22 Ref="78" type="Text" isKey="true">
+              <Border>None;[105:105:105];1;Solid;False;4;[105:105:105]</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新細明體,9</Font>
+              <Guid>2fc78952fbab4a999281e19ed7dd2b4d</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="5" />
+              <Parent isRef="72" />
+              <Text>數量合計:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text22>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>FooterBand1</Name>
@@ -1152,17 +1122,16 @@
       <Guid>ed1ce0ec57744af1bc40df09dc56088f</Guid>
       <Margins>1,1,1,1</Margins>
       <Name>Page1</Name>
-      <Orientation>Landscape</Orientation>
-      <PageHeight>21</PageHeight>
-      <PageWidth>29.7</PageWidth>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
       <Report isRef="0" />
-      <Watermark Ref="82" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="79" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page1>
   </Pages>
-  <PrinterSettings Ref="83" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="80" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -1174,10 +1143,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/16/2020 6:28:31 PM</ReportChanged>
+  <ReportChanged>3/11/2022 1:33:08 PM</ReportChanged>
   <ReportCreated>2/5/2015 10:21:21 AM</ReportCreated>
-  <ReportFile />
-  <ReportGuid>f4d6276465c64536842305049a5b1024</ReportGuid>
+  <ReportFile>C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\Reports\Stp\Stpr400.mrt</ReportFile>
+  <ReportGuid>fd048a4cd451418d88f39d6c654c5208</ReportGuid>
   <ReportImage isNull="true" />
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>

@@ -338,6 +338,7 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<vw_stpt410s> vw_stpt410s { get; set; }
         public virtual DbSet<vw_stpt500> vw_stpt500 { get; set; }
         public virtual DbSet<vw_stpt500s> vw_stpt500s { get; set; }
+        public virtual DbSet<vw_taxb010> vw_taxb010 { get; set; }
         public virtual DbSet<vw_taxi001> vw_taxi001 { get; set; }
         public virtual DbSet<vw_taxi020> vw_taxi020 { get; set; }
         public virtual DbSet<vw_taxi020s> vw_taxi020s { get; set; }
@@ -346,7 +347,6 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<vw_xinvt302s> vw_xinvt302s { get; set; }
         public virtual DbSet<vw_zinvt001> vw_zinvt001 { get; set; }
         public virtual DbSet<vw_zinvt001s> vw_zinvt001s { get; set; }
-        public virtual DbSet<vw_taxb010> vw_taxb010 { get; set; }
     
         public virtual int sap_check_table(string table)
         {
@@ -377,6 +377,15 @@ namespace YR.ERP.DAL.YRModel
                 new ObjectParameter("p_view", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_gen_aza", p_viewParameter);
+        }
+    
+        public virtual ObjectResult<sp_invr450_Result> sp_invr450(string p_view)
+        {
+            var p_viewParameter = p_view != null ?
+                new ObjectParameter("p_view", p_view) :
+                new ObjectParameter("p_view", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_invr450_Result>("sp_invr450", p_viewParameter);
         }
     }
 }

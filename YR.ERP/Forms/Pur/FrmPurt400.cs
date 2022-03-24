@@ -191,6 +191,7 @@ namespace YR.ERP.Forms.Pur
                     WfSetControlReadonly(new List<Control> { ute_pgacreu, ute_pgacreg, udt_pgacred }, true);
                     WfSetControlReadonly(new List<Control> { ute_pgamodu, ute_pgamodg, udt_pgamodd }, true);
                     WfSetControlReadonly(new List<Control> { ute_pgasecu, ute_pgasecg }, true);
+                    WfSetControlReadonly(new List<Control> { ute_tot_cnts }, true);
 
                     if (GlobalFn.isNullRet(masterModel.pga01, "") != "")
                     {
@@ -901,6 +902,11 @@ namespace YR.ERP.Forms.Pur
                             DrMaster["pga12_c"] = BoPur.OfGetPbb02(pfaModel.pfa12);
                             DrMaster["pga14"] = pfaModel.pfa14;
                             DrMaster["pga15"] = pfaModel.pfa15;
+                            DrMaster["pga17"] = pfaModel.pfa16;
+                            DrMaster["pga18"] = pfaModel.pfa17;
+                            DrMaster["pga20"] = pfaModel.pfa18;
+                            DrMaster["pga21"] = pfaModel.pfa19;
+                            DrMaster["pga22"] = pfaModel.pfa20;
                             break;
 
                         case "pga18": //匯率
@@ -2643,6 +2649,7 @@ namespace YR.ERP.Forms.Pur
         private bool WfSetTotalAmt()
         {
             pga_tb pgaModel;
+            decimal tot_cnts = 0;
             decimal pga13 = 0, pga13t = 0, pga13g;
             try
             {
@@ -2652,6 +2659,7 @@ namespace YR.ERP.Forms.Pur
                     foreach (pgb_tb l_pgb in TabDetailList[0].DtSource.ToList<pgb_tb>())
                     {
                         pga13t += l_pgb.pgb10t;
+                        tot_cnts += l_pgb.pgb05;
                     }
                     pga13t = GlobalFn.Round(pga13t, BekTbModel.bek04);
                     pga13 = pga13t / (1 + pgaModel.pga07 / 100);
@@ -2664,6 +2672,7 @@ namespace YR.ERP.Forms.Pur
                     foreach (pgb_tb l_pgb in TabDetailList[0].DtSource.ToList<pgb_tb>())
                     {
                         pga13 += l_pgb.pgb10;
+                        tot_cnts += l_pgb.pgb05;
                     }
                     pga13 = GlobalFn.Round(pga13, BekTbModel.bek04);
                     pga13g = pga13 * (pgaModel.pga07 / 100);
@@ -2674,6 +2683,7 @@ namespace YR.ERP.Forms.Pur
                 DrMaster["pga13"] = pga13;
                 DrMaster["pga13t"] = pga13t;
                 DrMaster["pga13g"] = pga13g;
+                DrMaster["tot_cnts"] = tot_cnts;
                 return true;
             }
             catch (Exception ex)

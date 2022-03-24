@@ -38,5 +38,6 @@ namespace YR.ERP.DAL.YRModel
         public string pebmodu { get; set; }
         public string pebmodg { get; set; }
         public Nullable<System.DateTime> pebmodd { get; set; }
+        public string ica31 { get; set; }
     }
 }

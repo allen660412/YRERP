@@ -316,15 +316,15 @@
         <EntityTypeShape EntityType="YRDB.vw_stpt410s" Width="1.5" PointX="66.75" PointY="36.75" />
         <EntityTypeShape EntityType="YRDB.vw_stpt500" Width="1.5" PointX="66.75" PointY="48.75" />
         <EntityTypeShape EntityType="YRDB.vw_stpt500s" Width="1.5" PointX="66.75" PointY="58.75" />
-        <EntityTypeShape EntityType="YRDB.vw_taxi001" Width="1.5" PointX="14.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_taxi020" Width="1.5" PointX="16.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_taxi020s" Width="1.5" PointX="18.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_test" Width="1.5" PointX="20.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_xinvt302" Width="1.5" PointX="22.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_xinvt302s" Width="1.5" PointX="24.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_zinvt001" Width="1.5" PointX="44.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_zinvt001s" Width="1.5" PointX="50.75" PointY="67.75" />
-        <EntityTypeShape EntityType="YRDB.vw_taxb010" Width="1.5" PointX="59.375" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxb010" Width="1.5" PointX="14.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxi001" Width="1.5" PointX="16.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxi020" Width="1.5" PointX="18.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_taxi020s" Width="1.5" PointX="20.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_test" Width="1.5" PointX="22.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_xinvt302" Width="1.5" PointX="24.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_xinvt302s" Width="1.5" PointX="44.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_zinvt001" Width="1.5" PointX="50.75" PointY="67.75" />
+        <EntityTypeShape EntityType="YRDB.vw_zinvt001s" Width="1.5" PointX="58.75" PointY="67.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -455,6 +455,9 @@
     <Compile Include="YRModel\shb_tb.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="YRModel\sp_invr450_Result.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="YRModel\tba_tb.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>

@@ -37,7 +37,7 @@ namespace YR.ERP.DAL.YRModel
         public string pga19 { get; set; }
         public string pga20 { get; set; }
         public string pga21 { get; set; }
-        public string pga22 { get; set; }
+        public Nullable<decimal> pga22 { get; set; }
         public string pga23 { get; set; }
         public string pga24 { get; set; }
         public string pga25 { get; set; }
@@ -80,5 +80,6 @@ namespace YR.ERP.DAL.YRModel
         public string pga11_c { get; set; }
         public string pga12_c { get; set; }
         public string pga01_c { get; set; }
+        public Nullable<decimal> tot_cnts { get; set; }
     }
 }

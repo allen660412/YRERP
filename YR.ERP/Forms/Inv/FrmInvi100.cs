@@ -1709,5 +1709,15 @@ namespace YR.ERP.Forms.Inv
             }
         }
 
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ultraTextEditor1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

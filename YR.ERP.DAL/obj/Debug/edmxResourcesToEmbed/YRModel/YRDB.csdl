@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="YRDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="Enitity" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sap_check_table">
+      <Parameter Name="table" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sap_update_aza04">
+      <Parameter Name="table_name" Mode="In" Type="String" />
+      <Parameter Name="view_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_gen_aza">
+      <Parameter Name="p_view" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_invr450" ReturnType="Collection(YRDB.sp_invr450_Result)">
+      <Parameter Name="p_view" Mode="In" Type="String" />
+    </FunctionImport>
     <EntitySet Name="ada_tb" EntityType="YRDB.ada_tb" />
     <EntitySet Name="adb_tb" EntityType="YRDB.adb_tb" />
     <EntitySet Name="adc_tb" EntityType="YRDB.adc_tb" />
@@ -312,6 +325,7 @@
     <EntitySet Name="vw_stpt410s" EntityType="YRDB.vw_stpt410s" />
     <EntitySet Name="vw_stpt500" EntityType="YRDB.vw_stpt500" />
     <EntitySet Name="vw_stpt500s" EntityType="YRDB.vw_stpt500s" />
+    <EntitySet Name="vw_taxb010" EntityType="YRDB.vw_taxb010" />
     <EntitySet Name="vw_taxi001" EntityType="YRDB.vw_taxi001" />
     <EntitySet Name="vw_taxi020" EntityType="YRDB.vw_taxi020" />
     <EntitySet Name="vw_taxi020s" EntityType="YRDB.vw_taxi020s" />
@@ -320,18 +334,17 @@
     <EntitySet Name="vw_xinvt302s" EntityType="YRDB.vw_xinvt302s" />
     <EntitySet Name="vw_zinvt001" EntityType="YRDB.vw_zinvt001" />
     <EntitySet Name="vw_zinvt001s" EntityType="YRDB.vw_zinvt001s" />
-    <EntitySet Name="vw_taxb010" EntityType="YRDB.vw_taxb010" />
-    <FunctionImport Name="sap_check_table">
-      <Parameter Name="table" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="sap_update_aza04">
-      <Parameter Name="table_name" Mode="In" Type="String" />
-      <Parameter Name="view_name" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="sp_gen_aza">
-      <Parameter Name="p_view" Mode="In" Type="String" />
-    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="sp_invr450_Result">
+    <Property Type="String" Name="ica01" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ica02" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="new_yn" Nullable="true" MaxLength="1" />
+    <Property Type="Decimal" Name="qty" Nullable="true" Precision="22" Scale="3" />
+    <Property Type="DateTime" Name="last_in_date" Nullable="true" />
+    <Property Type="Decimal" Name="last_in_qty" Nullable="true" Precision="22" Scale="3" />
+    <Property Type="DateTime" Name="last_out_date" Nullable="true" />
+    <Property Type="Decimal" Name="last_out_days" Nullable="true" Precision="22" Scale="0" />
+  </ComplexType>
   <EntityType Name="ada_tb">
     <Key>
       <PropertyRef Name="ada01" />
@@ -1725,10 +1738,10 @@
     <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica32" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica33" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica34" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica31" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica32" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -3030,9 +3043,9 @@
     <Property Name="pfa15" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="pfa16" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="pfa17" Type="Decimal" Nullable="false" Precision="22" Scale="10" />
-    <Property Name="pfa18" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="pfa19" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="pfa20" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="pfa18" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="pfa19" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pfa20" Type="Decimal" Precision="22" Scale="6" />
     <Property Name="pfa21" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pfa22" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pfa23" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -3146,9 +3159,9 @@
     <Property Name="pga17" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="pga18" Type="Decimal" Nullable="false" Precision="22" Scale="10" />
     <Property Name="pga19" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="pga20" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="pga21" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="pga22" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="pga20" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="pga21" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pga22" Type="Decimal" Precision="22" Scale="6" />
     <Property Name="pga23" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pga24" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pga25" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -6484,10 +6497,10 @@
     <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica32" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica33" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica34" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica31" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica32" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -8200,10 +8213,10 @@
     <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica32" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica33" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica34" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica31" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica32" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -8636,6 +8649,7 @@
     <Property Name="pebmodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="pebmodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="pebmodd" Type="DateTime" Precision="7" />
+    <Property Name="ica31" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="vw_purt300">
     <Key>
@@ -8665,9 +8679,9 @@
     <Property Name="pfa15" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="pfa16" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="pfa17" Type="Decimal" Nullable="false" Precision="22" Scale="10" />
-    <Property Name="pfa18" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="pfa19" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="pfa20" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="pfa18" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="pfa19" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pfa20" Type="Decimal" Precision="22" Scale="6" />
     <Property Name="pfa21" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pfa22" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pfa23" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -8712,6 +8726,7 @@
     <Property Name="pfa11_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
     <Property Name="pfa12_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
     <Property Name="pfa01_c" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="tot_cnts" Type="Decimal" Precision="38" Scale="3" />
   </EntityType>
   <EntityType Name="vw_purt300s">
     <Key>
@@ -8800,9 +8815,9 @@
     <Property Name="pga17" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="pga18" Type="Decimal" Nullable="false" Precision="22" Scale="10" />
     <Property Name="pga19" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="pga20" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="pga21" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="pga22" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="pga20" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="pga21" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pga22" Type="Decimal" Precision="22" Scale="6" />
     <Property Name="pga23" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pga24" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="pga25" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -8845,6 +8860,7 @@
     <Property Name="pga11_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
     <Property Name="pga12_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
     <Property Name="pga01_c" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="tot_cnts" Type="Decimal" Precision="38" Scale="3" />
   </EntityType>
   <EntityType Name="vw_purt400s">
     <Key>
@@ -9984,6 +10000,17 @@
     <Property Name="shbmodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="shbmodd" Type="DateTime" Precision="7" />
   </EntityType>
+  <EntityType Name="vw_taxb010">
+    <Key>
+      <PropertyRef Name="tca01" />
+      <PropertyRef Name="delete_yn" />
+    </Key>
+    <Property Name="tca01" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="tca03" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="tca04" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="tca06" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="delete_yn" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="vw_taxi001">
     <Key>
       <PropertyRef Name="tba01" />
@@ -10221,16 +10248,5 @@
     <Property Name="igbmodd" Type="DateTime" Precision="7" />
     <Property Name="xc_igb001" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="xc_igb002" Type="Decimal" Precision="22" Scale="0" />
-  </EntityType>
-  <EntityType Name="vw_taxb010">
-    <Key>
-      <PropertyRef Name="tca01" />
-      <PropertyRef Name="delete_yn" />
-    </Key>
-    <Property Name="tca01" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="tca03" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="tca04" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="tca06" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="delete_yn" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

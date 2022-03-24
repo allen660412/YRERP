@@ -35,7 +35,7 @@ namespace YR.ERP.DAL.YRModel
         public decimal pfa17 { get; set; }
         public string pfa18 { get; set; }
         public string pfa19 { get; set; }
-        public string pfa20 { get; set; }
+        public Nullable<decimal> pfa20 { get; set; }
         public string pfa21 { get; set; }
         public string pfa22 { get; set; }
         public string pfa23 { get; set; }
@@ -80,5 +80,6 @@ namespace YR.ERP.DAL.YRModel
         public string pfa11_c { get; set; }
         public string pfa12_c { get; set; }
         public string pfa01_c { get; set; }
+        public Nullable<decimal> tot_cnts { get; set; }
     }
 }

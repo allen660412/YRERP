@@ -1,6 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="YRDBStoreContainer" CdmEntityContainer="Enitity">
+    <FunctionImportMapping FunctionImportName="sap_check_table" FunctionName="YRDB.Store.sap_check_table" />
+    <FunctionImportMapping FunctionImportName="sap_update_aza04" FunctionName="YRDB.Store.sap_update_aza04" />
+    <FunctionImportMapping FunctionImportName="sp_gen_aza" FunctionName="YRDB.Store.sp_gen_aza" />
+    <FunctionImportMapping FunctionImportName="sp_invr450" FunctionName="YRDB.Store.sp_invr450">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="YRDB.sp_invr450_Result">
+          <ScalarProperty Name="ica01" ColumnName="ica01" />
+          <ScalarProperty Name="ica02" ColumnName="ica02" />
+          <ScalarProperty Name="new_yn" ColumnName="new_yn" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="last_in_date" ColumnName="last_in_date" />
+          <ScalarProperty Name="last_in_qty" ColumnName="last_in_qty" />
+          <ScalarProperty Name="last_out_date" ColumnName="last_out_date" />
+          <ScalarProperty Name="last_out_days" ColumnName="last_out_days" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <EntitySetMapping Name="ada_tb">
       <EntityTypeMapping TypeName="YRDB.ada_tb">
         <MappingFragment StoreEntitySet="ada_tb">
@@ -8148,6 +8165,7 @@
     <EntitySetMapping Name="vw_purt200s">
       <EntityTypeMapping TypeName="YRDB.vw_purt200s">
         <MappingFragment StoreEntitySet="vw_purt200s">
+          <ScalarProperty Name="ica31" ColumnName="ica31" />
           <ScalarProperty Name="pebmodd" ColumnName="pebmodd" />
           <ScalarProperty Name="pebmodg" ColumnName="pebmodg" />
           <ScalarProperty Name="pebmodu" ColumnName="pebmodu" />
@@ -8178,6 +8196,7 @@
     <EntitySetMapping Name="vw_purt300">
       <EntityTypeMapping TypeName="YRDB.vw_purt300">
         <MappingFragment StoreEntitySet="vw_purt300">
+          <ScalarProperty Name="tot_cnts" ColumnName="tot_cnts" />
           <ScalarProperty Name="pfa01_c" ColumnName="pfa01_c" />
           <ScalarProperty Name="pfa12_c" ColumnName="pfa12_c" />
           <ScalarProperty Name="pfa11_c" ColumnName="pfa11_c" />
@@ -8299,6 +8318,7 @@
     <EntitySetMapping Name="vw_purt400">
       <EntityTypeMapping TypeName="YRDB.vw_purt400">
         <MappingFragment StoreEntitySet="vw_purt400">
+          <ScalarProperty Name="tot_cnts" ColumnName="tot_cnts" />
           <ScalarProperty Name="pga01_c" ColumnName="pga01_c" />
           <ScalarProperty Name="pga12_c" ColumnName="pga12_c" />
           <ScalarProperty Name="pga11_c" ColumnName="pga11_c" />
@@ -9429,6 +9449,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="vw_taxb010">
+      <EntityTypeMapping TypeName="YRDB.vw_taxb010">
+        <MappingFragment StoreEntitySet="vw_taxb010">
+          <ScalarProperty Name="delete_yn" ColumnName="delete_yn" />
+          <ScalarProperty Name="tca06" ColumnName="tca06" />
+          <ScalarProperty Name="tca04" ColumnName="tca04" />
+          <ScalarProperty Name="tca03" ColumnName="tca03" />
+          <ScalarProperty Name="tca01" ColumnName="tca01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="vw_taxi001">
       <EntityTypeMapping TypeName="YRDB.vw_taxi001">
         <MappingFragment StoreEntitySet="vw_taxi001">
@@ -9655,19 +9686,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="vw_taxb010">
-      <EntityTypeMapping TypeName="YRDB.vw_taxb010">
-        <MappingFragment StoreEntitySet="vw_taxb010">
-          <ScalarProperty Name="delete_yn" ColumnName="delete_yn" />
-          <ScalarProperty Name="tca06" ColumnName="tca06" />
-          <ScalarProperty Name="tca04" ColumnName="tca04" />
-          <ScalarProperty Name="tca03" ColumnName="tca03" />
-          <ScalarProperty Name="tca01" ColumnName="tca01" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="sap_check_table" FunctionName="YRDB.Store.sap_check_table" />
-    <FunctionImportMapping FunctionImportName="sap_update_aza04" FunctionName="YRDB.Store.sap_update_aza04" />
-    <FunctionImportMapping FunctionImportName="sp_gen_aza" FunctionName="YRDB.Store.sp_gen_aza" />
   </EntityContainerMapping>
 </Mapping>
