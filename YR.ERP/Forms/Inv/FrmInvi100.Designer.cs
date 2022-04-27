@@ -141,6 +141,7 @@
             this.label41 = new System.Windows.Forms.Label();
             this.ute_ica33 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label42 = new System.Windows.Forms.Label();
+            this.Ucx_ica35 = new YR.Util.Controls.UcCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Master)).BeginInit();
             this.uTab_Master.SuspendLayout();
@@ -242,7 +243,6 @@
             this.ultraTabPageControl2.Controls.Add(this.label19);
             this.ultraTabPageControl2.Controls.Add(this.ute_ica19);
             this.ultraTabPageControl2.Controls.Add(this.label20);
-            this.ultraTabPageControl2.Location = new System.Drawing.Point(1, 27);
             this.ultraTabPageControl2.Size = new System.Drawing.Size(1144, 600);
             // 
             // ultraTabPageControl3
@@ -259,6 +259,7 @@
             // 
             // ultraTabPageControl1
             // 
+            this.ultraTabPageControl1.Controls.Add(this.Ucx_ica35);
             this.ultraTabPageControl1.Controls.Add(this.ucx_ica30);
             this.ultraTabPageControl1.Controls.Add(this.ucx_ica29);
             this.ultraTabPageControl1.Controls.Add(this.ute_ica28);
@@ -305,7 +306,6 @@
             this.ultraTabPageControl1.Controls.Add(this.ute_ica04);
             this.ultraTabPageControl1.Controls.Add(this.label3);
             this.ultraTabPageControl1.Controls.Add(this.uGridMaster);
-            this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl1.Size = new System.Drawing.Size(1144, 600);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.uGridMaster, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label3, 0);
@@ -353,6 +353,7 @@
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_ica28, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ucx_ica29, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ucx_ica30, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.Ucx_ica35, 0);
             // 
             // UtbmMain
             // 
@@ -1323,7 +1324,7 @@
             // 
             this.ute_ica21.AccessibleDescription = "";
             this.ute_ica21.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_ica21.Location = new System.Drawing.Point(563, 94);
+            this.ute_ica21.Location = new System.Drawing.Point(563, 122);
             this.ute_ica21.Name = "ute_ica21";
             this.ute_ica21.Size = new System.Drawing.Size(142, 22);
             this.ute_ica21.TabIndex = 17;
@@ -1334,7 +1335,7 @@
             this.label35.AccessibleDescription = "";
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label35.Location = new System.Drawing.Point(454, 98);
+            this.label35.Location = new System.Drawing.Point(454, 126);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(37, 14);
             this.label35.TabIndex = 167;
@@ -1367,7 +1368,7 @@
             // 
             this.ute_ica27.AccessibleDescription = "";
             this.ute_ica27.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_ica27.Location = new System.Drawing.Point(563, 71);
+            this.ute_ica27.Location = new System.Drawing.Point(563, 67);
             this.ute_ica27.Name = "ute_ica27";
             this.ute_ica27.Size = new System.Drawing.Size(142, 22);
             this.ute_ica27.TabIndex = 20;
@@ -1378,7 +1379,7 @@
             this.label36.AccessibleDescription = "";
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("新細明體", 10F);
-            this.label36.Location = new System.Drawing.Point(454, 75);
+            this.label36.Location = new System.Drawing.Point(454, 71);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(37, 14);
             this.label36.TabIndex = 171;
@@ -1420,7 +1421,7 @@
             // 
             this.ucx_ica29.AutoSize = true;
             this.ucx_ica29.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ucx_ica29.Location = new System.Drawing.Point(457, 124);
+            this.ucx_ica29.Location = new System.Drawing.Point(457, 152);
             this.ucx_ica29.Name = "ucx_ica29";
             this.ucx_ica29.NullValue = "";
             this.ucx_ica29.Size = new System.Drawing.Size(56, 18);
@@ -1432,7 +1433,7 @@
             // 
             this.ucx_ica30.AutoSize = true;
             this.ucx_ica30.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ucx_ica30.Location = new System.Drawing.Point(457, 154);
+            this.ucx_ica30.Location = new System.Drawing.Point(457, 182);
             this.ucx_ica30.Name = "ucx_ica30";
             this.ucx_ica30.NullValue = "";
             this.ucx_ica30.Size = new System.Drawing.Size(56, 18);
@@ -1532,6 +1533,21 @@
             this.label42.TabIndex = 93;
             this.label42.Tag = "ica33";
             this.label42.Text = "ica33";
+            // 
+            // Ucx_ica35
+            // 
+            this.Ucx_ica35.AllowNull = true;
+            this.Ucx_ica35.AutoSize = true;
+            this.Ucx_ica35.Font = new System.Drawing.Font("新細明體", 10F);
+            this.Ucx_ica35.Location = new System.Drawing.Point(457, 96);
+            this.Ucx_ica35.Name = "Ucx_ica35";
+            this.Ucx_ica35.NullValue = "N";
+            this.Ucx_ica35.Size = new System.Drawing.Size(56, 18);
+            this.Ucx_ica35.TabIndex = 177;
+            this.Ucx_ica35.Tag = "ica35";
+            this.Ucx_ica35.Text = "ica35";
+            this.Ucx_ica35.ThreeState = true;
+            this.Ucx_ica35.UseVisualStyleBackColor = true;
             // 
             // FrmInvi100
             // 
@@ -1717,5 +1733,6 @@
         private System.Windows.Forms.Label label42;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_ica34;
         private System.Windows.Forms.Label label41;
+        private Util.Controls.UcCheckBox Ucx_ica35;
     }
 }

@@ -66,7 +66,9 @@
             this.ute_sga13t = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ute_sga20 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.btnCreditCard = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.btnShipping = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -124,8 +126,8 @@
             this.btnQtyAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.udt_sgb04_pick = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.ute_sga20 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.label16 = new System.Windows.Forms.Label();
+            this.ute_sga28 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.label41 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BindingMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsbButtom)).BeginInit();
@@ -135,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga13t)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_sga20)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucb_sga09)).BeginInit();
@@ -156,7 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uGridDetail)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sgb04_pick)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_sga20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_sga28)).BeginInit();
             this.SuspendLayout();
             // 
             // UsbButtom
@@ -185,9 +188,9 @@
             this.panel3.Controls.Add(this.ute_sga13t);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(767, 0);
+            this.panel3.Location = new System.Drawing.Point(850, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(556, 312);
+            this.panel3.Size = new System.Drawing.Size(473, 312);
             this.panel3.TabIndex = 3;
             // 
             // ute_qty_tot
@@ -218,7 +221,7 @@
             // btnAutoCal
             // 
             this.btnAutoCal.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAutoCal.Location = new System.Drawing.Point(447, 182);
+            this.btnAutoCal.Location = new System.Drawing.Point(275, 240);
             this.btnAutoCal.Name = "btnAutoCal";
             this.btnAutoCal.Size = new System.Drawing.Size(83, 48);
             this.btnAutoCal.TabIndex = 84;
@@ -279,6 +282,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Pink;
+            this.panel2.Controls.Add(this.ute_sga28);
+            this.panel2.Controls.Add(this.label41);
             this.panel2.Controls.Add(this.ute_sga20);
             this.panel2.Controls.Add(this.btnCreditCard);
             this.panel2.Controls.Add(this.label16);
@@ -312,8 +317,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(767, 312);
+            this.panel2.Size = new System.Drawing.Size(850, 312);
             this.panel2.TabIndex = 0;
+            // 
+            // ute_sga20
+            // 
+            this.ute_sga20.AccessibleDescription = "";
+            this.ute_sga20.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ute_sga20.Location = new System.Drawing.Point(310, 272);
+            this.ute_sga20.Name = "ute_sga20";
+            this.ute_sga20.Size = new System.Drawing.Size(430, 29);
+            this.ute_sga20.TabIndex = 87;
+            this.ute_sga20.Tag = "sga20";
             // 
             // btnCreditCard
             // 
@@ -327,6 +342,18 @@
             this.btnCreditCard.Text = "刷卡手續費";
             this.btnCreditCard.UseVisualStyleBackColor = true;
             this.btnCreditCard.Click += new System.EventHandler(this.btnButton_Click);
+            // 
+            // label16
+            // 
+            this.label16.AccessibleDescription = "R";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label16.Location = new System.Drawing.Point(240, 279);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 19);
+            this.label16.TabIndex = 88;
+            this.label16.Tag = "sga20";
+            this.label16.Text = "sga20";
             // 
             // btnShipping
             // 
@@ -539,9 +566,9 @@
             // 
             this.ute_sga26.AccessibleDescription = "";
             this.ute_sga26.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.ute_sga26.Location = new System.Drawing.Point(642, 141);
+            this.ute_sga26.Location = new System.Drawing.Point(666, 140);
             this.ute_sga26.Name = "ute_sga26";
-            this.ute_sga26.Size = new System.Drawing.Size(109, 29);
+            this.ute_sga26.Size = new System.Drawing.Size(166, 29);
             this.ute_sga26.TabIndex = 10;
             this.ute_sga26.Tag = "sga26";
             // 
@@ -1135,27 +1162,27 @@
             this.udt_sgb04_pick.TabIndex = 0;
             this.udt_sgb04_pick.Tag = "sgb04_pick";
             // 
-            // ute_sga20
+            // ute_sga28
             // 
-            this.ute_sga20.AccessibleDescription = "";
-            this.ute_sga20.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.ute_sga20.Location = new System.Drawing.Point(310, 272);
-            this.ute_sga20.Name = "ute_sga20";
-            this.ute_sga20.Size = new System.Drawing.Size(430, 29);
-            this.ute_sga20.TabIndex = 87;
-            this.ute_sga20.Tag = "sga20";
+            this.ute_sga28.AccessibleDescription = "";
+            this.ute_sga28.Font = new System.Drawing.Font("新細明體", 14F);
+            this.ute_sga28.Location = new System.Drawing.Point(666, 175);
+            this.ute_sga28.Name = "ute_sga28";
+            this.ute_sga28.Size = new System.Drawing.Size(166, 28);
+            this.ute_sga28.TabIndex = 224;
+            this.ute_sga28.Tag = "sga28";
             // 
-            // label16
+            // label41
             // 
-            this.label16.AccessibleDescription = "R";
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label16.Location = new System.Drawing.Point(240, 279);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 19);
-            this.label16.TabIndex = 88;
-            this.label16.Tag = "sga20";
-            this.label16.Text = "sga20";
+            this.label41.AccessibleDescription = "";
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label41.Location = new System.Drawing.Point(572, 181);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(51, 19);
+            this.label41.TabIndex = 225;
+            this.label41.Tag = "sga28";
+            this.label41.Text = "sga28";
             // 
             // FrmStpt410
             // 
@@ -1185,6 +1212,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga13t)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_sga20)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ute_sga27)).EndInit();
@@ -1209,7 +1237,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.udt_sgb04_pick)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ute_sga20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_sga28)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1286,5 +1314,7 @@
         private System.Windows.Forms.Button btnUpdIca11;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_sga20;
         private System.Windows.Forms.Label label16;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_sga28;
+        private System.Windows.Forms.Label label41;
     }
 }

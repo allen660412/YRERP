@@ -1872,3 +1872,4 @@ C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\obj\Debug\YR.ERP.Forms.Inv.FrmInvr102.resources
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\bin\Debug\Reports\Inv\Invr102.mrt
 C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\obj\Debug\YR.ERP.Forms.Tax.FrmTaxb010.resources
+C:\Users\Allen Desktop\Documents\Visual Studio 2013\Projects\Git同步\YRERP\YR.ERP\obj\Debug\YR.ERP.Forms.Inv.FrmInvi103.resources

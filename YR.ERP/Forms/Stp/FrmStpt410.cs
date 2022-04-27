@@ -3543,9 +3543,18 @@ namespace YR.ERP.Forms.Stp
 
                                 //再檢查是否有原廠料號
                                 sbSql = new StringBuilder();
+                                //sbSql.AppendLine("SELECT COUNT(1) FROM ica_tb");
+                                //sbSql.AppendLine("WHERE ica21=@ica21");
+                                //sbSql.AppendLine("AND icaconf='Y' AND icavali='Y'");
                                 sbSql.AppendLine("SELECT COUNT(1) FROM ica_tb");
-                                sbSql.AppendLine("WHERE ica21=@ica21");
-                                sbSql.AppendLine("AND icaconf='Y' AND icavali='Y'");
+                                sbSql.AppendLine("WHERE icaconf='Y' AND icavali='Y'");
+                                sbSql.AppendLine("AND (ica21=@ica21");
+                                sbSql.AppendLine("OR EXISTS (");
+                                sbSql.AppendLine("SELECT 1");
+                                sbSql.AppendLine("FROM icd_tb");
+                                sbSql.AppendLine("WHERE ica01=icd01");
+                                sbSql.AppendLine(" AND icd02=@ica21)");
+                                sbSql.AppendLine(")");
 
                                 sqlParmList = new List<SqlParameter>();
                                 sqlParmList.Add(new SqlParameter("@ica21", e.Value));
@@ -3560,9 +3569,18 @@ namespace YR.ERP.Forms.Stp
                                 if (iChkCnts == 1)
                                 {
                                     sbSql = new StringBuilder();
+                                    //sbSql.AppendLine("SELECT TOP 1 * FROM ica_tb");
+                                    //sbSql.AppendLine("WHERE ica21=@ica21");
+                                    //sbSql.AppendLine("AND icaconf='Y' AND icavali='Y'");
                                     sbSql.AppendLine("SELECT TOP 1 * FROM ica_tb");
-                                    sbSql.AppendLine("WHERE ica21=@ica21");
-                                    sbSql.AppendLine("AND icaconf='Y' AND icavali='Y'");
+                                    sbSql.AppendLine("WHERE icaconf='Y' AND icavali='Y'");
+                                    sbSql.AppendLine("AND (ica21=@ica21");
+                                    sbSql.AppendLine("OR EXISTS (");
+                                    sbSql.AppendLine("SELECT 1");
+                                    sbSql.AppendLine("FROM icd_tb");
+                                    sbSql.AppendLine("WHERE ica01=icd01");
+                                    sbSql.AppendLine(" AND icd02=@ica21)");
+                                    sbSql.AppendLine(")");
 
                                     sqlParmList = new List<SqlParameter>();
                                     sqlParmList.Add(new SqlParameter("@ica21", e.Value));
@@ -3577,7 +3595,8 @@ namespace YR.ERP.Forms.Stp
                                     messageModel.ParamSearchList = new List<SqlParameter>();
                                     messageModel.ParamSearchList.Add(new SqlParameter("@ica21", e.Value));
 
-                                    WfShowPickUtility("p_ica21", messageModel);
+                                    //WfShowPickUtility("p_ica21", messageModel);
+                                    WfShowPickUtility("p_ica21a", messageModel);
                                     if (messageModel.Result == System.Windows.Forms.DialogResult.OK)
                                     {
                                         if (messageModel.DataRowList.Count > 0)
@@ -5240,16 +5259,47 @@ namespace YR.ERP.Forms.Stp
             try
             {
 
-                WfFireControlValidated(this.ActiveControl);
-                //各驗證控製項會將 isItemchkValid設為true
-                if (IsItemchkValid == false)
-                    return;
+                try
+                {
+                    if (FormEditMode != YREditType.NA
+                        )
+                    {
+                        IsInCRUDIni = true;
+                        if (this.TabMaster.ViewTable != "")
+                        {
+                            WfFireControlValidated(this.ActiveControl);
+                            //各驗證控製項會將 isItemchkValid設為true
+                            if (IsItemchkValid == false)
+                                return;
 
-                if (WfToolbarSave() == false)
-                    return;
+                            if (WfToolbarSave() == false)
+                                return;
 
-                if (WfDisplayMode() == false)
-                    return;
+                            if (WfDisplayMode() == false)
+                                return;
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                }
+
+                //WfFireControlValidated(this.ActiveControl);
+                ////各驗證控製項會將 isItemchkValid設為true
+                //if (IsItemchkValid == false)
+                //    return;
+
+                //if (WfToolbarSave() == false)
+                //    return;
+
+                //if (WfDisplayMode() == false)
+                //    return;
             }
             catch (Exception ex)
             {

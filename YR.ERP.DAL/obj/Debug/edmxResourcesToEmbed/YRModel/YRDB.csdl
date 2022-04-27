@@ -3747,7 +3747,7 @@
     <Property Name="sga25" Type="DateTime" Precision="7" />
     <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="sga27" Type="DateTime" Precision="7" />
-    <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sga28" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -9618,7 +9618,7 @@
     <Property Name="sga25" Type="DateTime" Precision="7" />
     <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="sga27" Type="DateTime" Precision="7" />
-    <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sga28" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -9776,7 +9776,7 @@
     <Property Name="sga25" Type="DateTime" Precision="7" />
     <Property Name="sga26" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="sga27" Type="DateTime" Precision="7" />
-    <Property Name="sga28" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="sga28" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="sga29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="sga31" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />

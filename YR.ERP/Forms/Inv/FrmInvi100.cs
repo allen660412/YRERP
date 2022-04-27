@@ -234,6 +234,7 @@ namespace YR.ERP.Forms.Inv
                 pDr["ica24"] = 0;
                 pDr["ica26"] = 0;
                 pDr["ica29"] = "Y"; //預設都是要計算成本的
+                pDr["ica35"] = "N"; //預設是不做多原廠料件的
                 pDr["icaconf"] = "N";
                 pDr["icavali"] = "W";//待確認
                 return true;
@@ -779,6 +780,11 @@ namespace YR.ERP.Forms.Inv
                 bt.SharedProps.Category = "action";
                 buttonList.Add(bt);
 
+                bt = new ButtonTool("invi103");
+                bt.SharedProps.Caption = "多原廠料件設定";
+                bt.SharedProps.Category = "action";
+                buttonList.Add(bt);
+
 
                 bt = new ButtonTool("PrintLabel");
                 bt.SharedProps.Caption = "列印標籤";
@@ -877,6 +883,17 @@ namespace YR.ERP.Forms.Inv
                         sbSql = new StringBuilder();
                         sbSql.AppendLine(string.Format(" AND icp01='{0}'", masterModel.ica01));
                         WfShowForm("invi102", false, new object[] { "invi100", this.LoginInfo, sbSql.ToString() });
+                        break;
+
+                    case "invi103"://多原廠料件管理
+                        if (FormEditMode != YREditType.NA)
+                            return;
+                        if (DrMaster == null)
+                            return;
+                        masterModel = DrMaster.ToItem<vw_invi100>();
+                        sbSql = new StringBuilder();
+                        sbSql.AppendLine(string.Format(" AND ica01='{0}'", masterModel.ica01));
+                        WfShowForm("invi103", false, new object[] { "invi100", this.LoginInfo, sbSql.ToString() });
                         break;
 
                     case "PrintLabel":

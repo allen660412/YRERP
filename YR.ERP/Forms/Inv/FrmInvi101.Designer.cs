@@ -104,15 +104,15 @@
             // 
             // ultraTabPageControl8
             // 
-            this.ultraTabPageControl8.Size = new System.Drawing.Size(892, 255);
+            this.ultraTabPageControl8.Size = new System.Drawing.Size(1086, 462);
             // 
             // ultraTabPageControl9
             // 
-            this.ultraTabPageControl9.Size = new System.Drawing.Size(892, 255);
+            this.ultraTabPageControl9.Size = new System.Drawing.Size(1086, 462);
             // 
             // ultraTabPageControl10
             // 
-            this.ultraTabPageControl10.Size = new System.Drawing.Size(892, 255);
+            this.ultraTabPageControl10.Size = new System.Drawing.Size(1086, 462);
             // 
             // ultraTabPageControl6
             // 
@@ -120,7 +120,7 @@
             // 
             // ultraTabPageControl7
             // 
-            this.ultraTabPageControl7.Size = new System.Drawing.Size(892, 255);
+            this.ultraTabPageControl7.Size = new System.Drawing.Size(1086, 462);
             // 
             // ultraSplitter1
             // 
@@ -159,19 +159,19 @@
             this.ultraTabPageControl2.Controls.Add(this.ute_icavali);
             this.ultraTabPageControl2.Controls.Add(this.label13);
             this.ultraTabPageControl2.Controls.Add(this.ucx_icaconf);
-            this.ultraTabPageControl2.Size = new System.Drawing.Size(892, 137);
+            this.ultraTabPageControl2.Size = new System.Drawing.Size(1086, 137);
             // 
             // ultraTabPageControl3
             // 
-            this.ultraTabPageControl3.Size = new System.Drawing.Size(892, 137);
+            this.ultraTabPageControl3.Size = new System.Drawing.Size(1086, 137);
             // 
             // ultraTabPageControl4
             // 
-            this.ultraTabPageControl4.Size = new System.Drawing.Size(892, 137);
+            this.ultraTabPageControl4.Size = new System.Drawing.Size(1086, 137);
             // 
             // ultraTabPageControl5
             // 
-            this.ultraTabPageControl5.Size = new System.Drawing.Size(892, 137);
+            this.ultraTabPageControl5.Size = new System.Drawing.Size(1086, 137);
             // 
             // ultraTabPageControl1
             // 
