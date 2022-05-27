@@ -1504,7 +1504,6 @@ namespace YR.ERP.Forms.Stp
 
                 DrMaster.EndEdit();
                 WfSetDetailPK();
-
                 return true;
             }
             catch (Exception ex)
@@ -2141,6 +2140,15 @@ namespace YR.ERP.Forms.Stp
                     }
                     //更新庫存交易歷史檔
                     if (BoInv.OfStockPost("stpt400", sgaModel, sgbModel, LoginInfo, out errMsg) == false)
+                    {
+                        WfShowErrorMsg(errMsg);
+                        DrMaster.RejectChanges();
+                        WfRollback();
+                        return;
+                    }
+
+                    //更新產品客戶價格表
+                    if (BoStp.OfInsUpdSddTb(sgaModel, sgbModel, LoginInfo, out errMsg) == false)
                     {
                         WfShowErrorMsg(errMsg);
                         DrMaster.RejectChanges();
