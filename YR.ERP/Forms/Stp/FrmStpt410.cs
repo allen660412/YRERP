@@ -3507,6 +3507,7 @@ namespace YR.ERP.Forms.Stp
                                 return false;
                             }
                             DrMaster["sga03_c"] = BoStp.OfGetSca03(e.Value.ToString());
+                            WfSetSga03Relation(GlobalFn.isNullRet(e.Value, ""));
                             //自動計算成本
                             if (BoStp.OfChkEbusinessPlateForm(masterModel.sga03) == false)
                             {

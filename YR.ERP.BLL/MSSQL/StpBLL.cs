@@ -1082,14 +1082,17 @@ namespace YR.ERP.BLL.MSSQL
                             }
                             tempPrice = GlobalFn.isNullRet(OfGetFieldValue(sqlSelect, sqlParmList.ToArray()), 0m);
                             break;
-                        case "A2":  //依料號客戶價格
+                        case "A2":  //依料號客戶價格 雖然key值只有料號+客戶編號+幣別，但還是得加含稅否來做處理  
                             sqlParmList = new List<SqlParameter>();
                             sqlParmList.Add(new SqlParameter("@sdd01", pItem));
                             sqlParmList.Add(new SqlParameter("@sdd02", pCust));
                             sqlParmList.Add(new SqlParameter("@sdd03", pCurrency));
+                            sqlParmList.Add(new SqlParameter("@sdd08", pTaxYN));
                             sqlSelect = @"SELECT sdd09 FROM sdd_tb 
                                             WHERE sdd01=@sdd01
-                                            AND sdd02=@sdd02 AND sdd03=@sdd03
+                                            AND sdd02=@sdd02 
+                                            AND sdd03=@sdd03
+                                            AND sdd08=@sdd08 
                                         ";
                             tempPrice = GlobalFn.isNullRet(OfGetFieldValue(sqlSelect, sqlParmList.ToArray()), 0m);
                             break;
