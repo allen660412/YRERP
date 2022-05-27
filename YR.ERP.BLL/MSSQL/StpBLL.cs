@@ -1047,7 +1047,7 @@ namespace YR.ERP.BLL.MSSQL
                 switch (sgaModel.sga03)
                 {
                     case "C000002"://蝦皮
-                        sga23 = sgaModel.sga13t * 0.04m;
+                        sga23 = sgaModel.sga13t * 0.05m;
                         if (sgaModel.sga13t > 4490)
                             sga23 += 60;
                         break;
@@ -1064,7 +1064,7 @@ namespace YR.ERP.BLL.MSSQL
                         //sga23 += 60;
                         break;
                     case "C000006"://蝦皮2
-                        sga23 = sgaModel.sga13t * 0.04m;
+                        sga23 = sgaModel.sga13t * 0.05m;
                         break;
                     case "C000007"://露天-艾達
                         sga23 = sgaModel.sga13t * 0.03m;

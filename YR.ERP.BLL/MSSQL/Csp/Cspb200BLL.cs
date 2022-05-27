@@ -757,8 +757,11 @@ namespace YR.ERP.BLL.MSSQL.Csp
                         sgbModel = drSgb.ToItem<sgb_tb>();
                         for (int i = 1; i <= sgbModel.sgb05; i++)
                         {
+//                            selectSql = @"SELECT TOP 1 * FROM jja_tb WHERE ISNULL(jja23,'') <>'Y' 
+//                                            AND jja04=@jja04 AND jja12=@jja12 ORDER BY jja06,jja01,jja02,jja03 ";
+                            //改為不對應倉庫
                             selectSql = @"SELECT TOP 1 * FROM jja_tb WHERE ISNULL(jja23,'') <>'Y' 
-                                            AND jja04=@jja04 AND jja12=@jja12 ORDER BY jja06,jja01,jja02,jja03 ";
+                                            AND jja04=@jja04 ORDER BY jja06,jja01,jja02,jja03 ";
                             sqlParmList = new List<SqlParameter>();
                             sqlParmList.Add(new SqlParameter("@jja04", sgbModel.sgb03));
                             sqlParmList.Add(new SqlParameter("@jja12", sgbModel.sgb16));
@@ -859,8 +862,11 @@ namespace YR.ERP.BLL.MSSQL.Csp
                         phbModel = drPhb.ToItem<phb_tb>();
                         for (int i = 1; i <= phbModel.phb05; i++)
                         {
+//                            selectSql = @"SELECT TOP 1 * FROM jja_tb WHERE ISNULL(jja23,'') <>'Y' 
+//                                            AND jja04=@jja04 AND jja12=@jja12 ORDER BY jja06,jja01,jja02,jja03 ";
+                            //改為不對應倉庫
                             selectSql = @"SELECT TOP 1 * FROM jja_tb WHERE ISNULL(jja23,'') <>'Y' 
-                                            AND jja04=@jja04 AND jja12=@jja12 ORDER BY jja06,jja01,jja02,jja03 ";
+                                            AND jja04=@jja04 ORDER BY jja06,jja01,jja02,jja03 ";
                             sqlParmList = new List<SqlParameter>();
                             sqlParmList.Add(new SqlParameter("@jja04", phbModel.phb03));
                             sqlParmList.Add(new SqlParameter("@jja12", phbModel.phb16));

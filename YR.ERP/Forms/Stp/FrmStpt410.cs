@@ -3988,6 +3988,7 @@ namespace YR.ERP.Forms.Stp
                     }
                 }
 
+                DrMaster.EndEdit();
                 WfSetDetailPK();
 
                 return true;

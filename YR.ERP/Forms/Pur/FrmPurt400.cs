@@ -1451,6 +1451,7 @@ namespace YR.ERP.Forms.Pur
                     }
                 }
 
+                DrMaster.EndEdit();
                 WfSetDetailPK();
 
                 return true;

@@ -1729,7 +1729,10 @@ namespace YR.ERP.Base.Forms
         {
             uGridMaster.PerformAction(UltraGridAction.ExitEditMode);
             uGridMaster.UpdateData();
-            BindingMaster.EndEdit();
+            //這裡會把異動的值莫名的還原,先註解掉
+            //BindingMaster.EndEdit();
+
+
             //tabMaster.dtSource.EndInit();
             //if (this.isDisplayOnly)
             //{ return true; }
@@ -1770,6 +1773,7 @@ namespace YR.ERP.Base.Forms
                     WfRollback();
                     return false;
                 }
+
 
                 if (this.WfAfterFormCheck() == false)
                 {
