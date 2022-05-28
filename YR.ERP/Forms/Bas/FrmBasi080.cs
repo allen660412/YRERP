@@ -31,6 +31,7 @@ namespace YR.ERP.Forms.Bas
         {
             InitializeComponent();
         } 
+        
         #endregion
 
         #region WfSetVar() : 設定變數預設值, 繼承的 frm 要依需求覆寫

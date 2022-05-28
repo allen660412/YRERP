@@ -46,27 +46,13 @@
             // uTab_Master
             // 
             this.uTab_Master.Location = new System.Drawing.Point(8, 55);
-            this.uTab_Master.Size = new System.Drawing.Size(914, 493);
-            // 
-            // ultraTabPageControl2
-            // 
-            this.ultraTabPageControl2.Size = new System.Drawing.Size(918, 455);
-            // 
-            // ultraTabPageControl3
-            // 
-            this.ultraTabPageControl3.Size = new System.Drawing.Size(918, 455);
-            // 
-            // ultraTabPageControl4
-            // 
-            this.ultraTabPageControl4.Size = new System.Drawing.Size(918, 455);
-            // 
-            // ultraTabPageControl5
-            // 
-            this.ultraTabPageControl5.Size = new System.Drawing.Size(918, 455);
+            this.uTab_Master.Size = new System.Drawing.Size(1042, 631);
+            this.uTab_Master.TabPageMargins.ForceSerialization = true;
             // 
             // ultraTabPageControl1
             // 
             this.ultraTabPageControl1.Controls.Add(this.uGridMaster);
+            this.ultraTabPageControl1.Size = new System.Drawing.Size(1038, 601);
             // 
             // UtbmMain
             // 
@@ -75,11 +61,16 @@
             this.UtbmMain.Ribbon.Visible = true;
             this.UtbmMain.ToolbarSettings.ForceSerialization = true;
             // 
+            // UsbButtom
+            // 
+            this.UsbButtom.Location = new System.Drawing.Point(0, 686);
+            this.UsbButtom.Size = new System.Drawing.Size(1058, 18);
+            // 
             // FrmInvi100_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 566);
+            this.ClientSize = new System.Drawing.Size(1058, 704);
             this.KeyPreview = true;
             this.Name = "FrmInvi100_2";
             this.Text = "FrmInvi100_2";

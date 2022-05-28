@@ -785,6 +785,10 @@ namespace YR.ERP.Forms.Inv
                 bt.SharedProps.Category = "action";
                 buttonList.Add(bt);
 
+                bt = new ButtonTool("stpi031");
+                bt.SharedProps.Caption = "料件客戶價格設定";
+                bt.SharedProps.Category = "action";
+                buttonList.Add(bt);
 
                 bt = new ButtonTool("PrintLabel");
                 bt.SharedProps.Caption = "列印標籤";
@@ -903,6 +907,17 @@ namespace YR.ERP.Forms.Inv
                         sbSql = new StringBuilder();
                         sbSql.AppendLine(string.Format(" AND ica01='{0}'", masterModel.ica01));
                         WfShowForm("invi103", false, new object[] { "invi100", this.LoginInfo, sbSql.ToString() });
+                        break;
+
+                    case "stpi031"://料件客戶價格設定
+                        if (FormEditMode != YREditType.NA)
+                            return;
+                        if (DrMaster == null)
+                            return;
+                        masterModel = DrMaster.ToItem<vw_invi100>();
+                        sbSql = new StringBuilder();
+                        sbSql.AppendLine(string.Format(" AND ica01='{0}' ", masterModel.ica01));
+                        WfShowForm("stpi031", false, new object[] { "invi100", this.LoginInfo, sbSql.ToString() });
                         break;
 
                     case "PrintLabel":

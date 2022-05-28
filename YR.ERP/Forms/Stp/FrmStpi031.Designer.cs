@@ -52,7 +52,7 @@
             // uTab_Detail
             // 
             this.uTab_Detail.Location = new System.Drawing.Point(1, 202);
-            this.uTab_Detail.Size = new System.Drawing.Size(914, 307);
+            this.uTab_Detail.Size = new System.Drawing.Size(1152, 541);
             this.uTab_Detail.TabPageMargins.ForceSerialization = true;
             // 
             // ultraTabPageControl8
@@ -69,7 +69,7 @@
             // 
             // ultraTabPageControl6
             // 
-            this.ultraTabPageControl6.Size = new System.Drawing.Size(910, 281);
+            this.ultraTabPageControl6.Size = new System.Drawing.Size(1148, 515);
             // 
             // ultraTabPageControl7
             // 
@@ -78,6 +78,7 @@
             // ultraSplitter1
             // 
             this.ultraSplitter1.Location = new System.Drawing.Point(1, 198);
+            this.ultraSplitter1.Size = new System.Drawing.Size(1152, 4);
             // 
             // uGridMaster
             // 
@@ -86,7 +87,7 @@
             // 
             // uTab_Master
             // 
-            this.uTab_Master.Size = new System.Drawing.Size(914, 144);
+            this.uTab_Master.Size = new System.Drawing.Size(1152, 144);
             this.uTab_Master.TabPageMargins.ForceSerialization = true;
             // 
             // ultraTabPageControl2
@@ -114,7 +115,7 @@
             this.ultraTabPageControl1.Controls.Add(this.ute_ica01);
             this.ultraTabPageControl1.Controls.Add(this.label1);
             this.ultraTabPageControl1.Controls.Add(this.uGridMaster);
-            this.ultraTabPageControl1.Size = new System.Drawing.Size(910, 114);
+            this.ultraTabPageControl1.Size = new System.Drawing.Size(1148, 114);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.uGridMaster, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label1, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_ica01, 0);
@@ -134,8 +135,8 @@
             // 
             // UsbButtom
             // 
-            this.UsbButtom.Location = new System.Drawing.Point(0, 509);
-            this.UsbButtom.Size = new System.Drawing.Size(916, 18);
+            this.UsbButtom.Location = new System.Drawing.Point(0, 743);
+            this.UsbButtom.Size = new System.Drawing.Size(1154, 18);
             // 
             // ute_ica02
             // 
@@ -204,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 527);
+            this.ClientSize = new System.Drawing.Size(1154, 761);
             this.Name = "FrmStpi031";
             this.Text = "FrmStpi031";
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Detail)).EndInit();
