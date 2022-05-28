@@ -241,6 +241,9 @@
     <Compile Include="YRModel\icc_tb.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="YRModel\icd_tb.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="YRModel\icm_tb.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
@@ -731,6 +734,9 @@
     <Compile Include="YRModel\vw_invi100_1.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="YRModel\vw_invi100_2.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="YRModel\vw_invi101.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
@@ -738,6 +744,12 @@
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
     <Compile Include="YRModel\vw_invi102.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi103.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YRModel\vw_invi103s.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
     <Compile Include="YRModel\vw_invi200.cs">

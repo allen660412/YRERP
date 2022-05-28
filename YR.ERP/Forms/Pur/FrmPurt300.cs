@@ -1313,6 +1313,8 @@ namespace YR.ERP.Forms.Pur
                         }
                     }
                 }
+
+                DrMaster.EndEdit();
                 WfSetDetailPK();
 
                 return true;
@@ -1823,6 +1825,12 @@ namespace YR.ERP.Forms.Pur
         {
             vw_purt300 masterModel = null;
             List<vw_purt300s> detailList = null;
+            pfa_tb pfaModel = null;
+            pfb_tb pfbModel = null;
+            StringBuilder sbSql;
+            List<SqlParameter> sqlParmsList;
+
+            string errMsg;
             try
             {
                 if (DrMaster == null)
@@ -1855,12 +1863,27 @@ namespace YR.ERP.Forms.Pur
                     DrMaster.RejectChanges();
                     return;
                 }
-                //寫入料件廠商價格檔
-                if (WfUpdPdd(masterModel, detailList) == false)
+                ////寫入料件廠商價格檔
+                //if (WfUpdPdd(masterModel, detailList) == false)
+                //{
+                //    WfRollback();
+                //    DrMaster.RejectChanges();
+                //    return;
+                //}
+
+                pfaModel = DrMaster.ToItem<pfa_tb>();
+                foreach (DataRow dr in TabDetailList[0].DtSource.Rows)
                 {
-                    WfRollback();
-                    DrMaster.RejectChanges();
-                    return;
+                    pfbModel = dr.ToItem<pfb_tb>();
+
+                    //更新產品客戶價格表
+                    if (BoPur.OfInsUpdPddTb(pfaModel, pfbModel, LoginInfo, out errMsg) == false)
+                    {
+                        WfShowErrorMsg(errMsg);
+                        DrMaster.RejectChanges();
+                        WfRollback();
+                        return;
+                    }
                 }
 
                 DrMaster["pfastat"] = "1";
@@ -2418,114 +2441,114 @@ namespace YR.ERP.Forms.Pur
         #endregion
 
         #region WfUpdPdd 訂單確認時,更新客戶產品價格檔
-        private bool WfUpdPdd(vw_purt300 pMasterModel, List<vw_purt300s> pDetailList)
-        {
-            PurBLL boPddAdd = null;
-            string sqlSelect = "";
-            List<SqlParameter> sqlParmList = null;
-            DataTable dtPdd = null;
-            DataRow drPdd = null;            
-            try
-            {
-                boPddAdd = new PurBLL(BoMaster.OfGetConntion());
-                boPddAdd.TRAN = BoMaster.TRAN;
-                boPddAdd.OfCreateDao("pdd_tb", "*", "");
-                sqlSelect = @"SELECT * FROM pdd_tb
-                              WHERE pdd01=@pdd01 AND pdd02=@pdd02 AND pdd03=@pdd03
-                            ";
-                if (BekModel == null)
-                    BekModel = BoBas.OfGetBekModel(pMasterModel.pfa10);
-                if (BekModel==null)
-                {
-                    WfShowErrorMsg("查無幣別資料!");
-                    return false;
-                }
+//        private bool WfUpdPdd(vw_purt300 pMasterModel, List<vw_purt300s> pDetailList)
+//        {
+//            PurBLL boPddAdd = null;
+//            string sqlSelect = "";
+//            List<SqlParameter> sqlParmList = null;
+//            DataTable dtPdd = null;
+//            DataRow drPdd = null;            
+//            try
+//            {
+//                boPddAdd = new PurBLL(BoMaster.OfGetConntion());
+//                boPddAdd.TRAN = BoMaster.TRAN;
+//                boPddAdd.OfCreateDao("pdd_tb", "*", "");
+//                sqlSelect = @"SELECT * FROM pdd_tb
+//                              WHERE pdd01=@pdd01 AND pdd02=@pdd02 AND pdd03=@pdd03
+//                            ";
+//                if (BekModel == null)
+//                    BekModel = BoBas.OfGetBekModel(pMasterModel.pfa10);
+//                if (BekModel==null)
+//                {
+//                    WfShowErrorMsg("查無幣別資料!");
+//                    return false;
+//                }
 
-                foreach (vw_purt300s detailModel in pDetailList)
-                {
-                    sqlParmList = new List<SqlParameter>();
-                    sqlParmList.Add(new SqlParameter("@pdd01", detailModel.pfb03)); //料號
-                    sqlParmList.Add(new SqlParameter("@pdd02", pMasterModel.pfa03)); //廠商編號
-                    sqlParmList.Add(new SqlParameter("@pdd03", pMasterModel.pfa10)); //幣別
-                    dtPdd = boPddAdd.OfGetDataTable(sqlSelect, sqlParmList.ToArray());
-                    if (dtPdd.Rows.Count == 0) //新增
-                    {
-                        drPdd = dtPdd.NewRow();
-                        drPdd["pdd01"] = detailModel.pfb03;//料號
-                        drPdd["pdd02"] = pMasterModel.pfa03;//廠商編號
-                        drPdd["pdd03"] = pMasterModel.pfa10;//幣別
-                        drPdd["pdd04"] = pMasterModel.pfa17;//匯率
-                        drPdd["pdd05"] = pMasterModel.pfa02;//最近採購日期
-                        drPdd["pdd06"] = pMasterModel.pfa06;//稅別
-                        drPdd["pdd07"] = pMasterModel.pfa07;//稅率
-                        drPdd["pdd08"] = pMasterModel.pfa08;//含稅否
+//                foreach (vw_purt300s detailModel in pDetailList)
+//                {
+//                    sqlParmList = new List<SqlParameter>();
+//                    sqlParmList.Add(new SqlParameter("@pdd01", detailModel.pfb03)); //料號
+//                    sqlParmList.Add(new SqlParameter("@pdd02", pMasterModel.pfa03)); //廠商編號
+//                    sqlParmList.Add(new SqlParameter("@pdd03", pMasterModel.pfa10)); //幣別
+//                    dtPdd = boPddAdd.OfGetDataTable(sqlSelect, sqlParmList.ToArray());
+//                    if (dtPdd.Rows.Count == 0) //新增
+//                    {
+//                        drPdd = dtPdd.NewRow();
+//                        drPdd["pdd01"] = detailModel.pfb03;//料號
+//                        drPdd["pdd02"] = pMasterModel.pfa03;//廠商編號
+//                        drPdd["pdd03"] = pMasterModel.pfa10;//幣別
+//                        drPdd["pdd04"] = pMasterModel.pfa17;//匯率
+//                        drPdd["pdd05"] = pMasterModel.pfa02;//最近採購日期
+//                        drPdd["pdd06"] = pMasterModel.pfa06;//稅別
+//                        drPdd["pdd07"] = pMasterModel.pfa07;//稅率
+//                        drPdd["pdd08"] = pMasterModel.pfa08;//含稅否
 
-                        if (pMasterModel.pfa08=="Y")
-                        {
-                            drPdd["pdd10"] = detailModel.pfb09;//含稅單價
-                            drPdd["pdd09"] = GlobalFn.Round(detailModel.pfb09 / (1 + pMasterModel.pfa07 / 100),BekModel.bek03);
-                        }
-                        else
-                        {
-                            drPdd["pdd09"] = detailModel.pfb09;//未稅單價
-                            drPdd["pdd10"] = GlobalFn.Round(detailModel.pfb09 * (1 + pMasterModel.pfa07 / 100), BekModel.bek03);
-                        }
-                        drPdd["pdd11"] = detailModel.pfb05;//最近採購數量
-                        drPdd["pdd12"] = detailModel.pfb06;//最近採購單位
+//                        if (pMasterModel.pfa08=="Y")
+//                        {
+//                            drPdd["pdd10"] = detailModel.pfb09;//含稅單價
+//                            drPdd["pdd09"] = GlobalFn.Round(detailModel.pfb09 / (1 + pMasterModel.pfa07 / 100),BekModel.bek03);
+//                        }
+//                        else
+//                        {
+//                            drPdd["pdd09"] = detailModel.pfb09;//未稅單價
+//                            drPdd["pdd10"] = GlobalFn.Round(detailModel.pfb09 * (1 + pMasterModel.pfa07 / 100), BekModel.bek03);
+//                        }
+//                        drPdd["pdd11"] = detailModel.pfb05;//最近採購數量
+//                        drPdd["pdd12"] = detailModel.pfb06;//最近採購單位
 
-                        drPdd["pddcreu"] = LoginInfo.UserNo;
-                        drPdd["pddcreg"] = LoginInfo.DeptNo;
-                        drPdd["pddcred"] = Now;
-                        drPdd["pddsecu"] = LoginInfo.UserNo;
-                        drPdd["pddsecg"] = LoginInfo.GroupNo;
-                        dtPdd.Rows.Add(drPdd);
-                    }
-                    else    //修改
-                    {
-                        drPdd = dtPdd.Rows[0];
-                        //drPdd["pdd01"] = detailModel.pfb03;//料號
-                        //drPdd["pdd02"] = pMasterModel.pfa03;//廠商編號
-                        //drPdd["pdd03"] = pMasterModel.pfa10;//幣別
-                        drPdd["pdd04"] = pMasterModel.pfa17;//匯率
-                        drPdd["pdd05"] = pMasterModel.pfa02;//最近採購日期
-                        drPdd["pdd06"] = pMasterModel.pfa06;//稅別
-                        drPdd["pdd07"] = pMasterModel.pfa07;//稅率
-                        drPdd["pdd08"] = pMasterModel.pfa08;//含稅否
+//                        drPdd["pddcreu"] = LoginInfo.UserNo;
+//                        drPdd["pddcreg"] = LoginInfo.DeptNo;
+//                        drPdd["pddcred"] = Now;
+//                        drPdd["pddsecu"] = LoginInfo.UserNo;
+//                        drPdd["pddsecg"] = LoginInfo.GroupNo;
+//                        dtPdd.Rows.Add(drPdd);
+//                    }
+//                    else    //修改
+//                    {
+//                        drPdd = dtPdd.Rows[0];
+//                        //drPdd["pdd01"] = detailModel.pfb03;//料號
+//                        //drPdd["pdd02"] = pMasterModel.pfa03;//廠商編號
+//                        //drPdd["pdd03"] = pMasterModel.pfa10;//幣別
+//                        drPdd["pdd04"] = pMasterModel.pfa17;//匯率
+//                        drPdd["pdd05"] = pMasterModel.pfa02;//最近採購日期
+//                        drPdd["pdd06"] = pMasterModel.pfa06;//稅別
+//                        drPdd["pdd07"] = pMasterModel.pfa07;//稅率
+//                        drPdd["pdd08"] = pMasterModel.pfa08;//含稅否
 
-                        if (pMasterModel.pfa08 == "Y")
-                        {
-                            drPdd["pdd10"] = detailModel.pfb09;//含稅單價
-                            drPdd["pdd09"] = GlobalFn.Round(detailModel.pfb09 / (1 + pMasterModel.pfa07 / 100), BekModel.bek03);
-                        }
-                        else
-                        {
-                            drPdd["pdd09"] = detailModel.pfb09;//未稅單價
-                            drPdd["pdd10"] = GlobalFn.Round(detailModel.pfb09 * (1 + pMasterModel.pfa07 / 100), BekModel.bek03);
-                        }
-                        drPdd["pdd11"] = detailModel.pfb05;//最近採購數量
-                        drPdd["pdd12"] = detailModel.pfb06;//最近採購單位
+//                        if (pMasterModel.pfa08 == "Y")
+//                        {
+//                            drPdd["pdd10"] = detailModel.pfb09;//含稅單價
+//                            drPdd["pdd09"] = GlobalFn.Round(detailModel.pfb09 / (1 + pMasterModel.pfa07 / 100), BekModel.bek03);
+//                        }
+//                        else
+//                        {
+//                            drPdd["pdd09"] = detailModel.pfb09;//未稅單價
+//                            drPdd["pdd10"] = GlobalFn.Round(detailModel.pfb09 * (1 + pMasterModel.pfa07 / 100), BekModel.bek03);
+//                        }
+//                        drPdd["pdd11"] = detailModel.pfb05;//最近採購數量
+//                        drPdd["pdd12"] = detailModel.pfb06;//最近採購單位
 
-                        drPdd["pddcreu"] = LoginInfo.UserNo;
-                        drPdd["pddcreg"] = LoginInfo.DeptNo;
-                        drPdd["pddcred"] = Now;
-                        drPdd["pddsecu"] = LoginInfo.UserNo;
-                        drPdd["pddsecg"] = LoginInfo.GroupNo;
-                    }
+//                        drPdd["pddcreu"] = LoginInfo.UserNo;
+//                        drPdd["pddcreg"] = LoginInfo.DeptNo;
+//                        drPdd["pddcred"] = Now;
+//                        drPdd["pddsecu"] = LoginInfo.UserNo;
+//                        drPdd["pddsecg"] = LoginInfo.GroupNo;
+//                    }
 
-                    if (boPddAdd.OfUpdate(dtPdd) < 1)
-                    {
-                        WfShowErrorMsg("異動料號廠商金額(pdd_tb)失敗!");
-                        return false;
-                    }
-                }
+//                    if (boPddAdd.OfUpdate(dtPdd) < 1)
+//                    {
+//                        WfShowErrorMsg("異動料號廠商金額(pdd_tb)失敗!");
+//                        return false;
+//                    }
+//                }
 
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+//                return true;
+//            }
+//            catch (Exception ex)
+//            {
+//                throw ex;
+//            }
+//        }
         #endregion
     }
 }

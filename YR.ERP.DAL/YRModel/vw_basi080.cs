@@ -18,7 +18,7 @@ namespace YR.ERP.DAL.YRModel
         public string bek02 { get; set; }
         public decimal bek03 { get; set; }
         public decimal bek04 { get; set; }
-        public string bek05 { get; set; }
+        public Nullable<decimal> bek05 { get; set; }
         public string bek06 { get; set; }
         public string bekvali { get; set; }
         public string bekcreu { get; set; }

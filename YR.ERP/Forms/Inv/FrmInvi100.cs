@@ -824,9 +824,18 @@ namespace YR.ERP.Forms.Inv
                 bt.SharedProps.Category = "action";
                 buttonList.Add(bt);
 
+                bt = new ButtonTool("invq210");
+                bt.SharedProps.Caption = "各倉庫存明細查詢";
+                bt.SharedProps.Category = "action";
+                buttonList.Add(bt);
 
                 bt = new ButtonTool("invi100_1");
-                bt.SharedProps.Caption = "進貨歷史單價";
+                bt.SharedProps.Caption = "進貨歷史單價查詢";
+                bt.SharedProps.Category = "action";
+                buttonList.Add(bt);
+
+                bt = new ButtonTool("invi100_2");
+                bt.SharedProps.Caption = "報價單歷史查詢";
                 bt.SharedProps.Category = "action";
                 buttonList.Add(bt);
                 return buttonList;
@@ -941,6 +950,17 @@ namespace YR.ERP.Forms.Inv
                         WFGenOldMateriel(icaModel);
                         break;
 
+                    case "invq210":
+                        if (FormEditMode != YREditType.NA)
+                            return;
+                        if (DrMaster == null)
+                            return;
+                        masterModel = DrMaster.ToItem<vw_invi100>();
+                        sbSql = new StringBuilder();
+                        sbSql.AppendLine(string.Format(" AND ica01='{0}' ", masterModel.ica01));
+                        WfShowForm("invq210", false, new object[] { "invi100", this.LoginInfo, sbSql.ToString() });
+                        break;
+
                     case "invi100_1":
                         if (FormEditMode != YREditType.NA)
                             return;
@@ -949,7 +969,18 @@ namespace YR.ERP.Forms.Inv
                         masterModel = DrMaster.ToItem<vw_invi100>();
                         sbSql = new StringBuilder();
                         sbSql.AppendLine(string.Format(" AND pgb03='{0}' ", masterModel.ica01));
-                        WfShowForm("invi100_1", false, new object[] { "invi100_1", this.LoginInfo, sbSql.ToString() });
+                        WfShowForm("invi100_1", false, new object[] { "invi100", this.LoginInfo, sbSql.ToString() });
+                        break;
+
+                    case "invi100_2":
+                        if (FormEditMode != YREditType.NA)
+                            return;
+                        if (DrMaster == null)
+                            return;
+                        masterModel = DrMaster.ToItem<vw_invi100>();
+                        sbSql = new StringBuilder();
+                        sbSql.AppendLine(string.Format(" AND pfb03='{0}' ", masterModel.ica01));
+                        WfShowForm("invi100_2", false, new object[] { "invi100", this.LoginInfo, sbSql.ToString() });
                         break;
                 }
             }
@@ -1717,24 +1748,17 @@ namespace YR.ERP.Forms.Inv
         }
         #endregion
 
+        #region pbx_icp03_DoubleClick 複製圖片
         private void pbx_icp03_DoubleClick(object sender, EventArgs e)
         {
-            if (pbx_icp03.Image!=null)
+            if (pbx_icp03.Image != null)
             {
                 Image img = pbx_icp03.Image;
                 Clipboard.SetImage(img);
             }
-        }
+        } 
+        #endregion
 
-        private void label40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ultraTextEditor1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }

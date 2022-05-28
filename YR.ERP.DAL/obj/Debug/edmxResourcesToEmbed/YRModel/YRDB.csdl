@@ -69,6 +69,7 @@
     <EntitySet Name="ica_tb" EntityType="YRDB.ica_tb" />
     <EntitySet Name="icb_tb" EntityType="YRDB.icb_tb" />
     <EntitySet Name="icc_tb" EntityType="YRDB.icc_tb" />
+    <EntitySet Name="icd_tb" EntityType="YRDB.icd_tb" />
     <EntitySet Name="icm_tb" EntityType="YRDB.icm_tb" />
     <EntitySet Name="icn_tb" EntityType="YRDB.icn_tb" />
     <EntitySet Name="icp_tb" EntityType="YRDB.icp_tb" />
@@ -221,9 +222,12 @@
     <EntitySet Name="vw_invi030" EntityType="YRDB.vw_invi030" />
     <EntitySet Name="vw_invi100" EntityType="YRDB.vw_invi100" />
     <EntitySet Name="vw_invi100_1" EntityType="YRDB.vw_invi100_1" />
+    <EntitySet Name="vw_invi100_2" EntityType="YRDB.vw_invi100_2" />
     <EntitySet Name="vw_invi101" EntityType="YRDB.vw_invi101" />
     <EntitySet Name="vw_invi101s" EntityType="YRDB.vw_invi101s" />
     <EntitySet Name="vw_invi102" EntityType="YRDB.vw_invi102" />
+    <EntitySet Name="vw_invi103" EntityType="YRDB.vw_invi103" />
+    <EntitySet Name="vw_invi103s" EntityType="YRDB.vw_invi103s" />
     <EntitySet Name="vw_invi200" EntityType="YRDB.vw_invi200" />
     <EntitySet Name="vw_invq210" EntityType="YRDB.vw_invq210" />
     <EntitySet Name="vw_invq210s" EntityType="YRDB.vw_invq210s" />
@@ -981,7 +985,7 @@
     <Property Name="bek02" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
     <Property Name="bek03" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
     <Property Name="bek04" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
-    <Property Name="bek05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="bek05" Type="Decimal" Precision="22" Scale="5" />
     <Property Name="bek06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="bekvali" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="bekcreu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -1839,6 +1843,22 @@
     <Property Name="icc09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="icc10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="icccomp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="icd_tb">
+    <Key>
+      <PropertyRef Name="icd01" />
+      <PropertyRef Name="icd02" />
+    </Key>
+    <Property Name="icd01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="icd02" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="icd03" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="icd04" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd07" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="icm_tb">
     <Key>
@@ -5101,7 +5121,7 @@
     <Property Name="bek02" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
     <Property Name="bek03" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
     <Property Name="bek04" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
-    <Property Name="bek05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="bek05" Type="Decimal" Precision="22" Scale="5" />
     <Property Name="bek06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="bekvali" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="bekcreu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -6578,6 +6598,22 @@
     <Property Name="pgb05" Type="Decimal" Precision="22" Scale="3" />
     <Property Name="price" Type="Decimal" Precision="38" Scale="19" />
   </EntityType>
+  <EntityType Name="vw_invi100_2">
+    <Key>
+      <PropertyRef Name="pfa01" />
+    </Key>
+    <Property Name="pfa01" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="pfa02" Type="DateTime" Precision="7" />
+    <Property Name="pfa03" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="pca03" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="pfb02" Type="Decimal" Precision="22" Scale="0" />
+    <Property Name="pfb03" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="pfb04" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="pfb05" Type="Decimal" Precision="22" Scale="3" />
+    <Property Name="price" Type="Decimal" Precision="38" Scale="19" />
+    <Property Name="price_twd" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="pfa10" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="vw_invi101">
     <Key>
       <PropertyRef Name="ica01" />
@@ -6647,6 +6683,127 @@
     <Property Name="icpmodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="icpmodd" Type="DateTime" Precision="7" />
     <Property Name="icp01_c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_invi103">
+    <Key>
+      <PropertyRef Name="ica01" />
+      <PropertyRef Name="ica10" />
+      <PropertyRef Name="ica11" />
+      <PropertyRef Name="ica12" />
+      <PropertyRef Name="ica13" />
+      <PropertyRef Name="ica14" />
+      <PropertyRef Name="ica15" />
+      <PropertyRef Name="ica16" />
+      <PropertyRef Name="ica18" />
+      <PropertyRef Name="ica19" />
+      <PropertyRef Name="ica26" />
+    </Key>
+    <Property Name="ica01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ica02" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica03" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="ica04" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ica05" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ica06" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ica07" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="ica08" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="ica09" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="ica10" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica11" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica12" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica13" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica14" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica15" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica16" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica17" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica18" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica19" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica20" Type="DateTime" Precision="7" />
+    <Property Name="ica21" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ica22" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ica23" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ica24" Type="Decimal" Precision="22" Scale="3" />
+    <Property Name="ica25" Type="DateTime" Precision="7" />
+    <Property Name="ica26" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+    <Property Name="ica27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica31" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica32" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
+    <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica41" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica42" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica43" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica44" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica45" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica46" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica47" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica48" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica49" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica50" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica51" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica52" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica53" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica54" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica55" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica56" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica57" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica58" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica59" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica60" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica61" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica62" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica63" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica64" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica65" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica66" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica67" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica68" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica69" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica70" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica71" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica72" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica73" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica74" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica75" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica76" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica77" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica78" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica79" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica80" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icaconf" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icavali" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icacreu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="icacreg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="icacred" Type="DateTime" Precision="7" />
+    <Property Name="icamodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="icamodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="icamodd" Type="DateTime" Precision="7" />
+    <Property Name="icasecu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="icasecg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_invi103s">
+    <Key>
+      <PropertyRef Name="icd01" />
+      <PropertyRef Name="icd02" />
+    </Key>
+    <Property Name="icd01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="icd02" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="icd03" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="icd04" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd07" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icd10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="vw_invi200">
     <Key>

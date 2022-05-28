@@ -564,6 +564,12 @@
     <Compile Include="Forms\Inv\FrmInvi100_1.Designer.cs">
       <DependentUpon>FrmInvi100_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inv\FrmInvi100_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inv\FrmInvi100_2.Designer.cs">
+      <DependentUpon>FrmInvi100_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inv\FrmInvi101.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1282,6 +1288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inv\FrmInvi100_1.resx">
       <DependentUpon>FrmInvi100_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inv\FrmInvi100_2.resx">
+      <DependentUpon>FrmInvi100_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inv\FrmInvi101.resx">
       <DependentUpon>FrmInvi101.cs</DependentUpon>

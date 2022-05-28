@@ -641,7 +641,7 @@
           <Property Name="bek02" Type="nvarchar" MaxLength="80" />
           <Property Name="bek03" Type="numeric" Precision="22" Scale="0" Nullable="false" />
           <Property Name="bek04" Type="numeric" Precision="22" Scale="0" Nullable="false" />
-          <Property Name="bek05" Type="nvarchar" MaxLength="1" />
+          <Property Name="bek05" Type="numeric" Precision="22" Scale="5" />
           <Property Name="bek06" Type="nvarchar" MaxLength="1" />
           <Property Name="bekvali" Type="nvarchar" MaxLength="1" />
           <Property Name="bekcreu" Type="nvarchar" MaxLength="10" />
@@ -1713,6 +1713,22 @@
           <Property Name="icc09" Type="nvarchar" MaxLength="1" />
           <Property Name="icc10" Type="nvarchar" MaxLength="1" />
           <Property Name="icccomp" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="icd_tb">
+          <Key>
+            <PropertyRef Name="icd01" />
+            <PropertyRef Name="icd02" />
+          </Key>
+          <Property Name="icd01" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="icd02" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="icd03" Type="nvarchar" MaxLength="255" />
+          <Property Name="icd04" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd05" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd06" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd07" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd08" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd09" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd10" Type="nvarchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="icm_tb">
           <Key>
@@ -4841,7 +4857,7 @@
           <Property Name="bek02" Type="nvarchar" MaxLength="80" />
           <Property Name="bek03" Type="numeric" Precision="22" Scale="0" Nullable="false" />
           <Property Name="bek04" Type="numeric" Precision="22" Scale="0" Nullable="false" />
-          <Property Name="bek05" Type="nvarchar" MaxLength="1" />
+          <Property Name="bek05" Type="numeric" Precision="22" Scale="5" />
           <Property Name="bek06" Type="nvarchar" MaxLength="1" />
           <Property Name="bekvali" Type="nvarchar" MaxLength="1" />
           <Property Name="bekcreu" Type="nvarchar" MaxLength="10" />
@@ -6425,6 +6441,24 @@
           <Property Name="price" Type="numeric" Precision="38" Scale="19" />
         </EntityType>
         <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_invi100_2' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="vw_invi100_2">
+          <Key>
+            <PropertyRef Name="pfa01" />
+          </Key>
+          <Property Name="pfa01" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="pfa02" Type="datetime2" Precision="7" />
+          <Property Name="pfa03" Type="nvarchar" MaxLength="10" />
+          <Property Name="pca03" Type="nvarchar" MaxLength="40" />
+          <Property Name="pfb02" Type="numeric" Precision="22" Scale="0" />
+          <Property Name="pfb03" Type="nvarchar" MaxLength="40" />
+          <Property Name="pfb04" Type="nvarchar" MaxLength="255" />
+          <Property Name="pfb05" Type="numeric" Precision="22" Scale="3" />
+          <Property Name="price" Type="numeric" Precision="38" Scale="19" />
+          <Property Name="price_twd" Type="numeric" Precision="38" Scale="6" />
+          <Property Name="pfa10" Type="nvarchar" MaxLength="4" />
+        </EntityType>
+        <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invi101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
         <EntityType Name="vw_invi101">
           <Key>
@@ -6499,6 +6533,131 @@
           <Property Name="icpmodg" Type="nvarchar" MaxLength="10" />
           <Property Name="icpmodd" Type="datetime2" Precision="7" />
           <Property Name="icp01_c" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_invi103' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="vw_invi103">
+          <Key>
+            <PropertyRef Name="ica01" />
+            <PropertyRef Name="ica10" />
+            <PropertyRef Name="ica11" />
+            <PropertyRef Name="ica12" />
+            <PropertyRef Name="ica13" />
+            <PropertyRef Name="ica14" />
+            <PropertyRef Name="ica15" />
+            <PropertyRef Name="ica16" />
+            <PropertyRef Name="ica18" />
+            <PropertyRef Name="ica19" />
+            <PropertyRef Name="ica26" />
+          </Key>
+          <Property Name="ica01" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="ica02" Type="nvarchar" MaxLength="255" />
+          <Property Name="ica03" Type="nvarchar" MaxLength="80" />
+          <Property Name="ica04" Type="nvarchar" MaxLength="10" />
+          <Property Name="ica05" Type="nvarchar" MaxLength="10" />
+          <Property Name="ica06" Type="nvarchar" MaxLength="10" />
+          <Property Name="ica07" Type="nvarchar" MaxLength="6" />
+          <Property Name="ica08" Type="nvarchar" MaxLength="6" />
+          <Property Name="ica09" Type="nvarchar" MaxLength="6" />
+          <Property Name="ica10" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica11" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica12" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica13" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica14" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica15" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica16" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica17" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica18" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica19" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica20" Type="datetime2" Precision="7" />
+          <Property Name="ica21" Type="nvarchar" MaxLength="40" />
+          <Property Name="ica22" Type="nvarchar" MaxLength="10" />
+          <Property Name="ica23" Type="nvarchar" MaxLength="10" />
+          <Property Name="ica24" Type="numeric" Precision="22" Scale="3" />
+          <Property Name="ica25" Type="datetime2" Precision="7" />
+          <Property Name="ica26" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+          <Property Name="ica27" Type="nvarchar" MaxLength="10" />
+          <Property Name="ica28" Type="nvarchar" MaxLength="255" />
+          <Property Name="ica29" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica30" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica31" Type="nvarchar" MaxLength="255" />
+          <Property Name="ica32" Type="nvarchar" MaxLength="255" />
+          <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
+          <Property Name="ica35" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica36" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica38" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica39" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica40" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica41" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica42" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica43" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica44" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica45" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica46" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica47" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica48" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica49" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica50" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica51" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica52" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica53" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica54" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica55" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica56" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica57" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica58" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica59" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica60" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica61" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica62" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica63" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica64" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica65" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica66" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica67" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica68" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica69" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica70" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica71" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica72" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica73" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica74" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica75" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica76" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica77" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica78" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica79" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica80" Type="nvarchar" MaxLength="1" />
+          <Property Name="icaconf" Type="nvarchar" MaxLength="1" />
+          <Property Name="icavali" Type="nvarchar" MaxLength="1" />
+          <Property Name="icacreu" Type="nvarchar" MaxLength="10" />
+          <Property Name="icacreg" Type="nvarchar" MaxLength="10" />
+          <Property Name="icacred" Type="datetime2" Precision="7" />
+          <Property Name="icamodu" Type="nvarchar" MaxLength="10" />
+          <Property Name="icamodg" Type="nvarchar" MaxLength="10" />
+          <Property Name="icamodd" Type="datetime2" Precision="7" />
+          <Property Name="icasecu" Type="nvarchar" MaxLength="10" />
+          <Property Name="icasecg" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_invi103s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="vw_invi103s">
+          <Key>
+            <PropertyRef Name="icd01" />
+            <PropertyRef Name="icd02" />
+          </Key>
+          <Property Name="icd01" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="icd02" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="icd03" Type="nvarchar" MaxLength="255" />
+          <Property Name="icd04" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd05" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd06" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd07" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd08" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd09" Type="nvarchar" MaxLength="1" />
+          <Property Name="icd10" Type="nvarchar" MaxLength="1" />
         </EntityType>
         <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invi200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -10390,6 +10549,7 @@
           <EntitySet Name="ica_tb" EntityType="Self.ica_tb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="icb_tb" EntityType="Self.icb_tb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="icc_tb" EntityType="Self.icc_tb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="icd_tb" EntityType="Self.icd_tb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="icm_tb" EntityType="Self.icm_tb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="icn_tb" EntityType="Self.icn_tb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="icp_tb" EntityType="Self.icp_tb" Schema="dbo" store:Type="Tables" />
@@ -12689,6 +12849,21 @@
     [vw_invi100_1].[price] AS [price]
     FROM [dbo].[vw_invi100_1] AS [vw_invi100_1]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="vw_invi100_2" EntityType="Self.vw_invi100_2" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_invi100_2].[pfa01] AS [pfa01], 
+    [vw_invi100_2].[pfa02] AS [pfa02], 
+    [vw_invi100_2].[pfa03] AS [pfa03], 
+    [vw_invi100_2].[pca03] AS [pca03], 
+    [vw_invi100_2].[pfb02] AS [pfb02], 
+    [vw_invi100_2].[pfb03] AS [pfb03], 
+    [vw_invi100_2].[pfb04] AS [pfb04], 
+    [vw_invi100_2].[pfb05] AS [pfb05], 
+    [vw_invi100_2].[price] AS [price], 
+    [vw_invi100_2].[price_twd] AS [price_twd], 
+    [vw_invi100_2].[pfa10] AS [pfa10]
+    FROM [dbo].[vw_invi100_2] AS [vw_invi100_2]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="vw_invi101" EntityType="Self.vw_invi101" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vw_invi101].[ica01] AS [ica01], 
@@ -12750,6 +12925,114 @@
     [vw_invi102].[icpmodd] AS [icpmodd], 
     [vw_invi102].[icp01_c] AS [icp01_c]
     FROM [dbo].[vw_invi102] AS [vw_invi102]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_invi103" EntityType="Self.vw_invi103" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_invi103].[ica01] AS [ica01], 
+    [vw_invi103].[ica02] AS [ica02], 
+    [vw_invi103].[ica03] AS [ica03], 
+    [vw_invi103].[ica04] AS [ica04], 
+    [vw_invi103].[ica05] AS [ica05], 
+    [vw_invi103].[ica06] AS [ica06], 
+    [vw_invi103].[ica07] AS [ica07], 
+    [vw_invi103].[ica08] AS [ica08], 
+    [vw_invi103].[ica09] AS [ica09], 
+    [vw_invi103].[ica10] AS [ica10], 
+    [vw_invi103].[ica11] AS [ica11], 
+    [vw_invi103].[ica12] AS [ica12], 
+    [vw_invi103].[ica13] AS [ica13], 
+    [vw_invi103].[ica14] AS [ica14], 
+    [vw_invi103].[ica15] AS [ica15], 
+    [vw_invi103].[ica16] AS [ica16], 
+    [vw_invi103].[ica17] AS [ica17], 
+    [vw_invi103].[ica18] AS [ica18], 
+    [vw_invi103].[ica19] AS [ica19], 
+    [vw_invi103].[ica20] AS [ica20], 
+    [vw_invi103].[ica21] AS [ica21], 
+    [vw_invi103].[ica22] AS [ica22], 
+    [vw_invi103].[ica23] AS [ica23], 
+    [vw_invi103].[ica24] AS [ica24], 
+    [vw_invi103].[ica25] AS [ica25], 
+    [vw_invi103].[ica26] AS [ica26], 
+    [vw_invi103].[ica27] AS [ica27], 
+    [vw_invi103].[ica28] AS [ica28], 
+    [vw_invi103].[ica29] AS [ica29], 
+    [vw_invi103].[ica30] AS [ica30], 
+    [vw_invi103].[ica31] AS [ica31], 
+    [vw_invi103].[ica32] AS [ica32], 
+    [vw_invi103].[ica33] AS [ica33], 
+    [vw_invi103].[ica34] AS [ica34], 
+    [vw_invi103].[ica35] AS [ica35], 
+    [vw_invi103].[ica36] AS [ica36], 
+    [vw_invi103].[ica37] AS [ica37], 
+    [vw_invi103].[ica38] AS [ica38], 
+    [vw_invi103].[ica39] AS [ica39], 
+    [vw_invi103].[ica40] AS [ica40], 
+    [vw_invi103].[ica41] AS [ica41], 
+    [vw_invi103].[ica42] AS [ica42], 
+    [vw_invi103].[ica43] AS [ica43], 
+    [vw_invi103].[ica44] AS [ica44], 
+    [vw_invi103].[ica45] AS [ica45], 
+    [vw_invi103].[ica46] AS [ica46], 
+    [vw_invi103].[ica47] AS [ica47], 
+    [vw_invi103].[ica48] AS [ica48], 
+    [vw_invi103].[ica49] AS [ica49], 
+    [vw_invi103].[ica50] AS [ica50], 
+    [vw_invi103].[ica51] AS [ica51], 
+    [vw_invi103].[ica52] AS [ica52], 
+    [vw_invi103].[ica53] AS [ica53], 
+    [vw_invi103].[ica54] AS [ica54], 
+    [vw_invi103].[ica55] AS [ica55], 
+    [vw_invi103].[ica56] AS [ica56], 
+    [vw_invi103].[ica57] AS [ica57], 
+    [vw_invi103].[ica58] AS [ica58], 
+    [vw_invi103].[ica59] AS [ica59], 
+    [vw_invi103].[ica60] AS [ica60], 
+    [vw_invi103].[ica61] AS [ica61], 
+    [vw_invi103].[ica62] AS [ica62], 
+    [vw_invi103].[ica63] AS [ica63], 
+    [vw_invi103].[ica64] AS [ica64], 
+    [vw_invi103].[ica65] AS [ica65], 
+    [vw_invi103].[ica66] AS [ica66], 
+    [vw_invi103].[ica67] AS [ica67], 
+    [vw_invi103].[ica68] AS [ica68], 
+    [vw_invi103].[ica69] AS [ica69], 
+    [vw_invi103].[ica70] AS [ica70], 
+    [vw_invi103].[ica71] AS [ica71], 
+    [vw_invi103].[ica72] AS [ica72], 
+    [vw_invi103].[ica73] AS [ica73], 
+    [vw_invi103].[ica74] AS [ica74], 
+    [vw_invi103].[ica75] AS [ica75], 
+    [vw_invi103].[ica76] AS [ica76], 
+    [vw_invi103].[ica77] AS [ica77], 
+    [vw_invi103].[ica78] AS [ica78], 
+    [vw_invi103].[ica79] AS [ica79], 
+    [vw_invi103].[ica80] AS [ica80], 
+    [vw_invi103].[icaconf] AS [icaconf], 
+    [vw_invi103].[icavali] AS [icavali], 
+    [vw_invi103].[icacreu] AS [icacreu], 
+    [vw_invi103].[icacreg] AS [icacreg], 
+    [vw_invi103].[icacred] AS [icacred], 
+    [vw_invi103].[icamodu] AS [icamodu], 
+    [vw_invi103].[icamodg] AS [icamodg], 
+    [vw_invi103].[icamodd] AS [icamodd], 
+    [vw_invi103].[icasecu] AS [icasecu], 
+    [vw_invi103].[icasecg] AS [icasecg]
+    FROM [dbo].[vw_invi103] AS [vw_invi103]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_invi103s" EntityType="Self.vw_invi103s" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_invi103s].[icd01] AS [icd01], 
+    [vw_invi103s].[icd02] AS [icd02], 
+    [vw_invi103s].[icd03] AS [icd03], 
+    [vw_invi103s].[icd04] AS [icd04], 
+    [vw_invi103s].[icd05] AS [icd05], 
+    [vw_invi103s].[icd06] AS [icd06], 
+    [vw_invi103s].[icd07] AS [icd07], 
+    [vw_invi103s].[icd08] AS [icd08], 
+    [vw_invi103s].[icd09] AS [icd09], 
+    [vw_invi103s].[icd10] AS [icd10]
+    FROM [dbo].[vw_invi103s] AS [vw_invi103s]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_invi200" EntityType="Self.vw_invi200" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -16036,6 +16319,7 @@
           <EntitySet Name="ica_tb" EntityType="YRDB.ica_tb" />
           <EntitySet Name="icb_tb" EntityType="YRDB.icb_tb" />
           <EntitySet Name="icc_tb" EntityType="YRDB.icc_tb" />
+          <EntitySet Name="icd_tb" EntityType="YRDB.icd_tb" />
           <EntitySet Name="icm_tb" EntityType="YRDB.icm_tb" />
           <EntitySet Name="icn_tb" EntityType="YRDB.icn_tb" />
           <EntitySet Name="icp_tb" EntityType="YRDB.icp_tb" />
@@ -16188,9 +16472,12 @@
           <EntitySet Name="vw_invi030" EntityType="YRDB.vw_invi030" />
           <EntitySet Name="vw_invi100" EntityType="YRDB.vw_invi100" />
           <EntitySet Name="vw_invi100_1" EntityType="YRDB.vw_invi100_1" />
+          <EntitySet Name="vw_invi100_2" EntityType="YRDB.vw_invi100_2" />
           <EntitySet Name="vw_invi101" EntityType="YRDB.vw_invi101" />
           <EntitySet Name="vw_invi101s" EntityType="YRDB.vw_invi101s" />
           <EntitySet Name="vw_invi102" EntityType="YRDB.vw_invi102" />
+          <EntitySet Name="vw_invi103" EntityType="YRDB.vw_invi103" />
+          <EntitySet Name="vw_invi103s" EntityType="YRDB.vw_invi103s" />
           <EntitySet Name="vw_invi200" EntityType="YRDB.vw_invi200" />
           <EntitySet Name="vw_invq210" EntityType="YRDB.vw_invq210" />
           <EntitySet Name="vw_invq210s" EntityType="YRDB.vw_invq210s" />
@@ -16948,7 +17235,7 @@
           <Property Name="bek02" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
           <Property Name="bek03" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
           <Property Name="bek04" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
-          <Property Name="bek05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="bek05" Type="Decimal" Precision="22" Scale="5" />
           <Property Name="bek06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="bekvali" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="bekcreu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -17806,6 +18093,22 @@
           <Property Name="icc09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="icc10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="icccomp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="icd_tb">
+          <Key>
+            <PropertyRef Name="icd01" />
+            <PropertyRef Name="icd02" />
+          </Key>
+          <Property Name="icd01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="icd02" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="icd03" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="icd04" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd07" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="icm_tb">
           <Key>
@@ -21068,7 +21371,7 @@
           <Property Name="bek02" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
           <Property Name="bek03" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
           <Property Name="bek04" Type="Decimal" Nullable="false" Precision="22" Scale="0" />
-          <Property Name="bek05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="bek05" Type="Decimal" Precision="22" Scale="5" />
           <Property Name="bek06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="bekvali" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="bekcreu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -22545,6 +22848,22 @@
           <Property Name="pgb05" Type="Decimal" Precision="22" Scale="3" />
           <Property Name="price" Type="Decimal" Precision="38" Scale="19" />
         </EntityType>
+        <EntityType Name="vw_invi100_2">
+          <Key>
+            <PropertyRef Name="pfa01" />
+          </Key>
+          <Property Name="pfa01" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="pfa02" Type="DateTime" Precision="7" />
+          <Property Name="pfa03" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="pca03" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="pfb02" Type="Decimal" Precision="22" Scale="0" />
+          <Property Name="pfb03" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="pfb04" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="pfb05" Type="Decimal" Precision="22" Scale="3" />
+          <Property Name="price" Type="Decimal" Precision="38" Scale="19" />
+          <Property Name="price_twd" Type="Decimal" Precision="38" Scale="6" />
+          <Property Name="pfa10" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="vw_invi101">
           <Key>
             <PropertyRef Name="ica01" />
@@ -22614,6 +22933,127 @@
           <Property Name="icpmodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="icpmodd" Type="DateTime" Precision="7" />
           <Property Name="icp01_c" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_invi103">
+          <Key>
+            <PropertyRef Name="ica01" />
+            <PropertyRef Name="ica10" />
+            <PropertyRef Name="ica11" />
+            <PropertyRef Name="ica12" />
+            <PropertyRef Name="ica13" />
+            <PropertyRef Name="ica14" />
+            <PropertyRef Name="ica15" />
+            <PropertyRef Name="ica16" />
+            <PropertyRef Name="ica18" />
+            <PropertyRef Name="ica19" />
+            <PropertyRef Name="ica26" />
+          </Key>
+          <Property Name="ica01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ica02" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ica03" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="ica04" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ica05" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ica06" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ica07" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="ica08" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="ica09" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="ica10" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica11" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica12" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica13" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica14" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica15" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica16" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica17" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica18" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica19" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica20" Type="DateTime" Precision="7" />
+          <Property Name="ica21" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="ica22" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ica23" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ica24" Type="Decimal" Precision="22" Scale="3" />
+          <Property Name="ica25" Type="DateTime" Precision="7" />
+          <Property Name="ica26" Type="Decimal" Nullable="false" Precision="22" Scale="6" />
+          <Property Name="ica27" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ica28" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ica29" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica30" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica31" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ica32" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
+          <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica41" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica42" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica43" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica44" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica45" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica46" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica47" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica48" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica49" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica50" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica51" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica52" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica53" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica54" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica55" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica56" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica57" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica58" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica59" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica60" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica61" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica62" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica63" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica64" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica65" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica66" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica67" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica68" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica69" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica70" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica71" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica72" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica73" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica74" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica75" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica76" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica77" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica78" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica79" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica80" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icaconf" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icavali" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icacreu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="icacreg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="icacred" Type="DateTime" Precision="7" />
+          <Property Name="icamodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="icamodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="icamodd" Type="DateTime" Precision="7" />
+          <Property Name="icasecu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="icasecg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_invi103s">
+          <Key>
+            <PropertyRef Name="icd01" />
+            <PropertyRef Name="icd02" />
+          </Key>
+          <Property Name="icd01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="icd02" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="icd03" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="icd04" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd05" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd07" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icd10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="vw_invi200">
           <Key>
@@ -27753,6 +28193,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="icd_tb">
+            <EntityTypeMapping TypeName="YRDB.icd_tb">
+              <MappingFragment StoreEntitySet="icd_tb">
+                <ScalarProperty Name="icd10" ColumnName="icd10" />
+                <ScalarProperty Name="icd09" ColumnName="icd09" />
+                <ScalarProperty Name="icd08" ColumnName="icd08" />
+                <ScalarProperty Name="icd07" ColumnName="icd07" />
+                <ScalarProperty Name="icd06" ColumnName="icd06" />
+                <ScalarProperty Name="icd05" ColumnName="icd05" />
+                <ScalarProperty Name="icd04" ColumnName="icd04" />
+                <ScalarProperty Name="icd03" ColumnName="icd03" />
+                <ScalarProperty Name="icd02" ColumnName="icd02" />
+                <ScalarProperty Name="icd01" ColumnName="icd01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="icm_tb">
             <EntityTypeMapping TypeName="YRDB.icm_tb">
               <MappingFragment StoreEntitySet="icm_tb">
@@ -32408,6 +32864,23 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="vw_invi100_2">
+            <EntityTypeMapping TypeName="YRDB.vw_invi100_2">
+              <MappingFragment StoreEntitySet="vw_invi100_2">
+                <ScalarProperty Name="pfa10" ColumnName="pfa10" />
+                <ScalarProperty Name="price_twd" ColumnName="price_twd" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="pfb05" ColumnName="pfb05" />
+                <ScalarProperty Name="pfb04" ColumnName="pfb04" />
+                <ScalarProperty Name="pfb03" ColumnName="pfb03" />
+                <ScalarProperty Name="pfb02" ColumnName="pfb02" />
+                <ScalarProperty Name="pca03" ColumnName="pca03" />
+                <ScalarProperty Name="pfa03" ColumnName="pfa03" />
+                <ScalarProperty Name="pfa02" ColumnName="pfa02" />
+                <ScalarProperty Name="pfa01" ColumnName="pfa01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="vw_invi101">
             <EntityTypeMapping TypeName="YRDB.vw_invi101">
               <MappingFragment StoreEntitySet="vw_invi101">
@@ -32473,6 +32946,118 @@
                 <ScalarProperty Name="icp03" ColumnName="icp03" />
                 <ScalarProperty Name="icp02" ColumnName="icp02" />
                 <ScalarProperty Name="icp01" ColumnName="icp01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_invi103">
+            <EntityTypeMapping TypeName="YRDB.vw_invi103">
+              <MappingFragment StoreEntitySet="vw_invi103">
+                <ScalarProperty Name="icasecg" ColumnName="icasecg" />
+                <ScalarProperty Name="icasecu" ColumnName="icasecu" />
+                <ScalarProperty Name="icamodd" ColumnName="icamodd" />
+                <ScalarProperty Name="icamodg" ColumnName="icamodg" />
+                <ScalarProperty Name="icamodu" ColumnName="icamodu" />
+                <ScalarProperty Name="icacred" ColumnName="icacred" />
+                <ScalarProperty Name="icacreg" ColumnName="icacreg" />
+                <ScalarProperty Name="icacreu" ColumnName="icacreu" />
+                <ScalarProperty Name="icavali" ColumnName="icavali" />
+                <ScalarProperty Name="icaconf" ColumnName="icaconf" />
+                <ScalarProperty Name="ica80" ColumnName="ica80" />
+                <ScalarProperty Name="ica79" ColumnName="ica79" />
+                <ScalarProperty Name="ica78" ColumnName="ica78" />
+                <ScalarProperty Name="ica77" ColumnName="ica77" />
+                <ScalarProperty Name="ica76" ColumnName="ica76" />
+                <ScalarProperty Name="ica75" ColumnName="ica75" />
+                <ScalarProperty Name="ica74" ColumnName="ica74" />
+                <ScalarProperty Name="ica73" ColumnName="ica73" />
+                <ScalarProperty Name="ica72" ColumnName="ica72" />
+                <ScalarProperty Name="ica71" ColumnName="ica71" />
+                <ScalarProperty Name="ica70" ColumnName="ica70" />
+                <ScalarProperty Name="ica69" ColumnName="ica69" />
+                <ScalarProperty Name="ica68" ColumnName="ica68" />
+                <ScalarProperty Name="ica67" ColumnName="ica67" />
+                <ScalarProperty Name="ica66" ColumnName="ica66" />
+                <ScalarProperty Name="ica65" ColumnName="ica65" />
+                <ScalarProperty Name="ica64" ColumnName="ica64" />
+                <ScalarProperty Name="ica63" ColumnName="ica63" />
+                <ScalarProperty Name="ica62" ColumnName="ica62" />
+                <ScalarProperty Name="ica61" ColumnName="ica61" />
+                <ScalarProperty Name="ica60" ColumnName="ica60" />
+                <ScalarProperty Name="ica59" ColumnName="ica59" />
+                <ScalarProperty Name="ica58" ColumnName="ica58" />
+                <ScalarProperty Name="ica57" ColumnName="ica57" />
+                <ScalarProperty Name="ica56" ColumnName="ica56" />
+                <ScalarProperty Name="ica55" ColumnName="ica55" />
+                <ScalarProperty Name="ica54" ColumnName="ica54" />
+                <ScalarProperty Name="ica53" ColumnName="ica53" />
+                <ScalarProperty Name="ica52" ColumnName="ica52" />
+                <ScalarProperty Name="ica51" ColumnName="ica51" />
+                <ScalarProperty Name="ica50" ColumnName="ica50" />
+                <ScalarProperty Name="ica49" ColumnName="ica49" />
+                <ScalarProperty Name="ica48" ColumnName="ica48" />
+                <ScalarProperty Name="ica47" ColumnName="ica47" />
+                <ScalarProperty Name="ica46" ColumnName="ica46" />
+                <ScalarProperty Name="ica45" ColumnName="ica45" />
+                <ScalarProperty Name="ica44" ColumnName="ica44" />
+                <ScalarProperty Name="ica43" ColumnName="ica43" />
+                <ScalarProperty Name="ica42" ColumnName="ica42" />
+                <ScalarProperty Name="ica41" ColumnName="ica41" />
+                <ScalarProperty Name="ica40" ColumnName="ica40" />
+                <ScalarProperty Name="ica39" ColumnName="ica39" />
+                <ScalarProperty Name="ica38" ColumnName="ica38" />
+                <ScalarProperty Name="ica37" ColumnName="ica37" />
+                <ScalarProperty Name="ica36" ColumnName="ica36" />
+                <ScalarProperty Name="ica35" ColumnName="ica35" />
+                <ScalarProperty Name="ica34" ColumnName="ica34" />
+                <ScalarProperty Name="ica33" ColumnName="ica33" />
+                <ScalarProperty Name="ica32" ColumnName="ica32" />
+                <ScalarProperty Name="ica31" ColumnName="ica31" />
+                <ScalarProperty Name="ica30" ColumnName="ica30" />
+                <ScalarProperty Name="ica29" ColumnName="ica29" />
+                <ScalarProperty Name="ica28" ColumnName="ica28" />
+                <ScalarProperty Name="ica27" ColumnName="ica27" />
+                <ScalarProperty Name="ica26" ColumnName="ica26" />
+                <ScalarProperty Name="ica25" ColumnName="ica25" />
+                <ScalarProperty Name="ica24" ColumnName="ica24" />
+                <ScalarProperty Name="ica23" ColumnName="ica23" />
+                <ScalarProperty Name="ica22" ColumnName="ica22" />
+                <ScalarProperty Name="ica21" ColumnName="ica21" />
+                <ScalarProperty Name="ica20" ColumnName="ica20" />
+                <ScalarProperty Name="ica19" ColumnName="ica19" />
+                <ScalarProperty Name="ica18" ColumnName="ica18" />
+                <ScalarProperty Name="ica17" ColumnName="ica17" />
+                <ScalarProperty Name="ica16" ColumnName="ica16" />
+                <ScalarProperty Name="ica15" ColumnName="ica15" />
+                <ScalarProperty Name="ica14" ColumnName="ica14" />
+                <ScalarProperty Name="ica13" ColumnName="ica13" />
+                <ScalarProperty Name="ica12" ColumnName="ica12" />
+                <ScalarProperty Name="ica11" ColumnName="ica11" />
+                <ScalarProperty Name="ica10" ColumnName="ica10" />
+                <ScalarProperty Name="ica09" ColumnName="ica09" />
+                <ScalarProperty Name="ica08" ColumnName="ica08" />
+                <ScalarProperty Name="ica07" ColumnName="ica07" />
+                <ScalarProperty Name="ica06" ColumnName="ica06" />
+                <ScalarProperty Name="ica05" ColumnName="ica05" />
+                <ScalarProperty Name="ica04" ColumnName="ica04" />
+                <ScalarProperty Name="ica03" ColumnName="ica03" />
+                <ScalarProperty Name="ica02" ColumnName="ica02" />
+                <ScalarProperty Name="ica01" ColumnName="ica01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_invi103s">
+            <EntityTypeMapping TypeName="YRDB.vw_invi103s">
+              <MappingFragment StoreEntitySet="vw_invi103s">
+                <ScalarProperty Name="icd10" ColumnName="icd10" />
+                <ScalarProperty Name="icd09" ColumnName="icd09" />
+                <ScalarProperty Name="icd08" ColumnName="icd08" />
+                <ScalarProperty Name="icd07" ColumnName="icd07" />
+                <ScalarProperty Name="icd06" ColumnName="icd06" />
+                <ScalarProperty Name="icd05" ColumnName="icd05" />
+                <ScalarProperty Name="icd04" ColumnName="icd04" />
+                <ScalarProperty Name="icd03" ColumnName="icd03" />
+                <ScalarProperty Name="icd02" ColumnName="icd02" />
+                <ScalarProperty Name="icd01" ColumnName="icd01" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

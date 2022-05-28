@@ -1,5 +1,5 @@
-﻿/* 程式名稱: 進貨歷史單價查詢
-   系統代號: invi100_1
+﻿/* 程式名稱: 報價單歷史查詢
+   系統代號: invi100_2
    作　　者: Allen
    描　　述: 
    異動記錄:
@@ -20,23 +20,22 @@ using YR.ERP.BLL.MSSQL;
 
 namespace YR.ERP.Forms.Inv
 {
-    public partial class FrmInvi100_1 : YR.ERP.Base.Forms.FrmEntryBase
+    public partial class FrmInvi100_2 : YR.ERP.Base.Forms.FrmEntryBase
     {
 
         #region Property
-        PurBLL BoPur = null;
+        //PurBLL BoPur = null;
 
-        //YREditType _srcFormState = new YREditType();//表單傳入要執行的狀態
-        //vw_admi611s _srcVwAdmi611s = null;
         #endregion
 
         #region 建構子
-        public FrmInvi100_1()
+        public FrmInvi100_2()
         {
             InitializeComponent();
-        }
+        } 
+        
 
-        public FrmInvi100_1(string pSourceForm, YR.ERP.Shared.UserInfo pUserInfo, string pWhere)
+        public FrmInvi100_2(string pSourceForm, YR.ERP.Shared.UserInfo pUserInfo, string pWhere)
         {
             InitializeComponent();
             StrQueryWhereAppend = pWhere;            
@@ -52,7 +51,7 @@ namespace YR.ERP.Forms.Inv
         /// <returns></returns>
         protected override Boolean WfSetVar()
         {
-            this.StrFormID = "invi100_1";
+            this.StrFormID = "invi100_2";
 
             this.IntTabCount = 1;
             this.IntMasterGridPos = 1;
@@ -86,7 +85,6 @@ namespace YR.ERP.Forms.Inv
         {
             BoMaster = new AdmBLL(LoginInfo.CompNo, TabMaster.TargetTable, TabMaster.TargetColumn, TabMaster.ViewTable);
 
-            BoPur = new PurBLL(BoMaster.OfGetConntion());
             return;
         }
         #endregion
@@ -98,7 +96,6 @@ namespace YR.ERP.Forms.Inv
             {
                 if (BoMaster.TRAN != null)
                 {
-                    BoPur.TRAN = BoMaster.TRAN;
                 }
             }
             catch (Exception ex)

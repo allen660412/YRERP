@@ -82,6 +82,7 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<ica_tb> ica_tb { get; set; }
         public virtual DbSet<icb_tb> icb_tb { get; set; }
         public virtual DbSet<icc_tb> icc_tb { get; set; }
+        public virtual DbSet<icd_tb> icd_tb { get; set; }
         public virtual DbSet<icm_tb> icm_tb { get; set; }
         public virtual DbSet<icn_tb> icn_tb { get; set; }
         public virtual DbSet<icp_tb> icp_tb { get; set; }
@@ -234,9 +235,12 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<vw_invi030> vw_invi030 { get; set; }
         public virtual DbSet<vw_invi100> vw_invi100 { get; set; }
         public virtual DbSet<vw_invi100_1> vw_invi100_1 { get; set; }
+        public virtual DbSet<vw_invi100_2> vw_invi100_2 { get; set; }
         public virtual DbSet<vw_invi101> vw_invi101 { get; set; }
         public virtual DbSet<vw_invi101s> vw_invi101s { get; set; }
         public virtual DbSet<vw_invi102> vw_invi102 { get; set; }
+        public virtual DbSet<vw_invi103> vw_invi103 { get; set; }
+        public virtual DbSet<vw_invi103s> vw_invi103s { get; set; }
         public virtual DbSet<vw_invi200> vw_invi200 { get; set; }
         public virtual DbSet<vw_invq210> vw_invq210 { get; set; }
         public virtual DbSet<vw_invq210s> vw_invq210s { get; set; }

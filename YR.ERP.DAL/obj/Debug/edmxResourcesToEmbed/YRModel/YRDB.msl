@@ -1532,6 +1532,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="icd_tb">
+      <EntityTypeMapping TypeName="YRDB.icd_tb">
+        <MappingFragment StoreEntitySet="icd_tb">
+          <ScalarProperty Name="icd10" ColumnName="icd10" />
+          <ScalarProperty Name="icd09" ColumnName="icd09" />
+          <ScalarProperty Name="icd08" ColumnName="icd08" />
+          <ScalarProperty Name="icd07" ColumnName="icd07" />
+          <ScalarProperty Name="icd06" ColumnName="icd06" />
+          <ScalarProperty Name="icd05" ColumnName="icd05" />
+          <ScalarProperty Name="icd04" ColumnName="icd04" />
+          <ScalarProperty Name="icd03" ColumnName="icd03" />
+          <ScalarProperty Name="icd02" ColumnName="icd02" />
+          <ScalarProperty Name="icd01" ColumnName="icd01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="icm_tb">
       <EntityTypeMapping TypeName="YRDB.icm_tb">
         <MappingFragment StoreEntitySet="icm_tb">
@@ -6187,6 +6203,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="vw_invi100_2">
+      <EntityTypeMapping TypeName="YRDB.vw_invi100_2">
+        <MappingFragment StoreEntitySet="vw_invi100_2">
+          <ScalarProperty Name="pfa10" ColumnName="pfa10" />
+          <ScalarProperty Name="price_twd" ColumnName="price_twd" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="pfb05" ColumnName="pfb05" />
+          <ScalarProperty Name="pfb04" ColumnName="pfb04" />
+          <ScalarProperty Name="pfb03" ColumnName="pfb03" />
+          <ScalarProperty Name="pfb02" ColumnName="pfb02" />
+          <ScalarProperty Name="pca03" ColumnName="pca03" />
+          <ScalarProperty Name="pfa03" ColumnName="pfa03" />
+          <ScalarProperty Name="pfa02" ColumnName="pfa02" />
+          <ScalarProperty Name="pfa01" ColumnName="pfa01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="vw_invi101">
       <EntityTypeMapping TypeName="YRDB.vw_invi101">
         <MappingFragment StoreEntitySet="vw_invi101">
@@ -6252,6 +6285,118 @@
           <ScalarProperty Name="icp03" ColumnName="icp03" />
           <ScalarProperty Name="icp02" ColumnName="icp02" />
           <ScalarProperty Name="icp01" ColumnName="icp01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_invi103">
+      <EntityTypeMapping TypeName="YRDB.vw_invi103">
+        <MappingFragment StoreEntitySet="vw_invi103">
+          <ScalarProperty Name="icasecg" ColumnName="icasecg" />
+          <ScalarProperty Name="icasecu" ColumnName="icasecu" />
+          <ScalarProperty Name="icamodd" ColumnName="icamodd" />
+          <ScalarProperty Name="icamodg" ColumnName="icamodg" />
+          <ScalarProperty Name="icamodu" ColumnName="icamodu" />
+          <ScalarProperty Name="icacred" ColumnName="icacred" />
+          <ScalarProperty Name="icacreg" ColumnName="icacreg" />
+          <ScalarProperty Name="icacreu" ColumnName="icacreu" />
+          <ScalarProperty Name="icavali" ColumnName="icavali" />
+          <ScalarProperty Name="icaconf" ColumnName="icaconf" />
+          <ScalarProperty Name="ica80" ColumnName="ica80" />
+          <ScalarProperty Name="ica79" ColumnName="ica79" />
+          <ScalarProperty Name="ica78" ColumnName="ica78" />
+          <ScalarProperty Name="ica77" ColumnName="ica77" />
+          <ScalarProperty Name="ica76" ColumnName="ica76" />
+          <ScalarProperty Name="ica75" ColumnName="ica75" />
+          <ScalarProperty Name="ica74" ColumnName="ica74" />
+          <ScalarProperty Name="ica73" ColumnName="ica73" />
+          <ScalarProperty Name="ica72" ColumnName="ica72" />
+          <ScalarProperty Name="ica71" ColumnName="ica71" />
+          <ScalarProperty Name="ica70" ColumnName="ica70" />
+          <ScalarProperty Name="ica69" ColumnName="ica69" />
+          <ScalarProperty Name="ica68" ColumnName="ica68" />
+          <ScalarProperty Name="ica67" ColumnName="ica67" />
+          <ScalarProperty Name="ica66" ColumnName="ica66" />
+          <ScalarProperty Name="ica65" ColumnName="ica65" />
+          <ScalarProperty Name="ica64" ColumnName="ica64" />
+          <ScalarProperty Name="ica63" ColumnName="ica63" />
+          <ScalarProperty Name="ica62" ColumnName="ica62" />
+          <ScalarProperty Name="ica61" ColumnName="ica61" />
+          <ScalarProperty Name="ica60" ColumnName="ica60" />
+          <ScalarProperty Name="ica59" ColumnName="ica59" />
+          <ScalarProperty Name="ica58" ColumnName="ica58" />
+          <ScalarProperty Name="ica57" ColumnName="ica57" />
+          <ScalarProperty Name="ica56" ColumnName="ica56" />
+          <ScalarProperty Name="ica55" ColumnName="ica55" />
+          <ScalarProperty Name="ica54" ColumnName="ica54" />
+          <ScalarProperty Name="ica53" ColumnName="ica53" />
+          <ScalarProperty Name="ica52" ColumnName="ica52" />
+          <ScalarProperty Name="ica51" ColumnName="ica51" />
+          <ScalarProperty Name="ica50" ColumnName="ica50" />
+          <ScalarProperty Name="ica49" ColumnName="ica49" />
+          <ScalarProperty Name="ica48" ColumnName="ica48" />
+          <ScalarProperty Name="ica47" ColumnName="ica47" />
+          <ScalarProperty Name="ica46" ColumnName="ica46" />
+          <ScalarProperty Name="ica45" ColumnName="ica45" />
+          <ScalarProperty Name="ica44" ColumnName="ica44" />
+          <ScalarProperty Name="ica43" ColumnName="ica43" />
+          <ScalarProperty Name="ica42" ColumnName="ica42" />
+          <ScalarProperty Name="ica41" ColumnName="ica41" />
+          <ScalarProperty Name="ica40" ColumnName="ica40" />
+          <ScalarProperty Name="ica39" ColumnName="ica39" />
+          <ScalarProperty Name="ica38" ColumnName="ica38" />
+          <ScalarProperty Name="ica37" ColumnName="ica37" />
+          <ScalarProperty Name="ica36" ColumnName="ica36" />
+          <ScalarProperty Name="ica35" ColumnName="ica35" />
+          <ScalarProperty Name="ica34" ColumnName="ica34" />
+          <ScalarProperty Name="ica33" ColumnName="ica33" />
+          <ScalarProperty Name="ica32" ColumnName="ica32" />
+          <ScalarProperty Name="ica31" ColumnName="ica31" />
+          <ScalarProperty Name="ica30" ColumnName="ica30" />
+          <ScalarProperty Name="ica29" ColumnName="ica29" />
+          <ScalarProperty Name="ica28" ColumnName="ica28" />
+          <ScalarProperty Name="ica27" ColumnName="ica27" />
+          <ScalarProperty Name="ica26" ColumnName="ica26" />
+          <ScalarProperty Name="ica25" ColumnName="ica25" />
+          <ScalarProperty Name="ica24" ColumnName="ica24" />
+          <ScalarProperty Name="ica23" ColumnName="ica23" />
+          <ScalarProperty Name="ica22" ColumnName="ica22" />
+          <ScalarProperty Name="ica21" ColumnName="ica21" />
+          <ScalarProperty Name="ica20" ColumnName="ica20" />
+          <ScalarProperty Name="ica19" ColumnName="ica19" />
+          <ScalarProperty Name="ica18" ColumnName="ica18" />
+          <ScalarProperty Name="ica17" ColumnName="ica17" />
+          <ScalarProperty Name="ica16" ColumnName="ica16" />
+          <ScalarProperty Name="ica15" ColumnName="ica15" />
+          <ScalarProperty Name="ica14" ColumnName="ica14" />
+          <ScalarProperty Name="ica13" ColumnName="ica13" />
+          <ScalarProperty Name="ica12" ColumnName="ica12" />
+          <ScalarProperty Name="ica11" ColumnName="ica11" />
+          <ScalarProperty Name="ica10" ColumnName="ica10" />
+          <ScalarProperty Name="ica09" ColumnName="ica09" />
+          <ScalarProperty Name="ica08" ColumnName="ica08" />
+          <ScalarProperty Name="ica07" ColumnName="ica07" />
+          <ScalarProperty Name="ica06" ColumnName="ica06" />
+          <ScalarProperty Name="ica05" ColumnName="ica05" />
+          <ScalarProperty Name="ica04" ColumnName="ica04" />
+          <ScalarProperty Name="ica03" ColumnName="ica03" />
+          <ScalarProperty Name="ica02" ColumnName="ica02" />
+          <ScalarProperty Name="ica01" ColumnName="ica01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_invi103s">
+      <EntityTypeMapping TypeName="YRDB.vw_invi103s">
+        <MappingFragment StoreEntitySet="vw_invi103s">
+          <ScalarProperty Name="icd10" ColumnName="icd10" />
+          <ScalarProperty Name="icd09" ColumnName="icd09" />
+          <ScalarProperty Name="icd08" ColumnName="icd08" />
+          <ScalarProperty Name="icd07" ColumnName="icd07" />
+          <ScalarProperty Name="icd06" ColumnName="icd06" />
+          <ScalarProperty Name="icd05" ColumnName="icd05" />
+          <ScalarProperty Name="icd04" ColumnName="icd04" />
+          <ScalarProperty Name="icd03" ColumnName="icd03" />
+          <ScalarProperty Name="icd02" ColumnName="icd02" />
+          <ScalarProperty Name="icd01" ColumnName="icd01" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -636,7 +636,7 @@
     <Property Name="bek02" Type="nvarchar" MaxLength="80" />
     <Property Name="bek03" Type="numeric" Precision="22" Scale="0" Nullable="false" />
     <Property Name="bek04" Type="numeric" Precision="22" Scale="0" Nullable="false" />
-    <Property Name="bek05" Type="nvarchar" MaxLength="1" />
+    <Property Name="bek05" Type="numeric" Precision="22" Scale="5" />
     <Property Name="bek06" Type="nvarchar" MaxLength="1" />
     <Property Name="bekvali" Type="nvarchar" MaxLength="1" />
     <Property Name="bekcreu" Type="nvarchar" MaxLength="10" />
@@ -1708,6 +1708,22 @@
     <Property Name="icc09" Type="nvarchar" MaxLength="1" />
     <Property Name="icc10" Type="nvarchar" MaxLength="1" />
     <Property Name="icccomp" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="icd_tb">
+    <Key>
+      <PropertyRef Name="icd01" />
+      <PropertyRef Name="icd02" />
+    </Key>
+    <Property Name="icd01" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="icd02" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="icd03" Type="nvarchar" MaxLength="255" />
+    <Property Name="icd04" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd05" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd06" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd07" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd08" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd09" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd10" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <EntityType Name="icm_tb">
     <Key>
@@ -4836,7 +4852,7 @@
     <Property Name="bek02" Type="nvarchar" MaxLength="80" />
     <Property Name="bek03" Type="numeric" Precision="22" Scale="0" Nullable="false" />
     <Property Name="bek04" Type="numeric" Precision="22" Scale="0" Nullable="false" />
-    <Property Name="bek05" Type="nvarchar" MaxLength="1" />
+    <Property Name="bek05" Type="numeric" Precision="22" Scale="5" />
     <Property Name="bek06" Type="nvarchar" MaxLength="1" />
     <Property Name="bekvali" Type="nvarchar" MaxLength="1" />
     <Property Name="bekcreu" Type="nvarchar" MaxLength="10" />
@@ -6420,6 +6436,24 @@
     <Property Name="price" Type="numeric" Precision="38" Scale="19" />
   </EntityType>
   <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_invi100_2' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="vw_invi100_2">
+    <Key>
+      <PropertyRef Name="pfa01" />
+    </Key>
+    <Property Name="pfa01" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="pfa02" Type="datetime2" Precision="7" />
+    <Property Name="pfa03" Type="nvarchar" MaxLength="10" />
+    <Property Name="pca03" Type="nvarchar" MaxLength="40" />
+    <Property Name="pfb02" Type="numeric" Precision="22" Scale="0" />
+    <Property Name="pfb03" Type="nvarchar" MaxLength="40" />
+    <Property Name="pfb04" Type="nvarchar" MaxLength="255" />
+    <Property Name="pfb05" Type="numeric" Precision="22" Scale="3" />
+    <Property Name="price" Type="numeric" Precision="38" Scale="19" />
+    <Property Name="price_twd" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="pfa10" Type="nvarchar" MaxLength="4" />
+  </EntityType>
+  <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invi101' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
   <EntityType Name="vw_invi101">
     <Key>
@@ -6494,6 +6528,131 @@
     <Property Name="icpmodg" Type="nvarchar" MaxLength="10" />
     <Property Name="icpmodd" Type="datetime2" Precision="7" />
     <Property Name="icp01_c" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_invi103' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="vw_invi103">
+    <Key>
+      <PropertyRef Name="ica01" />
+      <PropertyRef Name="ica10" />
+      <PropertyRef Name="ica11" />
+      <PropertyRef Name="ica12" />
+      <PropertyRef Name="ica13" />
+      <PropertyRef Name="ica14" />
+      <PropertyRef Name="ica15" />
+      <PropertyRef Name="ica16" />
+      <PropertyRef Name="ica18" />
+      <PropertyRef Name="ica19" />
+      <PropertyRef Name="ica26" />
+    </Key>
+    <Property Name="ica01" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="ica02" Type="nvarchar" MaxLength="255" />
+    <Property Name="ica03" Type="nvarchar" MaxLength="80" />
+    <Property Name="ica04" Type="nvarchar" MaxLength="10" />
+    <Property Name="ica05" Type="nvarchar" MaxLength="10" />
+    <Property Name="ica06" Type="nvarchar" MaxLength="10" />
+    <Property Name="ica07" Type="nvarchar" MaxLength="6" />
+    <Property Name="ica08" Type="nvarchar" MaxLength="6" />
+    <Property Name="ica09" Type="nvarchar" MaxLength="6" />
+    <Property Name="ica10" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica11" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica12" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica13" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica14" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica15" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica16" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica17" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica18" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica19" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica20" Type="datetime2" Precision="7" />
+    <Property Name="ica21" Type="nvarchar" MaxLength="40" />
+    <Property Name="ica22" Type="nvarchar" MaxLength="10" />
+    <Property Name="ica23" Type="nvarchar" MaxLength="10" />
+    <Property Name="ica24" Type="numeric" Precision="22" Scale="3" />
+    <Property Name="ica25" Type="datetime2" Precision="7" />
+    <Property Name="ica26" Type="numeric" Precision="22" Scale="6" Nullable="false" />
+    <Property Name="ica27" Type="nvarchar" MaxLength="10" />
+    <Property Name="ica28" Type="nvarchar" MaxLength="255" />
+    <Property Name="ica29" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica30" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica31" Type="nvarchar" MaxLength="255" />
+    <Property Name="ica32" Type="nvarchar" MaxLength="255" />
+    <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
+    <Property Name="ica35" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica36" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica38" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica39" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica40" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica41" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica42" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica43" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica44" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica45" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica46" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica47" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica48" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica49" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica50" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica51" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica52" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica53" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica54" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica55" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica56" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica57" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica58" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica59" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica60" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica61" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica62" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica63" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica64" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica65" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica66" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica67" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica68" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica69" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica70" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica71" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica72" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica73" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica74" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica75" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica76" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica77" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica78" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica79" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica80" Type="nvarchar" MaxLength="1" />
+    <Property Name="icaconf" Type="nvarchar" MaxLength="1" />
+    <Property Name="icavali" Type="nvarchar" MaxLength="1" />
+    <Property Name="icacreu" Type="nvarchar" MaxLength="10" />
+    <Property Name="icacreg" Type="nvarchar" MaxLength="10" />
+    <Property Name="icacred" Type="datetime2" Precision="7" />
+    <Property Name="icamodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="icamodg" Type="nvarchar" MaxLength="10" />
+    <Property Name="icamodd" Type="datetime2" Precision="7" />
+    <Property Name="icasecu" Type="nvarchar" MaxLength="10" />
+    <Property Name="icasecg" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_invi103s' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="vw_invi103s">
+    <Key>
+      <PropertyRef Name="icd01" />
+      <PropertyRef Name="icd02" />
+    </Key>
+    <Property Name="icd01" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="icd02" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="icd03" Type="nvarchar" MaxLength="255" />
+    <Property Name="icd04" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd05" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd06" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd07" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd08" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd09" Type="nvarchar" MaxLength="1" />
+    <Property Name="icd10" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invi200' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -10385,6 +10544,7 @@
     <EntitySet Name="ica_tb" EntityType="Self.ica_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="icb_tb" EntityType="Self.icb_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="icc_tb" EntityType="Self.icc_tb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="icd_tb" EntityType="Self.icd_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="icm_tb" EntityType="Self.icm_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="icn_tb" EntityType="Self.icn_tb" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="icp_tb" EntityType="Self.icp_tb" Schema="dbo" store:Type="Tables" />
@@ -12684,6 +12844,21 @@
     [vw_invi100_1].[price] AS [price]
     FROM [dbo].[vw_invi100_1] AS [vw_invi100_1]</DefiningQuery>
     </EntitySet>
+    <EntitySet Name="vw_invi100_2" EntityType="Self.vw_invi100_2" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_invi100_2].[pfa01] AS [pfa01], 
+    [vw_invi100_2].[pfa02] AS [pfa02], 
+    [vw_invi100_2].[pfa03] AS [pfa03], 
+    [vw_invi100_2].[pca03] AS [pca03], 
+    [vw_invi100_2].[pfb02] AS [pfb02], 
+    [vw_invi100_2].[pfb03] AS [pfb03], 
+    [vw_invi100_2].[pfb04] AS [pfb04], 
+    [vw_invi100_2].[pfb05] AS [pfb05], 
+    [vw_invi100_2].[price] AS [price], 
+    [vw_invi100_2].[price_twd] AS [price_twd], 
+    [vw_invi100_2].[pfa10] AS [pfa10]
+    FROM [dbo].[vw_invi100_2] AS [vw_invi100_2]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="vw_invi101" EntityType="Self.vw_invi101" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [vw_invi101].[ica01] AS [ica01], 
@@ -12745,6 +12920,114 @@
     [vw_invi102].[icpmodd] AS [icpmodd], 
     [vw_invi102].[icp01_c] AS [icp01_c]
     FROM [dbo].[vw_invi102] AS [vw_invi102]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_invi103" EntityType="Self.vw_invi103" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_invi103].[ica01] AS [ica01], 
+    [vw_invi103].[ica02] AS [ica02], 
+    [vw_invi103].[ica03] AS [ica03], 
+    [vw_invi103].[ica04] AS [ica04], 
+    [vw_invi103].[ica05] AS [ica05], 
+    [vw_invi103].[ica06] AS [ica06], 
+    [vw_invi103].[ica07] AS [ica07], 
+    [vw_invi103].[ica08] AS [ica08], 
+    [vw_invi103].[ica09] AS [ica09], 
+    [vw_invi103].[ica10] AS [ica10], 
+    [vw_invi103].[ica11] AS [ica11], 
+    [vw_invi103].[ica12] AS [ica12], 
+    [vw_invi103].[ica13] AS [ica13], 
+    [vw_invi103].[ica14] AS [ica14], 
+    [vw_invi103].[ica15] AS [ica15], 
+    [vw_invi103].[ica16] AS [ica16], 
+    [vw_invi103].[ica17] AS [ica17], 
+    [vw_invi103].[ica18] AS [ica18], 
+    [vw_invi103].[ica19] AS [ica19], 
+    [vw_invi103].[ica20] AS [ica20], 
+    [vw_invi103].[ica21] AS [ica21], 
+    [vw_invi103].[ica22] AS [ica22], 
+    [vw_invi103].[ica23] AS [ica23], 
+    [vw_invi103].[ica24] AS [ica24], 
+    [vw_invi103].[ica25] AS [ica25], 
+    [vw_invi103].[ica26] AS [ica26], 
+    [vw_invi103].[ica27] AS [ica27], 
+    [vw_invi103].[ica28] AS [ica28], 
+    [vw_invi103].[ica29] AS [ica29], 
+    [vw_invi103].[ica30] AS [ica30], 
+    [vw_invi103].[ica31] AS [ica31], 
+    [vw_invi103].[ica32] AS [ica32], 
+    [vw_invi103].[ica33] AS [ica33], 
+    [vw_invi103].[ica34] AS [ica34], 
+    [vw_invi103].[ica35] AS [ica35], 
+    [vw_invi103].[ica36] AS [ica36], 
+    [vw_invi103].[ica37] AS [ica37], 
+    [vw_invi103].[ica38] AS [ica38], 
+    [vw_invi103].[ica39] AS [ica39], 
+    [vw_invi103].[ica40] AS [ica40], 
+    [vw_invi103].[ica41] AS [ica41], 
+    [vw_invi103].[ica42] AS [ica42], 
+    [vw_invi103].[ica43] AS [ica43], 
+    [vw_invi103].[ica44] AS [ica44], 
+    [vw_invi103].[ica45] AS [ica45], 
+    [vw_invi103].[ica46] AS [ica46], 
+    [vw_invi103].[ica47] AS [ica47], 
+    [vw_invi103].[ica48] AS [ica48], 
+    [vw_invi103].[ica49] AS [ica49], 
+    [vw_invi103].[ica50] AS [ica50], 
+    [vw_invi103].[ica51] AS [ica51], 
+    [vw_invi103].[ica52] AS [ica52], 
+    [vw_invi103].[ica53] AS [ica53], 
+    [vw_invi103].[ica54] AS [ica54], 
+    [vw_invi103].[ica55] AS [ica55], 
+    [vw_invi103].[ica56] AS [ica56], 
+    [vw_invi103].[ica57] AS [ica57], 
+    [vw_invi103].[ica58] AS [ica58], 
+    [vw_invi103].[ica59] AS [ica59], 
+    [vw_invi103].[ica60] AS [ica60], 
+    [vw_invi103].[ica61] AS [ica61], 
+    [vw_invi103].[ica62] AS [ica62], 
+    [vw_invi103].[ica63] AS [ica63], 
+    [vw_invi103].[ica64] AS [ica64], 
+    [vw_invi103].[ica65] AS [ica65], 
+    [vw_invi103].[ica66] AS [ica66], 
+    [vw_invi103].[ica67] AS [ica67], 
+    [vw_invi103].[ica68] AS [ica68], 
+    [vw_invi103].[ica69] AS [ica69], 
+    [vw_invi103].[ica70] AS [ica70], 
+    [vw_invi103].[ica71] AS [ica71], 
+    [vw_invi103].[ica72] AS [ica72], 
+    [vw_invi103].[ica73] AS [ica73], 
+    [vw_invi103].[ica74] AS [ica74], 
+    [vw_invi103].[ica75] AS [ica75], 
+    [vw_invi103].[ica76] AS [ica76], 
+    [vw_invi103].[ica77] AS [ica77], 
+    [vw_invi103].[ica78] AS [ica78], 
+    [vw_invi103].[ica79] AS [ica79], 
+    [vw_invi103].[ica80] AS [ica80], 
+    [vw_invi103].[icaconf] AS [icaconf], 
+    [vw_invi103].[icavali] AS [icavali], 
+    [vw_invi103].[icacreu] AS [icacreu], 
+    [vw_invi103].[icacreg] AS [icacreg], 
+    [vw_invi103].[icacred] AS [icacred], 
+    [vw_invi103].[icamodu] AS [icamodu], 
+    [vw_invi103].[icamodg] AS [icamodg], 
+    [vw_invi103].[icamodd] AS [icamodd], 
+    [vw_invi103].[icasecu] AS [icasecu], 
+    [vw_invi103].[icasecg] AS [icasecg]
+    FROM [dbo].[vw_invi103] AS [vw_invi103]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_invi103s" EntityType="Self.vw_invi103s" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_invi103s].[icd01] AS [icd01], 
+    [vw_invi103s].[icd02] AS [icd02], 
+    [vw_invi103s].[icd03] AS [icd03], 
+    [vw_invi103s].[icd04] AS [icd04], 
+    [vw_invi103s].[icd05] AS [icd05], 
+    [vw_invi103s].[icd06] AS [icd06], 
+    [vw_invi103s].[icd07] AS [icd07], 
+    [vw_invi103s].[icd08] AS [icd08], 
+    [vw_invi103s].[icd09] AS [icd09], 
+    [vw_invi103s].[icd10] AS [icd10]
+    FROM [dbo].[vw_invi103s] AS [vw_invi103s]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_invi200" EntityType="Self.vw_invi200" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

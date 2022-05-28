@@ -2127,6 +2127,15 @@ namespace YR.ERP.Forms.Pur
                         WfRollback();
                         return;
                     }
+
+                    //更新產品客戶價格表
+                    if (BoPur.OfInsUpdPddTb(pgaModel, pgbModel, LoginInfo, out errMsg) == false)
+                    {
+                        WfShowErrorMsg(errMsg);
+                        DrMaster.RejectChanges();
+                        WfRollback();
+                        return;
+                    }
                 }
 
                 DrMaster["pgaconf"] = "Y";

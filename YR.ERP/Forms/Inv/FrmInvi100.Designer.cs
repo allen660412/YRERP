@@ -1473,7 +1473,6 @@
             this.ute_ica32.Size = new System.Drawing.Size(718, 79);
             this.ute_ica32.TabIndex = 88;
             this.ute_ica32.Tag = "ica32";
-            this.ute_ica32.ValueChanged += new System.EventHandler(this.ultraTextEditor1_ValueChanged);
             // 
             // label40
             // 
@@ -1486,7 +1485,6 @@
             this.label40.TabIndex = 89;
             this.label40.Tag = "ica32";
             this.label40.Text = "ica32";
-            this.label40.Click += new System.EventHandler(this.label40_Click);
             // 
             // ute_ica34
             // 

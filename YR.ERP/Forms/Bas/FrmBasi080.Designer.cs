@@ -53,6 +53,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.ute_bekcreu = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.label23 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ute_bek05 = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             ((System.ComponentModel.ISupportInitialize)(this.uGridMaster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uTab_Master)).BeginInit();
             this.uTab_Master.SuspendLayout();
@@ -74,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_bekcreg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_bekmodu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_bekcreu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_bek05)).BeginInit();
             this.SuspendLayout();
             // 
             // uGridMaster
@@ -105,7 +108,6 @@
             this.ultraTabPageControl2.Controls.Add(this.label24);
             this.ultraTabPageControl2.Controls.Add(this.ute_bekcreu);
             this.ultraTabPageControl2.Controls.Add(this.label23);
-            this.ultraTabPageControl2.Location = new System.Drawing.Point(1, 27);
             this.ultraTabPageControl2.Size = new System.Drawing.Size(910, 464);
             // 
             // ultraTabPageControl3
@@ -122,6 +124,8 @@
             // 
             // ultraTabPageControl1
             // 
+            this.ultraTabPageControl1.Controls.Add(this.label4);
+            this.ultraTabPageControl1.Controls.Add(this.ute_bek05);
             this.ultraTabPageControl1.Controls.Add(this.label3);
             this.ultraTabPageControl1.Controls.Add(this.ute_bek04);
             this.ultraTabPageControl1.Controls.Add(this.ute_bek01);
@@ -132,7 +136,6 @@
             this.ultraTabPageControl1.Controls.Add(this.label1);
             this.ultraTabPageControl1.Controls.Add(this.label8);
             this.ultraTabPageControl1.Controls.Add(this.uGridMaster);
-            this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl1.Size = new System.Drawing.Size(910, 464);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.uGridMaster, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label8, 0);
@@ -144,6 +147,8 @@
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_bek01, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_bek04, 0);
             this.ultraTabPageControl1.Controls.SetChildIndex(this.label3, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.ute_bek05, 0);
+            this.ultraTabPageControl1.Controls.SetChildIndex(this.label4, 0);
             // 
             // UtbmMain
             // 
@@ -172,7 +177,7 @@
             this.ute_bekvali.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ute_bekvali.CheckValue = "Y";
             this.ute_bekvali.Font = new System.Drawing.Font("新細明體", 10F);
-            this.ute_bekvali.Location = new System.Drawing.Point(21, 144);
+            this.ute_bekvali.Location = new System.Drawing.Point(21, 181);
             this.ute_bekvali.Name = "ute_bekvali";
             this.ute_bekvali.NullValue = "";
             this.ute_bekvali.Size = new System.Drawing.Size(67, 18);
@@ -430,6 +435,27 @@
             this.label23.Tag = "bekcreu";
             this.label23.Text = "bekcreu";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("新細明體", 10F);
+            this.label4.Location = new System.Drawing.Point(18, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 14);
+            this.label4.TabIndex = 70;
+            this.label4.Tag = "bek05";
+            this.label4.Text = "bek005";
+            // 
+            // ute_bek05
+            // 
+            this.ute_bek05.AccessibleDescription = "R";
+            this.ute_bek05.Font = new System.Drawing.Font("新細明體", 10F);
+            this.ute_bek05.Location = new System.Drawing.Point(174, 142);
+            this.ute_bek05.Name = "ute_bek05";
+            this.ute_bek05.Size = new System.Drawing.Size(100, 22);
+            this.ute_bek05.TabIndex = 69;
+            this.ute_bek05.Tag = "bek05";
+            // 
             // FrmBasi080
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -461,6 +487,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ute_bekcreg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_bekmodu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ute_bekcreu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ute_bek05)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,5 +519,7 @@
         private System.Windows.Forms.Label label24;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_bekcreu;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label4;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor ute_bek05;
     }
 }

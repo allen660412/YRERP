@@ -145,6 +145,7 @@ namespace YR.ERP.Forms.Bas
             {
                 pDr["bek03"] = 0;
                 pDr["bek04"] = 0;
+                pDr["bek05"] = 0;
                 pDr["bekvali"] = "Y";
                 return true;
             }

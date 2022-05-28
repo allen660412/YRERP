@@ -891,7 +891,7 @@ namespace YR.ERP.BLL.MSSQL
         #endregion
 
 
-        //調整sdd_tb 產品客戶價格表
+        #region OfInsUpdSddTb 調整sdd_tb 產品客戶價格表
         public bool OfInsUpdSddTb(sga_tb pSgaModel, sgb_tb pSgbModel, UserInfo pLoginInfo, out string pErrMsg)
         {
             sdd_tb sddModel = null;
@@ -947,7 +947,7 @@ namespace YR.ERP.BLL.MSSQL
                 iChkCnts = dtSdd.Rows.Count;
                 if (iChkCnts == 0)//新增
                 {
-                    drSdd = dtSdd.NewRow();  
+                    drSdd = dtSdd.NewRow();
                     dtSdd.Rows.Add(drSdd);
                 }
                 else
@@ -959,50 +959,50 @@ namespace YR.ERP.BLL.MSSQL
                     sddModel.sddsecu = "";
                     sddModel.sddsecg = "";
                 }
-                                  
-                    drSdd["sdd01"] = sddModel.sdd01;
-                    drSdd["sdd02"] = sddModel.sdd02;
-                    drSdd["sdd03"] = sddModel.sdd03;
-                    drSdd["sdd04"] = sddModel.sdd04;
-                    drSdd["sdd05"] = sddModel.sdd05;
-                    drSdd["sdd06"] = sddModel.sdd06;
-                    drSdd["sdd07"] = sddModel.sdd07;
-                    drSdd["sdd08"] = sddModel.sdd08;
-                    drSdd["sdd09"] = sddModel.sdd09;
-                    drSdd["sdd10"] = sddModel.sdd10;
-                    drSdd["sdd11"] = sddModel.sdd11;
-                    drSdd["sdd12"] = sddModel.sdd12;
-                    drSdd["sdd13"] = sddModel.sdd13;
-                    drSdd["sdd14"] = sddModel.sdd14;
-                    drSdd["sdd15"] = sddModel.sdd15;
-                    drSdd["sdd16"] = sddModel.sdd16;
-                    drSdd["sdd17"] = sddModel.sdd17;
-                    drSdd["sdd18"] = sddModel.sdd18;
-                    drSdd["sdd19"] = sddModel.sdd19;
-                    drSdd["sdd20"] = sddModel.sdd20;                
-                    if (iChkCnts == 0)//新增
+
+                drSdd["sdd01"] = sddModel.sdd01;
+                drSdd["sdd02"] = sddModel.sdd02;
+                drSdd["sdd03"] = sddModel.sdd03;
+                drSdd["sdd04"] = sddModel.sdd04;
+                drSdd["sdd05"] = sddModel.sdd05;
+                drSdd["sdd06"] = sddModel.sdd06;
+                drSdd["sdd07"] = sddModel.sdd07;
+                drSdd["sdd08"] = sddModel.sdd08;
+                drSdd["sdd09"] = sddModel.sdd09;
+                drSdd["sdd10"] = sddModel.sdd10;
+                drSdd["sdd11"] = sddModel.sdd11;
+                drSdd["sdd12"] = sddModel.sdd12;
+                drSdd["sdd13"] = sddModel.sdd13;
+                drSdd["sdd14"] = sddModel.sdd14;
+                drSdd["sdd15"] = sddModel.sdd15;
+                drSdd["sdd16"] = sddModel.sdd16;
+                drSdd["sdd17"] = sddModel.sdd17;
+                drSdd["sdd18"] = sddModel.sdd18;
+                drSdd["sdd19"] = sddModel.sdd19;
+                drSdd["sdd20"] = sddModel.sdd20;
+                if (iChkCnts == 0)//新增
+                {
+                    drSdd["sddcreu"] = pLoginInfo.UserNo;
+                    drSdd["sddcreg"] = pLoginInfo.DeptNo;
+                    drSdd["sddcred"] = OfGetToday();
+                    if (OfUpdate(dtSdd) != 1)
                     {
-                        drSdd["sddcreu"] = pLoginInfo.UserNo;
-                        drSdd["sddcreg"] = pLoginInfo.DeptNo;
-                        drSdd["sddcred"] = OfGetToday();
-                        if (OfUpdate(dtSdd) != 1)
-                        {
-                            pErrMsg = "新增產品客戶價格表(sdd_tb)失敗!";
-                            return false;
-                        }
+                        pErrMsg = "新增產品客戶價格表(sdd_tb)失敗!";
+                        return false;
                     }
-                    else
+                }
+                else
+                {
+                    drSdd["sddmodu"] = pLoginInfo.UserNo;
+                    drSdd["sddmodg"] = pLoginInfo.DeptNo;
+                    drSdd["sddsecu"] = pLoginInfo.UserNo;
+                    drSdd["sddsecg"] = pLoginInfo.GroupNo;
+                    if (OfUpdate(dtSdd) != 1)
                     {
-                        drSdd["sddmodu"] = pLoginInfo.UserNo;
-                        drSdd["sddmodg"] = pLoginInfo.DeptNo;
-                        drSdd["sddsecu"] = pLoginInfo.UserNo;
-                        drSdd["sddsecg"] = pLoginInfo.GroupNo;
-                        if (OfUpdate(dtSdd) != 1)
-                        {
-                            pErrMsg = "異動產品客戶價格表(sdd_tb)失敗!";
-                            return false;
-                        }
+                        pErrMsg = "異動產品客戶價格表(sdd_tb)失敗!";
+                        return false;
                     }
+                }
 
                 return true;
             }
@@ -1010,7 +1010,8 @@ namespace YR.ERP.BLL.MSSQL
             {
                 throw ex;
             }
-        }
+        } 
+        #endregion
 
 
         /**********  其他常用function ********/

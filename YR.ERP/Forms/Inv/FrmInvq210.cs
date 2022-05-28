@@ -29,6 +29,13 @@ namespace YR.ERP.Forms.Inv
         {
             InitializeComponent();
         }
+
+        public FrmInvq210(string pSourceForm, YR.ERP.Shared.UserInfo pUserInfo, string pWhere)
+        {
+            InitializeComponent();
+            StrQueryWhereAppend = pWhere;            
+            this.LoginInfo = pUserInfo;
+        }
         #endregion
 
         #region WfSetVar() : 設定變數預設值, 繼承的 frm 要依需求覆寫

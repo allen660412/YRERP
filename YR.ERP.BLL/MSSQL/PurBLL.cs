@@ -16,6 +16,7 @@ using YR.ERP.DAL.YRModel;
 using YR.Util;
 using System.Data.Common;
 using YR.Util;
+using YR.ERP.Shared;
 
 namespace YR.ERP.BLL.MSSQL
 {
@@ -472,7 +473,7 @@ namespace YR.ERP.BLL.MSSQL
         #endregion
 
         #region OfGetPdd 料號/廠商價格檔
-        public DataRow OfGetPddDr(string pPdd01,string pPdd02,string pPdd03)
+        public DataRow OfGetPddDr(string pPdd01, string pPdd02, string pPdd03)
         {
             DataRow drPdd = null;
             List<SqlParameter> sqlParmList;
@@ -500,7 +501,7 @@ namespace YR.ERP.BLL.MSSQL
             pdd_tb rtnModel = null;
             try
             {
-                drPdd = OfGetPddDr(pPdd01,pPdd02,pPdd03);
+                drPdd = OfGetPddDr(pPdd01, pPdd02, pPdd03);
                 if (drPdd == null)
                     return null;
                 rtnModel = drPdd.ToItem<pdd_tb>();
@@ -1009,7 +1010,7 @@ namespace YR.ERP.BLL.MSSQL
             }
         }
         #endregion
-
+        
         /**********  其他常用function ********/
         #region OfGetPrice
         /// <summary>
@@ -1074,7 +1075,7 @@ namespace YR.ERP.BLL.MSSQL
                     rtnResult.Message = "查無此幣別資料!";
                     return rtnResult;
                 }
-                
+
                 foreach (pbc_tb pbcModel in pbcList.OrderBy(p => p.pbc04))
                 {
                     switch (pbcModel.pbc03.ToUpper())
@@ -1112,7 +1113,7 @@ namespace YR.ERP.BLL.MSSQL
                             tempTaxPrice = tempTaxPrice * unitRate;
                             break;
                         case "A3":  //依料號供應商單價
-                            var pddModel = OfGetPddModel(pItem,pVendor,pCurrency);
+                            var pddModel = OfGetPddModel(pItem, pVendor, pCurrency);
                             if (pddModel == null)
                                 continue;
                             tempUtaxPrice = pddModel.pdd09;
@@ -1126,7 +1127,7 @@ namespace YR.ERP.BLL.MSSQL
                                 rtnResult.Message = "取得料號換算率失敗!";
                                 return rtnResult;
                             }
-                            
+
                             tempUtaxPrice = tempUtaxPrice * unitRate;
                             tempTaxPrice = tempTaxPrice * unitRate;
                             break;
@@ -1145,7 +1146,7 @@ namespace YR.ERP.BLL.MSSQL
                         break;
                     }
 
-                    if (pbcModel.pbc03.ToUpper() == "A3" ) //查詢已包含幣別,所以不用考量匯率
+                    if (pbcModel.pbc03.ToUpper() == "A3") //查詢已包含幣別,所以不用考量匯率
                     {
                         pUtaxPrice = GlobalFn.Round(tempUtaxPrice, bekModel.bek03);
                         pTaxPrice = GlobalFn.Round(tempTaxPrice, bekModel.bek03);
@@ -1163,5 +1164,258 @@ namespace YR.ERP.BLL.MSSQL
         }
         #endregion
 
+        #region OfInsUpdSddTb 調整sdd_tb 產品客戶價格表
+        //來源為採購單
+        public bool OfInsUpdPddTb(pfa_tb pPfaModel, pfb_tb pPfbModel, UserInfo pLoginInfo, out string pErrMsg)
+        {
+            pdd_tb pddModel = null;
+            int iChkCnts = 0;
+            List<SqlParameter> sqlParmList;
+            StringBuilder sbSql;
+            pErrMsg = "";
+            DataTable dtSdd;
+            DataRow drSdd;
+            try
+            {
+                pddModel = new pdd_tb();
+                pddModel.pdd01 = pPfbModel.pfb03;    //料號
+                pddModel.pdd02 = pPfaModel.pfa03;    //廠商編號
+                pddModel.pdd03 = pPfaModel.pfa10;    //幣別
+                pddModel.pdd04 = pPfaModel.pfa17;    //匯率
+                pddModel.pdd05 = pPfaModel.pfa02;    //最近採購日期
+                pddModel.pdd06 = pPfaModel.pfa06;    //稅別
+                pddModel.pdd07 = pPfaModel.pfa07;    //稅率
+                pddModel.pdd08 = pPfaModel.pfa08;    //含稅否
+                if (pPfaModel.pfa08 == "Y")//含稅時
+                {
+                    pddModel.pdd10 = pPfbModel.pfb09;    //含稅單價
+                    pddModel.pdd09 = pPfbModel.pfb09 / (1+pPfaModel.pfa07);    //未稅單價
+                }
+                else
+                {
+                    pddModel.pdd09 = pPfbModel.pfb09;    //未稅單價
+                    pddModel.pdd10 = pPfbModel.pfb05 * (1+pPfaModel.pfa07);    //含稅單價
+                }
+                pddModel.pdd11 = pPfbModel.pfb05;    //最近採購數量
+
+                pddModel.pdd12 = pPfbModel.pfb06;
+                pddModel.pdd13 = "";
+                pddModel.pdd14 = "";
+                pddModel.pdd15 = "";
+                pddModel.pdd16 = "";
+                pddModel.pdd17 = "";
+                pddModel.pdd18 = "";
+                pddModel.pdd19 = "";
+                pddModel.pdd20 = "";
+                pddModel.pddcreu = "";
+                pddModel.pddcreg = "";
+                pddModel.pddcred = null;
+
+                OfCreateDao("pdd_tb", "*", "");
+                sbSql = new StringBuilder();
+                sbSql.AppendLine("SELECT * FROM pdd_tb");
+                sbSql.AppendLine("WHERE pdd01=@pdd01");
+                sbSql.AppendLine("AND pdd02=@pdd02");
+                sbSql.AppendLine("AND pdd03=@pdd03");
+
+                sqlParmList = new List<SqlParameter>() { new SqlParameter("@pdd01", pPfbModel.pfb03), 
+                                        new SqlParameter("@pdd02", pPfaModel.pfa03) ,
+                                        new SqlParameter("@pdd03", pPfaModel.pfa10) 
+                };
+                dtSdd = OfGetDataTable(sbSql.ToString(), sqlParmList.ToArray());
+                iChkCnts = dtSdd.Rows.Count;
+                if (iChkCnts == 0)//新增
+                {
+                    drSdd = dtSdd.NewRow();
+                    dtSdd.Rows.Add(drSdd);
+                }
+                else
+                {
+                    drSdd = dtSdd.Rows[0];
+                    pddModel.pddmodu = "";
+                    pddModel.pddmodg = "";
+                    pddModel.pddmodd = null;
+                    pddModel.pddsecu = "";
+                    pddModel.pddsecg = "";
+                }
+
+                drSdd["pdd01"] = pddModel.pdd01;
+                drSdd["pdd02"] = pddModel.pdd02;
+                drSdd["pdd03"] = pddModel.pdd03;
+                drSdd["pdd04"] = pddModel.pdd04;
+                drSdd["pdd05"] = pddModel.pdd05;
+                drSdd["pdd06"] = pddModel.pdd06;
+                drSdd["pdd07"] = pddModel.pdd07;
+                drSdd["pdd08"] = pddModel.pdd08;
+                drSdd["pdd09"] = pddModel.pdd09;
+                drSdd["pdd10"] = pddModel.pdd10;
+                drSdd["pdd11"] = pddModel.pdd11;
+                drSdd["pdd12"] = pddModel.pdd12;
+                drSdd["pdd13"] = pddModel.pdd13;
+                drSdd["pdd14"] = pddModel.pdd14;
+                drSdd["pdd15"] = pddModel.pdd15;
+                drSdd["pdd16"] = pddModel.pdd16;
+                drSdd["pdd17"] = pddModel.pdd17;
+                drSdd["pdd18"] = pddModel.pdd18;
+                drSdd["pdd19"] = pddModel.pdd19;
+                drSdd["pdd20"] = pddModel.pdd20;
+                if (iChkCnts == 0)//新增
+                {
+                    drSdd["pddcreu"] = pLoginInfo.UserNo;
+                    drSdd["pddcreg"] = pLoginInfo.DeptNo;
+                    drSdd["pddcred"] = OfGetToday();
+                    if (OfUpdate(dtSdd) != 1)
+                    {
+                        pErrMsg = "新增產品廠商價格表(pdd_tb)失敗!";
+                        return false;
+                    }
+                }
+                else
+                {
+                    drSdd["pddmodu"] = pLoginInfo.UserNo;
+                    drSdd["pddmodg"] = pLoginInfo.DeptNo;
+                    drSdd["pddsecu"] = pLoginInfo.UserNo;
+                    drSdd["pddsecg"] = pLoginInfo.GroupNo;
+                    if (OfUpdate(dtSdd) != 1)
+                    {
+                        pErrMsg = "異動產品廠商價格表(pdd_tb)失敗!";
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //來源為入庫單
+        public bool OfInsUpdPddTb(pga_tb pPgaModel, pgb_tb pPgbModel, UserInfo pLoginInfo, out string pErrMsg)
+        {
+            pdd_tb pddModel = null;
+            int iChkCnts = 0;
+            List<SqlParameter> sqlParmList;
+            StringBuilder sbSql;
+            pErrMsg = "";
+            DataTable dtSdd;
+            DataRow drSdd;
+            try
+            {
+                pddModel = new pdd_tb();
+                pddModel.pdd01 = pPgbModel.pgb03;    //料號
+                pddModel.pdd02 = pPgaModel.pga03;    //廠商編號
+                pddModel.pdd03 = pPgaModel.pga10;    //幣別
+                pddModel.pdd04 = pPgaModel.pga18;    //匯率
+                pddModel.pdd05 = pPgaModel.pga02;    //最近採購日期
+                pddModel.pdd06 = pPgaModel.pga06;    //稅別
+                pddModel.pdd07 = pPgaModel.pga07;    //稅率
+                pddModel.pdd08 = pPgaModel.pga08;    //含稅否
+                if (pPgaModel.pga08 == "Y")//含稅時
+                {
+                    pddModel.pdd10 = pPgbModel.pgb09;    //含稅單價
+                    pddModel.pdd09 = pPgbModel.pgb09 / (1+pPgaModel.pga07);    //未稅單價
+                }
+                else
+                {
+                    pddModel.pdd09 = pPgbModel.pgb09;    //未稅單價
+                    pddModel.pdd10 = pPgbModel.pgb05 * (1+pPgaModel.pga07);    //含稅單價
+                }
+                pddModel.pdd11 = pPgbModel.pgb05;    //最近採購數量
+
+                pddModel.pdd12 = pPgbModel.pgb06;
+                pddModel.pdd13 = "";
+                pddModel.pdd14 = "";
+                pddModel.pdd15 = "";
+                pddModel.pdd16 = "";
+                pddModel.pdd17 = "";
+                pddModel.pdd18 = "";
+                pddModel.pdd19 = "";
+                pddModel.pdd20 = "";
+                pddModel.pddcreu = "";
+                pddModel.pddcreg = "";
+                pddModel.pddcred = null;
+
+                OfCreateDao("pdd_tb", "*", "");
+                sbSql = new StringBuilder();
+                sbSql.AppendLine("SELECT * FROM pdd_tb");
+                sbSql.AppendLine("WHERE pdd01=@pdd01");
+                sbSql.AppendLine("AND pdd02=@pdd02");
+                sbSql.AppendLine("AND pdd03=@pdd03");
+
+                sqlParmList = new List<SqlParameter>() { new SqlParameter("@pdd01", pPgbModel.pgb03), 
+                                        new SqlParameter("@pdd02", pPgaModel.pga03) ,
+                                        new SqlParameter("@pdd03", pPgaModel.pga10) 
+                };
+                dtSdd = OfGetDataTable(sbSql.ToString(), sqlParmList.ToArray());
+                iChkCnts = dtSdd.Rows.Count;
+                if (iChkCnts == 0)//新增
+                {
+                    drSdd = dtSdd.NewRow();
+                    dtSdd.Rows.Add(drSdd);
+                }
+                else
+                {
+                    drSdd = dtSdd.Rows[0];
+                    pddModel.pddmodu = "";
+                    pddModel.pddmodg = "";
+                    pddModel.pddmodd = null;
+                    pddModel.pddsecu = "";
+                    pddModel.pddsecg = "";
+                }
+
+                drSdd["pdd01"] = pddModel.pdd01;
+                drSdd["pdd02"] = pddModel.pdd02;
+                drSdd["pdd03"] = pddModel.pdd03;
+                drSdd["pdd04"] = pddModel.pdd04;
+                drSdd["pdd05"] = pddModel.pdd05;
+                drSdd["pdd06"] = pddModel.pdd06;
+                drSdd["pdd07"] = pddModel.pdd07;
+                drSdd["pdd08"] = pddModel.pdd08;
+                drSdd["pdd09"] = pddModel.pdd09;
+                drSdd["pdd10"] = pddModel.pdd10;
+                drSdd["pdd11"] = pddModel.pdd11;
+                drSdd["pdd12"] = pddModel.pdd12;
+                drSdd["pdd13"] = pddModel.pdd13;
+                drSdd["pdd14"] = pddModel.pdd14;
+                drSdd["pdd15"] = pddModel.pdd15;
+                drSdd["pdd16"] = pddModel.pdd16;
+                drSdd["pdd17"] = pddModel.pdd17;
+                drSdd["pdd18"] = pddModel.pdd18;
+                drSdd["pdd19"] = pddModel.pdd19;
+                drSdd["pdd20"] = pddModel.pdd20;
+                if (iChkCnts == 0)//新增
+                {
+                    drSdd["pddcreu"] = pLoginInfo.UserNo;
+                    drSdd["pddcreg"] = pLoginInfo.DeptNo;
+                    drSdd["pddcred"] = OfGetToday();
+                    if (OfUpdate(dtSdd) != 1)
+                    {
+                        pErrMsg = "新增產品廠商價格表(pdd_tb)失敗!";
+                        return false;
+                    }
+                }
+                else
+                {
+                    drSdd["pddmodu"] = pLoginInfo.UserNo;
+                    drSdd["pddmodg"] = pLoginInfo.DeptNo;
+                    drSdd["pddsecu"] = pLoginInfo.UserNo;
+                    drSdd["pddsecg"] = pLoginInfo.GroupNo;
+                    if (OfUpdate(dtSdd) != 1)
+                    {
+                        pErrMsg = "異動產品廠商價格表(pdd_tb)失敗!";
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
     }
 }
