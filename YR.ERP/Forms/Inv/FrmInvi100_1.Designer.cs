@@ -46,12 +46,13 @@
             // uTab_Master
             // 
             this.uTab_Master.Location = new System.Drawing.Point(8, 55);
-            this.uTab_Master.Size = new System.Drawing.Size(914, 493);
+            this.uTab_Master.Size = new System.Drawing.Size(1136, 591);
             this.uTab_Master.TabPageMargins.ForceSerialization = true;
             // 
             // ultraTabPageControl1
             // 
             this.ultraTabPageControl1.Controls.Add(this.uGridMaster);
+            this.ultraTabPageControl1.Size = new System.Drawing.Size(1132, 561);
             // 
             // UtbmMain
             // 
@@ -60,11 +61,16 @@
             this.UtbmMain.Ribbon.Visible = true;
             this.UtbmMain.ToolbarSettings.ForceSerialization = true;
             // 
+            // UsbButtom
+            // 
+            this.UsbButtom.Location = new System.Drawing.Point(0, 646);
+            this.UsbButtom.Size = new System.Drawing.Size(1152, 18);
+            // 
             // FrmInvi100_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 566);
+            this.ClientSize = new System.Drawing.Size(1152, 664);
             this.KeyPreview = true;
             this.Name = "FrmInvi100_1";
             this.Text = "FrmInvi100_1";

@@ -1238,6 +1238,10 @@ namespace YR.ERP.Forms.Stp
             List<KeyValuePair<string, string>> sourceList;
             try
             {
+                //課稅別
+                sourceList = BoStp.OfGetTaxTypeKVPList();
+                WfSetUcomboxDataSource(ucb_sga06, sourceList);
+
                 //發票聯數
                 sourceList = BoStp.OfGetInvoWayKVPList();
                 WfSetUcomboxDataSource(ucb_sga09, sourceList);
@@ -3226,7 +3230,7 @@ namespace YR.ERP.Forms.Stp
                     //    WfSetControlReadonly(ute_sga03, true);
 
                     //WfSetControlReadonly(new List<Control> { ute_sga01_c, ute_sga03_c, ute_sga04_c, ute_sga05_c, ute_sga11_c, ute_sga12_c }, true);
-                    //WfSetControlReadonly(new List<Control> { ute_sga07, ucx_sga08 }, true);
+                    WfSetControlReadonly(new List<Control> { ute_sga07, ucx_sga08 }, true);
                     //WfSetControlReadonly(new List<Control> { ute_sga13, ute_sga13t, ute_sga13g }, true);
                     //WfSetControlReadonly(new List<Control> { ute_sga14_c, ute_sga15_c, ute_sga16_c }, true);
                     //WfSetControlReadonly(new List<Control> { ute_sga22 }, true);
@@ -3686,6 +3690,11 @@ namespace YR.ERP.Forms.Stp
                             WfItemChkForceFocus(udt_sgb04_pick);
                             e.Row["sgb04_pick"] = "";
                             uGridMaster.ActiveRow.Refresh();
+                            break;
+
+                        case "sga06"://課稅別
+                            WfSetSga06Relation(GlobalFn.isNullRet(e.Value, ""));
+                            WfResetAmtBySga06();
                             break;
 
                         case "sga26"://發票別
@@ -4745,6 +4754,24 @@ namespace YR.ERP.Forms.Stp
                     }
                 }
                 return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region WfResetAmtBySga06 依稅別更新單身及單頭的金額
+        private void WfResetAmtBySga06()
+        {
+            try
+            {
+                foreach (DataRow dr in TabDetailList[0].DtSource.Rows)
+                {
+                    WfSetDetailAmt(dr);
+                    WfSetTotalAmt();
+                }
             }
             catch (Exception ex)
             {
