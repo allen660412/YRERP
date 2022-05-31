@@ -5461,17 +5461,21 @@ namespace YR.ERP.Forms.Stp
         }
 
 
+        #region btnUpdIca11_Click 回寫歷史客戶價格 料號/客戶價格..等
         private void btnUpdIca11_Click(object sender, EventArgs e)
         {
-            vw_stpt410 masterModel;
+            sga_tb masterModel;
             StringBuilder sbSql;
-            vw_stpt410s detailModel;
+            sgb_tb detailModel;
             DataRow drDetail;
             InvBLL boIcaUpd = null;
             DataTable dtIca = null;
             DataRow drIca = null;
             string selectSql = "";
             List<SqlParameter> sqlParms;
+            List<sbc_tb> sbcList = null;
+            sbc_tb sbcModel=null;
+            string errMsg;
 
             try
             {
@@ -5482,47 +5486,70 @@ namespace YR.ERP.Forms.Stp
 
                 if (DrMaster == null)
                     return;
-                masterModel = DrMaster.ToItem<vw_stpt410>();
+                masterModel = DrMaster.ToItem<sga_tb>();
                 if (uGridDetail.ActiveRow == null)
                     return;
                 drDetail = WfGetUgridDatarow(uGridDetail.ActiveRow);
-                detailModel = drDetail.ToItem<vw_stpt410s>();
+                detailModel = drDetail.ToItem<sgb_tb>();
                 if (GlobalFn.varIsNull(detailModel.sgb03))
                     return;
 
-                boIcaUpd = new InvBLL(BoMaster.OfGetConntion());
-                boIcaUpd.OfCreateDao("ica_tb", "*", "");
-                selectSql = "SELECT * FROM ica_tb WHERE ica01=@ica01 ";
-                sqlParms =new List<SqlParameter>();
-                sqlParms.Add(new SqlParameter("@ica01", detailModel.sgb03));
-                dtIca = boIcaUpd.OfGetDataTable(selectSql,sqlParms.ToArray());
-                if (dtIca==null ||dtIca.Rows.Count==0)
+
+                if (masterModel.sga12=="")
                 {
-                    WfShowErrorMsg("查無此料號");
+                    WfShowErrorMsg("查無取價原則!");
+                    return;
+                }
+                sbcList = BoStp.OfgetSbcList(masterModel.sga12);
+                sbcModel=sbcList.OrderBy(p => p.sbc04).First<sbc_tb>();
+                if (sbcModel.sbc03=="A1") //第一筆是依料號主檔的才有需要回寫
+                {
+                    boIcaUpd = new InvBLL(BoMaster.OfGetConntion());
+                    boIcaUpd.OfCreateDao("ica_tb", "*", "");
+                    selectSql = "SELECT * FROM ica_tb WHERE ica01=@ica01 ";
+                    sqlParms = new List<SqlParameter>();
+                    sqlParms.Add(new SqlParameter("@ica01", detailModel.sgb03));
+                    dtIca = boIcaUpd.OfGetDataTable(selectSql, sqlParms.ToArray());
+                    if (dtIca == null || dtIca.Rows.Count == 0)
+                    {
+                        WfShowErrorMsg("查無此料號");
+                        return;
+                    }
+
+                    if (dtIca.Rows.Count != 1)
+                    {
+                        WfShowErrorMsg("料號並非只有一筆");
+                        return;
+                    }
+                    drIca = dtIca.Rows[0];
+                    drIca["ica11"] = detailModel.sgb09;
+
+                    if (boIcaUpd.OfUpdate(dtIca) != 1)
+                    {
+                        WfShowErrorMsg("異動料號訂價失敗!");
+                        return;
+                    }
+                }
+                
+                //更新產品客戶價格表
+                if (BoStp.OfInsUpdSddTb(masterModel, detailModel, LoginInfo, out errMsg) == false)
+                {
+                    WfShowErrorMsg(errMsg);
+                    DrMaster.RejectChanges();
+                    WfRollback();
                     return;
                 }
 
-                if (dtIca.Rows.Count != 1)
-                {
-                    WfShowErrorMsg("料號並非只有一筆");
-                    return;
-                }
-                drIca = dtIca.Rows[0];
-                drIca["ica11"] = detailModel.sgb09;
 
-                if (boIcaUpd.OfUpdate(dtIca) != 1)
-                {
-                    WfShowErrorMsg("異動料號訂價失敗!");
-                    return;
-                }
                 WfShowBottomStatusMsg("異動成功!");
             }
             catch (Exception ex)
             {
-                
+
                 throw ex;
             }
-        }
+        } 
+        #endregion
 
         private void uGridDetail_AfterRowActivate(object sender, EventArgs e)
         {
