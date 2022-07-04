@@ -1403,8 +1403,8 @@
           <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
           <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica38" Type="nvarchar" MaxLength="1" />
           <Property Name="ica39" Type="nvarchar" MaxLength="1" />
           <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -6362,8 +6362,8 @@
           <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
           <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica38" Type="nvarchar" MaxLength="1" />
           <Property Name="ica39" Type="nvarchar" MaxLength="1" />
           <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -6439,6 +6439,10 @@
           <Property Name="pgb04" Type="nvarchar" MaxLength="255" />
           <Property Name="pgb05" Type="numeric" Precision="22" Scale="3" />
           <Property Name="price" Type="numeric" Precision="38" Scale="19" />
+          <Property Name="pfa08" Type="nvarchar" MaxLength="1" />
+          <Property Name="pfa10" Type="nvarchar" MaxLength="4" />
+          <Property Name="pfa17" Type="numeric" Precision="22" Scale="10" />
+          <Property Name="pfb09" Type="numeric" Precision="22" Scale="6" />
         </EntityType>
         <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invi100_2' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -6585,8 +6589,8 @@
           <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
           <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica38" Type="nvarchar" MaxLength="1" />
           <Property Name="ica39" Type="nvarchar" MaxLength="1" />
           <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -7174,6 +7178,8 @@
           <Property Name="ifbmodu" Type="nvarchar" MaxLength="10" />
           <Property Name="ifbmodg" Type="nvarchar" MaxLength="10" />
           <Property Name="ifbmodd" Type="datetime2" Precision="7" />
+          <Property Name="ifb07_c" Type="nvarchar" MaxLength="80" />
+          <Property Name="ifb10_c" Type="nvarchar" MaxLength="80" />
         </EntityType>
         <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invt331' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -8337,8 +8343,8 @@
           <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
           <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-          <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+          <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
           <Property Name="ica38" Type="nvarchar" MaxLength="1" />
           <Property Name="ica39" Type="nvarchar" MaxLength="1" />
           <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -10108,6 +10114,27 @@
           <Property Name="stock_qty" Type="bigint" />
           <Property Name="print_label" Type="nvarchar" MaxLength="30" />
           <Property Name="ica18" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="icc05" Type="numeric" Precision="22" Scale="3" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt410s_stock' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="vw_stpt410s_stock">
+          <Key>
+            <PropertyRef Name="icc01" />
+            <PropertyRef Name="icc02" />
+            <PropertyRef Name="icc05" />
+          </Key>
+          <Property Name="icc01" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="icc02" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="icc03" Type="nvarchar" MaxLength="10" />
+          <Property Name="icc04" Type="nvarchar" MaxLength="6" />
+          <Property Name="icc05" Type="numeric" Precision="22" Scale="3" Nullable="false" />
+          <Property Name="icc06" Type="nvarchar" MaxLength="1" />
+          <Property Name="icc07" Type="nvarchar" MaxLength="1" />
+          <Property Name="icc08" Type="nvarchar" MaxLength="1" />
+          <Property Name="icc09" Type="nvarchar" MaxLength="1" />
+          <Property Name="icc10" Type="nvarchar" MaxLength="1" />
+          <Property Name="icccomp" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -12846,7 +12873,11 @@
     [vw_invi100_1].[pgb03] AS [pgb03], 
     [vw_invi100_1].[pgb04] AS [pgb04], 
     [vw_invi100_1].[pgb05] AS [pgb05], 
-    [vw_invi100_1].[price] AS [price]
+    [vw_invi100_1].[price] AS [price], 
+    [vw_invi100_1].[pfa08] AS [pfa08], 
+    [vw_invi100_1].[pfa10] AS [pfa10], 
+    [vw_invi100_1].[pfa17] AS [pfa17], 
+    [vw_invi100_1].[pfb09] AS [pfb09]
     FROM [dbo].[vw_invi100_1] AS [vw_invi100_1]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_invi100_2" EntityType="Self.vw_invi100_2" store:Type="Views" store:Schema="dbo">
@@ -13449,7 +13480,9 @@
     [vw_invt330s].[ifbcred] AS [ifbcred], 
     [vw_invt330s].[ifbmodu] AS [ifbmodu], 
     [vw_invt330s].[ifbmodg] AS [ifbmodg], 
-    [vw_invt330s].[ifbmodd] AS [ifbmodd]
+    [vw_invt330s].[ifbmodd] AS [ifbmodd], 
+    [vw_invt330s].[ifb07_c] AS [ifb07_c], 
+    [vw_invt330s].[ifb10_c] AS [ifb10_c]
     FROM [dbo].[vw_invt330s] AS [vw_invt330s]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_invt331" EntityType="Self.vw_invt331" store:Type="Views" store:Schema="dbo">
@@ -15939,8 +15972,24 @@
     [vw_stpt410s].[sgbmodd] AS [sgbmodd], 
     [vw_stpt410s].[stock_qty] AS [stock_qty], 
     [vw_stpt410s].[print_label] AS [print_label], 
-    [vw_stpt410s].[ica18] AS [ica18]
+    [vw_stpt410s].[ica18] AS [ica18], 
+    [vw_stpt410s].[icc05] AS [icc05]
     FROM [dbo].[vw_stpt410s] AS [vw_stpt410s]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_stpt410s_stock" EntityType="Self.vw_stpt410s_stock" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_stpt410s_stock].[icc01] AS [icc01], 
+    [vw_stpt410s_stock].[icc02] AS [icc02], 
+    [vw_stpt410s_stock].[icc03] AS [icc03], 
+    [vw_stpt410s_stock].[icc04] AS [icc04], 
+    [vw_stpt410s_stock].[icc05] AS [icc05], 
+    [vw_stpt410s_stock].[icc06] AS [icc06], 
+    [vw_stpt410s_stock].[icc07] AS [icc07], 
+    [vw_stpt410s_stock].[icc08] AS [icc08], 
+    [vw_stpt410s_stock].[icc09] AS [icc09], 
+    [vw_stpt410s_stock].[icc10] AS [icc10], 
+    [vw_stpt410s_stock].[icccomp] AS [icccomp]
+    FROM [dbo].[vw_stpt410s_stock] AS [vw_stpt410s_stock]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_stpt500" EntityType="Self.vw_stpt500" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -16577,6 +16626,7 @@
           <EntitySet Name="vw_stpt400s" EntityType="YRDB.vw_stpt400s" />
           <EntitySet Name="vw_stpt410" EntityType="YRDB.vw_stpt410" />
           <EntitySet Name="vw_stpt410s" EntityType="YRDB.vw_stpt410s" />
+          <EntitySet Name="vw_stpt410s_stock" EntityType="YRDB.vw_stpt410s_stock" />
           <EntitySet Name="vw_stpt500" EntityType="YRDB.vw_stpt500" />
           <EntitySet Name="vw_stpt500s" EntityType="YRDB.vw_stpt500s" />
           <EntitySet Name="vw_taxb010" EntityType="YRDB.vw_taxb010" />
@@ -17997,8 +18047,8 @@
           <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -22772,8 +22822,8 @@
           <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -22847,6 +22897,10 @@
           <Property Name="pgb04" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="pgb05" Type="Decimal" Precision="22" Scale="3" />
           <Property Name="price" Type="Decimal" Precision="38" Scale="19" />
+          <Property Name="pfa08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="pfa10" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="pfa17" Type="Decimal" Precision="22" Scale="10" />
+          <Property Name="pfb09" Type="Decimal" Precision="22" Scale="6" />
         </EntityType>
         <EntityType Name="vw_invi100_2">
           <Key>
@@ -22983,8 +23037,8 @@
           <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -23522,6 +23576,8 @@
           <Property Name="ifbmodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="ifbmodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="ifbmodd" Type="DateTime" Precision="7" />
+          <Property Name="ifb07_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="ifb10_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="vw_invt331">
           <Key>
@@ -24625,8 +24681,8 @@
           <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-          <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+          <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
           <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -26306,6 +26362,25 @@
           <Property Name="stock_qty" Type="Int64" />
           <Property Name="print_label" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="ica18" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="icc05" Type="Decimal" Precision="22" Scale="3" />
+        </EntityType>
+        <EntityType Name="vw_stpt410s_stock">
+          <Key>
+            <PropertyRef Name="icc01" />
+            <PropertyRef Name="icc02" />
+            <PropertyRef Name="icc05" />
+          </Key>
+          <Property Name="icc01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="icc02" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="icc03" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="icc04" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="icc05" Type="Decimal" Nullable="false" Precision="22" Scale="3" />
+          <Property Name="icc06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icc07" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icc08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icc09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icc10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="icccomp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="vw_stpt500">
           <Key>
@@ -32852,6 +32927,10 @@
           <EntitySetMapping Name="vw_invi100_1">
             <EntityTypeMapping TypeName="YRDB.vw_invi100_1">
               <MappingFragment StoreEntitySet="vw_invi100_1">
+                <ScalarProperty Name="pfb09" ColumnName="pfb09" />
+                <ScalarProperty Name="pfa17" ColumnName="pfa17" />
+                <ScalarProperty Name="pfa10" ColumnName="pfa10" />
+                <ScalarProperty Name="pfa08" ColumnName="pfa08" />
                 <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="pgb05" ColumnName="pgb05" />
                 <ScalarProperty Name="pgb04" ColumnName="pgb04" />
@@ -33499,6 +33578,8 @@
           <EntitySetMapping Name="vw_invt330s">
             <EntityTypeMapping TypeName="YRDB.vw_invt330s">
               <MappingFragment StoreEntitySet="vw_invt330s">
+                <ScalarProperty Name="ifb10_c" ColumnName="ifb10_c" />
+                <ScalarProperty Name="ifb07_c" ColumnName="ifb07_c" />
                 <ScalarProperty Name="ifbmodd" ColumnName="ifbmodd" />
                 <ScalarProperty Name="ifbmodg" ColumnName="ifbmodg" />
                 <ScalarProperty Name="ifbmodu" ColumnName="ifbmodu" />
@@ -36113,6 +36194,7 @@
           <EntitySetMapping Name="vw_stpt410s">
             <EntityTypeMapping TypeName="YRDB.vw_stpt410s">
               <MappingFragment StoreEntitySet="vw_stpt410s">
+                <ScalarProperty Name="icc05" ColumnName="icc05" />
                 <ScalarProperty Name="ica18" ColumnName="ica18" />
                 <ScalarProperty Name="print_label" ColumnName="print_label" />
                 <ScalarProperty Name="stock_qty" ColumnName="stock_qty" />
@@ -36164,6 +36246,23 @@
                 <ScalarProperty Name="sgb03" ColumnName="sgb03" />
                 <ScalarProperty Name="sgb02" ColumnName="sgb02" />
                 <ScalarProperty Name="sgb01" ColumnName="sgb01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_stpt410s_stock">
+            <EntityTypeMapping TypeName="YRDB.vw_stpt410s_stock">
+              <MappingFragment StoreEntitySet="vw_stpt410s_stock">
+                <ScalarProperty Name="icccomp" ColumnName="icccomp" />
+                <ScalarProperty Name="icc10" ColumnName="icc10" />
+                <ScalarProperty Name="icc09" ColumnName="icc09" />
+                <ScalarProperty Name="icc08" ColumnName="icc08" />
+                <ScalarProperty Name="icc07" ColumnName="icc07" />
+                <ScalarProperty Name="icc06" ColumnName="icc06" />
+                <ScalarProperty Name="icc05" ColumnName="icc05" />
+                <ScalarProperty Name="icc04" ColumnName="icc04" />
+                <ScalarProperty Name="icc03" ColumnName="icc03" />
+                <ScalarProperty Name="icc02" ColumnName="icc02" />
+                <ScalarProperty Name="icc01" ColumnName="icc01" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

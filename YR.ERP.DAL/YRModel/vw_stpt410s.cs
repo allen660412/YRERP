@@ -65,5 +65,6 @@ namespace YR.ERP.DAL.YRModel
         public Nullable<long> stock_qty { get; set; }
         public string print_label { get; set; }
         public Nullable<decimal> ica18 { get; set; }
+        public Nullable<decimal> icc05 { get; set; }
     }
 }

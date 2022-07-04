@@ -327,6 +327,7 @@
     <EntitySet Name="vw_stpt400s" EntityType="YRDB.vw_stpt400s" />
     <EntitySet Name="vw_stpt410" EntityType="YRDB.vw_stpt410" />
     <EntitySet Name="vw_stpt410s" EntityType="YRDB.vw_stpt410s" />
+    <EntitySet Name="vw_stpt410s_stock" EntityType="YRDB.vw_stpt410s_stock" />
     <EntitySet Name="vw_stpt500" EntityType="YRDB.vw_stpt500" />
     <EntitySet Name="vw_stpt500s" EntityType="YRDB.vw_stpt500s" />
     <EntitySet Name="vw_taxb010" EntityType="YRDB.vw_taxb010" />
@@ -1747,8 +1748,8 @@
     <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -6522,8 +6523,8 @@
     <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -6597,6 +6598,10 @@
     <Property Name="pgb04" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="pgb05" Type="Decimal" Precision="22" Scale="3" />
     <Property Name="price" Type="Decimal" Precision="38" Scale="19" />
+    <Property Name="pfa08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="pfa10" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="pfa17" Type="Decimal" Precision="22" Scale="10" />
+    <Property Name="pfb09" Type="Decimal" Precision="22" Scale="6" />
   </EntityType>
   <EntityType Name="vw_invi100_2">
     <Key>
@@ -6733,8 +6738,8 @@
     <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -7272,6 +7277,8 @@
     <Property Name="ifbmodu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="ifbmodg" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="ifbmodd" Type="DateTime" Precision="7" />
+    <Property Name="ifb07_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="ifb10_c" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="vw_invt331">
     <Key>
@@ -8375,8 +8382,8 @@
     <Property Name="ica33" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="ica34" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica35" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica36" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="ica37" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ica36" Type="Decimal" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="Decimal" Precision="22" Scale="0" />
     <Property Name="ica38" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica39" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="ica40" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
@@ -10056,6 +10063,25 @@
     <Property Name="stock_qty" Type="Int64" />
     <Property Name="print_label" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="ica18" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="icc05" Type="Decimal" Precision="22" Scale="3" />
+  </EntityType>
+  <EntityType Name="vw_stpt410s_stock">
+    <Key>
+      <PropertyRef Name="icc01" />
+      <PropertyRef Name="icc02" />
+      <PropertyRef Name="icc05" />
+    </Key>
+    <Property Name="icc01" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="icc02" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="icc03" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="icc04" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="icc05" Type="Decimal" Nullable="false" Precision="22" Scale="3" />
+    <Property Name="icc06" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icc07" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icc08" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icc09" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icc10" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="icccomp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="vw_stpt500">
     <Key>

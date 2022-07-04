@@ -18,6 +18,7 @@ using YR.ERP.DAL.YRModel;
 using YR.Util;
 using YR.ERP.Base.Forms;
 using YR.ERP.DAL.YRModel.Reports.Pur.Purr300;
+using System.Linq;
 
 namespace YR.ERP.Forms.Pur
 {
@@ -315,10 +316,10 @@ namespace YR.ERP.Forms.Pur
                 switch (purr300Model.order_by)
                 {
                     case "1"://1.依出貨日期
-                        sqlOrderBy = " ORDER BY pfa02";
+                        sqlOrderBy = " ORDER BY pfa02,pfb02";
                         break;
                     case "2"://2.依客戶
-                        sqlOrderBy = " ORDER BY pfa03";
+                        sqlOrderBy = " ORDER BY pfa03,pfb02";
                         break;
                 }
                 dtMaster = BoMaster.OfGetDataTable(string.Concat(sqlBody, strWhere, sqlOrderBy), sqlParmList.ToArray());
@@ -329,7 +330,7 @@ namespace YR.ERP.Forms.Pur
                     WfShowErrorMsg("查無資料,請重新過濾條件!");
                     return false;
                 }
-                masterList = dtMaster.ToList<Master>(true);
+                masterList = dtMaster.ToList<Master>(true).OrderBy(o=>o.pfb02).ToList();
                 foreach (Master masterModel in masterList)
                 {
                     //處理金額

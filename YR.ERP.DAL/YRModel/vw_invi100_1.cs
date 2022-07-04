@@ -23,5 +23,9 @@ namespace YR.ERP.DAL.YRModel
         public string pgb04 { get; set; }
         public Nullable<decimal> pgb05 { get; set; }
         public Nullable<decimal> price { get; set; }
+        public string pfa08 { get; set; }
+        public string pfa10 { get; set; }
+        public Nullable<decimal> pfa17 { get; set; }
+        public Nullable<decimal> pfb09 { get; set; }
     }
 }

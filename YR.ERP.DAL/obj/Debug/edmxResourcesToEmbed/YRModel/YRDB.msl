@@ -6191,6 +6191,10 @@
     <EntitySetMapping Name="vw_invi100_1">
       <EntityTypeMapping TypeName="YRDB.vw_invi100_1">
         <MappingFragment StoreEntitySet="vw_invi100_1">
+          <ScalarProperty Name="pfb09" ColumnName="pfb09" />
+          <ScalarProperty Name="pfa17" ColumnName="pfa17" />
+          <ScalarProperty Name="pfa10" ColumnName="pfa10" />
+          <ScalarProperty Name="pfa08" ColumnName="pfa08" />
           <ScalarProperty Name="price" ColumnName="price" />
           <ScalarProperty Name="pgb05" ColumnName="pgb05" />
           <ScalarProperty Name="pgb04" ColumnName="pgb04" />
@@ -6838,6 +6842,8 @@
     <EntitySetMapping Name="vw_invt330s">
       <EntityTypeMapping TypeName="YRDB.vw_invt330s">
         <MappingFragment StoreEntitySet="vw_invt330s">
+          <ScalarProperty Name="ifb10_c" ColumnName="ifb10_c" />
+          <ScalarProperty Name="ifb07_c" ColumnName="ifb07_c" />
           <ScalarProperty Name="ifbmodd" ColumnName="ifbmodd" />
           <ScalarProperty Name="ifbmodg" ColumnName="ifbmodg" />
           <ScalarProperty Name="ifbmodu" ColumnName="ifbmodu" />
@@ -9452,6 +9458,7 @@
     <EntitySetMapping Name="vw_stpt410s">
       <EntityTypeMapping TypeName="YRDB.vw_stpt410s">
         <MappingFragment StoreEntitySet="vw_stpt410s">
+          <ScalarProperty Name="icc05" ColumnName="icc05" />
           <ScalarProperty Name="ica18" ColumnName="ica18" />
           <ScalarProperty Name="print_label" ColumnName="print_label" />
           <ScalarProperty Name="stock_qty" ColumnName="stock_qty" />
@@ -9503,6 +9510,23 @@
           <ScalarProperty Name="sgb03" ColumnName="sgb03" />
           <ScalarProperty Name="sgb02" ColumnName="sgb02" />
           <ScalarProperty Name="sgb01" ColumnName="sgb01" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_stpt410s_stock">
+      <EntityTypeMapping TypeName="YRDB.vw_stpt410s_stock">
+        <MappingFragment StoreEntitySet="vw_stpt410s_stock">
+          <ScalarProperty Name="icccomp" ColumnName="icccomp" />
+          <ScalarProperty Name="icc10" ColumnName="icc10" />
+          <ScalarProperty Name="icc09" ColumnName="icc09" />
+          <ScalarProperty Name="icc08" ColumnName="icc08" />
+          <ScalarProperty Name="icc07" ColumnName="icc07" />
+          <ScalarProperty Name="icc06" ColumnName="icc06" />
+          <ScalarProperty Name="icc05" ColumnName="icc05" />
+          <ScalarProperty Name="icc04" ColumnName="icc04" />
+          <ScalarProperty Name="icc03" ColumnName="icc03" />
+          <ScalarProperty Name="icc02" ColumnName="icc02" />
+          <ScalarProperty Name="icc01" ColumnName="icc01" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

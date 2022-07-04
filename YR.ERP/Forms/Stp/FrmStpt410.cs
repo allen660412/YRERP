@@ -412,6 +412,49 @@ namespace YR.ERP.Forms.Stp
                     WfSetControlReadonly(tabDetailinfo.UGrid, true);
                 }
 
+
+                //初始化 庫存Stotck
+                WfSetAppearance(uGridStock, 1);
+                AdmBLL boStock = new AdmBLL(BoMaster.OfGetConntion(), "icc_tb", "*", "vw_stpt410s_stock");
+                dtTemp = boStock.OfSelect(" WHERE 1=2 ");
+                uGridStock.DataSource = dtTemp;
+                uGridStock.DataBind();
+                List<aza_tb> azaTbList;
+                azaTbList = BoSecurity.OfGetAzaModels("vw_stpt410s_stock");
+                this.WfSetGridHeader(uGridStock, azaTbList, this.DateFormat);
+                WfSeDetailGridLayout(uGridStock);
+
+                //try
+                //{
+                //    if (pTabinfo != null && pTabinfo.IsGridFormatFinshed == false && pTabinfo.AzaTbList != null)
+                //        if (pTabinfo.IsGridFormatFinshed == false)
+                //        {
+                //            this.WfSetGridHeader(pTabinfo.UGrid, pTabinfo.AzaTbList, this.DateFormat);
+                //            WfSeDetailGridLayout(pTabinfo.UGrid);
+                //            WfSetGridButtomRowCount(pTabinfo.UGrid);
+                //            pTabinfo.IsGridFormatFinshed = true;
+                //        }
+                //}
+
+                //if (boDetail != null)
+                //{
+                //    tabDetailinfo.BoBasic = boDetail;
+                //    //bo.OfCreateDao(tabDetailinfo.TargetTable, tabDetailinfo.TargetColumn, tabDetailinfo.ViewTable);
+
+                //    if (BoSecurity != null)
+                //        tabDetailinfo.AzaTbList = BoSecurity.OfGetAzaModels(tabDetailinfo.ViewTable);
+
+                //    if (tabDetailinfo.ViewTable != "")
+                //    {
+                //        dtTemp = tabDetailinfo.BoBasic.OfSelect(" WHERE 1=2 ");
+                //    }
+
+                //}
+                //tabDetailinfo.UGrid = WfIniDetailGrid(iTabsIndex);
+                //tabDetailinfo.UGrid.DataSource = dtTemp;
+                //tableName = this.TabDetailList[iTabsIndex].ViewTable;
+                //tablePrefix = this.TabDetailList[iTabsIndex].ViewTable;
+
                 //iTabsIndex++;
                 //if (iTabsIndex <= IntTabDetailCount)
                 //    ut.Visible = true;
@@ -1670,6 +1713,8 @@ namespace YR.ERP.Forms.Stp
                 // 依頁面索引初始化 Grid
                 uGrid.Name = string.Format("uGrid_Detail{0}", pTabindex.ToString());
                 uGrid.TabStop = false;
+
+
                 return uGrid;
                 //switch (pi_tabindex)
                 //{
@@ -3639,7 +3684,14 @@ namespace YR.ERP.Forms.Stp
 
                                 //預帶倉庫
                                 if (!GlobalFn.varIsNull(masterModel.sgb16_pick))
+                                {
                                     newRow["sgb16"] = masterModel.sgb16_pick;
+                                    //取得該倉庫存量
+                                    decimal icc05 = 0;
+                                    icc05 = BoInv.OfGetIcc05(ica01, masterModel.sgb16_pick);
+                                    newRow["icc05"] = icc05;
+                                }
+                                
 
                                 if (!GlobalFn.varIsNull(masterModel.sga12))
                                 {
@@ -3662,9 +3714,11 @@ namespace YR.ERP.Forms.Stp
                                 {
                                     newRow["sgb09"] = GlobalFn.Round(masterModel.sga13t * 0.02m, 0);
                                 }
+                                
 
 
                                 WfLoadIcp03(ica01);//取得圖檔
+                                WfLoadStock(ica01);//取得圖檔
                                 WfSetDetailAmt(newRow);
                                 WfSetTotalAmt();
                                 WfGetQtyTot();
@@ -5136,6 +5190,33 @@ namespace YR.ERP.Forms.Stp
         }
         #endregion
 
+        #region 取得料件圖檔
+        private void WfLoadStock(string ica01)
+        {
+            string selectSql;
+            List<SqlParameter> sqlParmsList;
+            DataTable dt = null;
+            try
+            {
+                selectSql = @"
+                            SELECT *
+                            FROM vw_stpt410s_stock
+                            WHERE icc01=@icc01
+                                AND icc05>0
+                           ";
+                sqlParmsList = new List<SqlParameter>();
+                sqlParmsList.Add(new SqlParameter("@icc01", ica01));
+                dt = BoStp.OfGetDataTable(selectSql, sqlParmsList.ToArray());
+                uGridStock.DataSource = dt;
+                uGridStock.DataBind();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #region WfGetQtyTot 取得出庫總數量
         private void WfGetQtyTot()
         {
@@ -5460,7 +5541,6 @@ namespace YR.ERP.Forms.Stp
             }
         }
 
-
         #region btnUpdIca11_Click 回寫歷史客戶價格 料號/客戶價格..等
         private void btnUpdIca11_Click(object sender, EventArgs e)
         {
@@ -5551,6 +5631,7 @@ namespace YR.ERP.Forms.Stp
         } 
         #endregion
 
+        #region uGridDetail_AfterRowActivate Grid deatail資料列作用時
         private void uGridDetail_AfterRowActivate(object sender, EventArgs e)
         {
             DataRow dr;
@@ -5564,6 +5645,7 @@ namespace YR.ERP.Forms.Stp
                     if (sgb03 != "")
                     {
                         WfLoadIcp03(sgb03);
+                        WfLoadStock(sgb03);
                     }
                 }
             }
@@ -5572,7 +5654,8 @@ namespace YR.ERP.Forms.Stp
 
                 WfShowErrorMsg(ex.Message);
             }
-        }
+        } 
+        #endregion
 
         #region rdb_cust_CheckedChanged 選取客戶編號
         private void rdb_cust_CheckedChanged(object sender, EventArgs e)

@@ -665,6 +665,7 @@ namespace YR.ERP.Forms.Inv
                                 WfShowErrorMsg("無此倉庫別,請確認!");
                                 return false;
                             }
+                            e.Row["ifb07_c"]= BoInv.OfGetIcb02(e.Value.ToString());
                             break;
 
                         case "ifb10"://撥入倉庫
@@ -682,6 +683,7 @@ namespace YR.ERP.Forms.Inv
                                 WfShowErrorMsg("撥出倉與撥入倉不可相同,請確認!");
                                 return false;
                             }
+                            e.Row["ifb10_c"]= BoInv.OfGetIcb02(e.Value.ToString());
                             break;
                     }
                 }

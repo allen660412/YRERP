@@ -340,6 +340,7 @@ namespace YR.ERP.DAL.YRModel
         public virtual DbSet<vw_stpt400s> vw_stpt400s { get; set; }
         public virtual DbSet<vw_stpt410> vw_stpt410 { get; set; }
         public virtual DbSet<vw_stpt410s> vw_stpt410s { get; set; }
+        public virtual DbSet<vw_stpt410s_stock> vw_stpt410s_stock { get; set; }
         public virtual DbSet<vw_stpt500> vw_stpt500 { get; set; }
         public virtual DbSet<vw_stpt500s> vw_stpt500s { get; set; }
         public virtual DbSet<vw_taxb010> vw_taxb010 { get; set; }

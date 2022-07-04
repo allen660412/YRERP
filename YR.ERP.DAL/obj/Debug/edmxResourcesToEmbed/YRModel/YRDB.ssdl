@@ -1398,8 +1398,8 @@
     <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
     <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica38" Type="nvarchar" MaxLength="1" />
     <Property Name="ica39" Type="nvarchar" MaxLength="1" />
     <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -6357,8 +6357,8 @@
     <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
     <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica38" Type="nvarchar" MaxLength="1" />
     <Property Name="ica39" Type="nvarchar" MaxLength="1" />
     <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -6434,6 +6434,10 @@
     <Property Name="pgb04" Type="nvarchar" MaxLength="255" />
     <Property Name="pgb05" Type="numeric" Precision="22" Scale="3" />
     <Property Name="price" Type="numeric" Precision="38" Scale="19" />
+    <Property Name="pfa08" Type="nvarchar" MaxLength="1" />
+    <Property Name="pfa10" Type="nvarchar" MaxLength="4" />
+    <Property Name="pfa17" Type="numeric" Precision="22" Scale="10" />
+    <Property Name="pfb09" Type="numeric" Precision="22" Scale="6" />
   </EntityType>
   <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invi100_2' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -6580,8 +6584,8 @@
     <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
     <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica38" Type="nvarchar" MaxLength="1" />
     <Property Name="ica39" Type="nvarchar" MaxLength="1" />
     <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -7169,6 +7173,8 @@
     <Property Name="ifbmodu" Type="nvarchar" MaxLength="10" />
     <Property Name="ifbmodg" Type="nvarchar" MaxLength="10" />
     <Property Name="ifbmodd" Type="datetime2" Precision="7" />
+    <Property Name="ifb07_c" Type="nvarchar" MaxLength="80" />
+    <Property Name="ifb10_c" Type="nvarchar" MaxLength="80" />
   </EntityType>
   <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_invt331' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -8332,8 +8338,8 @@
     <Property Name="ica33" Type="nvarchar" MaxLength="1000" />
     <Property Name="ica34" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica35" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica36" Type="nvarchar" MaxLength="1" />
-    <Property Name="ica37" Type="nvarchar" MaxLength="1" />
+    <Property Name="ica36" Type="numeric" Precision="22" Scale="5" />
+    <Property Name="ica37" Type="numeric" Precision="22" Scale="0" />
     <Property Name="ica38" Type="nvarchar" MaxLength="1" />
     <Property Name="ica39" Type="nvarchar" MaxLength="1" />
     <Property Name="ica40" Type="nvarchar" MaxLength="1" />
@@ -10103,6 +10109,27 @@
     <Property Name="stock_qty" Type="bigint" />
     <Property Name="print_label" Type="nvarchar" MaxLength="30" />
     <Property Name="ica18" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="icc05" Type="numeric" Precision="22" Scale="3" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt410s_stock' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="vw_stpt410s_stock">
+    <Key>
+      <PropertyRef Name="icc01" />
+      <PropertyRef Name="icc02" />
+      <PropertyRef Name="icc05" />
+    </Key>
+    <Property Name="icc01" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="icc02" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="icc03" Type="nvarchar" MaxLength="10" />
+    <Property Name="icc04" Type="nvarchar" MaxLength="6" />
+    <Property Name="icc05" Type="numeric" Precision="22" Scale="3" Nullable="false" />
+    <Property Name="icc06" Type="nvarchar" MaxLength="1" />
+    <Property Name="icc07" Type="nvarchar" MaxLength="1" />
+    <Property Name="icc08" Type="nvarchar" MaxLength="1" />
+    <Property Name="icc09" Type="nvarchar" MaxLength="1" />
+    <Property Name="icc10" Type="nvarchar" MaxLength="1" />
+    <Property Name="icccomp" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <!--產生期間發現錯誤:
 警告 6002: 資料表/檢視 'IDA.dbo.vw_stpt500' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
@@ -12841,7 +12868,11 @@
     [vw_invi100_1].[pgb03] AS [pgb03], 
     [vw_invi100_1].[pgb04] AS [pgb04], 
     [vw_invi100_1].[pgb05] AS [pgb05], 
-    [vw_invi100_1].[price] AS [price]
+    [vw_invi100_1].[price] AS [price], 
+    [vw_invi100_1].[pfa08] AS [pfa08], 
+    [vw_invi100_1].[pfa10] AS [pfa10], 
+    [vw_invi100_1].[pfa17] AS [pfa17], 
+    [vw_invi100_1].[pfb09] AS [pfb09]
     FROM [dbo].[vw_invi100_1] AS [vw_invi100_1]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_invi100_2" EntityType="Self.vw_invi100_2" store:Type="Views" store:Schema="dbo">
@@ -13444,7 +13475,9 @@
     [vw_invt330s].[ifbcred] AS [ifbcred], 
     [vw_invt330s].[ifbmodu] AS [ifbmodu], 
     [vw_invt330s].[ifbmodg] AS [ifbmodg], 
-    [vw_invt330s].[ifbmodd] AS [ifbmodd]
+    [vw_invt330s].[ifbmodd] AS [ifbmodd], 
+    [vw_invt330s].[ifb07_c] AS [ifb07_c], 
+    [vw_invt330s].[ifb10_c] AS [ifb10_c]
     FROM [dbo].[vw_invt330s] AS [vw_invt330s]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_invt331" EntityType="Self.vw_invt331" store:Type="Views" store:Schema="dbo">
@@ -15934,8 +15967,24 @@
     [vw_stpt410s].[sgbmodd] AS [sgbmodd], 
     [vw_stpt410s].[stock_qty] AS [stock_qty], 
     [vw_stpt410s].[print_label] AS [print_label], 
-    [vw_stpt410s].[ica18] AS [ica18]
+    [vw_stpt410s].[ica18] AS [ica18], 
+    [vw_stpt410s].[icc05] AS [icc05]
     FROM [dbo].[vw_stpt410s] AS [vw_stpt410s]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_stpt410s_stock" EntityType="Self.vw_stpt410s_stock" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_stpt410s_stock].[icc01] AS [icc01], 
+    [vw_stpt410s_stock].[icc02] AS [icc02], 
+    [vw_stpt410s_stock].[icc03] AS [icc03], 
+    [vw_stpt410s_stock].[icc04] AS [icc04], 
+    [vw_stpt410s_stock].[icc05] AS [icc05], 
+    [vw_stpt410s_stock].[icc06] AS [icc06], 
+    [vw_stpt410s_stock].[icc07] AS [icc07], 
+    [vw_stpt410s_stock].[icc08] AS [icc08], 
+    [vw_stpt410s_stock].[icc09] AS [icc09], 
+    [vw_stpt410s_stock].[icc10] AS [icc10], 
+    [vw_stpt410s_stock].[icccomp] AS [icccomp]
+    FROM [dbo].[vw_stpt410s_stock] AS [vw_stpt410s_stock]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_stpt500" EntityType="Self.vw_stpt500" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

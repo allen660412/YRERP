@@ -49,8 +49,8 @@ namespace YR.ERP.DAL.YRModel
         public string ica33 { get; set; }
         public Nullable<decimal> ica34 { get; set; }
         public string ica35 { get; set; }
-        public string ica36 { get; set; }
-        public string ica37 { get; set; }
+        public Nullable<decimal> ica36 { get; set; }
+        public Nullable<decimal> ica37 { get; set; }
         public string ica38 { get; set; }
         public string ica39 { get; set; }
         public string ica40 { get; set; }

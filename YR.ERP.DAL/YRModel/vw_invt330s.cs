@@ -39,5 +39,7 @@ namespace YR.ERP.DAL.YRModel
         public string ifbmodu { get; set; }
         public string ifbmodg { get; set; }
         public Nullable<System.DateTime> ifbmodd { get; set; }
+        public string ifb07_c { get; set; }
+        public string ifb10_c { get; set; }
     }
 }

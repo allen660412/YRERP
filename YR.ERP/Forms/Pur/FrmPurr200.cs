@@ -18,6 +18,7 @@ using YR.ERP.DAL.YRModel;
 using YR.Util;
 using YR.ERP.Base.Forms;
 using YR.ERP.DAL.YRModel.Reports.Pur.Purr200;
+using System.Linq;
 
 namespace YR.ERP.Forms.Pur
 {
@@ -329,8 +330,8 @@ namespace YR.ERP.Forms.Pur
                 dtSebTb = BoMaster.OfGetDataTable(sbSql.ToString(), sqlParmList.ToArray());
                 dtSebTb.TableName = "Detail";
 
-                detailList = dtSebTb.ToList<Detail>();
-                foreach(Detail detailModel in detailList)
+                detailList = dtSebTb.ToList<Detail>().OrderBy(o=>o.peb02).ToList();
+                foreach (Detail detailModel in detailList)
                 {
                     detailModel.peb05_str = string.Format("{0:N" + detailModel.bej03 + "}", detailModel.peb05);//數量
                 }

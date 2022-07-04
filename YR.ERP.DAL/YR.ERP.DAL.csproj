@@ -1049,6 +1049,9 @@
     <Compile Include="YRModel\vw_stpt410s.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="YRModel\vw_stpt410s_stock.cs">
+      <DependentUpon>YRDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="YRModel\vw_stpt500.cs">
       <DependentUpon>YRDB.tt</DependentUpon>
     </Compile>
